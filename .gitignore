@@ -1,0 +1,9 @@
+# 대용량 데이터 파일 (GitHub 100MB 제한 초과)
+공모전 dataset/open/data/train.csv
+공모전 dataset/open/data/trackman_history.csv
+
+# 기타
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
