@@ -1,6 +1,7 @@
 # 🏆 LG Aimers 해커톤 — 야구 투구 제구 성공 확률 예측
 
-> LG AI연구원 주최 해커톤 참가 레포지토리
+> LG AI연구원 주최 해커톤 참가 레포지토리  
+> **팀원은 이 README를 먼저 읽어주세요** 👇
 
 ---
 
@@ -21,26 +22,41 @@
 ```
 lg aimers 관련/
 │
-├── 공모전 dataset/
+├── 📁 docs/                              ← ✅ 팀 문서 모음 (여기부터 읽으세요)
+│   ├── README.md                          # 문서 인덱스 + 진행 체크리스트
+│   ├── 01_trackman_history_columns.md    # 데이터 컬럼 30개 상세 분석
+│   ├── 02_대회_방향성_및_목표.md           # 대회 목표·공략 로드맵·주의사항
+│   └── 환경설정_트러블슈팅.md             # 환경 설정 에러 해결 기록
+│
+├── 📁 submissions/                       ← ✅ 제출 ZIP 버전 관리
+│   ├── lg_aimers_submission.zip          # 제출본 (버전 관리용)
+│   └── my_submission.zip
+│   (새 제출 시 → submission_v2_YYYYMMDD.zip 형식으로 추가)
+│
+├── 📁 공모전 dataset/
 │   └── open/
-│       ├── data/
-│       │   ├── train.csv                  # 학습 데이터 (1,475,092행 × 49컬럼) ※ git 제외
-│       │   ├── test.csv                   # 평가 데이터 형식 확인용 5건 샘플
-│       │   ├── trackman_history.csv       # 2019~2024년 Trackman 로그 ※ git 제외
+│       ├── 📁 data/                      ← ✅ 원본 데이터 (git 제외, 직접 배치)
+│       │   ├── train.csv                  # 학습 데이터 (약 1,475,092행 × 49컬럼)
+│       │   ├── test.csv                   # 예측 대상 데이터
+│       │   ├── trackman_history.csv       # 2019~ Trackman 투구 물리 로그
 │       │   └── sample_submission.csv      # 제출 형식 예시
-│       ├── baseline_submit/
-│       │   ├── script.py                  # 추론 스크립트
+│       ├── 📁 baseline_submit/           ← ✅ 베이스라인 실행 폴더
+│       │   ├── script.py                  # 추론 스크립트 (여기서 실행)
 │       │   ├── requirements.txt           # 패키지 목록
+│       │   ├── data → (심볼릭 링크 → ../data)
 │       │   ├── model/
 │       │   │   └── rf.pkl                 # 베이스라인 Random Forest 모델
 │       │   └── output/
-│       │       └── submission.csv         # 생성된 제출 파일
-│       └── data_description.md            # 전체 컬럼 설명서
+│       │       └── submission.csv         # 실행 후 생성되는 제출 파일
+│       └── data_description.md            # 공식 컬럼 설명서
 │
-├── lg_aimers_submission.zip               # 리더보드 제출용 zip
-├── 환경설정_트러블슈팅.md                  # 환경 설정 에러 해결 기록
+├── 📁 output/                            ← 모델 출력 결과
+│   └── submission.csv
 │
-└── 강의자료/
+├── 환경설정_트러블슈팅.md                  # (docs/에 동일 파일 있음)
+├── README.md                              # 이 파일
+│
+└── 📁 강의자료/
     ├── 『LG AI연구원 해커톤 문제 소개』.pdf
     ├── 『지도학습』.pdf
     ├── 『딥러닝 자연어처리 기초와 LLM Agent』.pdf
@@ -50,7 +66,8 @@ lg aimers 관련/
     └── 『Optimization & Time-Series Analysis』/
 ```
 
-> ⚠️ `train.csv`, `trackman_history.csv`는 100MB 이상으로 GitHub에 올리지 않습니다. 로컬에서 직접 관리하세요.
+> ⚠️ `train.csv`, `trackman_history.csv`는 100MB 이상으로 GitHub에 올라가지 않습니다.  
+> 팀원은 아래 **팀원 온보딩** 섹션을 참고해 직접 데이터를 배치하세요.
 
 ---
 
@@ -71,6 +88,39 @@ lg aimers 관련/
 - `test.csv` 내부 행 간 통계/rolling/target encoding **금지**
 - 현재 투구 **이후** 확정되는 정보 사용 **금지** (Trackman 측정값, 실제 판정 등)
 - `trackman_history.csv`는 1:1 join 불가 — 피처 엔지니어링 보조 자료로만 활용
+
+---
+
+## 👋 팀원 온보딩 (레포 처음 받았을 때)
+
+### Step 1. 문서 먼저 읽기
+
+| 순서 | 파일 | 내용 |
+|------|------|------|
+| 1️⃣ | [docs/README.md](docs/README.md) | 전체 인덱스 + 진행 체크리스트 |
+| 2️⃣ | [docs/02_대회_방향성_및_목표.md](docs/02_대회_방향성_및_목표.md) | 대회 목표, Target 변수, 공략법 |
+| 3️⃣ | [docs/01_trackman_history_columns.md](docs/01_trackman_history_columns.md) | 데이터 컬럼 상세 설명 |
+| 4️⃣ | [docs/환경설정_트러블슈팅.md](docs/환경설정_트러블슈팅.md) | 환경 설정 에러 대처법 |
+
+### Step 2. 대용량 데이터 배치
+
+레포를 받으면 아래 파일들이 없습니다. **LG Aimers 대회 페이지**에서 직접 다운받아 경로에 배치하세요.
+
+```bash
+# 아래 경로에 파일을 직접 넣어주세요
+공모전 dataset/open/data/
+├── train.csv                ← 대회 사이트에서 다운로드
+├── test.csv                 ← 대회 사이트에서 다운로드
+├── trackman_history.csv     ← 대회 사이트에서 다운로드
+└── sample_submission.csv    ← 대회 사이트에서 다운로드
+```
+
+### Step 3. 심볼릭 링크 설정 후 베이스라인 실행
+
+```bash
+cd "공모전 dataset/open/baseline_submit"
+ln -sf "../data" "./data"   # 심볼릭 링크 생성
+```
 
 ---
 
@@ -189,6 +239,16 @@ submission.zip
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange)
 ![pandas](https://img.shields.io/badge/pandas-2.3.3-lightblue)
 ![numpy](https://img.shields.io/badge/numpy-1.26.4-yellow)
+
+---
+
+---
+
+## 📝 문서 기여 가이드
+
+- 분석 결과, 실험 노트 등 새 문서는 **`docs/` 폴더**에 `03_`, `04_` 번호 붙여 저장
+- 제출 파일은 **`submissions/` 폴더**에 `submission_v버전_날짜.zip` 형식으로 저장
+- 새 문서 추가 시 [docs/README.md](docs/README.md)의 문서 목록 표에 추가
 
 ---
 
