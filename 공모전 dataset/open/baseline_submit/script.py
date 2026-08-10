@@ -1,5 +1,6 @@
 # script.py
 import os
+import math
 
 import joblib
 import pandas as pd
@@ -50,20 +51,30 @@ def build_features(df):
 def merge_predictions(sub, ids, preds):
     """sample_submission의 row_id 순서에 맞춰 예측 확률 병합.
 
-    예측에 없는 row_id는 sample_submission의 기존 값(placeholder)을 유지한다.
+    ID 누락·중복 또는 비정상 확률이 있으면 잘못된 파일을 저장하지 않고 중단한다.
     """
+    if len(ids) != len(preds):
+        raise ValueError(f"ID 수({len(ids)})와 예측 수({len(preds)})가 다름")
+    if len(ids) != len(set(ids)):
+        raise ValueError("test 데이터의 row_id에 중복이 있음")
+    if sub[ID_COL].duplicated().any():
+        raise ValueError("sample_submission의 row_id에 중복이 있음")
+
+    test_ids = set(ids)
+    submission_ids = set(sub[ID_COL])
+    if test_ids != submission_ids:
+        missing = len(submission_ids - test_ids)
+        extra = len(test_ids - submission_ids)
+        raise ValueError(
+            f"test와 sample_submission의 row_id 불일치: "
+            f"예측 누락={missing}, 제출 양식에 없는 ID={extra}"
+        )
+
+    if any(not math.isfinite(float(p)) or not 0.0 <= float(p) <= 1.0 for p in preds):
+        raise ValueError("예측값에 NaN, 무한대 또는 [0, 1] 범위 밖의 값이 있음")
+
     pred_map = dict(zip(ids, preds))
-    values, n_missing = [], 0
-    for rid, cur in zip(sub[ID_COL], sub[TARGET_COL]):
-        p = pred_map.get(rid)
-        if p is None:
-            n_missing += 1
-            values.append(cur)
-        else:
-            values.append(p)
-    if n_missing:
-        print(f" 경고: 예측이 없어 placeholder를 유지한 row_id {n_missing}건")
-    sub[TARGET_COL] = values
+    sub[TARGET_COL] = sub[ID_COL].map(pred_map)
     return sub
 
 
