@@ -28,10 +28,18 @@ lg aimers 관련/
 │   ├── 02_대회_방향성_및_목표.md           # 대회 목표·공략 로드맵·주의사항
 │   └── 환경설정_트러블슈팅.md             # 환경 설정 에러 해결 기록
 │
-├── 📁 submissions/                       ← ✅ 제출 ZIP 버전 관리
-│   ├── lg_aimers_submission.zip          # 제출본 (버전 관리용)
-│   └── my_submission.zip
-│   (새 제출 시 → submission_v2_YYYYMMDD.zip 형식으로 추가)
+├── 📁 submissions/                       ← 제출 산출물 보관
+│   └── 📁 by_submitter/                  ← ✅ 실제 제출 작업의 단일 기준 위치
+│       ├── README.md                     # 담당 모델·점수·제출 시각 기록
+│       ├── 전병윤_RF_기준선/
+│       │   ├── submit.zip                # 전병윤이 그대로 업로드
+│       │   └── 설명.md
+│       ├── 이준형_안정형/
+│       │   ├── submit.zip                # 이준형이 그대로 업로드
+│       │   └── 설명.md
+│       └── 오현기_보정형/
+│           ├── submit.zip                # 오현기가 그대로 업로드
+│           └── 설명.md
 │
 ├── 📁 공모전 dataset/
 │   └── open/
@@ -178,11 +186,19 @@ zip -r submission.zip script.py requirements.txt model/ output/
 
 > ⚠️ **팀 구성 전 팀원당 1회 개인 제출 필수**
 
-1. 위 과정으로 `lg_aimers_submission.zip` 생성
-2. LG Aimers 리더보드에 zip 파일 업로드
-3. 평가 서버에서 실제 `test.csv`로 교체 후 `script.py` 자동 실행 → 채점
+앞으로 모든 제출 준비와 관리는 `submissions/by_submitter/`에서 수행합니다.
+루트나 `submissions/` 바로 아래의 과거 ZIP은 새 제출에 사용하지 않습니다.
 
-**제출 파일 구조:**
+1. 새 모델을 학습하고 로컬 시간순 검증 결과를 기록합니다.
+2. 평가 서버 방식으로 스모크 테스트와 ZIP 무결성 검사를 수행합니다.
+3. 담당자 폴더의 기존 `submit.zip`을 검증된 새 파일로 교체합니다.
+4. 담당자는 자기 폴더 안의 `submit.zip`을 이름 변경이나 재압축 없이 그대로 업로드합니다.
+5. 제출 직후 `submissions/by_submitter/README.md`에 Public Score, 제출 시각, 정상 실행 여부를 기록합니다.
+
+현재 담당은 전병윤=RF 기준선, 이준형=안정형, 오현기=보정형입니다. 모델 배정을
+바꾸면 ZIP 파일뿐 아니라 각 폴더의 `설명.md`와 배정표도 함께 갱신합니다.
+
+**각 `submit.zip`의 내부 구조:**
 ```
 submission.zip
 ├── script.py

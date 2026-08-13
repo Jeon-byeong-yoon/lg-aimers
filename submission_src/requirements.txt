@@ -1,0 +1,6 @@
+# Evaluation server base packages; versions documented for reproducibility.
+# Python 3.11.15
+# numpy==1.26.4
+# pandas==2.3.3
+# scikit-learn==1.8.0
+# joblib==1.5.3
