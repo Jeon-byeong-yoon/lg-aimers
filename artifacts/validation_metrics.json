@@ -1,0 +1,37 @@
+{
+  "split": "season < 2024 -> season == 2024",
+  "train_rows": 1221585,
+  "validation_rows": 253507,
+  "models": {
+    "extra_trees": {
+      "brier": 0.24819199081374926,
+      "bss": 646.4736442680863,
+      "prediction_mean": 0.4955352164635803,
+      "target_mean": 0.4861049201797189
+    },
+    "hist_gbdt": {
+      "brier": 0.24838371328501346,
+      "bss": 569.7253836200233,
+      "prediction_mean": 0.498070165176824,
+      "target_mean": 0.4861049201797189
+    }
+  },
+  "stable_blend": {
+    "brier": 0.24814897267353977,
+    "bss": 663.6941996657986,
+    "prediction_mean": 0.4962957010775533,
+    "target_mean": 0.4861049201797189
+  },
+  "affine_blend": {
+    "brier": 0.248002348106104,
+    "bss": 722.3893564972772,
+    "prediction_mean": 0.4861049201796679,
+    "target_mean": 0.4861049201797189
+  },
+  "affine_coefficients": [
+    -0.10090351012444661,
+    0.8353049890180033,
+    0.3475120652860652
+  ],
+  "elapsed_seconds": 262.19065004214644
+}
