@@ -1,0 +1,51 @@
+{
+  "all_v2": {
+    "brier": 0.24819729879675695,
+    "bss": 644.3488100704942,
+    "prediction_mean": 0.49750689307338525,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": 0.0
+  },
+  "without_categorical_interactions": {
+    "brier": 0.24836774428974523,
+    "bss": 576.1179186371978,
+    "prediction_mean": 0.4966793743570523,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": 0.00017044549298828038
+  },
+  "without_game_context": {
+    "brier": 0.24819402115856257,
+    "bss": 645.6608786495899,
+    "prediction_mean": 0.4974742631232412,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": -3.277638194382204e-06
+  },
+  "without_recent_form": {
+    "brier": 0.2481760693350416,
+    "bss": 652.8471579709927,
+    "prediction_mean": 0.4978738747160548,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": -2.1229461715344122e-05
+  },
+  "without_failure_proxies": {
+    "brier": 0.2481424620987835,
+    "bss": 666.3004423512309,
+    "prediction_mean": 0.4965295367512618,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": -5.483669797345936e-05
+  },
+  "without_reliability": {
+    "brier": 0.2482083304524101,
+    "bss": 639.9327373072695,
+    "prediction_mean": 0.49823228252224666,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": 1.1031655653137573e-05
+  },
+  "without_missingness": {
+    "brier": 0.24819161736722364,
+    "bss": 646.6231383315479,
+    "prediction_mean": 0.4975644187368611,
+    "target_mean": 0.4861049201797189,
+    "brier_delta_vs_all": -5.681429533305193e-06
+  }
+}

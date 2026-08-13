@@ -1,0 +1,78 @@
+{
+  "2022": {
+    "train_rows": 728588,
+    "valid_rows": 247472,
+    "train_prior": 0.5431423520563061,
+    "extra_trees": {
+      "brier": 0.24352174550276354,
+      "bss": 2264.320415834398,
+      "prediction_mean": 0.5324364626310288,
+      "target_mean": 0.5289204435249241
+    },
+    "hist_gbdt": {
+      "brier": 0.24358142842419173,
+      "bss": 2240.367109843955,
+      "prediction_mean": 0.5314970135068688,
+      "target_mean": 0.5289204435249241
+    },
+    "blend_50_50": {
+      "brier": 0.2434654331452259,
+      "bss": 2286.920970546935,
+      "prediction_mean": 0.5319667380689488,
+      "target_mean": 0.5289204435249241
+    },
+    "elapsed_seconds": 79.8840459161438
+  },
+  "2023": {
+    "train_rows": 976060,
+    "valid_rows": 245525,
+    "train_prior": 0.5395365039034485,
+    "extra_trees": {
+      "brier": 0.2544397140008536,
+      "bss": 0.0,
+      "prediction_mean": 0.5222126888112563,
+      "target_mean": 0.49995723449750534
+    },
+    "hist_gbdt": {
+      "brier": 0.2535723299499269,
+      "bss": 0.0,
+      "prediction_mean": 0.5216165235014458,
+      "target_mean": 0.49995723449750534
+    },
+    "blend_50_50": {
+      "brier": 0.25390443994207657,
+      "bss": 0.0,
+      "prediction_mean": 0.5219146061563512,
+      "target_mean": 0.49995723449750534
+    },
+    "elapsed_seconds": 113.96428825007752
+  },
+  "2024": {
+    "train_rows": 1221585,
+    "valid_rows": 253507,
+    "train_prior": 0.5315815109059132,
+    "extra_trees": {
+      "brier": 0.24815118211183856,
+      "bss": 662.8097412852974,
+      "prediction_mean": 0.4940650096604271,
+      "target_mean": 0.4861049201797189
+    },
+    "hist_gbdt": {
+      "brier": 0.2481922355746335,
+      "bss": 646.3756642451135,
+      "prediction_mean": 0.4980956324101325,
+      "target_mean": 0.4861049201797189
+    },
+    "blend_50_50": {
+      "brier": 0.2480308535135023,
+      "bss": 710.9783809217118,
+      "prediction_mean": 0.49608032103527966,
+      "target_mean": 0.4861049201797189
+    },
+    "elapsed_seconds": 157.39746737503447
+  },
+  "summary": {
+    "mean_blend_brier": 0.2484669088669349,
+    "all_blend_bss_positive": false
+  }
+}
