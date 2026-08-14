@@ -1,0 +1,38 @@
+{
+  "v5_no_hierarchy": {
+    "brier": 0.24810508503244472,
+    "bss": 681.262824229123,
+    "prediction_mean": 0.4970374468013589,
+    "target_mean": 0.4861049201797189
+  },
+  "only_pitcher_vs_batter_hand": {
+    "brier": 0.24813509661937433,
+    "bss": 669.2489111966627,
+    "prediction_mean": 0.49799120973784355,
+    "target_mean": 0.4861049201797189
+  },
+  "only_pitcher_count": {
+    "brier": 0.24813425726026583,
+    "bss": 669.5849143329214,
+    "prediction_mean": 0.4968440632600779,
+    "target_mean": 0.4861049201797189
+  },
+  "only_batter_vs_pitcher_hand": {
+    "brier": 0.24811780772819583,
+    "bss": 676.1698126316107,
+    "prediction_mean": 0.49688081197896045,
+    "target_mean": 0.4861049201797189
+  },
+  "only_pitcher_batter": {
+    "brier": 0.2480789379924104,
+    "bss": 691.7297237557963,
+    "prediction_mean": 0.49703669130831235,
+    "target_mean": 0.4861049201797189
+  },
+  "all_hierarchy": {
+    "brier": 0.24808509065059445,
+    "bss": 689.2667583513035,
+    "prediction_mean": 0.49611072434455294,
+    "target_mean": 0.4861049201797189
+  }
+}
