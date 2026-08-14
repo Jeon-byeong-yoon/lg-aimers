@@ -12,6 +12,8 @@ __pycache__/
 artifacts/ensemble.joblib
 artifacts/v2_ensemble.joblib
 artifacts/v4_ensemble.joblib
+artifacts/v5_ensemble.joblib
+artifacts/v6_ensemble.joblib
 artifacts/*_predictions.joblib
 submissions/ensemble_stable.zip
 submissions/ensemble_affine.zip

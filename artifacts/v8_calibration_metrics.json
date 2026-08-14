@@ -1,0 +1,26 @@
+{
+  "folds": {
+    "2022": {
+      "raw_brier": 0.24339495592003893,
+      "shift_from_earlier_folds": 0.0,
+      "calibrated_brier": 0.24339495592003893,
+      "calibrated_bss": 2315.206491762434,
+      "observed_residual": -0.0016354947692325261
+    },
+    "2023": {
+      "raw_brier": 0.2537059834861092,
+      "shift_from_earlier_folds": -0.0016354947692325261,
+      "calibrated_brier": 0.2536330099142764,
+      "calibrated_bss": 0,
+      "observed_residual": -0.023127073346879856
+    },
+    "2024": {
+      "raw_brier": 0.24799502458725692,
+      "shift_from_earlier_folds": -0.012381284058056191,
+      "calibrated_brier": 0.24789684929525516,
+      "calibrated_bss": 764.6214964217024,
+      "observed_residual": -0.010155307226167531
+    }
+  },
+  "proposed_2025_shift": -0.011639291780759972
+}
