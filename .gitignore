@@ -11,5 +11,7 @@ __pycache__/
 # 모델 학습/패키징 중간 산출물 (최종 제출본은 submissions/by_submitter에 보관)
 artifacts/ensemble.joblib
 artifacts/v2_ensemble.joblib
+artifacts/v4_ensemble.joblib
+artifacts/*_predictions.joblib
 submissions/ensemble_stable.zip
 submissions/ensemble_affine.zip
