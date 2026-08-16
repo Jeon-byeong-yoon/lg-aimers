@@ -1,0 +1,90 @@
+{
+  "baseline": {
+    "2023": 0.2534920956366789,
+    "2024": 0.24786335458060424
+  },
+  "accepted_count": 0,
+  "best": null,
+  "top10_accepted": [],
+  "top5_overall": [
+    {
+      "leaves": 4,
+      "min_samples_leaf": 3000,
+      "l2": 50.0,
+      "strength": 0.1,
+      "2023_brier": 0.2534828751398561,
+      "2024_brier": 0.24787855846955043,
+      "2023_gain": 9.220496822781588e-06,
+      "2024_gain": -1.520388894618585e-05
+    },
+    {
+      "leaves": 4,
+      "min_samples_leaf": 3000,
+      "l2": 10.0,
+      "strength": 0.1,
+      "2023_brier": 0.2534825864272394,
+      "2024_brier": 0.24787858637852578,
+      "2023_gain": 9.509209439484412e-06,
+      "2024_gain": -1.5231797921538837e-05
+    },
+    {
+      "leaves": 4,
+      "min_samples_leaf": 1500,
+      "l2": 50.0,
+      "strength": 0.1,
+      "2023_brier": 0.2534834466919395,
+      "2024_brier": 0.24787858790673148,
+      "2023_gain": 8.648944739397812e-06,
+      "2024_gain": -1.523332612723971e-05
+    },
+    {
+      "leaves": 4,
+      "min_samples_leaf": 1500,
+      "l2": 10.0,
+      "strength": 0.1,
+      "2023_brier": 0.2534828094640795,
+      "2024_brier": 0.24787872722714263,
+      "2023_gain": 9.286172599431985e-06,
+      "2024_gain": -1.5372646538391876e-05
+    },
+    {
+      "leaves": 8,
+      "min_samples_leaf": 3000,
+      "l2": 50.0,
+      "strength": 0.1,
+      "2023_brier": 0.2534833875382438,
+      "2024_brier": 0.24788141115229254,
+      "2023_gain": 8.708098435117329e-06,
+      "2024_gain": -1.805657168829633e-05
+    }
+  ],
+  "features": [
+    "inning",
+    "outs_before",
+    "run_total_before",
+    "score_diff_pitcher_team",
+    "num_runners_on",
+    "home_win_expectancy",
+    "away_win_expectancy",
+    "li",
+    "asof_pitcher_n",
+    "asof_pitcher_success_rate",
+    "asof_pitcher_reverse_rate",
+    "asof_pitcher_middle_rate",
+    "asof_pitcher_ball_rate",
+    "asof_pitcher_strike_rate",
+    "asof_pitcher_prev1_game_success_rate",
+    "asof_pitcher_prev3_game_success_rate",
+    "asof_pitcher_prev5_game_success_rate",
+    "asof_pitcher_prev1_game_middle_rate",
+    "asof_pitcher_prev3_game_middle_rate",
+    "asof_pitcher_prev5_game_middle_rate",
+    "asof_batter_n",
+    "asof_batter_success_rate",
+    "asof_batter_middle_rate",
+    "asof_pitcher_pitchmix_n",
+    "asof_pitcher_fastball_rate",
+    "asof_pitcher_breaking_rate",
+    "asof_pitcher_offspeed_rate"
+  ]
+}
