@@ -1,0 +1,141 @@
+{
+  "experiment": "V39_context_regularization",
+  "description": "form=V38-gentle_500 fixed; context HGB regularization+LR grid",
+  "baseline_v38": {
+    "2022": 0.243390002346232,
+    "2023": 0.25324438180845804,
+    "2024": 0.24783152211261955
+  },
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "v38_base",
+      "config": "V31 original context (no_matchup_hte)",
+      "scores": {
+        "2022": 0.243390002346232,
+        "2023": 0.25324438180845804,
+        "2024": 0.24783152211261955
+      },
+      "gains_vs_v38": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ctx_g600",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 600
+      },
+      "scores": {
+        "2022": 0.24338069515888172,
+        "2023": 0.2532314784706203,
+        "2024": 0.24783743628071536
+      },
+      "gains_vs_v38": {
+        "2022": 9.307187350288126e-06,
+        "2023": 1.2903337837766315e-05,
+        "2024": -5.914168095810801e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ctx_strong",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "scores": {
+        "2022": 0.24337684342954233,
+        "2023": 0.25323898215711793,
+        "2024": 0.24783756442368152
+      },
+      "gains_vs_v38": {
+        "2022": 1.3158916689681721e-05,
+        "2023": 5.399651340110001e-06,
+        "2024": -6.042311061965622e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ctx_g500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.24338020310171266,
+        "2023": 0.25323230996817314,
+        "2024": 0.24783809760216058
+      },
+      "gains_vs_v38": {
+        "2022": 9.799244519353989e-06,
+        "2023": 1.2071840284899604e-05,
+        "2024": -6.5754895410274905e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ctx_wide500",
+      "config": {
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 150,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.24338201067286228,
+        "2023": 0.25324836107193793,
+        "2024": 0.24783818957906464
+      },
+      "gains_vs_v38": {
+        "2022": 7.991673369733832e-06,
+        "2023": -3.979263479891859e-06,
+        "2024": -6.667466445092751e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ctx_g400",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 400
+      },
+      "scores": {
+        "2022": 0.24337835774485203,
+        "2023": 0.2532321190869742,
+        "2024": 0.24783933912707365
+      },
+      "gains_vs_v38": {
+        "2022": 1.1644601379978692e-05,
+        "2023": 1.2262721483857764e-05,
+        "2024": -7.817014454097881e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}
