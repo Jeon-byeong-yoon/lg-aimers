@@ -1,0 +1,120 @@
+{
+  "baseline_v12": {
+    "2023": 0.2534920956366789,
+    "2024": 0.24786335458060424
+  },
+  "candidate_count": 1512,
+  "accepted_count": 605,
+  "best": {
+    "count_smoothing": 500,
+    "pitcher_smoothing": 300,
+    "count_weight": 0.75,
+    "pitcher_weight": 0.25,
+    "2023_brier": 0.25347569351099875,
+    "2024_brier": 0.24785582522243238,
+    "2023_gain": 1.640212568015942e-05,
+    "2024_gain": 7.529358171859402e-06
+  },
+  "top10": [
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.25347569351099875,
+      "2024_brier": 0.24785582522243238,
+      "2023_gain": 1.640212568015942e-05,
+      "2024_gain": 7.529358171859402e-06
+    },
+    {
+      "count_smoothing": 200,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.2534750150381051,
+      "2024_brier": 0.2478558626406778,
+      "2023_gain": 1.7080598573804284e-05,
+      "2024_gain": 7.491939926440594e-06
+    },
+    {
+      "count_smoothing": 100,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.2534747746652302,
+      "2024_brier": 0.24785587643168266,
+      "2023_gain": 1.7320971448686606e-05,
+      "2024_gain": 7.478148921574723e-06
+    },
+    {
+      "count_smoothing": 50,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.2534746516143364,
+      "2024_brier": 0.24785588359033645,
+      "2023_gain": 1.7444022342494314e-05,
+      "2024_gain": 7.470990267793853e-06
+    },
+    {
+      "count_smoothing": 25,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.2534745893519279,
+      "2024_brier": 0.24785588723712076,
+      "2023_gain": 1.7506284751001022e-05,
+      "2024_gain": 7.467343483474886e-06
+    },
+    {
+      "count_smoothing": 10,
+      "pitcher_smoothing": 300,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.25347455175512235,
+      "2024_brier": 0.24785588944706083,
+      "2023_gain": 1.7543881556558727e-05,
+      "2024_gain": 7.465133543410607e-06
+    },
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 300,
+      "count_weight": 1.0,
+      "pitcher_weight": 0.25,
+      "2023_brier": 0.25347608948386985,
+      "2024_brier": 0.24785601017226722,
+      "2023_gain": 1.600615280905604e-05,
+      "2024_gain": 7.344408337023323e-06
+    },
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.3,
+      "2023_brier": 0.25347993585898554,
+      "2024_brier": 0.24785607330141332,
+      "2023_gain": 1.2159777693365736e-05,
+      "2024_gain": 7.281279190918255e-06
+    },
+    {
+      "count_smoothing": 200,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.3,
+      "2023_brier": 0.2534792537331774,
+      "2024_brier": 0.24785610928628973,
+      "2023_gain": 1.284190350148151e-05,
+      "2024_gain": 7.245294314506268e-06
+    },
+    {
+      "count_smoothing": 100,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.3,
+      "2023_brier": 0.2534790120846573,
+      "2024_brier": 0.24785612259038486,
+      "2023_gain": 1.3083552021619926e-05,
+      "2024_gain": 7.231990219375151e-06
+    }
+  ]
+}

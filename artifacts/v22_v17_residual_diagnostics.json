@@ -1,0 +1,390 @@
+{
+  "folds": {
+    "2023": {
+      "brier": 0.2533578938768331,
+      "residual_mean": -0.021806552473241626
+    },
+    "2024": {
+      "brier": 0.24785045715137144,
+      "residual_mean": 0.0018538299399168765
+    }
+  },
+  "features": {
+    "inning": {
+      "2023": {
+        "correlation": 0.0008413800367948567,
+        "decile_residual_spread": 0.03388760083399731
+      },
+      "2024": {
+        "correlation": -0.002561794021268516,
+        "decile_residual_spread": 0.008195635247631968
+      }
+    },
+    "outs_before": {
+      "2023": {
+        "correlation": 0.005165712960682521,
+        "decile_residual_spread": 0.005015860028184105
+      },
+      "2024": {
+        "correlation": 0.0039575199690397985,
+        "decile_residual_spread": 0.004315956581603079
+      }
+    },
+    "run_total_before": {
+      "2023": {
+        "correlation": -0.0030468583951977985,
+        "decile_residual_spread": 0.012246932628767797
+      },
+      "2024": {
+        "correlation": 0.00033548669486861856,
+        "decile_residual_spread": 0.013184626305078662
+      }
+    },
+    "score_diff_pitcher_team": {
+      "2023": {
+        "correlation": -0.0009259529349349061,
+        "decile_residual_spread": 0.013894154169986109
+      },
+      "2024": {
+        "correlation": -5.009571749804171e-05,
+        "decile_residual_spread": 0.00650298295360487
+      }
+    },
+    "num_runners_on": {
+      "2023": {
+        "correlation": -0.004074680393847203,
+        "decile_residual_spread": 0.013002103541393608
+      },
+      "2024": {
+        "correlation": 0.0028675636111468125,
+        "decile_residual_spread": 0.0037268080051473824
+      }
+    },
+    "home_win_expectancy": {
+      "2023": {
+        "correlation": -0.0032235157903056444,
+        "decile_residual_spread": 0.010696599994465688
+      },
+      "2024": {
+        "correlation": -0.001549652869798033,
+        "decile_residual_spread": 0.011090249205135225
+      }
+    },
+    "away_win_expectancy": {
+      "2023": {
+        "correlation": 0.0032226656388745357,
+        "decile_residual_spread": 0.011112696786496783
+      },
+      "2024": {
+        "correlation": 0.0015483328502892049,
+        "decile_residual_spread": 0.00993927963015917
+      }
+    },
+    "li": {
+      "2023": {
+        "correlation": -0.00048283578827330165,
+        "decile_residual_spread": 0.009625613777128898
+      },
+      "2024": {
+        "correlation": 0.0007068146420797144,
+        "decile_residual_spread": 0.010828639547786852
+      }
+    },
+    "asof_pitcher_n": {
+      "2023": {
+        "correlation": 0.03526874107168626,
+        "decile_residual_spread": 0.08118746098146574
+      },
+      "2024": {
+        "correlation": 0.0011827923451029811,
+        "decile_residual_spread": 0.013258325457401385
+      }
+    },
+    "asof_pitcher_success_rate": {
+      "2023": {
+        "correlation": -0.014762021167223815,
+        "decile_residual_spread": 0.06352947495080083
+      },
+      "2024": {
+        "correlation": 0.005835051675804082,
+        "decile_residual_spread": 0.016398731879781105
+      }
+    },
+    "asof_pitcher_reverse_rate": {
+      "2023": {
+        "correlation": 0.011788066985910723,
+        "decile_residual_spread": 0.0494515877221603
+      },
+      "2024": {
+        "correlation": -0.0034186697575006725,
+        "decile_residual_spread": 0.015575895111556545
+      }
+    },
+    "asof_pitcher_middle_rate": {
+      "2023": {
+        "correlation": 0.03369521236743403,
+        "decile_residual_spread": 0.08934057911485035
+      },
+      "2024": {
+        "correlation": -0.009245391995072141,
+        "decile_residual_spread": 0.03024032562220584
+      }
+    },
+    "asof_pitcher_ball_rate": {
+      "2023": {
+        "correlation": -0.052324840458838055,
+        "decile_residual_spread": 0.09615560263119094
+      },
+      "2024": {
+        "correlation": -0.0015700996631881252,
+        "decile_residual_spread": 0.01529659243023297
+      }
+    },
+    "asof_pitcher_strike_rate": {
+      "2023": {
+        "correlation": 0.05009988537436069,
+        "decile_residual_spread": 0.09818057699285512
+      },
+      "2024": {
+        "correlation": -0.0008507404789275138,
+        "decile_residual_spread": 0.015298374053101062
+      }
+    },
+    "asof_pitcher_prev1_game_success_rate": {
+      "2023": {
+        "correlation": 0.015492885916996355,
+        "decile_residual_spread": 0.044516369210444884
+      },
+      "2024": {
+        "correlation": 0.0026783335476866584,
+        "decile_residual_spread": 0.016756086183970544
+      }
+    },
+    "asof_pitcher_prev3_game_success_rate": {
+      "2023": {
+        "correlation": 0.013484723993577813,
+        "decile_residual_spread": 0.04086903013323277
+      },
+      "2024": {
+        "correlation": 0.0048870870660563896,
+        "decile_residual_spread": 0.013582902039008287
+      }
+    },
+    "asof_pitcher_prev5_game_success_rate": {
+      "2023": {
+        "correlation": 0.01190155649306915,
+        "decile_residual_spread": 0.042086544633934395
+      },
+      "2024": {
+        "correlation": 0.0076810661604089,
+        "decile_residual_spread": 0.01831911896133781
+      }
+    },
+    "asof_pitcher_prev1_game_middle_rate": {
+      "2023": {
+        "correlation": 0.0016957461316508956,
+        "decile_residual_spread": 0.014125859891045093
+      },
+      "2024": {
+        "correlation": -0.005792901532794247,
+        "decile_residual_spread": 0.012135664514559216
+      }
+    },
+    "asof_pitcher_prev3_game_middle_rate": {
+      "2023": {
+        "correlation": 0.011350694653535344,
+        "decile_residual_spread": 0.02209722519227031
+      },
+      "2024": {
+        "correlation": -0.00893323343045098,
+        "decile_residual_spread": 0.024637714131124287
+      }
+    },
+    "asof_pitcher_prev5_game_middle_rate": {
+      "2023": {
+        "correlation": 0.013592694581933774,
+        "decile_residual_spread": 0.02889591611160963
+      },
+      "2024": {
+        "correlation": -0.010182975454762957,
+        "decile_residual_spread": 0.023000565781041565
+      }
+    },
+    "asof_batter_n": {
+      "2023": {
+        "correlation": 0.04731747669487952,
+        "decile_residual_spread": 0.11933110776530233
+      },
+      "2024": {
+        "correlation": -0.004748428094374993,
+        "decile_residual_spread": 0.014987627857612668
+      }
+    },
+    "asof_batter_success_rate": {
+      "2023": {
+        "correlation": -0.04070097203654514,
+        "decile_residual_spread": 0.10141936781761662
+      },
+      "2024": {
+        "correlation": 0.0033427843201450183,
+        "decile_residual_spread": 0.009625999356050335
+      }
+    },
+    "asof_batter_middle_rate": {
+      "2023": {
+        "correlation": 0.04894307164658243,
+        "decile_residual_spread": 0.1153238701458961
+      },
+      "2024": {
+        "correlation": -0.0078607489458563,
+        "decile_residual_spread": 0.023549079695373818
+      }
+    },
+    "asof_pitcher_pitchmix_n": {
+      "2023": {
+        "correlation": 0.03526874107168626,
+        "decile_residual_spread": 0.08118746098146574
+      },
+      "2024": {
+        "correlation": 0.0011827923451029811,
+        "decile_residual_spread": 0.013258325457401385
+      }
+    },
+    "asof_pitcher_fastball_rate": {
+      "2023": {
+        "correlation": -0.023654392516835945,
+        "decile_residual_spread": 0.050417997022642345
+      },
+      "2024": {
+        "correlation": -0.0012683524166048643,
+        "decile_residual_spread": 0.014782795884998371
+      }
+    },
+    "asof_pitcher_breaking_rate": {
+      "2023": {
+        "correlation": -0.007811603313672926,
+        "decile_residual_spread": 0.0379344753170844
+      },
+      "2024": {
+        "correlation": -0.0025587037277990912,
+        "decile_residual_spread": 0.013953525799865411
+      }
+    },
+    "asof_pitcher_offspeed_rate": {
+      "2023": {
+        "correlation": 0.028173362429983077,
+        "decile_residual_spread": 0.06942843744915034
+      },
+      "2024": {
+        "correlation": 0.0038413499509414814,
+        "decile_residual_spread": 0.014674281297792757
+      }
+    }
+  },
+  "stable_ranking": [
+    {
+      "feature": "asof_pitcher_prev5_game_success_rate",
+      "corr_2023": 0.01190155649306915,
+      "corr_2024": 0.0076810661604089,
+      "min_abs_corr": 0.0076810661604089,
+      "spread_2023": 0.042086544633934395,
+      "spread_2024": 0.01831911896133781
+    },
+    {
+      "feature": "asof_pitcher_prev3_game_success_rate",
+      "corr_2023": 0.013484723993577813,
+      "corr_2024": 0.0048870870660563896,
+      "min_abs_corr": 0.0048870870660563896,
+      "spread_2023": 0.04086903013323277,
+      "spread_2024": 0.013582902039008287
+    },
+    {
+      "feature": "outs_before",
+      "corr_2023": 0.005165712960682521,
+      "corr_2024": 0.0039575199690397985,
+      "min_abs_corr": 0.0039575199690397985,
+      "spread_2023": 0.005015860028184105,
+      "spread_2024": 0.004315956581603079
+    },
+    {
+      "feature": "asof_pitcher_offspeed_rate",
+      "corr_2023": 0.028173362429983077,
+      "corr_2024": 0.0038413499509414814,
+      "min_abs_corr": 0.0038413499509414814,
+      "spread_2023": 0.06942843744915034,
+      "spread_2024": 0.014674281297792757
+    },
+    {
+      "feature": "asof_pitcher_prev1_game_success_rate",
+      "corr_2023": 0.015492885916996355,
+      "corr_2024": 0.0026783335476866584,
+      "min_abs_corr": 0.0026783335476866584,
+      "spread_2023": 0.044516369210444884,
+      "spread_2024": 0.016756086183970544
+    },
+    {
+      "feature": "asof_pitcher_breaking_rate",
+      "corr_2023": -0.007811603313672926,
+      "corr_2024": -0.0025587037277990912,
+      "min_abs_corr": 0.0025587037277990912,
+      "spread_2023": 0.0379344753170844,
+      "spread_2024": 0.013953525799865411
+    },
+    {
+      "feature": "asof_pitcher_ball_rate",
+      "corr_2023": -0.052324840458838055,
+      "corr_2024": -0.0015700996631881252,
+      "min_abs_corr": 0.0015700996631881252,
+      "spread_2023": 0.09615560263119094,
+      "spread_2024": 0.01529659243023297
+    },
+    {
+      "feature": "home_win_expectancy",
+      "corr_2023": -0.0032235157903056444,
+      "corr_2024": -0.001549652869798033,
+      "min_abs_corr": 0.001549652869798033,
+      "spread_2023": 0.010696599994465688,
+      "spread_2024": 0.011090249205135225
+    },
+    {
+      "feature": "away_win_expectancy",
+      "corr_2023": 0.0032226656388745357,
+      "corr_2024": 0.0015483328502892049,
+      "min_abs_corr": 0.0015483328502892049,
+      "spread_2023": 0.011112696786496783,
+      "spread_2024": 0.00993927963015917
+    },
+    {
+      "feature": "asof_pitcher_fastball_rate",
+      "corr_2023": -0.023654392516835945,
+      "corr_2024": -0.0012683524166048643,
+      "min_abs_corr": 0.0012683524166048643,
+      "spread_2023": 0.050417997022642345,
+      "spread_2024": 0.014782795884998371
+    },
+    {
+      "feature": "asof_pitcher_n",
+      "corr_2023": 0.03526874107168626,
+      "corr_2024": 0.0011827923451029811,
+      "min_abs_corr": 0.0011827923451029811,
+      "spread_2023": 0.08118746098146574,
+      "spread_2024": 0.013258325457401385
+    },
+    {
+      "feature": "asof_pitcher_pitchmix_n",
+      "corr_2023": 0.03526874107168626,
+      "corr_2024": 0.0011827923451029811,
+      "min_abs_corr": 0.0011827923451029811,
+      "spread_2023": 0.08118746098146574,
+      "spread_2024": 0.013258325457401385
+    },
+    {
+      "feature": "score_diff_pitcher_team",
+      "corr_2023": -0.0009259529349349061,
+      "corr_2024": -5.009571749804171e-05,
+      "min_abs_corr": 5.009571749804171e-05,
+      "spread_2023": 0.013894154169986109,
+      "spread_2024": 0.00650298295360487
+    }
+  ]
+}
