@@ -1,0 +1,125 @@
+{
+  "blend": {
+    "v17": 0.69,
+    "form": 0.12,
+    "context_v26": 0.19
+  },
+  "baseline_v25": {
+    "2023": 0.2533208415598194,
+    "2024": 0.24784544408284379
+  },
+  "candidate_count": 500,
+  "accepted_count": 149,
+  "best": {
+    "count_smoothing": 1000,
+    "pitcher_smoothing": 500,
+    "count_weight": 0.85,
+    "pitcher_weight": 0.4,
+    "2023_brier": 0.25329745243984253,
+    "2024_brier": 0.24784039183292753,
+    "2023_gain_vs_v25": 2.3389119976846562e-05,
+    "2024_gain_vs_v25": 5.052249916259743e-06
+  },
+  "top10": [
+    {
+      "count_smoothing": 1000,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.25329745243984253,
+      "2024_brier": 0.24784039183292753,
+      "2023_gain_vs_v25": 2.3389119976846562e-05,
+      "2024_gain_vs_v25": 5.052249916259743e-06
+    },
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.25329654524270734,
+      "2024_brier": 0.24784047628924277,
+      "2023_gain_vs_v25": 2.4296317112038057e-05,
+      "2024_gain_vs_v25": 4.967793601012849e-06
+    },
+    {
+      "count_smoothing": 1000,
+      "pitcher_smoothing": 1000,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.55,
+      "2023_brier": 0.2533027144577969,
+      "2024_brier": 0.24784049109010156,
+      "2023_gain_vs_v25": 1.8127102022480468e-05,
+      "2024_gain_vs_v25": 4.9529927422242714e-06
+    },
+    {
+      "count_smoothing": 1000,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.2532974883859251,
+      "2024_brier": 0.2478405183289259,
+      "2023_gain_vs_v25": 2.335317389429159e-05,
+      "2024_gain_vs_v25": 4.925753917889297e-06
+    },
+    {
+      "count_smoothing": 200,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.25329593607643264,
+      "2024_brier": 0.24784053309388615,
+      "2023_gain_vs_v25": 2.4905483386739036e-05,
+      "2024_gain_vs_v25": 4.910988957634865e-06
+    },
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.2532966626699405,
+      "2024_brier": 0.24784054417516813,
+      "2023_gain_vs_v25": 2.4178889878878618e-05,
+      "2024_gain_vs_v25": 4.8999076756595095e-06
+    },
+    {
+      "count_smoothing": 100,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.2532957206492114,
+      "2024_brier": 0.2478405531403368,
+      "2023_gain_vs_v25": 2.5120910607967506e-05,
+      "2024_gain_vs_v25": 4.8909425069965096e-06
+    },
+    {
+      "count_smoothing": 200,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.2532961070185247,
+      "2024_brier": 0.24784056334567128,
+      "2023_gain_vs_v25": 2.4734541294701984e-05,
+      "2024_gain_vs_v25": 4.88073717250237e-06
+    },
+    {
+      "count_smoothing": 100,
+      "pitcher_smoothing": 500,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.4,
+      "2023_brier": 0.2532959102135959,
+      "2024_brier": 0.24784057040596905,
+      "2023_gain_vs_v25": 2.4931346223500128e-05,
+      "2024_gain_vs_v25": 4.8736768747392745e-06
+    },
+    {
+      "count_smoothing": 500,
+      "pitcher_smoothing": 1000,
+      "count_weight": 0.85,
+      "pitcher_weight": 0.55,
+      "2023_brier": 0.2533017999440249,
+      "2024_brier": 0.24784057224343511,
+      "2023_gain_vs_v25": 1.9041615794468392e-05,
+      "2024_gain_vs_v25": 4.871839408671086e-06
+    }
+  ]
+}
