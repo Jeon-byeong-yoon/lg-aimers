@@ -1,0 +1,28 @@
+{
+  "experiment": "V37a_calibration_refresh",
+  "description": "V35-strong form + refreshed calibration residuals; context=V31",
+  "form_config": {
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 200,
+    "l2_regularization": 20.0,
+    "learning_rate": 0.05,
+    "max_iter": 240
+  },
+  "baseline_v31": {
+    "2022": 0.24339835671689145,
+    "2023": 0.25326829650157456,
+    "2024": 0.24783690211517923
+  },
+  "scores": {
+    "2022": 0.24339190109678308,
+    "2023": 0.25324116415617326,
+    "2024": 0.24783243514926118
+  },
+  "gains_vs_v31": {
+    "2022": 6.455620108369864e-06,
+    "2023": 2.7132345401303937e-05,
+    "2024": 4.4669659180485155e-06
+  },
+  "all_seasons_improved": true,
+  "submit_ready_2024_gain_gt_5e6": false
+}
