@@ -1,0 +1,212 @@
+{
+  "experiment": "V40_form_iter_l2_grid",
+  "description": "form: iter extension (550-700) + l2 tuning at gentle LR; context=V31",
+  "baseline_v38": {
+    "2022": 0.243390002346232,
+    "2023": 0.25324438180845804,
+    "2024": 0.24783152211261955
+  },
+  "accepted_count": 1,
+  "submit_ready_count": 0,
+  "best_accepted": {
+    "variant": "l2_30_g600",
+    "config": {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 30.0,
+      "learning_rate": 0.03,
+      "max_iter": 600
+    },
+    "scores": {
+      "2022": 0.24338917022638498,
+      "2023": 0.2532351585305349,
+      "2024": 0.24783149130555202
+    },
+    "gains_vs_v38": {
+      "2022": 8.321198470273572e-07,
+      "2023": 9.223277923131601e-06,
+      "2024": 3.0807067535887356e-08
+    },
+    "all_improved": true,
+    "submit_ready": false
+  },
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "g600",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 600
+      },
+      "scores": {
+        "2022": 0.2433900192923938,
+        "2023": 0.253246482799721,
+        "2024": 0.247831156170897
+      },
+      "gains_vs_v38": {
+        "2022": -1.694616177938535e-08,
+        "2023": -2.1009912629654792e-06,
+        "2024": 3.659417225632122e-07
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "g700",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 700
+      },
+      "scores": {
+        "2022": 0.2433900192923938,
+        "2023": 0.253246482799721,
+        "2024": 0.24783139895481465
+      },
+      "gains_vs_v38": {
+        "2022": -1.694616177938535e-08,
+        "2023": -2.1009912629654792e-06,
+        "2024": 1.2315780489879913e-07
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "l2_30_g600",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 30.0,
+        "learning_rate": 0.03,
+        "max_iter": 600
+      },
+      "scores": {
+        "2022": 0.24338917022638498,
+        "2023": 0.2532351585305349,
+        "2024": 0.24783149130555202
+      },
+      "gains_vs_v38": {
+        "2022": 8.321198470273572e-07,
+        "2023": 9.223277923131601e-06,
+        "2024": 3.0807067535887356e-08
+      },
+      "all_improved": true,
+      "submit_ready": false
+    },
+    {
+      "variant": "g500_ref",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.243390002346232,
+        "2023": 0.25324438180845804,
+        "2024": 0.24783152211261955
+      },
+      "gains_vs_v38": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "l2_30_g500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 30.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.24338925881837248,
+        "2023": 0.2532369825430169,
+        "2024": 0.24783159868701435
+      },
+      "gains_vs_v38": {
+        "2022": 7.435278595313566e-07,
+        "2023": 7.399265441132563e-06,
+        "2024": -7.657439479724637e-08
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "g550",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 550
+      },
+      "scores": {
+        "2022": 0.2433899607852577,
+        "2023": 0.253246788134665,
+        "2024": 0.24783248676700667
+      },
+      "gains_vs_v38": {
+        "2022": 4.156097430096928e-08,
+        "2023": -2.406326206960685e-06,
+        "2024": -9.64654387120012e-07
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "l2_25_g500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 25.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.24339097601456317,
+        "2023": 0.25324604863729666,
+        "2024": 0.24783270644102418
+      },
+      "gains_vs_v38": {
+        "2022": -9.736683311556416e-07,
+        "2023": -1.6668288386201269e-06,
+        "2024": -1.1843284046242353e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "l2_15_g500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 15.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.2433911483705054,
+        "2023": 0.25325172837015253,
+        "2024": 0.24783500228365188
+      },
+      "gains_vs_v38": {
+        "2022": -1.1460242733962733e-06,
+        "2023": -7.346561694487885e-06,
+        "2024": -3.4801710323273394e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

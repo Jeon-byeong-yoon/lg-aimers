@@ -1,0 +1,94 @@
+{
+  "baseline_v31": {
+    "2023": 0.25326829650157456,
+    "2024": 0.24783690211517923
+  },
+  "candidate_count": 5,
+  "accepted_count": 4,
+  "best": {
+    "variant": "l2_30",
+    "config": {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 30.0,
+      "learning_rate": 0.05,
+      "max_iter": 240
+    },
+    "2023_brier": 0.25324069143110567,
+    "2024_brier": 0.2478337165829718,
+    "2023_gain_vs_v31": 2.76050704688946e-05,
+    "2024_gain_vs_v31": 3.1855322074336723e-06
+  },
+  "all": [
+    {
+      "variant": "l2_30",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 30.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "2023_brier": 0.25324069143110567,
+      "2024_brier": 0.2478337165829718,
+      "2023_gain_vs_v31": 2.76050704688946e-05,
+      "2024_gain_vs_v31": 3.1855322074336723e-06
+    },
+    {
+      "variant": "min250",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 250,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "2023_brier": 0.25324432751374654,
+      "2024_brier": 0.2478338886846251,
+      "2023_gain_vs_v31": 2.3968987828026922e-05,
+      "2024_gain_vs_v31": 3.013430554116292e-06
+    },
+    {
+      "variant": "leaf11",
+      "config": {
+        "max_leaf_nodes": 11,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "2023_brier": 0.25323341727289456,
+      "2024_brier": 0.24783435712397744,
+      "2023_gain_vs_v31": 3.4879228680007035e-05,
+      "2024_gain_vs_v31": 2.544991201780533e-06
+    },
+    {
+      "variant": "leaf19",
+      "config": {
+        "max_leaf_nodes": 19,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "2023_brier": 0.2532710482910546,
+      "2024_brier": 0.24783497449830888,
+      "2023_gain_vs_v31": -2.7517894800599407e-06,
+      "2024_gain_vs_v31": 1.927616870345261e-06
+    },
+    {
+      "variant": "min150",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 150,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "2023_brier": 0.2532357641706105,
+      "2024_brier": 0.24783512932063514,
+      "2023_gain_vs_v31": 3.2532330964063494e-05,
+      "2024_gain_vs_v31": 1.7727945440804138e-06
+    }
+  ]
+}

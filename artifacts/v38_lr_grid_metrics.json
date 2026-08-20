@@ -1,0 +1,194 @@
+{
+  "experiment": "V38_lr_grid",
+  "description": "form HGB: lower LR grid (0.02-0.04) + V31 context; unexplored axis",
+  "base_config": {
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 200,
+    "l2_regularization": 20.0
+  },
+  "baseline_v31": {
+    "2022": 0.24339835671689145,
+    "2023": 0.25326829650157456,
+    "2024": 0.24783690211517923
+  },
+  "accepted_count": 6,
+  "submit_ready_count": 1,
+  "best_accepted": {
+    "variant": "gentle_500",
+    "config": {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 20.0,
+      "learning_rate": 0.03,
+      "max_iter": 500
+    },
+    "scores": {
+      "2022": 0.243390002346232,
+      "2023": 0.25324438180845804,
+      "2024": 0.24783152211261955
+    },
+    "gains_vs_v31": {
+      "2022": 8.354370659435784e-06,
+      "2023": 2.391469311652239e-05,
+      "2024": 5.380002559673969e-06
+    },
+    "all_seasons_improved": true,
+    "submit_ready": true
+  },
+  "best_submit_ready": {
+    "variant": "gentle_500",
+    "config": {
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 20.0,
+      "learning_rate": 0.03,
+      "max_iter": 500
+    },
+    "scores": {
+      "2022": 0.243390002346232,
+      "2023": 0.25324438180845804,
+      "2024": 0.24783152211261955
+    },
+    "gains_vs_v31": {
+      "2022": 8.354370659435784e-06,
+      "2023": 2.391469311652239e-05,
+      "2024": 5.380002559673969e-06
+    },
+    "all_seasons_improved": true,
+    "submit_ready": true
+  },
+  "all_results": [
+    {
+      "variant": "gentle_500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022": 0.243390002346232,
+        "2023": 0.25324438180845804,
+        "2024": 0.24783152211261955
+      },
+      "gains_vs_v31": {
+        "2022": 8.354370659435784e-06,
+        "2023": 2.391469311652239e-05,
+        "2024": 5.380002559673969e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": true
+    },
+    {
+      "variant": "v35_strong",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.05,
+        "max_iter": 240
+      },
+      "scores": {
+        "2022": 0.24339190109678308,
+        "2023": 0.25324116415617326,
+        "2024": 0.24783243514926118
+      },
+      "gains_vs_v31": {
+        "2022": 6.455620108369864e-06,
+        "2023": 2.7132345401303937e-05,
+        "2024": 4.4669659180485155e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "variant": "gentle_400",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 400
+      },
+      "scores": {
+        "2022": 0.24338922729224483,
+        "2023": 0.2532438417109365,
+        "2024": 0.24783252456927965
+      },
+      "gains_vs_v31": {
+        "2022": 9.129424646620032e-06,
+        "2023": 2.4454790638062107e-05,
+        "2024": 4.377545899575397e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "variant": "gentle_300",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.04,
+        "max_iter": 300
+      },
+      "scores": {
+        "2022": 0.24338551623992208,
+        "2023": 0.2532468987980798,
+        "2024": 0.24783261771033885
+      },
+      "gains_vs_v31": {
+        "2022": 1.2840476969366854e-05,
+        "2023": 2.1397703494741016e-05,
+        "2024": 4.284404840376732e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "variant": "slow_800",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.02,
+        "max_iter": 800
+      },
+      "scores": {
+        "2022": 0.24338927759319867,
+        "2023": 0.2532417570294406,
+        "2024": 0.24783342602051434
+      },
+      "gains_vs_v31": {
+        "2022": 9.079123692773416e-06,
+        "2023": 2.653947213399066e-05,
+        "2024": 3.4760946648892954e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "variant": "slow_600",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.02,
+        "max_iter": 600
+      },
+      "scores": {
+        "2022": 0.24338873918245468,
+        "2023": 0.25324223191315404,
+        "2024": 0.24783487635149634
+      },
+      "gains_vs_v31": {
+        "2022": 9.617534436762165e-06,
+        "2023": 2.6064588420526835e-05,
+        "2024": 2.0257636828835413e-06
+      },
+      "all_seasons_improved": true,
+      "submit_ready": false
+    }
+  ]
+}
