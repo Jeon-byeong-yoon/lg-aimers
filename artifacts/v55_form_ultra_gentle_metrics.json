@@ -1,0 +1,131 @@
+{
+  "experiment": "V55_form_ultra_gentle_learning_rates",
+  "description": "Evaluate ultra-gentle learning rates (0.012~0.025) on Form HGB with V41 32% weight",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 5,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "ultra_gentle_600",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.025,
+        "max_iter": 600,
+        "random_state": 42
+      },
+      "scores": {
+        "2022": 0.24339674158808308,
+        "2023": 0.2531587794874564,
+        "2024": 0.24782687878757462
+      },
+      "gains_vs_v41": {
+        "2022": -7.947222672166632e-06,
+        "2023": -4.882451963339474e-06,
+        "2024": -1.3382681744444902e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ultra_gentle_750",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.02,
+        "max_iter": 750,
+        "random_state": 42
+      },
+      "scores": {
+        "2022": 0.24338775518269923,
+        "2023": 0.25314916115132513,
+        "2024": 0.24782955432582096
+      },
+      "gains_vs_v41": {
+        "2022": 1.0391827116873475e-06,
+        "2023": 4.7358841679390196e-06,
+        "2024": -4.013806420788413e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ultra_gentle_1000",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.015,
+        "max_iter": 1000,
+        "random_state": 42
+      },
+      "scores": {
+        "2022": 0.24339277400398612,
+        "2023": 0.2531622705244642,
+        "2024": 0.24782936176111492
+      },
+      "gains_vs_v41": {
+        "2022": -3.979638575207778e-06,
+        "2023": -8.373488971147314e-06,
+        "2024": -3.821241714746515e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "ultra_gentle_1200",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.012,
+        "max_iter": 1200,
+        "random_state": 42
+      },
+      "scores": {
+        "2022": 0.24338937851348907,
+        "2023": 0.2531662857185754,
+        "2024": 0.24782919182664856
+      },
+      "gains_vs_v41": {
+        "2022": -5.841480781587638e-07,
+        "2023": -1.2388683082342755e-05,
+        "2024": -3.6513072483868036e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "gentle_500_l2_25",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 25.0,
+        "learning_rate": 0.03,
+        "max_iter": 500,
+        "random_state": 42
+      },
+      "scores": {
+        "2022": 0.2433911720050771,
+        "2023": 0.2531577847241893,
+        "2024": 0.24782768430193905
+      },
+      "gains_vs_v41": {
+        "2022": -2.377639666178988e-06,
+        "2023": -3.887688696246894e-06,
+        "2024": -2.143782538877037e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}
