@@ -1,0 +1,116 @@
+{
+  "experiment": "V59_inner_tree_weights_reoptimization",
+  "description": "Re-optimize 4-simplex tree weights under V41 3-way blend (55% V17, 32% Form, 13% Context)",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 2774,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "top_5_results": [
+    {
+      "weights": {
+        "extra_trees": 0.41,
+        "trackman_hgb": 0.26,
+        "te_trackman_hgb": 0.05,
+        "hierarchical_hgb": 0.28
+      },
+      "scores": {
+        "2022": 0.24337711196484305,
+        "2023": 0.25320057308963856,
+        "2024": 0.2478231340833897
+      },
+      "gains_vs_v41": {
+        "2022": 1.1682400567869511e-05,
+        "2023": -4.667605414548914e-05,
+        "2024": 2.406436010460311e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "weights": {
+        "extra_trees": 0.41,
+        "trackman_hgb": 0.22999999999999998,
+        "te_trackman_hgb": 0.05,
+        "hierarchical_hgb": 0.31000000000000005
+      },
+      "scores": {
+        "2022": 0.24337830692082457,
+        "2023": 0.25319911453624866,
+        "2024": 0.24782314217163917
+      },
+      "gains_vs_v41": {
+        "2022": 1.048744458634343e-05,
+        "2023": -4.5217500755589946e-05,
+        "2024": 2.3983477610012294e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "weights": {
+        "extra_trees": 0.44,
+        "trackman_hgb": 0.22999999999999998,
+        "te_trackman_hgb": 0.05,
+        "hierarchical_hgb": 0.28
+      },
+      "scores": {
+        "2022": 0.2433756833107819,
+        "2023": 0.25321160328228254,
+        "2024": 0.24782320537841088
+      },
+      "gains_vs_v41": {
+        "2022": 1.3111054629005858e-05,
+        "2023": -5.770624678946845e-05,
+        "2024": 2.3351409892957697e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "weights": {
+        "extra_trees": 0.41,
+        "trackman_hgb": 0.29,
+        "te_trackman_hgb": 0.05,
+        "hierarchical_hgb": 0.25
+      },
+      "scores": {
+        "2022": 0.2433760237279381,
+        "2023": 0.2532021194273098,
+        "2024": 0.24782321549622796
+      },
+      "gains_vs_v41": {
+        "2022": 1.2770637472819812e-05,
+        "2023": -4.822239181673238e-05,
+        "2024": 2.3250231722116155e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "weights": {
+        "extra_trees": 0.44,
+        "trackman_hgb": 0.26,
+        "te_trackman_hgb": 0.05,
+        "hierarchical_hgb": 0.25
+      },
+      "scores": {
+        "2022": 0.24337456802128601,
+        "2023": 0.2532131187765567,
+        "2024": 0.24782322815966978
+      },
+      "gains_vs_v41": {
+        "2022": 1.4226344124901313e-05,
+        "2023": -5.922174106365308e-05,
+        "2024": 2.31235973038868e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}
