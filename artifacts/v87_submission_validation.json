@@ -1,0 +1,54 @@
+{
+  "experiment": "V87_final_submission",
+  "candidate": "late_blend_3_seed_mean",
+  "signal_weights": {
+    "rates": 0.2,
+    "hierarchy": 0.2,
+    "middle": 0.6
+  },
+  "seeds": [42, 1042, 2042],
+  "validation_gains_vs_v41": {
+    "2022": 8.776127432386094e-06,
+    "2023": 7.080601245212925e-06,
+    "2024": 3.732614408780144e-06
+  },
+  "time_block_wins": 10,
+  "time_block_count": 12,
+  "zip_path": "submissions/by_submitter/전병윤_RF_기준선/submit_v87.zip",
+  "upload_path": "submissions/by_submitter/전병윤_RF_기준선/submit.zip",
+  "zip_size_mib": 36.4,
+  "zip_sha256": "343e06240df7ee7ffd206cf27873613f22110b340f33e24807fae279892c85e4",
+  "zip_integrity_passed": true,
+  "isolated_5_row_smoke": {
+    "passed": true,
+    "elapsed_seconds": 1.41,
+    "prediction_mean": 0.460579198335804,
+    "prediction_min": 0.4169999873729101,
+    "prediction_max": 0.5063712904429646
+  },
+  "synthetic_full_scale_benchmark": {
+    "rows": 245789,
+    "passed": true,
+    "elapsed_seconds": 25.94,
+    "note": "The five official sample rows were repeated with unique row_id values for runtime and memory-path validation only."
+  },
+  "format_checks": {
+    "row_count_matches": true,
+    "row_id_order_matches": true,
+    "row_id_unique": true,
+    "finite_probabilities": true,
+    "probabilities_in_unit_interval": true,
+    "forbidden_archive_entries_absent": true
+  },
+  "upload_file_byte_identical_to_versioned_zip": true,
+  "compatibility_fix": {
+    "original_server_error": "ValueError: <class 'numpy.random._pcg64.PCG64'> is not a known BitGenerator module.",
+    "root_cause": "The local NumPy 2.4.6 sklearn models serialized fit-only Generator/PCG64 state that the server NumPy 1.26.4 could not deserialize.",
+    "fix": "Set HistGradientBoostingClassifier._feature_subsample_rng to None after fitting. This state is not used by predict or predict_proba.",
+    "sanitized_model_count": 9,
+    "post_fix_isolated_smoke_passed": true,
+    "post_fix_predictions_unchanged": true,
+    "failed_zip_sha256": "78d960814501a86ffb8833782fbce71a085ea70a071c411c6f49e35b656a7bc0"
+  },
+  "ready_for_manual_upload": true
+}
