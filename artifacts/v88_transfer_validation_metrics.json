@@ -1,0 +1,634 @@
+{
+  "experiment": "V88_transfer_focused_validation_baseline",
+  "baseline": "V41",
+  "compliance": {
+    "official_train_data_only": true,
+    "test_csv_read": false,
+    "test_row_aggregation_used": false,
+    "current_pitch_post_event_information_used": false,
+    "validation_segments_used_as_inference_features": false
+  },
+  "selection_policy": {
+    "development_windows": "2022-2023 and 2024 March-August",
+    "final_confirmation_window": "2024 September-October; inspect once per promoted candidate",
+    "primary_requirements": [
+      "positive 2024 full-season gain",
+      "positive 2024 July-October gain",
+      "no material 2022 or 2023 regression",
+      "at least 75% monthly-block wins",
+      "target 2024 gain >= 2e-5; preferred >= 5e-5"
+    ],
+    "important_note": "The final confirmation window is reported for the baseline now, but future candidate tuning must not use it."
+  },
+  "season_summary": [
+    {
+      "season": "2022",
+      "n": 247472,
+      "pitchers": 390,
+      "brier": 0.24338879436541092,
+      "prediction_mean": 0.5299056081173753,
+      "target_mean": 0.5289204435249241,
+      "calibration_gap": 0.0009851645924512376
+    },
+    {
+      "season": "2023",
+      "n": 245525,
+      "pitchers": 382,
+      "brier": 0.25315389703549307,
+      "prediction_mean": 0.5218414721266086,
+      "target_mean": 0.49995723449750534,
+      "calibration_gap": 0.021884237629103243
+    },
+    {
+      "season": "2024",
+      "n": 253507,
+      "pitchers": 391,
+      "brier": 0.24782554051940006,
+      "prediction_mean": 0.4846984755714821,
+      "target_mean": 0.4861049201797189,
+      "calibration_gap": -0.001406444608236801
+    }
+  ],
+  "half_summary": [
+    {
+      "season": "2022",
+      "half": "first_mar_jun",
+      "n": 126211,
+      "pitchers": 315,
+      "brier": 0.24220520947607752,
+      "prediction_mean": 0.5327241084810315,
+      "target_mean": 0.5406501810460261,
+      "calibration_gap": -0.007926072564994668
+    },
+    {
+      "season": "2022",
+      "half": "second_jul_oct",
+      "n": 121261,
+      "pitchers": 345,
+      "brier": 0.24462069441957224,
+      "prediction_mean": 0.5269720536406894,
+      "target_mean": 0.5167118859319979,
+      "calibration_gap": 0.010260167708691537
+    },
+    {
+      "season": "2023",
+      "half": "first_mar_jun",
+      "n": 123310,
+      "pitchers": 339,
+      "brier": 0.25389657673007565,
+      "prediction_mean": 0.5267537404101573,
+      "target_mean": 0.4954667099180926,
+      "calibration_gap": 0.031287030492064716
+    },
+    {
+      "season": "2023",
+      "half": "second_jul_oct",
+      "n": 122215,
+      "pitchers": 323,
+      "brier": 0.2524045632128119,
+      "prediction_mean": 0.5168851917842251,
+      "target_mean": 0.5044879924722825,
+      "calibration_gap": 0.012397199311942608
+    },
+    {
+      "season": "2024",
+      "half": "first_mar_jun",
+      "n": 143541,
+      "pitchers": 331,
+      "brier": 0.24771405376215444,
+      "prediction_mean": 0.486214980046525,
+      "target_mean": 0.49031983893103714,
+      "calibration_gap": -0.004104858884512119
+    },
+    {
+      "season": "2024",
+      "half": "second_jul_oct",
+      "n": 109966,
+      "pitchers": 330,
+      "brier": 0.24797106659674942,
+      "prediction_mean": 0.4827189494556631,
+      "target_mean": 0.48060309550224617,
+      "calibration_gap": 0.0021158539534169574
+    }
+  ],
+  "transfer_windows": [
+    {
+      "validation_role": "development",
+      "n": 711528,
+      "pitchers": 584,
+      "brier": 0.24809155396118002,
+      "prediction_mean": 0.5134113741141367,
+      "target_mean": 0.5062204157812482,
+      "calibration_gap": 0.00719095833288852
+    },
+    {
+      "validation_role": "final_confirmation_2024_sep_oct",
+      "n": 34976,
+      "pitchers": 257,
+      "brier": 0.2484259029733955,
+      "prediction_mean": 0.48118184875128406,
+      "target_mean": 0.47706999085086915,
+      "calibration_gap": 0.004111857900414906
+    }
+  ],
+  "monthly_blocks": [
+    {
+      "season": "2022",
+      "game_month": "4",
+      "n": 41395,
+      "pitchers": 241,
+      "brier": 0.2413000211621401,
+      "prediction_mean": 0.5336921315928824,
+      "target_mean": 0.5335426983935257,
+      "calibration_gap": 0.00014943319935667443
+    },
+    {
+      "season": "2022",
+      "game_month": "5",
+      "n": 44865,
+      "pitchers": 253,
+      "brier": 0.2417739247040987,
+      "prediction_mean": 0.534334721287489,
+      "target_mean": 0.55056279950964,
+      "calibration_gap": -0.016228078222151
+    },
+    {
+      "season": "2022",
+      "game_month": "6",
+      "n": 39951,
+      "pitchers": 238,
+      "brier": 0.24362744825734128,
+      "prediction_mean": 0.5299123776037873,
+      "target_mean": 0.5368826812845736,
+      "calibration_gap": -0.006970303680786327
+    },
+    {
+      "season": "2022",
+      "game_month": "7",
+      "n": 33468,
+      "pitchers": 234,
+      "brier": 0.24439269787858428,
+      "prediction_mean": 0.5304280867477043,
+      "target_mean": 0.5188538305246803,
+      "calibration_gap": 0.011574256223023993
+    },
+    {
+      "season": "2022",
+      "game_month": "8",
+      "n": 36914,
+      "pitchers": 229,
+      "brier": 0.24586863423664257,
+      "prediction_mean": 0.5224250669437428,
+      "target_mean": 0.5183670152245761,
+      "calibration_gap": 0.004058051719166733
+    },
+    {
+      "season": "2022",
+      "game_month": "9",
+      "n": 41603,
+      "pitchers": 268,
+      "brier": 0.24375470711053124,
+      "prediction_mean": 0.5310510429374252,
+      "target_mean": 0.516621397495373,
+      "calibration_gap": 0.014429645442052275
+    },
+    {
+      "season": "2022",
+      "game_month": "10",
+      "n": 9276,
+      "pitchers": 175,
+      "brier": 0.24436107905136242,
+      "prediction_mean": 0.5143030971069915,
+      "target_mean": 0.5028029322984044,
+      "calibration_gap": 0.011500164808587066
+    },
+    {
+      "season": "2023",
+      "game_month": "4",
+      "n": 41288,
+      "pitchers": 239,
+      "brier": 0.25309146579007924,
+      "prediction_mean": 0.5264441991854392,
+      "target_mean": 0.4866547180778919,
+      "calibration_gap": 0.039789481107547264
+    },
+    {
+      "season": "2023",
+      "game_month": "5",
+      "n": 39576,
+      "pitchers": 261,
+      "brier": 0.25540354292088535,
+      "prediction_mean": 0.5326188265129498,
+      "target_mean": 0.49676571659591673,
+      "calibration_gap": 0.035853109917033055
+    },
+    {
+      "season": "2023",
+      "game_month": "6",
+      "n": 42446,
+      "pitchers": 257,
+      "brier": 0.2532746506716271,
+      "prediction_mean": 0.5215863204054937,
+      "target_mean": 0.5028271215191066,
+      "calibration_gap": 0.018759198886387107
+    },
+    {
+      "season": "2023",
+      "game_month": "7",
+      "n": 28611,
+      "pitchers": 222,
+      "brier": 0.25262259116522917,
+      "prediction_mean": 0.5209425550178458,
+      "target_mean": 0.5042116668414246,
+      "calibration_gap": 0.01673088817642121
+    },
+    {
+      "season": "2023",
+      "game_month": "8",
+      "n": 38825,
+      "pitchers": 248,
+      "brier": 0.2530583639196755,
+      "prediction_mean": 0.5223029901082562,
+      "target_mean": 0.5046490663232454,
+      "calibration_gap": 0.01765392378501085
+    },
+    {
+      "season": "2023",
+      "game_month": "9",
+      "n": 37141,
+      "pitchers": 239,
+      "brier": 0.2532867540705413,
+      "prediction_mean": 0.5186958521981266,
+      "target_mean": 0.5019250962548127,
+      "calibration_gap": 0.016770755943313898
+    },
+    {
+      "season": "2023",
+      "game_month": "10",
+      "n": 17638,
+      "pitchers": 175,
+      "brier": 0.2487540778495328,
+      "prediction_mean": 0.4945651454161366,
+      "target_mean": 0.5099784556072117,
+      "calibration_gap": -0.015413310191075058
+    },
+    {
+      "season": "2024",
+      "game_month": "3",
+      "n": 12361,
+      "pitchers": 163,
+      "brier": 0.2474401883928011,
+      "prediction_mean": 0.49311958009493007,
+      "target_mean": 0.5026292371167381,
+      "calibration_gap": -0.00950965702180806
+    },
+    {
+      "season": "2024",
+      "game_month": "4",
+      "n": 42588,
+      "pitchers": 241,
+      "brier": 0.24836768576258622,
+      "prediction_mean": 0.48669170992585403,
+      "target_mean": 0.49213393444162673,
+      "calibration_gap": -0.005442224515772698
+    },
+    {
+      "season": "2024",
+      "game_month": "5",
+      "n": 44078,
+      "pitchers": 255,
+      "brier": 0.24741928085761694,
+      "prediction_mean": 0.48644209643775815,
+      "target_mean": 0.4878851127546622,
+      "calibration_gap": -0.0014430163169040222
+    },
+    {
+      "season": "2024",
+      "game_month": "6",
+      "n": 44514,
+      "pitchers": 261,
+      "brier": 0.24745663745003668,
+      "prediction_mean": 0.48361666109985735,
+      "target_mean": 0.48757694208563596,
+      "calibration_gap": -0.003960280985778608
+    },
+    {
+      "season": "2024",
+      "game_month": "7",
+      "n": 33070,
+      "pitchers": 227,
+      "brier": 0.24729556676538886,
+      "prediction_mean": 0.4837517866567762,
+      "target_mean": 0.47989114000604777,
+      "calibration_gap": 0.0038606466507284387
+    },
+    {
+      "season": "2024",
+      "game_month": "8",
+      "n": 41920,
+      "pitchers": 252,
+      "brier": 0.2481244640756025,
+      "prediction_mean": 0.48318664287158763,
+      "target_mean": 0.4841125954198473,
+      "calibration_gap": -0.0009259525482596676
+    },
+    {
+      "season": "2024",
+      "game_month": "9",
+      "n": 33305,
+      "pitchers": 250,
+      "brier": 0.2483259582297092,
+      "prediction_mean": 0.4813215320528135,
+      "target_mean": 0.47566431466746734,
+      "calibration_gap": 0.0056572173853461916
+    },
+    {
+      "season": "2024",
+      "game_month": "10",
+      "n": 1671,
+      "pitchers": 39,
+      "brier": 0.2504179195433958,
+      "prediction_mean": 0.4783977958743013,
+      "target_mean": 0.5050867743865949,
+      "calibration_gap": -0.02668897851229357
+    }
+  ],
+  "history_segments": [
+    {
+      "season": "2022",
+      "history_bin": "cold_0_49",
+      "n": 4003,
+      "pitchers": 104,
+      "brier": 0.23684887674568814,
+      "prediction_mean": 0.5813866253354077,
+      "target_mean": 0.562827879090682,
+      "calibration_gap": 0.018558746244725755
+    },
+    {
+      "season": "2022",
+      "history_bin": "high_1000_plus",
+      "n": 187335,
+      "pitchers": 216,
+      "brier": 0.24521562486255336,
+      "prediction_mean": 0.5211345282747144,
+      "target_mean": 0.5201270451330504,
+      "calibration_gap": 0.0010074831416639896
+    },
+    {
+      "season": "2022",
+      "history_bin": "low_50_199",
+      "n": 10494,
+      "pitchers": 108,
+      "brier": 0.2339147433191164,
+      "prediction_mean": 0.5685021748492051,
+      "target_mean": 0.5642271774347246,
+      "calibration_gap": 0.0042749974144804526
+    },
+    {
+      "season": "2022",
+      "history_bin": "mid_200_999",
+      "n": 45640,
+      "pitchers": 149,
+      "brier": 0.23864231519646661,
+      "prediction_mean": 0.5525177763714789,
+      "target_mean": 0.5539219982471516,
+      "calibration_gap": -0.0014042218756726843
+    },
+    {
+      "season": "2023",
+      "history_bin": "cold_0_49",
+      "n": 3129,
+      "pitchers": 77,
+      "brier": 0.27135425930195145,
+      "prediction_mean": 0.5880640834887091,
+      "target_mean": 0.47043783956535634,
+      "calibration_gap": 0.11762624392335275
+    },
+    {
+      "season": "2023",
+      "history_bin": "high_1000_plus",
+      "n": 200423,
+      "pitchers": 229,
+      "brier": 0.25163738078502695,
+      "prediction_mean": 0.5186280089041839,
+      "target_mean": 0.5045379023365582,
+      "calibration_gap": 0.01409010656762577
+    },
+    {
+      "season": "2023",
+      "history_bin": "low_50_199",
+      "n": 8285,
+      "pitchers": 101,
+      "brier": 0.26276681788257866,
+      "prediction_mean": 0.5433602710263291,
+      "target_mean": 0.4648159324079662,
+      "calibration_gap": 0.07854433861836291
+    },
+    {
+      "season": "2023",
+      "history_bin": "mid_200_999",
+      "n": 33688,
+      "pitchers": 132,
+      "brier": 0.25812162304230024,
+      "prediction_mean": 0.5295165534490921,
+      "target_mean": 0.4840892899548801,
+      "calibration_gap": 0.045427263494212
+    },
+    {
+      "season": "2024",
+      "history_bin": "cold_0_49",
+      "n": 3980,
+      "pitchers": 98,
+      "brier": 0.2460025396882533,
+      "prediction_mean": 0.46701534509851683,
+      "target_mean": 0.45603015075376885,
+      "calibration_gap": 0.010985194344747984
+    },
+    {
+      "season": "2024",
+      "history_bin": "high_1000_plus",
+      "n": 194823,
+      "pitchers": 234,
+      "brier": 0.24796394962294746,
+      "prediction_mean": 0.48892330660718564,
+      "target_mean": 0.49117404002607495,
+      "calibration_gap": -0.002250733418889317
+    },
+    {
+      "season": "2024",
+      "history_bin": "low_50_199",
+      "n": 10572,
+      "pitchers": 110,
+      "brier": 0.24707564380069505,
+      "prediction_mean": 0.4659054208131151,
+      "target_mean": 0.46490730230798333,
+      "calibration_gap": 0.000998118505131762
+    },
+    {
+      "season": "2024",
+      "history_bin": "mid_200_999",
+      "n": 44132,
+      "pitchers": 139,
+      "brier": 0.2475585726647302,
+      "prediction_mean": 0.47214442810748763,
+      "target_mean": 0.47151726638267016,
+      "calibration_gap": 0.000627161724817471
+    }
+  ],
+  "pitchmix_history_segments": [
+    {
+      "season": "2022",
+      "pitchmix_history_bin": "cold_0_49",
+      "n": 4003,
+      "pitchers": 104,
+      "brier": 0.23684887674568814,
+      "prediction_mean": 0.5813866253354077,
+      "target_mean": 0.562827879090682,
+      "calibration_gap": 0.018558746244725755
+    },
+    {
+      "season": "2022",
+      "pitchmix_history_bin": "high_1000_plus",
+      "n": 187335,
+      "pitchers": 216,
+      "brier": 0.24521562486255336,
+      "prediction_mean": 0.5211345282747144,
+      "target_mean": 0.5201270451330504,
+      "calibration_gap": 0.0010074831416639896
+    },
+    {
+      "season": "2022",
+      "pitchmix_history_bin": "low_50_199",
+      "n": 10494,
+      "pitchers": 108,
+      "brier": 0.2339147433191164,
+      "prediction_mean": 0.5685021748492051,
+      "target_mean": 0.5642271774347246,
+      "calibration_gap": 0.0042749974144804526
+    },
+    {
+      "season": "2022",
+      "pitchmix_history_bin": "mid_200_999",
+      "n": 45640,
+      "pitchers": 149,
+      "brier": 0.23864231519646661,
+      "prediction_mean": 0.5525177763714789,
+      "target_mean": 0.5539219982471516,
+      "calibration_gap": -0.0014042218756726843
+    },
+    {
+      "season": "2023",
+      "pitchmix_history_bin": "cold_0_49",
+      "n": 3129,
+      "pitchers": 77,
+      "brier": 0.27135425930195145,
+      "prediction_mean": 0.5880640834887091,
+      "target_mean": 0.47043783956535634,
+      "calibration_gap": 0.11762624392335275
+    },
+    {
+      "season": "2023",
+      "pitchmix_history_bin": "high_1000_plus",
+      "n": 200423,
+      "pitchers": 229,
+      "brier": 0.25163738078502695,
+      "prediction_mean": 0.5186280089041839,
+      "target_mean": 0.5045379023365582,
+      "calibration_gap": 0.01409010656762577
+    },
+    {
+      "season": "2023",
+      "pitchmix_history_bin": "low_50_199",
+      "n": 8285,
+      "pitchers": 101,
+      "brier": 0.26276681788257866,
+      "prediction_mean": 0.5433602710263291,
+      "target_mean": 0.4648159324079662,
+      "calibration_gap": 0.07854433861836291
+    },
+    {
+      "season": "2023",
+      "pitchmix_history_bin": "mid_200_999",
+      "n": 33688,
+      "pitchers": 132,
+      "brier": 0.25812162304230024,
+      "prediction_mean": 0.5295165534490921,
+      "target_mean": 0.4840892899548801,
+      "calibration_gap": 0.045427263494212
+    },
+    {
+      "season": "2024",
+      "pitchmix_history_bin": "cold_0_49",
+      "n": 3980,
+      "pitchers": 98,
+      "brier": 0.2460025396882533,
+      "prediction_mean": 0.46701534509851683,
+      "target_mean": 0.45603015075376885,
+      "calibration_gap": 0.010985194344747984
+    },
+    {
+      "season": "2024",
+      "pitchmix_history_bin": "high_1000_plus",
+      "n": 194823,
+      "pitchers": 234,
+      "brier": 0.24796394962294746,
+      "prediction_mean": 0.48892330660718564,
+      "target_mean": 0.49117404002607495,
+      "calibration_gap": -0.002250733418889317
+    },
+    {
+      "season": "2024",
+      "pitchmix_history_bin": "low_50_199",
+      "n": 10572,
+      "pitchers": 110,
+      "brier": 0.24707564380069505,
+      "prediction_mean": 0.4659054208131151,
+      "target_mean": 0.46490730230798333,
+      "calibration_gap": 0.000998118505131762
+    },
+    {
+      "season": "2024",
+      "pitchmix_history_bin": "mid_200_999",
+      "n": 44132,
+      "pitchers": 139,
+      "brier": 0.2475585726647302,
+      "prediction_mean": 0.47214442810748763,
+      "target_mean": 0.47151726638267016,
+      "calibration_gap": 0.000627161724817471
+    }
+  ],
+  "monthly_block_difficulty": {
+    "count": 22,
+    "best_brier": 0.2413000211621401,
+    "worst_brier": 0.25540354292088535
+  },
+  "pitcher_cluster_bootstrap": {
+    "2022": {
+      "unit": "pitcher_id",
+      "pitchers": 390,
+      "rounds": 1000,
+      "seed": 20250823,
+      "mean": 0.2433470511432298,
+      "ci95_low": 0.24180827522004564,
+      "ci95_high": 0.24465869902564513
+    },
+    "2023": {
+      "unit": "pitcher_id",
+      "pitchers": 382,
+      "rounds": 1000,
+      "seed": 20250823,
+      "mean": 0.25314006697072267,
+      "ci95_low": 0.25179797458624076,
+      "ci95_high": 0.25449969826360486
+    },
+    "2024": {
+      "unit": "pitcher_id",
+      "pitchers": 391,
+      "rounds": 1000,
+      "seed": 20250823,
+      "mean": 0.24783557259372876,
+      "ci95_low": 0.2473809704021097,
+      "ci95_high": 0.24827319944418746
+    }
+  }
+}
