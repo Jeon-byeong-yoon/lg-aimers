@@ -1,0 +1,1136 @@
+{
+  "experiment": "V83_stable_final_ensemble",
+  "selection_policy": {
+    "signals": {
+      "rates_2024": "V79 rates; strongest 2024 gain",
+      "hierarchy_2022": "V79 hierarchy; strongest 2022 gain",
+      "middle_2023": "V80 middle at 0.01; strongest stable 2023 block pattern"
+    },
+    "equal_weights_only": true,
+    "scales": [
+      0.5,
+      1.0
+    ],
+    "continuous_weight_optimization": false
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_row_aggregation_used": false,
+    "post_pitch_information_used": false
+  },
+  "candidate_count": 8,
+  "submit_ready_count": 0,
+  "best": {
+    "signals": [
+      "rates_2024",
+      "hierarchy_2022",
+      "middle_2023"
+    ],
+    "scale_toward_signal_mean": 0.5,
+    "scores": {
+      "2022": 0.24338371505178805,
+      "2023": 0.2531532892766364,
+      "2024": 0.24782341370199457
+    },
+    "gains_vs_v41": {
+      "2022": 5.079313622868842e-06,
+      "2023": 6.077588566855141e-07,
+      "2024": 2.126817405606607e-06
+    },
+    "mean_gain": 2.604629961720321e-06,
+    "minimum_season_gain": 6.077588566855141e-07,
+    "positive_to_negative_gain_ratio": null,
+    "block_wins": 9,
+    "block_count": 12,
+    "block_win_rate": 0.75,
+    "blocks": [
+      {
+        "season": 2022,
+        "block": "early_3_5",
+        "n": 86260,
+        "gain": 3.977213706818361e-06
+      },
+      {
+        "season": 2022,
+        "block": "mid_6_7",
+        "n": 73419,
+        "gain": 7.667299085356571e-07
+      },
+      {
+        "season": 2022,
+        "block": "late_8",
+        "n": 36914,
+        "gain": 9.52558979483431e-06
+      },
+      {
+        "season": 2022,
+        "block": "finish_9_10",
+        "n": 50879,
+        "gain": 9.945031971603235e-06
+      },
+      {
+        "season": 2023,
+        "block": "early_3_5",
+        "n": 80864,
+        "gain": 2.8411894282265315e-06
+      },
+      {
+        "season": 2023,
+        "block": "mid_6_7",
+        "n": 71057,
+        "gain": 5.862533241085544e-07
+      },
+      {
+        "season": 2023,
+        "block": "late_8",
+        "n": 38825,
+        "gain": -8.524125515996239e-07
+      },
+      {
+        "season": 2023,
+        "block": "finish_9_10",
+        "n": 54779,
+        "gain": -1.6263975933794583e-06
+      },
+      {
+        "season": 2024,
+        "block": "early_3_5",
+        "n": 99027,
+        "gain": 3.854227796945553e-06
+      },
+      {
+        "season": 2024,
+        "block": "mid_6_7",
+        "n": 77584,
+        "gain": 3.3601919912917833e-06
+      },
+      {
+        "season": 2024,
+        "block": "late_8",
+        "n": 41920,
+        "gain": -2.8059975042959984e-06
+      },
+      {
+        "season": 2024,
+        "block": "finish_9_10",
+        "n": 34976,
+        "gain": 4.1230454878027345e-07
+      }
+    ],
+    "pitcher_cluster_bootstrap_95_ci": {
+      "2022": {
+        "lower": 1.9057568122752822e-07,
+        "median": 4.845874723165542e-06,
+        "upper": 9.903751050686627e-06,
+        "pitcher_clusters": 390,
+        "iterations": 1000
+      },
+      "2023": {
+        "lower": -5.0368654232696585e-06,
+        "median": 5.084080698274426e-07,
+        "upper": 6.679190726716495e-06,
+        "pitcher_clusters": 382,
+        "iterations": 1000
+      },
+      "2024": {
+        "lower": -1.1993655242267685e-06,
+        "median": 2.0907551864775193e-06,
+        "upper": 5.771219703788916e-06,
+        "pitcher_clusters": 391,
+        "iterations": 1000
+      }
+    },
+    "all_bootstrap_lower_bounds_positive": false,
+    "all_seasons_improved": true,
+    "submit_ready": false
+  },
+  "best_submit_ready": null,
+  "results": [
+    {
+      "signals": [
+        "rates_2024",
+        "hierarchy_2022",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 0.5,
+      "scores": {
+        "2022": 0.24338371505178805,
+        "2023": 0.2531532892766364,
+        "2024": 0.24782341370199457
+      },
+      "gains_vs_v41": {
+        "2022": 5.079313622868842e-06,
+        "2023": 6.077588566855141e-07,
+        "2024": 2.126817405606607e-06
+      },
+      "mean_gain": 2.604629961720321e-06,
+      "minimum_season_gain": 6.077588566855141e-07,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 9,
+      "block_count": 12,
+      "block_win_rate": 0.75,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 3.977213706818361e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": 7.667299085356571e-07
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 9.52558979483431e-06
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 9.945031971603235e-06
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 2.8411894282265315e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": 5.862533241085544e-07
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -8.524125515996239e-07
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -1.6263975933794583e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 3.854227796945553e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 3.3601919912917833e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -2.8059975042959984e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": 4.1230454878027345e-07
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": 1.9057568122752822e-07,
+          "median": 4.845874723165542e-06,
+          "upper": 9.903751050686627e-06,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -5.0368654232696585e-06,
+          "median": 5.084080698274426e-07,
+          "upper": 6.679190726716495e-06,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -1.1993655242267685e-06,
+          "median": 2.0907551864775193e-06,
+          "upper": 5.771219703788916e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "hierarchy_2022",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 0.5,
+      "scores": {
+        "2022": 0.2433819392785328,
+        "2023": 0.2531509685698309,
+        "2024": 0.24782494767250898
+      },
+      "gains_vs_v41": {
+        "2022": 6.855086878115868e-06,
+        "2023": 2.9284656621886285e-06,
+        "2024": 5.928468911897689e-07
+      },
+      "mean_gain": 3.4587998104980886e-06,
+      "minimum_season_gain": 5.928468911897689e-07,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 9,
+      "block_count": 12,
+      "block_win_rate": 0.75,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 8.167427244881731e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": 3.2888925858010065e-06
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 7.553394548581727e-06
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 9.269572409598137e-06
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 3.5364117542679985e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": 5.476292860240317e-06
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -3.3507931764820142e-06
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": 3.1765591729238096e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 2.2219402560086365e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 1.5342599266054968e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -2.4444518373911706e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": -2.467516069137865e-06
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": 1.921860800852925e-06,
+          "median": 6.737018531605461e-06,
+          "upper": 1.1771184339075337e-05,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -1.6590671388232912e-06,
+          "median": 3.0749029467681525e-06,
+          "upper": 8.092589520730061e-06,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -2.3634333325284756e-06,
+          "median": 6.15477534269231e-07,
+          "upper": 3.6782420533458243e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "rates_2024",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 0.5,
+      "scores": {
+        "2022": 0.24338829242034127,
+        "2023": 0.2531522425930428,
+        "2024": 0.2478229989636973
+      },
+      "gains_vs_v41": {
+        "2022": 5.019450696475136e-07,
+        "2023": 1.6544424502606958e-06,
+        "2024": 2.541555702867404e-06
+      },
+      "mean_gain": 1.5659810742585378e-06,
+      "minimum_season_gain": 5.019450696475136e-07,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 7,
+      "block_count": 12,
+      "block_win_rate": 0.5833333333333334,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": -3.058773346054089e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": -2.2338297054058653e-06
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 6.766927935830669e-06
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 5.941121177965858e-06
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 4.749386889768559e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": -8.485704973137942e-07
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": 5.875258935972294e-06
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -2.659002413418765e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 3.4192282793998885e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 3.411594793861772e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -1.7886100393271764e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": 3.3165486355013485e-06
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": -2.956729252767531e-06,
+          "median": 4.3313874105967507e-07,
+          "upper": 4.165881239261362e-06,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -3.062926038555236e-06,
+          "median": 1.65747479257864e-06,
+          "upper": 6.451763844281518e-06,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -4.1027476955705426e-07,
+          "median": 2.5504890564267645e-06,
+          "upper": 5.210896933717386e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "hierarchy_2022",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 1.0,
+      "scores": {
+        "2022": 0.24337648294928102,
+        "2023": 0.2531488772256368,
+        "2024": 0.24782528685631758
+      },
+      "gains_vs_v41": {
+        "2022": 1.2311416129895392e-05,
+        "2023": 5.019809856288138e-06,
+        "2024": 2.5366308259444637e-07
+      },
+      "mean_gain": 5.861629689592658e-06,
+      "minimum_season_gain": 2.5366308259444637e-07,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 9,
+      "block_count": 12,
+      "block_win_rate": 0.75,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 1.4986449462489615e-05
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": 5.185862367529381e-06
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 1.3747072101416569e-05
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 1.701683195712289e-05
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 6.275264324950847e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": 1.0156138998684838e-05
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -7.5628027692564714e-06
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": 5.4219114857811945e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 3.4896994260957825e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 2.1717054489445164e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -5.836552438409637e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": -5.863747007728293e-06
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": 2.1160592322957313e-06,
+          "median": 1.2235438996500844e-05,
+          "upper": 2.145850957704641e-05,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -4.51848722600074e-06,
+          "median": 4.916927253899622e-06,
+          "upper": 1.4595790144380302e-05,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -5.4909588680936775e-06,
+          "median": 8.81736286371246e-08,
+          "upper": 6.704305821102784e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "rates_2024",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 1.0,
+      "scores": {
+        "2022": 0.24338867960501628,
+        "2023": 0.2531513531630084,
+        "2024": 0.2478211949462723
+      },
+      "gains_vs_v41": {
+        "2022": 1.1476039463165222e-07,
+        "2023": 2.5438724846615912e-06,
+        "2024": 4.34557312786743e-06
+      },
+      "mean_gain": 2.3347353357202247e-06,
+      "minimum_season_gain": 1.1476039463165222e-07,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 7,
+      "block_count": 12,
+      "block_win_rate": 0.5833333333333334,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": -7.007738943909381e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": -5.283671101141696e-06
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 1.2682668875718672e-05
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 1.086187533880234e-05
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 8.723088845308258e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": -2.4515015917825345e-06
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": 1.1016314976464159e-05
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -6.102916171202288e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 6.104006781693094e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 6.108825222728154e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -4.3287829295524105e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": 5.852218997598468e-06
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": -7.481445500513067e-06,
+          "median": -1.3479874773775818e-07,
+          "upper": 7.979617747826524e-06,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -6.980504872880994e-06,
+          "median": 2.531379140601905e-06,
+          "upper": 1.2039249242490688e-05,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -1.0771747957430262e-06,
+          "median": 4.384723918707762e-06,
+          "upper": 9.837245596156602e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "rates_2024",
+        "hierarchy_2022",
+        "middle_2023"
+      ],
+      "scale_toward_signal_mean": 1.0,
+      "scores": {
+        "2022": 0.24338017315184013,
+        "2023": 0.2531538057184214,
+        "2024": 0.2478224843133528
+      },
+      "gains_vs_v41": {
+        "2022": 8.621213570786379e-06,
+        "2023": 9.131707168208436e-08,
+        "2024": 3.0562060473748875e-06
+      },
+      "mean_gain": 3.922912229947784e-06,
+      "minimum_season_gain": 9.131707168208436e-08,
+      "positive_to_negative_gain_ratio": null,
+      "block_wins": 8,
+      "block_count": 12,
+      "block_win_rate": 0.6666666666666666,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 6.421259001410107e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": 7.776774743617487e-08
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 1.757652139466881e-05
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 1.8181996939981016e-05
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": 4.594510887689918e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": 7.596073814397641e-08
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -2.8356676022855964e-06
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -4.461794700483246e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 6.508260831150636e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 5.568590960541853e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -6.850511211881072e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": -4.1697306649157717e-07
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": -7.119265723923311e-07,
+          "median": 8.38276061239524e-06,
+          "upper": 1.7969509495509415e-05,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -1.0674741905286942e-05,
+          "median": 2.729391201162826e-07,
+          "upper": 1.1398647702335322e-05,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -4.201501081390286e-06,
+          "median": 3.109401857915286e-06,
+          "upper": 9.882828068019842e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": true,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "rates_2024",
+        "hierarchy_2022"
+      ],
+      "scale_toward_signal_mean": 0.5,
+      "scores": {
+        "2022": 0.24338147008966265,
+        "2023": 0.2531570266625753,
+        "2024": 0.24782267121410453
+      },
+      "gains_vs_v41": {
+        "2022": 7.324275748260556e-06,
+        "2023": -3.1296270822100958e-06,
+        "2024": 2.869305295638558e-06
+      },
+      "mean_gain": 2.354651320563006e-06,
+      "minimum_season_gain": -3.1296270822100958e-06,
+      "positive_to_negative_gain_ratio": 3.2571232214352386,
+      "block_wins": 7,
+      "block_count": 12,
+      "block_win_rate": 0.5833333333333334,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 6.288028284756608e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": 6.923065271891016e-07
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 1.3709444041803964e-05
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 1.40185337339227e-05
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": -1.327475758761132e-07
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": -3.2251441684505444e-06
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -5.4455782151907606e-06
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -5.788231731029825e-06
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 5.538021685430605e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 4.767480920403466e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -4.5582214857342596e-06
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": 5.023703869566631e-09
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": 1.0143978187047771e-07,
+          "median": 7.256997857621773e-06,
+          "upper": 1.5359155038835814e-05,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -1.1400970273260802e-05,
+          "median": -3.066105716845923e-06,
+          "upper": 5.278562339466236e-06,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -2.535167526834649e-06,
+          "median": 2.956953591185881e-06,
+          "upper": 8.209320231158358e-06,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": false,
+      "submit_ready": false
+    },
+    {
+      "signals": [
+        "rates_2024",
+        "hierarchy_2022"
+      ],
+      "scale_toward_signal_mean": 1.0,
+      "scores": {
+        "2022": 0.24337758343391364,
+        "2023": 0.253162666748778,
+        "2024": 0.2478224781147772
+      },
+      "gains_vs_v41": {
+        "2022": 1.1210931497279697e-05,
+        "2023": -8.769713284950686e-06,
+        "2024": 3.062404622972137e-06
+      },
+      "mean_gain": 1.8345409451003825e-06,
+      "minimum_season_gain": -8.769713284950686e-06,
+      "positive_to_negative_gain_ratio": 1.6275715814729848,
+      "block_wins": 5,
+      "block_count": 12,
+      "block_win_rate": 0.4166666666666667,
+      "blocks": [
+        {
+          "season": 2022,
+          "block": "early_3_5",
+          "n": 86260,
+          "gain": 9.145230738250021e-06
+        },
+        {
+          "season": 2022,
+          "block": "mid_6_7",
+          "n": 73419,
+          "gain": -1.8801692964198757e-06
+        },
+        {
+          "season": 2022,
+          "block": "late_8",
+          "n": 36914,
+          "gain": 2.4111811773364078e-05
+        },
+        {
+          "season": 2022,
+          "block": "finish_9_10",
+          "n": 50879,
+          "gain": 2.4243809150698015e-05
+        },
+        {
+          "season": 2023,
+          "block": "early_3_5",
+          "n": 80864,
+          "gain": -2.696889373710043e-06
+        },
+        {
+          "season": 2023,
+          "block": "mid_6_7",
+          "n": 71057,
+          "gain": -8.901482304146668e-06
+        },
+        {
+          "season": 2023,
+          "block": "late_8",
+          "n": 38825,
+          "gain": -1.3416014217892958e-05
+        },
+        {
+          "season": 2023,
+          "block": "finish_9_10",
+          "n": 54779,
+          "gain": -1.4270308181574265e-05
+        },
+        {
+          "season": 2024,
+          "block": "early_3_5",
+          "n": 99027,
+          "gain": 8.397103605839451e-06
+        },
+        {
+          "season": 2024,
+          "block": "mid_6_7",
+          "n": 77584,
+          "gain": 6.956280877656873e-06
+        },
+        {
+          "season": 2024,
+          "block": "late_8",
+          "n": 41920,
+          "gain": -1.1879361666161659e-05
+        },
+        {
+          "season": 2024,
+          "block": "finish_9_10",
+          "n": 34976,
+          "gain": -2.7708206943310998e-06
+        }
+      ],
+      "pitcher_cluster_bootstrap_95_ci": {
+        "2022": {
+          "lower": -3.453328936040275e-06,
+          "median": 1.0745339906146945e-05,
+          "upper": 2.6753654106578654e-05,
+          "pitcher_clusters": 390,
+          "iterations": 1000
+        },
+        "2023": {
+          "lower": -2.679190305990829e-05,
+          "median": -8.610432247052937e-06,
+          "upper": 7.442803938950913e-06,
+          "pitcher_clusters": 382,
+          "iterations": 1000
+        },
+        "2024": {
+          "lower": -7.995572079117152e-06,
+          "median": 2.820000552755692e-06,
+          "upper": 1.3273759971921424e-05,
+          "pitcher_clusters": 391,
+          "iterations": 1000
+        }
+      },
+      "all_bootstrap_lower_bounds_positive": false,
+      "all_seasons_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "experiment": "V66_pitcher_isotonic_regression",
+  "description": "\ud22c\uc218\ubcc4 Isotonic Regression \uac1c\uc778\ud654 \ubcf4\uc815 (n_min=300\uad6c)",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "scores": {
+    "2022": 0.24338879436541092,
+    "2023": 0.258614921347846,
+    "2024": 0.25288220263113376
+  },
+  "gains_vs_v41": {
+    "2022": 0.0,
+    "2023": -0.005461024312352958,
+    "2024": -0.005056662111733584
+  },
+  "all_improved": false,
+  "submit_ready": false
+}
