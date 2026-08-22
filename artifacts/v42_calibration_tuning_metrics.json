@@ -1,0 +1,395 @@
+{
+  "experiment": "V42_calibration_tuning",
+  "description": "Grid search over count/pitcher_count smoothing thresholds and weights on V41 blend",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 150,
+  "accepted_count": 10,
+  "submit_ready_count": 0,
+  "best_accepted": {
+    "count_min": 300,
+    "pitcher_min": 300,
+    "count_weight": 0.7,
+    "pitcher_weight": 0.3,
+    "scores": {
+      "2022": 0.24338879436541092,
+      "2023": 0.2531491999439334,
+      "2024": 0.24782488616255566
+    },
+    "gains_vs_v41": {
+      "2022": 0.0,
+      "2023": 4.6970915596467044e-06,
+      "2024": 6.543568445149806e-07
+    },
+    "improved_both_folds": true,
+    "submit_ready": false
+  },
+  "best_submit_ready": null,
+  "top10_accepted": [
+    {
+      "count_min": 300,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531491999439334,
+        "2024": 0.24782488616255566
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.6970915596467044e-06,
+        "2024": 6.543568445149806e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 500,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531495761163626,
+        "2024": 0.24782488952888138
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.320919130496037e-06,
+        "2024": 6.509905187968013e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 700,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314993149929244,
+        "2024": 0.24782489368464683
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 3.965536200634112e-06,
+        "2024": 6.468347533428176e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1000,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531504295493752,
+        "2024": 0.2478249012994879
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 3.467486117847418e-06,
+        "2024": 6.392199122795539e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1500,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531511785128903,
+        "2024": 0.24782491733617643
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 2.7185226027515164e-06,
+        "2024": 6.231832237468815e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1000,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314895978310636,
+        "2024": 0.24782530370056588
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.937252386705282e-06,
+        "2024": 2.36818834292718e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1500,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531497353636276,
+        "2024": 0.24782530457982418
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.161671865454686e-06,
+        "2024": 2.359395759876648e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 700,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314844410278436,
+        "2024": 0.24782530582340978
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 5.4529327087049495e-06,
+        "2024": 2.3469599039205313e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 500,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314807619757634,
+        "2024": 0.24782530844706852
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 5.8208379167257185e-06,
+        "2024": 2.3207233165734031e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 300,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314768684197814,
+        "2024": 0.2478253121023107
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 6.210193514932794e-06,
+        "2024": 2.2841708946508277e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    }
+  ],
+  "top10_overall": [
+    {
+      "count_min": 300,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531491999439334,
+        "2024": 0.24782488616255566
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.6970915596467044e-06,
+        "2024": 6.543568445149806e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 500,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531495761163626,
+        "2024": 0.24782488952888138
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.320919130496037e-06,
+        "2024": 6.509905187968013e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 700,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314993149929244,
+        "2024": 0.24782489368464683
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 3.965536200634112e-06,
+        "2024": 6.468347533428176e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1000,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531504295493752,
+        "2024": 0.2478249012994879
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 3.467486117847418e-06,
+        "2024": 6.392199122795539e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1500,
+      "pitcher_min": 300,
+      "count_weight": 0.7,
+      "pitcher_weight": 0.3,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531511785128903,
+        "2024": 0.24782491733617643
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 2.7185226027515164e-06,
+        "2024": 6.231832237468815e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    },
+    {
+      "count_min": 300,
+      "pitcher_min": 500,
+      "count_weight": 0.65,
+      "pitcher_weight": 0.35,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.2531539375748028,
+        "2024": 0.24782525314914125
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": -4.0539309742460006e-08,
+        "2024": 2.8737025892233703e-07
+      },
+      "improved_both_folds": false,
+      "submit_ready": false
+    },
+    {
+      "count_min": 500,
+      "pitcher_min": 500,
+      "count_weight": 0.65,
+      "pitcher_weight": 0.35,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315429994607525,
+        "2024": 0.2478252632631319
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": -4.029105821756751e-07,
+        "2024": 2.772562682773483e-07
+      },
+      "improved_both_folds": false,
+      "submit_ready": false
+    },
+    {
+      "count_min": 700,
+      "pitcher_min": 500,
+      "count_weight": 0.65,
+      "pitcher_weight": 0.35,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315464226032586,
+        "2024": 0.2478252739404295
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": -7.452248327877165e-07,
+        "2024": 2.665789706757238e-07
+      },
+      "improved_both_folds": false,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1000,
+      "pitcher_min": 500,
+      "count_weight": 0.65,
+      "pitcher_weight": 0.35,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315512197407936,
+        "2024": 0.2478252909345209
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": -1.2249385862861395e-06,
+        "2024": 2.495848792638533e-07
+      },
+      "improved_both_folds": false,
+      "submit_ready": false
+    },
+    {
+      "count_min": 1000,
+      "pitcher_min": 200,
+      "count_weight": 0.75,
+      "pitcher_weight": 0.25,
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25314895978310636,
+        "2024": 0.24782530370056588
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 4.937252386705282e-06,
+        "2024": 2.36818834292718e-07
+      },
+      "improved_both_folds": true,
+      "submit_ready": false
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "experiment": "V57_probability_soft_shrinkage",
+  "description": "Evaluate Prior Shrinkage, Logit Temperature, and Margin Clipping on V41 predictions",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 56,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "top_5_results": [
+    {
+      "method": "clip_low_0.01_high_0.9",
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315389703549307,
+        "2024": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "method": "clip_low_0.01_high_0.92",
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315389703549307,
+        "2024": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "method": "clip_low_0.01_high_0.95",
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315389703549307,
+        "2024": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "method": "clip_low_0.01_high_0.97",
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315389703549307,
+        "2024": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "method": "clip_low_0.01_high_0.98",
+      "scores": {
+        "2022": 0.24338879436541092,
+        "2023": 0.25315389703549307,
+        "2024": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

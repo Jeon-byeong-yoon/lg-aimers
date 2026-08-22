@@ -1,0 +1,46 @@
+{
+  "experiment": "V52_context_physical_stuff",
+  "description": "Evaluate derived physical Stuff metrics (Bauer Units, Total Break, Speed Drop) in Context HGB",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 2,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "plus_stuff_metrics",
+      "scores": {
+        "2022": 0.24338496324838546,
+        "2023": 0.2531828127968306,
+        "2024": 0.2478328893278974
+      },
+      "gains_vs_v41": {
+        "2022": 3.831117025454578e-06,
+        "2023": -2.891576133751128e-05,
+        "2024": -7.34880849723174e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "stuff_core_metrics",
+      "scores": {
+        "2022": 0.24338180096019452,
+        "2023": 0.25316722129540187,
+        "2024": 0.2478307281900628
+      },
+      "gains_vs_v41": {
+        "2022": 6.993405216398907e-06,
+        "2023": -1.332425990879793e-05,
+        "2024": -5.187670662626376e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

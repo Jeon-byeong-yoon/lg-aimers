@@ -1,0 +1,91 @@
+{
+  "experiment": "V46_extended_form_features",
+  "description": "Evaluate location failure & quality form feature variants on gentle_500 Form HGB",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 5,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "base_v22",
+      "scores": {
+        "2022_raw": 0.24338879436541092,
+        "2023_calib": 0.25315389703549307,
+        "2024_calib": 0.24782554051940017
+      },
+      "gains_vs_v41": {
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "plus_control_margin",
+      "scores": {
+        "2022_raw": 0.24338535012215387,
+        "2023_calib": 0.25317592558260255,
+        "2024_calib": 0.24782853103188066
+      },
+      "gains_vs_v41": {
+        "2022": 3.4442432570447323e-06,
+        "2023": -2.2028547109476104e-05,
+        "2024": -2.9905124804829875e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "plus_batter_matchup_form",
+      "scores": {
+        "2022_raw": 0.24339610609866802,
+        "2023_calib": 0.253152731556291,
+        "2024_calib": 0.24782862361341737
+      },
+      "gains_vs_v41": {
+        "2022": -7.31173325710377e-06,
+        "2023": 1.16547920209209e-06,
+        "2024": -3.0830940171977517e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "plus_combined_stable",
+      "scores": {
+        "2022_raw": 0.24338350904826817,
+        "2023_calib": 0.25315048051783384,
+        "2024_calib": 0.24782869142244932
+      },
+      "gains_vs_v41": {
+        "2022": 5.285317142750268e-06,
+        "2023": 3.416517659227125e-06,
+        "2024": -3.1509030491427836e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "plus_prev1_momentum",
+      "scores": {
+        "2022_raw": 0.24338628133614626,
+        "2023_calib": 0.2531673727834527,
+        "2024_calib": 0.24783092877176527
+      },
+      "gains_vs_v41": {
+        "2022": 2.5130292646557972e-06,
+        "2023": -1.3475747959623696e-05,
+        "2024": -5.388252365096102e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

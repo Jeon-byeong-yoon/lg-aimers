@@ -1,0 +1,104 @@
+{
+  "experiment": "V43_base_hierarchical_hgb_regularization",
+  "description": "Evaluate gentle LR + regularization on base hierarchical_hgb (35.45% of base trees)",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 4,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "gentle_500",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 500
+      },
+      "scores": {
+        "2022_raw": 0.2433693591276994,
+        "2023_calib": 0.25313687838958454,
+        "2024_calib": 0.2478255521753412
+      },
+      "gains_vs_v41": {
+        "2022": 1.943523771152922e-05,
+        "2023": 1.701864590852864e-05,
+        "2024": -1.165594101792955e-08
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "gentle_400",
+      "config": {
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 200,
+        "l2_regularization": 20.0,
+        "learning_rate": 0.03,
+        "max_iter": 400
+      },
+      "scores": {
+        "2022_raw": 0.24336789967481207,
+        "2023_calib": 0.2531278639833606,
+        "2024_calib": 0.24782721053782664
+      },
+      "gains_vs_v41": {
+        "2022": 2.0894690598849408e-05,
+        "2023": 2.603305213244589e-05,
+        "2024": -1.6700184264639706e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "balanced_400",
+      "config": {
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 150,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.03,
+        "max_iter": 400
+      },
+      "scores": {
+        "2022_raw": 0.24337572894120732,
+        "2023_calib": 0.2531667008612396,
+        "2024_calib": 0.24782877174616588
+      },
+      "gains_vs_v41": {
+        "2022": 1.3065424203595466e-05,
+        "2023": -1.2803825746532382e-05,
+        "2024": -3.2312267657097493e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "mild_300",
+      "config": {
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 150,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.04,
+        "max_iter": 300
+      },
+      "scores": {
+        "2022_raw": 0.24337888387075163,
+        "2023_calib": 0.2531677822752363,
+        "2024_calib": 0.2478331020026771
+      },
+      "gains_vs_v41": {
+        "2022": 9.910494659287616e-06,
+        "2023": -1.3885239743216538e-05,
+        "2024": -7.56148327693551e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}

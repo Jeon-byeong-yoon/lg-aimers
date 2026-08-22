@@ -1,0 +1,76 @@
+{
+  "experiment": "V44_base_tree_ensemble_refinement",
+  "description": "Evaluate combinations of gentle_500 regularized base HGBs (Trackman, Encoded, Hierarchical)",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "candidate_count": 4,
+  "accepted_count": 0,
+  "submit_ready_count": 0,
+  "best_accepted": null,
+  "best_submit_ready": null,
+  "all_results": [
+    {
+      "variant": "upgrade_hierarchical_only",
+      "scores": {
+        "2022_raw": 0.2433693591276994,
+        "2023_calib": 0.25313687838958454,
+        "2024_calib": 0.2478255521753412
+      },
+      "gains_vs_v41": {
+        "2022": 1.943523771152922e-05,
+        "2023": 1.701864590852864e-05,
+        "2024": -1.165594101792955e-08
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "upgrade_trackman_only",
+      "scores": {
+        "2022_raw": 0.2433879112150967,
+        "2023_calib": 0.2531381465690531,
+        "2024_calib": 0.24782680764068615
+      },
+      "gains_vs_v41": {
+        "2022": 8.831503142125996e-07,
+        "2023": 1.5750466439978794e-05,
+        "2024": -1.2671212859804992e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "upgrade_hierarchical_and_trackman",
+      "scores": {
+        "2022_raw": 0.24337075267448835,
+        "2023_calib": 0.2531224147398778,
+        "2024_calib": 0.24782941614065412
+      },
+      "gains_vs_v41": {
+        "2022": 1.804169092256558e-05,
+        "2023": 3.14822956152816e-05,
+        "2024": -3.875621253951467e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    },
+    {
+      "variant": "upgrade_all_3_hgbs",
+      "scores": {
+        "2022_raw": 0.24336915868767398,
+        "2023_calib": 0.25311418081869125,
+        "2024_calib": 0.24783056317900443
+      },
+      "gains_vs_v41": {
+        "2022": 1.963567773693997e-05,
+        "2023": 3.971621680182169e-05,
+        "2024": -5.022659604253521e-06
+      },
+      "all_improved": false,
+      "submit_ready": false
+    }
+  ]
+}
