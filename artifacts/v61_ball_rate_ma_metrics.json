@@ -1,0 +1,39 @@
+{
+  "experiment": "V61_ball_rate_ma_form_feature",
+  "description": "\uacbd\uae30 \ub0b4 \ucd5c\uadfc N\uad6c \ubcfc\ub137 \ube44\uc728 MA \ud53c\ucc98 \ucd94\uac00 (Form HGB \uc7ac\ud559\uc2b5)",
+  "baseline_v41": {
+    "2022": 0.24338879436541092,
+    "2023": 0.25315389703549307,
+    "2024": 0.24782554051940017
+  },
+  "scores": {
+    "2022": 0.24338879436541092,
+    "2023": 0.2514731740110531,
+    "2024": 0.24792822835802938
+  },
+  "gains_vs_v41": {
+    "2022": 0.0,
+    "2023": 0.0016807230244399451,
+    "2024": -0.00010268783862921183
+  },
+  "all_improved": false,
+  "submit_ready": false,
+  "features_used_2023": [
+    "asof_pitcher_success_rate",
+    "asof_pitcher_prev1_game_success_rate",
+    "asof_pitcher_prev3_game_success_rate",
+    "asof_pitcher_prev5_game_success_rate",
+    "ball_rate_ma20",
+    "ball_rate_ma30",
+    "ball_rate_ma50"
+  ],
+  "features_used_2024": [
+    "asof_pitcher_success_rate",
+    "asof_pitcher_prev1_game_success_rate",
+    "asof_pitcher_prev3_game_success_rate",
+    "asof_pitcher_prev5_game_success_rate",
+    "ball_rate_ma20",
+    "ball_rate_ma30",
+    "ball_rate_ma50"
+  ]
+}
