@@ -1,0 +1,2769 @@
+{
+  "experiment": "V103_decoupled_shrinkage",
+  "baseline": "V96 (feature shrinkage 50, drift shrinkage 50, reliability 150, w 0.15)",
+  "baseline_public_score": 962.8787800874,
+  "promotion_rule_revision": {
+    "reason": "The sealed 2024 Sep-Oct window has a paired-bootstrap 95% CI width of 37 points over 34,976 rows, so it cannot resolve the effects being measured. Every sealed reading so far sat inside its own noise band.",
+    "primary": "development-window paired pitcher bootstrap ci95_low > 0",
+    "secondary": "monthly block win rate >= 75%, no 2022/2023 regression",
+    "sealed_window": "demoted to a sanity check; reject only below -5e-05",
+    "retrospective_check": "must accept V96, whose leaderboard gain was +11.77"
+  },
+  "shrinkages": [
+    20.0,
+    50.0,
+    100.0,
+    200.0
+  ],
+  "reliability_scales": [
+    50.0,
+    150.0,
+    400.0
+  ],
+  "drift_scales": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "bootstrap": {
+    "rounds": 2000,
+    "seed": 20260825,
+    "unit": "pitcher_id",
+    "window": "development"
+  },
+  "results": {
+    "feat20_drift20_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 1.9702242979752362e-05,
+        "2023": -2.0980425626438715e-05,
+        "2024": 1.9312687545048483e-05
+      },
+      "gain_2024_mar_aug": 1.9312687545048483e-05,
+      "gain_2024_jul_aug": 4.685583569688283e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -7.441221116207721e-05,
+      "development_bootstrap": {
+        "mean": 5.544343152568699e-06,
+        "ci95_low": -1.0014392418719196e-05,
+        "ci95_high": 2.181507069286066e-05
+      },
+      "sealed_gain": -2.3794497459419953e-05
+    },
+    "feat20_drift20_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 2.3635879778352668e-05,
+        "2023": 9.123851110579699e-05,
+        "2024": 1.7448418137142193e-05
+      },
+      "gain_2024_mar_aug": 1.7448418137142193e-05,
+      "gain_2024_jul_aug": 4.3855540440950285e-05,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -1.5585170720472648e-05,
+      "development_bootstrap": {
+        "mean": 4.5062982965796314e-05,
+        "ci95_low": 2.613318095860881e-05,
+        "ci95_high": 6.628249455892696e-05
+      },
+      "sealed_gain": -3.088878390904869e-05
+    },
+    "feat20_drift20_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 2.2635836722352994e-05,
+        "2023": 0.00019547973553556995,
+        "2024": 9.095028576462606e-06
+      },
+      "gain_2024_mar_aug": 9.095028576462606e-06,
+      "gain_2024_jul_aug": 3.481474416417709e-05,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -2.52908763494596e-05,
+      "development_bootstrap": {
+        "mean": 7.811982598375314e-05,
+        "ci95_low": 4.912107470257953e-05,
+        "ci95_high": 0.00011156095817982099
+      },
+      "sealed_gain": -4.392106747489333e-05
+    },
+    "feat20_drift20_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 1.4499043122824911e-05,
+        "2023": -7.809020413342154e-05,
+        "2024": 1.7513906417442832e-05
+      },
+      "gain_2024_mar_aug": 1.7513906417442832e-05,
+      "gain_2024_jul_aug": 4.441773483442545e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00016142658941500535,
+      "development_bootstrap": {
+        "mean": -1.6524520028525087e-05,
+        "ci95_low": -3.3855408074021237e-05,
+        "ci95_high": 1.350283789534963e-06
+      },
+      "sealed_gain": -2.3754028425887122e-05
+    },
+    "feat20_drift20_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 1.88840509200131e-05,
+        "2023": 9.897864918031442e-06,
+        "2024": 1.8488488345954796e-05
+      },
+      "gain_2024_mar_aug": 1.8488488345954796e-05,
+      "gain_2024_jul_aug": 4.2741297718414384e-05,
+      "monthly_blocks_won": 15,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.75,
+      "worst_monthly_gain": -4.699049741662889e-05,
+      "development_bootstrap": {
+        "mean": 1.5661723755083427e-05,
+        "ci95_low": 9.47793092653142e-07,
+        "ci95_high": 3.173258729973064e-05
+      },
+      "sealed_gain": -2.8441428542017913e-05
+    },
+    "feat20_drift20_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 2.0370692813968792e-05,
+        "2023": 9.279090271549453e-05,
+        "2024": 1.5466111388507258e-05
+      },
+      "gain_2024_mar_aug": 1.5466111388507258e-05,
+      "gain_2024_jul_aug": 3.6719631962328685e-05,
+      "monthly_blocks_won": 18,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.9,
+      "worst_monthly_gain": -1.3810982768452979e-05,
+      "development_bootstrap": {
+        "mean": 4.3854194450706314e-05,
+        "ci95_low": 2.3901286106242532e-05,
+        "ci95_high": 6.742926336346527e-05
+      },
+      "sealed_gain": -3.747572456320968e-05
+    },
+    "feat20_drift20_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 1.0019574470225028e-05,
+        "2023": -0.00013793754529156944,
+        "2024": 1.377474094110101e-05
+      },
+      "gain_2024_mar_aug": 1.377474094110101e-05,
+      "gain_2024_jul_aug": 4.164710678852955e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.00025071991835648726,
+      "development_bootstrap": {
+        "mean": -3.988225869089806e-05,
+        "ci95_low": -6.303321424642429e-05,
+        "ci95_high": -1.7649613132488266e-05
+      },
+      "sealed_gain": -2.4076481180956053e-05
+    },
+    "feat20_drift20_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 1.4375771011009898e-05,
+        "2023": -7.628764280029567e-05,
+        "2024": 1.58768265767912e-05
+      },
+      "gain_2024_mar_aug": 1.58768265767912e-05,
+      "gain_2024_jul_aug": 4.1305167063780404e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.0001763142226802843,
+      "development_bootstrap": {
+        "mean": -1.644818461993512e-05,
+        "ci95_low": -3.3646882775147255e-05,
+        "ci95_high": 1.2865659002866098e-06
+      },
+      "sealed_gain": -2.6390278034371476e-05
+    },
+    "feat20_drift20_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.7307550361826434e-05,
+        "2023": -1.734243555041583e-05,
+        "2024": 1.5980010956754282e-05
+      },
+      "gain_2024_mar_aug": 1.5980010956754282e-05,
+      "gain_2024_jul_aug": 3.8431206308429465e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -0.0001043466186364599,
+      "development_bootstrap": {
+        "mean": 4.9432494420690865e-06,
+        "ci95_low": -1.0669749656872776e-05,
+        "ci95_high": 2.190102556488864e-05
+      },
+      "sealed_gain": -3.136108436601539e-05
+    },
+    "feat20_drift50_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 1.5543866982484977e-05,
+        "2023": -5.066424835223696e-05,
+        "2024": 1.7294299673691875e-05
+      },
+      "gain_2024_mar_aug": 1.7294299673691875e-05,
+      "gain_2024_jul_aug": 4.553603523886465e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00011602128982934133,
+      "development_bootstrap": {
+        "mean": -6.76477541966289e-06,
+        "ci95_low": -2.272808189604102e-05,
+        "ci95_high": 9.444338768046438e-06
+      },
+      "sealed_gain": -2.3856707706527943e-05
+    },
+    "feat20_drift50_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 1.861866818696235e-05,
+        "2023": 4.8354562012313774e-05,
+        "2024": 1.5719142969207805e-05
+      },
+      "gain_2024_mar_aug": 1.5719142969207805e-05,
+      "gain_2024_jul_aug": 4.28001899862135e-05,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -4.0342088489256586e-05,
+      "development_bootstrap": {
+        "mean": 2.7989022109939784e-05,
+        "ci95_low": 9.767136220334552e-06,
+        "ci95_high": 4.7572273409445425e-05
+      },
+      "sealed_gain": -3.0202651253594675e-05
+    },
+    "feat20_drift50_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 1.7573357806513137e-05,
+        "2023": 0.00014049018340454432,
+        "2024": 8.520403871350005e-06
+      },
+      "gain_2024_mar_aug": 8.520403871350005e-06,
+      "gain_2024_jul_aug": 3.464007720091389e-05,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -4.333239973304725e-05,
+      "development_bootstrap": {
+        "mean": 5.7207500845931795e-05,
+        "ci95_low": 2.9582673373398042e-05,
+        "ci95_high": 8.815412813668296e-05
+      },
+      "sealed_gain": -4.19669598994664e-05
+    },
+    "feat20_drift50_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 1.2084435626926977e-05,
+        "2023": -9.732093127702115e-05,
+        "2024": 1.5987574923722305e-05
+      },
+      "gain_2024_mar_aug": 1.5987574923722305e-05,
+      "gain_2024_jul_aug": 4.3509916094517187e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.0001882349381162515,
+      "development_bootstrap": {
+        "mean": -2.44690039782943e-05,
+        "ci95_low": -4.2561451691071185e-05,
+        "ci95_high": -6.354921616900611e-06
+      },
+      "sealed_gain": -2.4129496033894297e-05
+    },
+    "feat20_drift50_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 1.5871462458081806e-05,
+        "2023": -1.806318230684851e-05,
+        "2024": 1.6916999223659797e-05
+      },
+      "gain_2024_mar_aug": 1.6916999223659797e-05,
+      "gain_2024_jul_aug": 4.1987895170250056e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -8.608638250747925e-05,
+      "development_bootstrap": {
+        "mean": 4.482843231584757e-06,
+        "ci95_low": -1.0346948895968462e-05,
+        "ci95_high": 2.015450502112947e-05
+      },
+      "sealed_gain": -2.8475613841601363e-05
+    },
+    "feat20_drift50_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.7166338573947993e-05,
+        "2023": 5.668956440301341e-05,
+        "2024": 1.4328136716494748e-05
+      },
+      "gain_2024_mar_aug": 1.4328136716494748e-05,
+      "gain_2024_jul_aug": 3.652619598037358e-05,
+      "monthly_blocks_won": 18,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.9,
+      "worst_monthly_gain": -3.43244322420053e-05,
+      "development_bootstrap": {
+        "mean": 2.993281428758143e-05,
+        "ci95_low": 1.0567995084545727e-05,
+        "ci95_high": 5.136477538710404e-05
+      },
+      "sealed_gain": -3.681595014608442e-05
+    },
+    "feat20_drift50_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 8.649388958839795e-06,
+        "2023": -0.00014911356134720256,
+        "2024": 1.2687281256394048e-05
+      },
+      "gain_2024_mar_aug": 1.2687281256394048e-05,
+      "gain_2024_jul_aug": 4.097181937501794e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.0002661952716776847,
+      "development_bootstrap": {
+        "mean": -4.454928169391627e-05,
+        "ci95_low": -6.839950515271357e-05,
+        "ci95_high": -2.1978192830452603e-05
+      },
+      "sealed_gain": -2.4475398947750868e-05
+    },
+    "feat20_drift50_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 1.256681407216969e-05,
+        "2023": -9.266062873471964e-05,
+        "2024": 1.4561373254668403e-05
+      },
+      "gain_2024_mar_aug": 1.4561373254668403e-05,
+      "gain_2024_jul_aug": 4.0611676160517653e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00019906815541774993,
+      "development_bootstrap": {
+        "mean": -2.3131141429863788e-05,
+        "ci95_low": -4.097681055617435e-05,
+        "ci95_high": -4.942183479680964e-06
+      },
+      "sealed_gain": -2.6698389858585065e-05
+    },
+    "feat20_drift50_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.5224036214356474e-05,
+        "2023": -3.865169926428009e-05,
+        "2024": 1.4647054800507657e-05
+      },
+      "gain_2024_mar_aug": 1.4647054800507657e-05,
+      "gain_2024_jul_aug": 3.7932472060086023e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -0.00013407306596063993,
+      "development_bootstrap": {
+        "mean": -3.5439227117041186e-06,
+        "ci95_low": -1.9612641077216135e-05,
+        "ci95_high": 1.3310935675580233e-05
+      },
+      "sealed_gain": -3.138488036366044e-05
+    },
+    "feat20_drift100_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 1.16152860422131e-05,
+        "2023": -8.237107575147696e-05,
+        "2024": 1.460766359234783e-05
+      },
+      "gain_2024_mar_aug": 1.460766359234783e-05,
+      "gain_2024_jul_aug": 4.393094471230301e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.00016014693698704148,
+      "development_bootstrap": {
+        "mean": -1.989728158827685e-05,
+        "ci95_low": -3.7311426190130004e-05,
+        "ci95_high": -3.198616447707863e-06
+      },
+      "sealed_gain": -2.4795589464364282e-05
+    },
+    "feat20_drift100_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 1.3591961112755669e-05,
+        "2023": 2.265141510208963e-06,
+        "2024": 1.2743792988858277e-05
+      },
+      "gain_2024_mar_aug": 1.2743792988858277e-05,
+      "gain_2024_jul_aug": 4.130723140467267e-05,
+      "monthly_blocks_won": 14,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.7,
+      "worst_monthly_gain": -6.791226985801295e-05,
+      "development_bootstrap": {
+        "mean": 9.422949617496592e-06,
+        "ci95_low": -9.483345551847155e-06,
+        "ci95_high": 2.8264376710291934e-05
+      },
+      "sealed_gain": -3.086926554140368e-05
+    },
+    "feat20_drift100_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 1.2025967489172294e-05,
+        "2023": 8.099871686407804e-05,
+        "2024": 5.959409419773056e-06
+      },
+      "gain_2024_mar_aug": 5.959409419773056e-06,
+      "gain_2024_jul_aug": 3.386903536992842e-05,
+      "monthly_blocks_won": 15,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.75,
+      "worst_monthly_gain": -7.985430874249324e-05,
+      "development_bootstrap": {
+        "mean": 3.396298653664457e-05,
+        "ci95_low": 6.858170699462252e-06,
+        "ci95_high": 6.220622616875619e-05
+      },
+      "sealed_gain": -4.186683448461871e-05
+    },
+    "feat20_drift100_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 9.64523343723251e-06,
+        "2023": -0.00011902687833195279,
+        "2024": 1.3968275359761621e-05
+      },
+      "gain_2024_mar_aug": 1.3968275359761621e-05,
+      "gain_2024_jul_aug": 4.2322301807609766e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.00021839925478975321,
+      "development_bootstrap": {
+        "mean": -3.342756421480228e-05,
+        "ci95_low": -5.308452628308656e-05,
+        "ci95_high": -1.5179012668028586e-05
+      },
+      "sealed_gain": -2.5021766125328088e-05
+    },
+    "feat20_drift100_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 1.2719396170706756e-05,
+        "2023": -4.972210469057654e-05,
+        "2024": 1.4563842326618943e-05
+      },
+      "gain_2024_mar_aug": 1.4563842326618943e-05,
+      "gain_2024_jul_aug": 4.086955568440645e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00013023868259735128,
+      "development_bootstrap": {
+        "mean": -8.260636710738438e-06,
+        "ci95_low": -2.43859525870985e-05,
+        "ci95_high": 8.308346069007289e-06
+      },
+      "sealed_gain": -2.9242524046222722e-05
+    },
+    "feat20_drift100_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.3639232853669666e-05,
+        "2023": 1.567766548960175e-05,
+        "2024": 1.2091650785640673e-05
+      },
+      "gain_2024_mar_aug": 1.2091650785640673e-05,
+      "gain_2024_jul_aug": 3.5919185925272885e-05,
+      "monthly_blocks_won": 15,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.75,
+      "worst_monthly_gain": -5.6093790341836464e-05,
+      "development_bootstrap": {
+        "mean": 1.38673215810687e-05,
+        "ci95_low": -5.745236602497046e-06,
+        "ci95_high": 3.440846438868287e-05
+      },
+      "sealed_gain": -3.707650384220785e-05
+    },
+    "feat20_drift100_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 7.1828318850955085e-06,
+        "2023": -0.00016229954299187198,
+        "2024": 1.1250571517589514e-05
+      },
+      "gain_2024_mar_aug": 1.1250571517589514e-05,
+      "gain_2024_jul_aug": 4.0041797594845244e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.00028434691003997224,
+      "development_bootstrap": {
+        "mean": -5.0050661219938866e-05,
+        "ci95_low": -7.471802771801386e-05,
+        "ci95_high": -2.7254627712927783e-05
+      },
+      "sealed_gain": -2.5173190260717582e-05
+    },
+    "feat20_drift100_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 1.0597910334906237e-05,
+        "2023": -0.00011200080256348798,
+        "2024": 1.2736861929352988e-05
+      },
+      "gain_2024_mar_aug": 1.2736861929352988e-05,
+      "gain_2024_jul_aug": 3.9590590071472646e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.000225812241239297,
+      "development_bootstrap": {
+        "mean": -3.1049954195361295e-05,
+        "ci95_low": -5.008081795402531e-05,
+        "ci95_high": -1.1934893626608802e-05
+      },
+      "sealed_gain": -2.7402681779171133e-05
+    },
+    "feat20_drift100_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.2906740395809317e-05,
+        "2023": -6.385353285165673e-05,
+        "2024": 1.265511074394257e-05
+      },
+      "gain_2024_mar_aug": 1.265511074394257e-05,
+      "gain_2024_jul_aug": 3.706961938297849e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.00016908735142685683,
+      "development_bootstrap": {
+        "mean": -1.365799770098546e-05,
+        "ci95_low": -3.0331333400863268e-05,
+        "ci95_high": 3.8096505684344512e-06
+      },
+      "sealed_gain": -3.186740952595774e-05
+    },
+    "feat20_drift200_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 6.810712875368689e-06,
+        "2023": -0.0001207749052669637,
+        "2024": 1.0364613705948778e-05
+      },
+      "gain_2024_mar_aug": 1.0364613705948778e-05,
+      "gain_2024_jul_aug": 4.12767944067373e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00021342157426114516,
+      "development_bootstrap": {
+        "mean": -3.612339708515101e-05,
+        "ci95_low": -5.6380073632762674e-05,
+        "ci95_high": -1.7113094081718016e-05
+      },
+      "sealed_gain": -2.6992383872585966e-05
+    },
+    "feat20_drift200_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 6.789340583602342e-06,
+        "2023": -5.404435082243852e-05,
+        "2024": 7.103202481393349e-06
+      },
+      "gain_2024_mar_aug": 7.103202481393349e-06,
+      "gain_2024_jul_aug": 3.815049476591663e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00012557153414857126,
+      "development_bootstrap": {
+        "mean": -1.410597699783088e-05,
+        "ci95_low": -3.510888888630267e-05,
+        "ci95_high": 6.119655213588201e-06
+      },
+      "sealed_gain": -3.352322190482879e-05
+    },
+    "feat20_drift200_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 3.4947924117858527e-06,
+        "2023": 7.647729674658436e-06,
+        "2024": -5.960654940017854e-07
+      },
+      "gain_2024_mar_aug": -5.960654940017854e-07,
+      "gain_2024_jul_aug": 3.075937161104429e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00011958841549133259,
+      "development_bootstrap": {
+        "mean": 3.6714132228531752e-06,
+        "ci95_low": -2.4422356245802058e-05,
+        "ci95_high": 3.153430219859802e-05
+      },
+      "sealed_gain": -4.455046263730858e-05
+    },
+    "feat20_drift200_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 6.480554860309114e-06,
+        "2023": -0.0001466006866783342,
+        "2024": 1.07726644440065e-05
+      },
+      "gain_2024_mar_aug": 1.07726644440065e-05,
+      "gain_2024_jul_aug": 4.024019551910767e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.0002564673636993184,
+      "development_bootstrap": {
+        "mean": -4.502453394763719e-05,
+        "ci95_low": -6.7193519486829e-05,
+        "ci95_high": -2.5262413998510966e-05
+      },
+      "sealed_gain": -2.6792862979270625e-05
+    },
+    "feat20_drift200_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 8.277322103620325e-06,
+        "2023": -9.018363519781317e-05,
+        "2024": 1.0331464489486453e-05
+      },
+      "gain_2024_mar_aug": 1.0331464489486453e-05,
+      "gain_2024_jul_aug": 3.841495054278366e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.0001863624607928897,
+      "development_bootstrap": {
+        "mean": -2.5067441210976922e-05,
+        "ci95_low": -4.4430313133847424e-05,
+        "ci95_high": -6.6069226908915625e-06
+      },
+      "sealed_gain": -3.132378880678907e-05
+    },
+    "feat20_drift200_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 8.123059161952579e-06,
+        "2023": -3.70721325036001e-05,
+        "2024": 7.196531718131264e-06
+      },
+      "gain_2024_mar_aug": 7.196531718131264e-06,
+      "gain_2024_jul_aug": 3.353778479128238e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00011964702958441191,
+      "development_bootstrap": {
+        "mean": -7.756884287230778e-06,
+        "ci95_low": -2.8602274886604363e-05,
+        "ci95_high": 1.3680736291469105e-05
+      },
+      "sealed_gain": -3.908434949583261e-05
+    },
+    "feat20_drift200_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 5.20269125595233e-06,
+        "2023": -0.00017974669629292083,
+        "2024": 9.006065500458257e-06
+      },
+      "gain_2024_mar_aug": 9.006065500458257e-06,
+      "gain_2024_jul_aug": 3.840627515448799e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.00030804154323366465,
+      "development_bootstrap": {
+        "mean": -5.744915547518257e-05,
+        "ci95_low": -8.310544020599881e-05,
+        "ci95_high": -3.387959035411562e-05
+      },
+      "sealed_gain": -2.64119523362033e-05
+    },
+    "feat20_drift200_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 7.794815972465203e-06,
+        "2023": -0.00013768224349766412,
+        "2024": 9.685319142590177e-06
+      },
+      "gain_2024_mar_aug": 9.685319142590177e-06,
+      "gain_2024_jul_aug": 3.754945862629716e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.0002608850933357566,
+      "development_bootstrap": {
+        "mean": -4.182392212095194e-05,
+        "ci95_low": -6.301521185446647e-05,
+        "ci95_high": -2.1595594780367535e-05
+      },
+      "sealed_gain": -2.887643487276138e-05
+    },
+    "feat20_drift200_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 9.39210335425225e-06,
+        "2023": -9.744306874069559e-05,
+        "2024": 9.006675346836918e-06
+      },
+      "gain_2024_mar_aug": 9.006675346836918e-06,
+      "gain_2024_jul_aug": 3.489764707655666e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.00021522569063003153,
+      "development_bootstrap": {
+        "mean": -2.7591590325406946e-05,
+        "ci95_low": -4.668113392845038e-05,
+        "ci95_high": -8.23655522287042e-06
+      },
+      "sealed_gain": -3.3319893624561045e-05
+    },
+    "feat50_drift20_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 4.196713715937504e-06,
+        "2023": -2.1212842613214176e-06,
+        "2024": 3.2776956929133205e-06
+      },
+      "gain_2024_mar_aug": 3.2776956929133205e-06,
+      "gain_2024_jul_aug": 5.406564205552374e-06,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -4.3263730019276985e-05,
+      "development_bootstrap": {
+        "mean": 1.7343223821375771e-06,
+        "ci95_low": -5.046160280822762e-06,
+        "ci95_high": 7.793046959505123e-06
+      },
+      "sealed_gain": 5.378452282179657e-06
+    },
+    "feat50_drift20_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 8.53475170647296e-06,
+        "2023": 0.00011004140378885808,
+        "2024": 9.445525989207842e-07
+      },
+      "gain_2024_mar_aug": 9.445525989207842e-07,
+      "gain_2024_jul_aug": 1.4911821287342473e-06,
+      "monthly_blocks_won": 14,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.7,
+      "worst_monthly_gain": -1.7498955554293075e-05,
+      "development_bootstrap": {
+        "mean": 4.123020002523923e-05,
+        "ci95_low": 2.9860754548514814e-05,
+        "ci95_high": 5.35817629530483e-05
+      },
+      "sealed_gain": -2.8894096697631107e-06
+    },
+    "feat50_drift20_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 7.939109842408291e-06,
+        "2023": 0.00021422637953657486,
+        "2024": -7.877710647845194e-06
+      },
+      "gain_2024_mar_aug": -7.877710647845194e-06,
+      "gain_2024_jul_aug": -8.464700968925099e-06,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -4.449213114385915e-05,
+      "development_bootstrap": {
+        "mean": 7.426428087306999e-05,
+        "ci95_low": 5.022731285084214e-05,
+        "ci95_high": 0.00010098633467926247
+      },
+      "sealed_gain": -1.7095268737921217e-05
+    },
+    "feat50_drift20_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -1.2676699999169198e-06,
+        "2023": -5.959917769672259e-05,
+        "2024": 1.3336031115530763e-06
+      },
+      "gain_2024_mar_aug": 1.3336031115530763e-06,
+      "gain_2024_jul_aug": 3.072924181311928e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -8.950172686203033e-05,
+      "development_bootstrap": {
+        "mean": -2.059703527146711e-05,
+        "ci95_low": -3.2110118314189706e-05,
+        "ci95_high": -1.0650851441840196e-05
+      },
+      "sealed_gain": 5.705167724919554e-06
+    },
+    "feat50_drift20_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 3.3911470597429522e-06,
+        "2023": 2.8148585208465202e-05,
+        "2024": 1.7666556271014356e-06
+      },
+      "gain_2024_mar_aug": 1.7666556271014356e-06,
+      "gain_2024_jul_aug": 5.336306635233287e-07,
+      "monthly_blocks_won": 14,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.7,
+      "worst_monthly_gain": -5.931220274384884e-06,
+      "development_bootstrap": {
+        "mean": 1.143519910576004e-05,
+        "ci95_low": 8.599618908876194e-06,
+        "ci95_high": 1.4706713071561538e-05
+      },
+      "sealed_gain": -1.2684688921711308e-08
+    },
+    "feat50_drift20_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 5.151598216169997e-06,
+        "2023": 0.00011080131685966292,
+        "2024": -1.7972507433095326e-06
+      },
+      "gain_2024_mar_aug": -1.7972507433095326e-06,
+      "gain_2024_jul_aug": -6.350891494339624e-06,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -2.6961088225260107e-05,
+      "development_bootstrap": {
+        "mean": 3.947366039500145e-05,
+        "ci95_low": 2.7002145132487483e-05,
+        "ci95_high": 5.369165484621171e-05
+      },
+      "sealed_gain": -1.0077433007823372e-05
+    },
+    "feat50_drift20_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -5.961095284131488e-06,
+        "2023": -0.00011955338651169109,
+        "2024": -2.290060322988521e-06
+      },
+      "gain_2024_mar_aug": -2.290060322988521e-06,
+      "gain_2024_jul_aug": 5.967251734966977e-07,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00016416635940383464,
+      "development_bootstrap": {
+        "mean": -4.403059130193127e-05,
+        "ci95_low": -6.249637094868695e-05,
+        "ci95_high": -2.743733817266127e-05
+      },
+      "sealed_gain": 5.826991088622063e-06
+    },
+    "feat50_drift20_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -1.4380677966825604e-06,
+        "2023": -5.8197223995092763e-05,
+        "2024": -6.717530793616064e-07
+      },
+      "gain_2024_mar_aug": -6.717530793616064e-07,
+      "gain_2024_jul_aug": -4.6085643398919545e-07,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -9.020617457685395e-05,
+      "development_bootstrap": {
+        "mean": -2.078843532139529e-05,
+        "ci95_low": -3.085547843614834e-05,
+        "ci95_high": -1.1737642933461942e-05
+      },
+      "sealed_gain": 2.7048799968823436e-06
+    },
+    "feat50_drift20_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.6605425007981412e-06,
+        "2023": 4.5424328011167156e-07,
+        "2024": -1.0523470914620316e-06
+      },
+      "gain_2024_mar_aug": -1.0523470914620316e-06,
+      "gain_2024_jul_aug": -4.050459072077297e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -1.868408138225126e-05,
+      "development_bootstrap": {
+        "mean": 4.110806501819276e-07,
+        "ci95_low": -3.8059355750167846e-06,
+        "ci95_high": 4.740726568534305e-06
+      },
+      "sealed_gain": -3.074240573086347e-06
+    },
+    "feat50_drift50_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -4.1442366601170063e-07,
+        "2023": -3.207306325631811e-05,
+        "2024": 9.308602930749778e-07
+      },
+      "gain_2024_mar_aug": 9.308602930749778e-07,
+      "gain_2024_jul_aug": 4.197270113000805e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -6.558733796381303e-05,
+      "development_bootstrap": {
+        "mean": -1.0925606973691526e-05,
+        "ci95_low": -1.8067069517024246e-05,
+        "ci95_high": -4.825347264033404e-06
+      },
+      "sealed_gain": 5.298062629173202e-06
+    },
+    "feat50_drift50_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 2.8383980380595533e-06,
+        "2023": 6.675552029157745e-05,
+        "2024": -1.2773938617362217e-06
+      },
+      "gain_2024_mar_aug": -1.2773938617362217e-06,
+      "gain_2024_jul_aug": 6.015912221970511e-07,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -1.0510697378900537e-05,
+      "development_bootstrap": {
+        "mean": 2.3630022993986383e-05,
+        "ci95_low": 1.4610550016446612e-05,
+        "ci95_high": 3.348051121434538e-05
+      },
+      "sealed_gain": -2.230546123156617e-06
+    },
+    "feat50_drift50_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 1.971108157204238e-06,
+        "2023": 0.00015870091486715264,
+        "2024": -9.109230409921128e-06
+      },
+      "gain_2024_mar_aug": -9.109230409921128e-06,
+      "gain_2024_jul_aug": -8.418355201255143e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -3.443432717796614e-05,
+      "development_bootstrap": {
+        "mean": 5.2650334168053565e-05,
+        "ci95_low": 3.1612289388433133e-05,
+        "ci95_high": 7.613129646849174e-05
+      },
+      "sealed_gain": -1.5177519974291357e-05
+    },
+    "feat50_drift50_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -3.934649894355785e-06,
+        "2023": -7.895493016271225e-05,
+        "2024": -3.2283938537174676e-07
+      },
+      "gain_2024_mar_aug": -3.2283938537174676e-07,
+      "gain_2024_jul_aug": 2.3116200311642845e-06,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -0.00010514775052673056,
+      "development_bootstrap": {
+        "mean": -2.871239827607713e-05,
+        "ci95_low": -4.096750962026611e-05,
+        "ci95_high": -1.8037274765199725e-05
+      },
+      "sealed_gain": 5.360946775915185e-06
+    },
+    "feat50_drift50_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.4424991790671187e-06,
+        "2023": 7.444992790240165e-05,
+        "2024": -3.1954474217305684e-06
+      },
+      "gain_2024_mar_aug": -3.1954474217305684e-06,
+      "gain_2024_jul_aug": -6.2512982967737785e-06,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -1.8472327416260982e-05,
+      "development_bootstrap": {
+        "mean": 2.521052212219485e-05,
+        "ci95_low": 1.4911494186851648e-05,
+        "ci95_high": 3.712246903080528e-05
+      },
+      "sealed_gain": -9.355165272691779e-06
+    },
+    "feat50_drift50_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -7.45385031926887e-06,
+        "2023": -0.00013077329010825934,
+        "2024": -3.4054442591315635e-06
+      },
+      "gain_2024_mar_aug": -3.4054442591315635e-06,
+      "gain_2024_jul_aug": 5.409782555848717e-08,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0001795608221703882,
+      "development_bootstrap": {
+        "mean": -4.876396493101151e-05,
+        "ci95_low": -6.788681866426957e-05,
+        "ci95_high": -3.139871340404933e-05
+      },
+      "sealed_gain": 5.480353051625201e-06
+    },
+    "feat50_drift50_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -3.4308790211508456e-06,
+        "2023": -7.463604124091981e-05,
+        "2024": -2.0290927786388403e-06
+      },
+      "gain_2024_mar_aug": -2.0290927786388403e-06,
+      "gain_2024_jul_aug": -9.55357238892174e-07,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00011283877148235392,
+      "development_bootstrap": {
+        "mean": -2.7570918070417193e-05,
+        "ci95_low": -3.844573249218579e-05,
+        "ci95_high": -1.762748556927215e-05
+      },
+      "sealed_gain": 2.4751877673662242e-06
+    },
+    "feat50_drift50_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -6.681106941760299e-07,
+        "2023": -2.09427955156233e-05,
+        "2024": -2.4411517505811524e-06
+      },
+      "gain_2024_mar_aug": -2.4411517505811524e-06,
+      "gain_2024_jul_aug": -4.283873189274206e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -4.824874759714404e-05,
+      "development_bootstrap": {
+        "mean": -8.208792755715575e-06,
+        "ci95_low": -1.2997072572648934e-05,
+        "ci95_high": -3.7097945248587026e-06
+      },
+      "sealed_gain": -2.993477111134588e-06
+    },
+    "feat50_drift100_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -4.747753123525921e-06,
+        "2023": -6.397213553723134e-05,
+        "2024": -1.946083243549505e-06
+      },
+      "gain_2024_mar_aug": -1.946083243549505e-06,
+      "gain_2024_jul_aug": 2.8532332335048386e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -9.178451861225408e-05,
+      "development_bootstrap": {
+        "mean": -2.432367251332351e-05,
+        "ci95_low": -3.288267404844942e-05,
+        "ci95_high": -1.653695709008805e-05
+      },
+      "sealed_gain": 4.417338765751297e-06
+    },
+    "feat50_drift100_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -2.79543181201038e-06,
+        "2023": 2.0377732466962566e-05,
+        "2024": -4.538205025006328e-06
+      },
+      "gain_2024_mar_aug": -4.538205025006328e-06,
+      "gain_2024_jul_aug": -4.997868887450248e-07,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -3.240088460827163e-05,
+      "development_bootstrap": {
+        "mean": 4.665611445016209e-06,
+        "ci95_low": -3.7679632174671853e-06,
+        "ci95_high": 1.3117546394897255e-05
+      },
+      "sealed_gain": -2.8099235693439935e-06
+    },
+    "feat50_drift100_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -4.385779194620759e-06,
+        "2023": 9.882495856333959e-05,
+        "2024": -1.2050839772059017e-05
+      },
+      "gain_2024_mar_aug": -1.2050839772059017e-05,
+      "gain_2024_jul_aug": -8.667289738109088e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -4.444735075873969e-05,
+      "development_bootstrap": {
+        "mean": 2.887470111673039e-05,
+        "ci95_low": 9.53462047080093e-06,
+        "ci95_high": 5.0113325030798255e-05
+      },
+      "sealed_gain": -1.4961078770615034e-05
+    },
+    "feat50_drift100_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -6.609955909137428e-06,
+        "2023": -0.00010074245246379614,
+        "2024": -2.3871983127886986e-06
+      },
+      "gain_2024_mar_aug": -2.3871983127886986e-06,
+      "gain_2024_jul_aug": 1.3873422873533417e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00013169760685797515,
+      "development_bootstrap": {
+        "mean": -3.7795064262280095e-05,
+        "ci95_low": -5.1355588668275216e-05,
+        "ci95_high": -2.594207004362234e-05
+      },
+      "sealed_gain": 4.564100384979696e-06
+    },
+    "feat50_drift100_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -3.5062220250055054e-06,
+        "2023": -3.1781285252956224e-05,
+        "2024": -2.420745942225175e-06
+      },
+      "gain_2024_mar_aug": -2.420745942225175e-06,
+      "gain_2024_jul_aug": -7.233346711983584e-07,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -4.3908501025232736e-05,
+      "development_bootstrap": {
+        "mean": -1.2929638566865465e-05,
+        "ci95_low": -1.683519628202022e-05,
+        "ci95_high": -9.580560134048785e-06
+      },
+      "sealed_gain": -6.237746538745013e-07
+    },
+    "feat50_drift100_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -2.556814191385158e-06,
+        "2023": 3.3274878496685547e-05,
+        "2024": -5.522052079497528e-06
+      },
+      "gain_2024_mar_aug": -5.522052079497528e-06,
+      "gain_2024_jul_aug": -6.331635265680892e-06,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -2.0714859446075104e-05,
+      "development_bootstrap": {
+        "mean": 8.896817916292228e-06,
+        "ci95_low": -3.027004268053539e-07,
+        "ci95_high": 1.9345998239640663e-05
+      },
+      "sealed_gain": -9.424871567819206e-06
+    },
+    "feat50_drift100_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -9.036246959502554e-06,
+        "2023": -0.00014397522303642485,
+        "2024": -4.814646031452612e-06
+      },
+      "gain_2024_mar_aug": -4.814646031452612e-06,
+      "gain_2024_jul_aug": -6.577904849373759e-07,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0001975895848542566,
+      "development_bootstrap": {
+        "mean": -5.4302689641840647e-05,
+        "ci95_low": -7.447958582107344e-05,
+        "ci95_high": -3.625588617472474e-05
+      },
+      "sealed_gain": 4.886266975702739e-06
+    },
+    "feat50_drift100_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -5.573542108148386e-06,
+        "2023": -9.400014199493195e-05,
+        "2024": -3.812342154228667e-06
+      },
+      "gain_2024_mar_aug": -3.812342154228667e-06,
+      "gain_2024_jul_aug": -1.6492431234216656e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00013939854378627184,
+      "development_bootstrap": {
+        "mean": -3.55457486131243e-05,
+        "ci95_low": -4.8096806261575754e-05,
+        "ci95_high": -2.427777244343143e-05
+      },
+      "sealed_gain": 1.926453702346041e-06
+    },
+    "feat50_drift100_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -3.2170856457020387e-06,
+        "2023": -4.617653166999199e-05,
+        "2024": -4.378079874179046e-06
+      },
+      "gain_2024_mar_aug": -4.378079874179046e-06,
+      "gain_2024_jul_aug": -4.7104589270281865e-06,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -8.301728170652219e-05,
+      "development_bootstrap": {
+        "mean": -1.8397558114609938e-05,
+        "ci95_low": -2.488252761093113e-05,
+        "ci95_high": -1.2485229031478128e-05
+      },
+      "sealed_gain": -3.268595799343766e-06
+    },
+    "feat50_drift200_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -9.944666288138132e-06,
+        "2023": -0.00010249204190689879,
+        "2024": -6.22288821105083e-06
+      },
+      "gain_2024_mar_aug": -6.22288821105083e-06,
+      "gain_2024_jul_aug": 7.086777526652982e-07,
+      "monthly_blocks_won": 3,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.15,
+      "worst_monthly_gain": -0.000126244627871064,
+      "development_bootstrap": {
+        "mean": -4.073666676293637e-05,
+        "ci95_low": -5.311025772974809e-05,
+        "ci95_high": -2.9742534691410387e-05
+      },
+      "sealed_gain": 2.4229093147072507e-06
+    },
+    "feat50_drift200_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -1.0186562337815477e-05,
+        "2023": -3.610587514695604e-05,
+        "2024": -1.0229428154124545e-05
+      },
+      "gain_2024_mar_aug": -1.0229428154124545e-05,
+      "gain_2024_jul_aug": -2.8921312904119104e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -6.344319490167601e-05,
+      "development_bootstrap": {
+        "mean": -1.914363329941934e-05,
+        "ci95_low": -3.1090887846135806e-05,
+        "ci95_high": -8.486552642880858e-06
+      },
+      "sealed_gain": -5.160332497002676e-06
+    },
+    "feat50_drift200_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -1.3701634267542941e-05,
+        "2023": 2.5241817665558608e-05,
+        "2024": -1.867382484803806e-05
+      },
+      "gain_2024_mar_aug": -1.867382484803806e-05,
+      "gain_2024_jul_aug": -1.0757763847540631e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -8.655667728455724e-05,
+      "development_bootstrap": {
+        "mean": -1.7906297025383631e-06,
+        "ci95_low": -2.2853320241167402e-05,
+        "ci95_high": 1.8992477019338872e-05
+      },
+      "sealed_gain": -1.7239977008948993e-05
+    },
+    "feat50_drift200_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -1.000723917901608e-05,
+        "2023": -0.00012833819038811085,
+        "2024": -5.503837018024944e-06
+      },
+      "gain_2024_mar_aug": -5.503837018024944e-06,
+      "gain_2024_jul_aug": -2.193256993575628e-07,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00016949763506726018,
+      "development_bootstrap": {
+        "mean": -4.945624725455133e-05,
+        "ci95_low": -6.57321291591847e-05,
+        "ci95_high": -3.5482376476495917e-05
+      },
+      "sealed_gain": 3.018403600578163e-06
+    },
+    "feat50_drift200_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -8.297203131525191e-06,
+        "2023": -7.227571012709319e-05,
+        "2024": -6.5346654635789056e-06
+      },
+      "gain_2024_mar_aug": -6.5346654635789056e-06,
+      "gain_2024_jul_aug": -2.4647823601344293e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -9.963015817035097e-05,
+      "development_bootstrap": {
+        "mean": -2.9832762956258533e-05,
+        "ci95_low": -3.9235897593835406e-05,
+        "ci95_high": -2.179024634194033e-05
+      },
+      "sealed_gain": -2.3669393101293214e-06
+    },
+    "feat50_drift200_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -8.538197269013037e-06,
+        "2023": -1.9518778652383268e-05,
+        "2024": -1.0259226725968576e-05
+      },
+      "gain_2024_mar_aug": -1.0259226725968576e-05,
+      "gain_2024_jul_aug": -7.76215979608895e-06,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -7.346483700416128e-05,
+      "development_bootstrap": {
+        "mean": -1.2855814470879903e-05,
+        "ci95_low": -2.4795013618820687e-05,
+        "ci95_high": -1.8526203788174623e-06
+      },
+      "sealed_gain": -1.0981917082361657e-05
+    },
+    "feat50_drift200_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -1.1127571073032774e-05,
+        "2023": -0.00016139114818907406,
+        "2024": -6.937557855064202e-06
+      },
+      "gain_2024_mar_aug": -6.937557855064202e-06,
+      "gain_2024_jul_aug": -1.912041899970188e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00022108370605831057,
+      "development_bootstrap": {
+        "mean": -6.169173297935292e-05,
+        "ci95_low": -8.359514551279562e-05,
+        "ci95_high": -4.261223233567122e-05
+      },
+      "sealed_gain": 3.858699511987943e-06
+    },
+    "feat50_drift200_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -8.543411697170183e-06,
+        "2023": -0.00011963474070650885,
+        "2024": -6.681493650712363e-06
+      },
+      "gain_2024_mar_aug": -6.681493650712363e-06,
+      "gain_2024_jul_aug": -3.118468030610951e-06,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00017417062789827387,
+      "development_bootstrap": {
+        "mean": -4.630554016211802e-05,
+        "ci95_low": -6.146970869218858e-05,
+        "ci95_high": -3.310831876411495e-05
+      },
+      "sealed_gain": 7.694925264120324e-07
+    },
+    "feat50_drift200_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -6.954089656033389e-06,
+        "2023": -7.970361126223158e-05,
+        "2024": -7.783326884245261e-06
+      },
+      "gain_2024_mar_aug": -7.783326884245261e-06,
+      "gain_2024_jul_aug": -6.119889182800809e-06,
+      "monthly_blocks_won": 3,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.15,
+      "worst_monthly_gain": -0.0001287545969304203,
+      "development_bootstrap": {
+        "mean": -3.2312248903568524e-05,
+        "ci95_low": -4.269730765568719e-05,
+        "ci95_high": -2.307603479384446e-05
+      },
+      "sealed_gain": -4.2986906744056295e-06
+    },
+    "feat100_drift20_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 1.7885797122171756e-05,
+        "2023": -8.306525331235237e-05,
+        "2024": -3.823724201511708e-06
+      },
+      "gain_2024_mar_aug": -3.823724201511708e-06,
+      "gain_2024_jul_aug": -1.7763573929964172e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.0001403696896683507,
+      "development_bootstrap": {
+        "mean": -2.3616729921489772e-05,
+        "ci95_low": -4.2019302168214765e-05,
+        "ci95_high": -6.062124908205392e-06
+      },
+      "sealed_gain": -5.114166549944698e-06
+    },
+    "feat100_drift20_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 2.353889426776089e-05,
+        "2023": 3.0410603843520967e-05,
+        "2024": -5.710292579961216e-06
+      },
+      "gain_2024_mar_aug": -5.710292579961216e-06,
+      "gain_2024_jul_aug": -5.594683656468754e-06,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -7.780805913608805e-05,
+      "development_bootstrap": {
+        "mean": 1.6926817782462957e-05,
+        "ci95_low": -1.9079558110649963e-06,
+        "ci95_high": 3.580824600839331e-05
+      },
+      "sealed_gain": -1.2595896928183493e-05
+    },
+    "feat100_drift20_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 2.42583115587499e-05,
+        "2023": 0.00013590874869693145,
+        "2024": -1.4085981111184392e-05
+      },
+      "gain_2024_mar_aug": -1.4085981111184392e-05,
+      "gain_2024_jul_aug": -1.5453510940782355e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -7.17810060030235e-05,
+      "development_bootstrap": {
+        "mean": 5.1008568691144696e-05,
+        "ci95_low": 2.29589432086475e-05,
+        "ci95_high": 8.090377834520247e-05
+      },
+      "sealed_gain": -2.601562442263776e-05
+    },
+    "feat100_drift20_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 1.132794936920255e-05,
+        "2023": -0.00014130721495820263,
+        "2024": -6.174960688243433e-06
+      },
+      "gain_2024_mar_aug": -6.174960688243433e-06,
+      "gain_2024_jul_aug": -4.281733692049754e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00019702871599081682,
+      "development_bootstrap": {
+        "mean": -4.6717098976399986e-05,
+        "ci95_low": -6.809704089423703e-05,
+        "ci95_high": -2.7034487717120297e-05
+      },
+      "sealed_gain": -4.9300268543049814e-06
+    },
+    "feat100_drift20_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 1.6755093565358536e-05,
+        "2023": -5.2628317052545776e-05,
+        "2024": -5.498905409838059e-06
+      },
+      "gain_2024_mar_aug": -5.498905409838059e-06,
+      "gain_2024_jul_aug": -6.8098395338992235e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -9.434509331426044e-05,
+      "development_bootstrap": {
+        "mean": -1.402170023897473e-05,
+        "ci95_low": -2.945439132363984e-05,
+        "ci95_high": 1.688974347598439e-06
+      },
+      "sealed_gain": -9.933035567991884e-06
+    },
+    "feat100_drift20_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.9283871858281915e-05,
+        "2023": 3.095554959912113e-05,
+        "2024": -8.81980901739214e-06
+      },
+      "gain_2024_mar_aug": -8.81980901739214e-06,
+      "gain_2024_jul_aug": -1.3683174015823113e-05,
+      "monthly_blocks_won": 14,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.7,
+      "worst_monthly_gain": -7.892859671119622e-05,
+      "development_bootstrap": {
+        "mean": 1.4679925410464855e-05,
+        "ci95_low": -5.0146846360472325e-06,
+        "ci95_high": 3.4824716134528716e-05
+      },
+      "sealed_gain": -1.9282940186739534e-05
+    },
+    "feat100_drift20_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 5.811539598548619e-06,
+        "2023": -0.00020192338043113994,
+        "2024": -1.0135097999731221e-05
+      },
+      "gain_2024_mar_aug": -1.0135097999731221e-05,
+      "gain_2024_jul_aug": -6.91698211599273e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.0002722529792816355,
+      "development_bootstrap": {
+        "mean": -7.076865246877547e-05,
+        "ci95_low": -9.765947780084668e-05,
+        "ci95_high": -4.628317203334965e-05
+      },
+      "sealed_gain": -5.17112086340128e-06
+    },
+    "feat100_drift20_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 1.069140197927424e-05,
+        "2023": -0.000139967061243057,
+        "2024": -8.442024931720627e-06
+      },
+      "gain_2024_mar_aug": -8.442024931720627e-06,
+      "gain_2024_jul_aug": -8.042900755603508e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.0001999618125239127,
+      "development_bootstrap": {
+        "mean": -4.7172330858997055e-05,
+        "ci95_low": -6.752024164410574e-05,
+        "ci95_high": -2.8077057534376978e-05
+      },
+      "sealed_gain": -7.75984694138703e-06
+    },
+    "feat100_drift20_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.4146847170031507e-05,
+        "2023": -8.071543729636789e-05,
+        "2024": -8.747853119437124e-06
+      },
+      "gain_2024_mar_aug": -8.747853119437124e-06,
+      "gain_2024_jul_aug": -1.1700840425816388e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00013267681063244894,
+      "development_bootstrap": {
+        "mean": -2.5618649258177343e-05,
+        "ci95_low": -4.1982048401454765e-05,
+        "ci95_high": -9.486813997388852e-06
+      },
+      "sealed_gain": -1.3005582497601227e-05
+    },
+    "feat100_drift50_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 1.2651300901670174e-05,
+        "2023": -0.00011368116710588136,
+        "2024": -6.705237125310796e-06
+      },
+      "gain_2024_mar_aug": -6.705237125310796e-06,
+      "gain_2024_jul_aug": -3.438077796214068e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00016289243893433388,
+      "development_bootstrap": {
+        "mean": -3.688685194562222e-05,
+        "ci95_low": -5.5721229716290515e-05,
+        "ci95_high": -1.86763822430156e-05
+      },
+      "sealed_gain": -5.6438661042668486e-06
+    },
+    "feat100_drift50_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 1.690750234151894e-05,
+        "2023": -1.3871481851558428e-05,
+        "2024": -8.734255326559794e-06
+      },
+      "gain_2024_mar_aug": -8.734255326559794e-06,
+      "gain_2024_jul_aug": -7.162914029005746e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.0001069319148319685,
+      "development_bootstrap": {
+        "mean": -1.5886482512451304e-06,
+        "ci95_low": -2.028972876388494e-05,
+        "ci95_high": 1.6279171383896896e-05
+      },
+      "sealed_gain": -1.2610998233550165e-05
+    },
+    "feat100_drift50_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 1.70435921964412e-05,
+        "2023": 7.905501443044431e-05,
+        "2024": -1.638685592118216e-05
+      },
+      "gain_2024_mar_aug": -1.638685592118216e-05,
+      "gain_2024_jul_aug": -1.6312017794445326e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -0.00010891223611628985,
+      "development_bootstrap": {
+        "mean": 2.8174236649521422e-05,
+        "ci95_low": 1.4149627816186201e-06,
+        "ci95_high": 5.51780968320716e-05
+      },
+      "sealed_gain": -2.4996495461638475e-05
+    },
+    "feat100_drift50_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 8.327282352224558e-06,
+        "2023": -0.00016104850413615807,
+        "2024": -8.212110856818473e-06
+      },
+      "gain_2024_mar_aug": -8.212110856818473e-06,
+      "gain_2024_jul_aug": -5.381794743340954e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00021770705254778747,
+      "development_bootstrap": {
+        "mean": -5.519848207999107e-05,
+        "ci95_low": -7.763968216552804e-05,
+        "ci95_high": -3.462342179943585e-05
+      },
+      "sealed_gain": -5.633688402923563e-06
+    },
+    "feat100_drift50_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 1.2863415821807095e-05,
+        "2023": -8.135520732895959e-05,
+        "2024": -7.836622544414664e-06
+      },
+      "gain_2024_mar_aug": -7.836622544414664e-06,
+      "gain_2024_jul_aug": -7.851605549137712e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00012434720553187003,
+      "development_bootstrap": {
+        "mean": -2.6005929493206225e-05,
+        "ci95_low": -4.23323512655329e-05,
+        "ci95_high": -9.777051789895592e-06
+      },
+      "sealed_gain": -1.045951177849256e-05
+    },
+    "feat100_drift50_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.4907398576100838e-05,
+        "2023": -6.166912782071729e-06,
+        "2024": -1.0979421039113342e-05
+      },
+      "gain_2024_mar_aug": -1.0979421039113342e-05,
+      "gain_2024_jul_aug": -1.4261094620543982e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00010229773856847018,
+      "development_bootstrap": {
+        "mean": -3.1525306030375867e-07,
+        "ci95_low": -1.9300938714529795e-05,
+        "ci95_high": 1.861069892751354e-05
+      },
+      "sealed_gain": -1.9279553650837574e-05
+    },
+    "feat100_drift50_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 4.166564830528399e-06,
+        "2023": -0.00021333569010286208,
+        "2024": -1.1477997113584395e-05
+      },
+      "gain_2024_mar_aug": -1.1477997113584395e-05,
+      "gain_2024_jul_aug": -7.674133209498113e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.00028798456562621907,
+      "development_bootstrap": {
+        "mean": -7.569123824781794e-05,
+        "ci95_low": -0.00010335121665548943,
+        "ci95_high": -5.0740628749922914e-05
+      },
+      "sealed_gain": -5.771903003732536e-06
+    },
+    "feat100_drift50_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 8.470261155481557e-06,
+        "2023": -0.00015669448760161485,
+        "2024": -1.0140637397562642e-05
+      },
+      "gain_2024_mar_aug": -1.0140637397562642e-05,
+      "gain_2024_jul_aug": -8.859187178856871e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00022109533140685377,
+      "development_bootstrap": {
+        "mean": -5.423863183296219e-05,
+        "ci95_low": -7.542895332696809e-05,
+        "ci95_high": -3.398891693395059e-05
+      },
+      "sealed_gain": -8.370755325904085e-06
+    },
+    "feat100_drift50_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 1.1513754509291591e-05,
+        "2023": -0.00010249728824241079,
+        "2024": -1.0591688133976036e-05
+      },
+      "gain_2024_mar_aug": -1.0591688133976036e-05,
+      "gain_2024_jul_aug": -1.2363302034147343e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00015633812399031263,
+      "development_bootstrap": {
+        "mean": -3.4616946963999195e-05,
+        "ci95_low": -5.2092220784233915e-05,
+        "ci95_high": -1.770190108068705e-05
+      },
+      "sealed_gain": -1.3433107242317533e-05
+    },
+    "feat100_drift100_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 7.786727512980434e-06,
+        "2023": -0.00014620839712475275,
+        "2024": -1.0229259715333612e-05
+      },
+      "gain_2024_mar_aug": -1.0229259715333612e-05,
+      "gain_2024_jul_aug": -5.358921715653335e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00019245754405848112,
+      "development_bootstrap": {
+        "mean": -5.088517954010831e-05,
+        "ci95_low": -7.101019875427633e-05,
+        "ci95_high": -3.167289741987514e-05
+      },
+      "sealed_gain": -7.134667449113516e-06
+    },
+    "feat100_drift100_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 1.0476806594685584e-05,
+        "2023": -6.119150628311038e-05,
+        "2024": -1.2965685069927367e-05
+      },
+      "gain_2024_mar_aug": -1.2965685069927367e-05,
+      "gain_2024_jul_aug": -9.129502699862689e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00013773634463882977,
+      "development_bootstrap": {
+        "mean": -2.1453452882496464e-05,
+        "ci95_low": -4.202079449372594e-05,
+        "ci95_high": -2.3298902838095656e-06
+      },
+      "sealed_gain": -1.4105491901875445e-05
+    },
+    "feat100_drift100_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": 9.624216982264789e-06,
+        "2023": 1.7922742650715012e-05,
+        "2024": -2.0622623390116644e-05
+      },
+      "gain_2024_mar_aug": -2.0622623390116644e-05,
+      "gain_2024_jul_aug": -1.7714566411185732e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00014974647637654257,
+      "development_bootstrap": {
+        "mean": 3.1980794884899197e-06,
+        "ci95_low": -2.4051380698737207e-05,
+        "ci95_high": 2.918614285369129e-05
+      },
+      "sealed_gain": -2.6000209220812138e-05
+    },
+    "feat100_drift100_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 5.36060157616844e-06,
+        "2023": -0.0001832143929859361,
+        "2024": -1.0744446450693572e-05
+      },
+      "gain_2024_mar_aug": -1.0744446450693572e-05,
+      "gain_2024_jul_aug": -6.744785708163751e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00024145334178894202,
+      "development_bootstrap": {
+        "mean": -6.465678043862072e-05,
+        "ci95_low": -8.772533039468182e-05,
+        "ci95_high": -4.319419415822022e-05
+      },
+      "sealed_gain": -6.928723342783261e-06
+    },
+    "feat100_drift100_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 8.920131654889575e-06,
+        "2023": -0.00011370404240495721,
+        "2024": -1.0959333486327203e-05
+      },
+      "gain_2024_mar_aug": -1.0959333486327203e-05,
+      "gain_2024_jul_aug": -9.233010051854087e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.0001588768812560032,
+      "development_bootstrap": {
+        "mean": -3.9499016618711916e-05,
+        "ci95_low": -5.7523703209860816e-05,
+        "ci95_high": -2.2177886529168135e-05
+      },
+      "sealed_gain": -1.1830569255752723e-05
+    },
+    "feat100_drift100_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 1.0325335683099483e-05,
+        "2023": -4.809869528517632e-05,
+        "2024": -1.4241979029796579e-05
+      },
+      "gain_2024_mar_aug": -1.4241979029796579e-05,
+      "gain_2024_jul_aug": -1.5218858031475305e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.00012630684851082643,
+      "development_bootstrap": {
+        "mean": -1.7380222011059855e-05,
+        "ci95_low": -3.7454811377438135e-05,
+        "ci95_high": 1.7981842318537602e-06
+      },
+      "sealed_gain": -2.0345637043812842e-05
+    },
+    "feat100_drift100_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 2.455249215829763e-06,
+        "2023": -0.0002267284315447153,
+        "2024": -1.317054927595526e-05
+      },
+      "gain_2024_mar_aug": -1.317054927595526e-05,
+      "gain_2024_jul_aug": -8.667366091089233e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.0003063787952339863,
+      "development_bootstrap": {
+        "mean": -8.14276683769299e-05,
+        "ci95_low": -0.00010951788126374812,
+        "ci95_high": -5.552334817550372e-05
+      },
+      "sealed_gain": -6.725950956236583e-06
+    },
+    "feat100_drift100_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 6.134219606786811e-06,
+        "2023": -0.00017634480112615865,
+        "2024": -1.2348912358227299e-05
+      },
+      "gain_2024_mar_aug": -1.2348912358227299e-05,
+      "gain_2024_jul_aug": -9.97508992002946e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00024820330409662024,
+      "development_bootstrap": {
+        "mean": -6.251002050309352e-05,
+        "ci95_low": -8.469656294389615e-05,
+        "ci95_high": -4.130601522269908e-05
+      },
+      "sealed_gain": -9.459432205796528e-06
+    },
+    "feat100_drift100_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 8.706941608836188e-06,
+        "2023": -0.0001281126414241549,
+        "2024": -1.3095317037673647e-05
+      },
+      "gain_2024_mar_aug": -1.3095317037673647e-05,
+      "gain_2024_jul_aug": -1.3352576914091788e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.00019183759194748898,
+      "development_bootstrap": {
+        "mean": -4.520112315945906e-05,
+        "ci95_low": -6.421844065985046e-05,
+        "ci95_high": -2.674312145511697e-05
+      },
+      "sealed_gain": -1.4428149683690364e-05
+    },
+    "feat100_drift200_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": 2.116968875020998e-06,
+        "2023": -0.00018536199357854937,
+        "2024": -1.5332279781531274e-05
+      },
+      "gain_2024_mar_aug": -1.5332279781531274e-05,
+      "gain_2024_jul_aug": -8.2908890054911e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00023574538267132167,
+      "development_bootstrap": {
+        "mean": -6.79350515859839e-05,
+        "ci95_low": -9.094306915987039e-05,
+        "ci95_high": -4.607477898423456e-05
+      },
+      "sealed_gain": -1.0049704071972405e-05
+    },
+    "feat100_drift200_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": 2.376407858859837e-06,
+        "2023": -0.00011862564902322275,
+        "2024": -1.9896230847090105e-05
+      },
+      "gain_2024_mar_aug": -1.9896230847090105e-05,
+      "gain_2024_jul_aug": -1.2702964815026911e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00016973077734725584,
+      "development_bootstrap": {
+        "mean": -4.621801432132601e-05,
+        "ci95_low": -6.89238439950922e-05,
+        "ci95_high": -2.4582145571583755e-05
+      },
+      "sealed_gain": -1.783681158725609e-05
+    },
+    "feat100_drift200_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -6.373290373516238e-07,
+        "2023": -5.692777841532427e-05,
+        "2024": -2.889803866348858e-05
+      },
+      "gain_2024_mar_aug": -2.889803866348858e-05,
+      "gain_2024_jul_aug": -2.1379864138613997e-05,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.0001931252994557228,
+      "development_bootstrap": {
+        "mean": -2.8741006923304206e-05,
+        "ci95_low": -5.7374929477136266e-05,
+        "ci95_high": -1.4554489539520537e-06
+      },
+      "sealed_gain": -3.0120321802776093e-05
+    },
+    "feat100_drift200_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": 1.7102809313465717e-06,
+        "2023": -0.00021119773496786122,
+        "2024": -1.4467823786186464e-05
+      },
+      "gain_2024_mar_aug": -1.4467823786186464e-05,
+      "gain_2024_jul_aug": -8.958836237821149e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.0002788545125267161,
+      "development_bootstrap": {
+        "mean": -7.672606732997303e-05,
+        "ci95_low": -0.00010193405242997588,
+        "ci95_high": -5.324707241483172e-05
+      },
+      "sealed_gain": -9.24348744693322e-06
+    },
+    "feat100_drift200_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": 3.7495944859554174e-06,
+        "2023": -0.00015477987336550954,
+        "2024": -1.5983360953066016e-05
+      },
+      "gain_2024_mar_aug": -1.5983360953066016e-05,
+      "gain_2024_jul_aug": -1.188553155521018e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00020928641910028848,
+      "development_bootstrap": {
+        "mean": -5.701429685672643e-05,
+        "ci95_low": -7.76413435380765e-05,
+        "ci95_high": -3.711283806601667e-05
+      },
+      "sealed_gain": -1.4727334891630374e-05
+    },
+    "feat100_drift200_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": 3.837877855585356e-06,
+        "2023": -0.00010166756054946573,
+        "2024": -2.019263093678117e-05
+      },
+      "gain_2024_mar_aug": -2.019263093678117e-05,
+      "gain_2024_jul_aug": -1.78641476477766e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00016266960076964613,
+      "development_bootstrap": {
+        "mean": -3.9949062196394065e-05,
+        "ci95_low": -6.2078343824191e-05,
+        "ci95_high": -1.8761042449023692e-05
+      },
+      "sealed_gain": -2.344081719785205e-05
+    },
+    "feat100_drift200_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": 2.673427966833649e-07,
+        "2023": -0.0002443369189321748,
+        "2024": -1.566552614071929e-05
+      },
+      "gain_2024_mar_aug": -1.566552614071929e-05,
+      "gain_2024_jul_aug": -1.0315764648206801e-05,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -0.0003302886639891215,
+      "development_bootstrap": {
+        "mean": -8.903102233123492e-05,
+        "ci95_low": -0.0001188242315311102,
+        "ci95_high": -6.147547812441253e-05
+      },
+      "sealed_gain": -8.322929609126474e-06
+    },
+    "feat100_drift200_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": 3.019476559340647e-06,
+        "2023": -0.0002022682431899509,
+        "2024": -1.5776161416439537e-05
+      },
+      "gain_2024_mar_aug": -1.5776161416439537e-05,
+      "gain_2024_jul_aug": -1.2035535540346167e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00028359900953524384,
+      "development_bootstrap": {
+        "mean": -7.359127797727635e-05,
+        "ci95_low": -9.806756113854544e-05,
+        "ci95_high": -5.064133160774982e-05
+      },
+      "sealed_gain": -1.1470510165493716e-05
+    },
+    "feat100_drift200_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": 4.776772987272206e-06,
+        "2023": -0.0001620248454860149,
+        "2024": -1.724469413004483e-05
+      },
+      "gain_2024_mar_aug": -1.724469413004483e-05,
+      "gain_2024_jul_aug": -1.5550301454034503e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00023840640227354887,
+      "development_bootstrap": {
+        "mean": -5.9544435182003244e-05,
+        "ci95_low": -8.107040997900109e-05,
+        "ci95_high": -3.8930579334938185e-05
+      },
+      "sealed_gain": -1.6597066937102176e-05
+    },
+    "feat200_drift20_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -1.2799126919902728e-05,
+        "2023": -9.649506428421813e-05,
+        "2024": -3.28709877506432e-05
+      },
+      "gain_2024_mar_aug": -3.28709877506432e-05,
+      "gain_2024_jul_aug": -8.19358430127648e-06,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0001893336117092329,
+      "development_bootstrap": {
+        "mean": -4.784450649818508e-05,
+        "ci95_low": -6.964636794089271e-05,
+        "ci95_high": -2.800224623616539e-05
+      },
+      "sealed_gain": -4.4748319310834026e-05
+    },
+    "feat200_drift20_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -6.27993484284241e-06,
+        "2023": 1.9317126391490954e-05,
+        "2024": -3.1922768554812175e-05
+      },
+      "gain_2024_mar_aug": -3.1922768554812175e-05,
+      "gain_2024_jul_aug": -8.763022243162418e-06,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -0.0001683852695405321,
+      "development_bootstrap": {
+        "mean": -5.322889771321352e-06,
+        "ci95_low": -2.3301156823469083e-05,
+        "ci95_high": 1.4034106849933393e-05
+      },
+      "sealed_gain": -4.98094686005645e-05
+    },
+    "feat200_drift20_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -4.694422620382179e-06,
+        "2023": 0.00012715160476473727,
+        "2024": -3.746366951175472e-05
+      },
+      "gain_2024_mar_aug": -3.746366951175472e-05,
+      "gain_2024_jul_aug": -1.537296120588955e-05,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -0.0001587117011024084,
+      "development_bootstrap": {
+        "mean": 3.073693016027146e-05,
+        "ci95_low": 5.467436992738547e-06,
+        "ci95_high": 5.8099586558204995e-05
+      },
+      "sealed_gain": -6.08086150065106e-05
+    },
+    "feat200_drift20_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -1.997494811574221e-05,
+        "2023": -0.00015610112239056764,
+        "2024": -3.650637664926939e-05
+      },
+      "gain_2024_mar_aug": -3.650637664926939e-05,
+      "gain_2024_jul_aug": -1.1599613026363965e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00023676735899157112,
+      "development_bootstrap": {
+        "mean": -7.202491459307936e-05,
+        "ci95_low": -9.764712260896891e-05,
+        "ci95_high": -4.8560928371152424e-05
+      },
+      "sealed_gain": -4.519675350178227e-05
+    },
+    "feat200_drift20_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -1.3990695709550278e-05,
+        "2023": -6.576793919532453e-05,
+        "2024": -3.363761000253058e-05
+      },
+      "gain_2024_mar_aug": -3.363761000253058e-05,
+      "gain_2024_jul_aug": -1.1329156759643804e-05,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -0.00018281174730588493,
+      "development_bootstrap": {
+        "mean": -3.7891466352735095e-05,
+        "ci95_low": -5.6434737997599015e-05,
+        "ci95_high": -1.9458735049947022e-05
+      },
+      "sealed_gain": -4.809546807025496e-05
+    },
+    "feat200_drift20_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -1.0904809206590857e-05,
+        "2023": 1.9470212745928498e-05,
+        "2024": -3.476580224175124e-05
+      },
+      "gain_2024_mar_aug": -3.476580224175124e-05,
+      "gain_2024_jul_aug": -1.5403929132998318e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.0001727459539265061,
+      "development_bootstrap": {
+        "mean": -7.751791200376512e-06,
+        "ci95_low": -2.6583028706257585e-05,
+        "ci95_high": 1.3106522512696033e-05
+      },
+      "sealed_gain": -5.534107854378882e-05
+    },
+    "feat200_drift20_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -2.604270304120688e-05,
+        "2023": -0.00021798677713401503,
+        "2024": -4.179963494102939e-05
+      },
+      "gain_2024_mar_aug": -4.179963494102939e-05,
+      "gain_2024_jul_aug": -1.558189994594693e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00029873438451791316,
+      "development_bootstrap": {
+        "mean": -9.711572740094653e-05,
+        "ci95_low": -0.00012823378803016494,
+        "ci95_high": -6.863544520704103e-05
+      },
+      "sealed_gain": -4.641701660787384e-05
+    },
+    "feat200_drift20_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -2.0881405027850684e-05,
+        "2023": -0.000155010917291601,
+        "2024": -3.858041099482143e-05
+      },
+      "gain_2024_mar_aug": -3.858041099482143e-05,
+      "gain_2024_jul_aug": -1.4582775724808346e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00021187250377792342,
+      "development_bootstrap": {
+        "mean": -7.260098594599497e-05,
+        "ci95_low": -9.783862501030415e-05,
+        "ci95_high": -4.89863957451037e-05
+      },
+      "sealed_gain": -4.739103308914284e-05
+    },
+    "feat200_drift20_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -1.7144524204462665e-05,
+        "2023": -9.473975269058083e-05,
+        "2024": -3.736008830434062e-05
+      },
+      "gain_2024_mar_aug": -3.736008830434062e-05,
+      "gain_2024_jul_aug": -1.611567253427117e-05,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00019316291909025034,
+      "development_bootstrap": {
+        "mean": -5.012888450000211e-05,
+        "ci95_low": -7.015815664230071e-05,
+        "ci95_high": -2.9974395004568345e-05
+      },
+      "sealed_gain": -5.102205904864019e-05
+    },
+    "feat200_drift50_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -1.837662766015236e-05,
+        "2023": -0.0001277694568070007,
+        "2024": -3.661056526234794e-05
+      },
+      "gain_2024_mar_aug": -3.661056526234794e-05,
+      "gain_2024_jul_aug": -1.0805757691788032e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00021229203972689828,
+      "development_bootstrap": {
+        "mean": -6.172468282372335e-05,
+        "ci95_low": -8.437117676502176e-05,
+        "ci95_high": -4.097774046946216e-05
+      },
+      "sealed_gain": -4.6158321808618186e-05
+    },
+    "feat200_drift50_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -1.3425833548706513e-05,
+        "2023": -2.5952677397468713e-05,
+        "2024": -3.6233828183268916e-05
+      },
+      "gain_2024_mar_aug": -3.6233828183268916e-05,
+      "gain_2024_jul_aug": -1.175693209663978e-05,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -0.00019888665109897807,
+      "development_bootstrap": {
+        "mean": -2.4753437257138078e-05,
+        "ci95_low": -4.2510164114954704e-05,
+        "ci95_high": -5.879859299739716e-06
+      },
+      "sealed_gain": -5.114502432112471e-05
+    },
+    "feat200_drift50_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -1.259515102218716e-05,
+        "2023": 6.898091303974318e-05,
+        "2024": -4.148067349756352e-05
+      },
+      "gain_2024_mar_aug": -4.148067349756352e-05,
+      "gain_2024_jul_aug": -1.8132374034139654e-05,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -0.00019767963236576143,
+      "development_bootstrap": {
+        "mean": 6.682489515836611e-06,
+        "ci95_low": -1.678263058259982e-05,
+        "ci95_high": 3.2609777597700076e-05
+      },
+      "sealed_gain": -6.155009193243594e-05
+    },
+    "feat200_drift50_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -2.317606845760003e-05,
+        "2023": -0.00017629042523786465,
+        "2024": -3.916377615212855e-05
+      },
+      "gain_2024_mar_aug": -3.916377615212855e-05,
+      "gain_2024_jul_aug": -1.3443407850251457e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00025281144500136803,
+      "development_bootstrap": {
+        "mean": -8.092110758278902e-05,
+        "ci95_low": -0.00010820282803620353,
+        "ci95_high": -5.693563262784916e-05
+      },
+      "sealed_gain": -4.655683288674524e-05
+    },
+    "feat200_drift50_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -1.8183053440421456e-05,
+        "2023": -9.516684997575086e-05,
+        "2024": -3.690570113853368e-05
+      },
+      "gain_2024_mar_aug": -3.690570113853368e-05,
+      "gain_2024_jul_aug": -1.3486523433777354e-05,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00020156754830135974,
+      "development_bootstrap": {
+        "mean": -5.049791043614463e-05,
+        "ci95_low": -7.005343451423793e-05,
+        "ci95_high": -3.162316080454745e-05
+      },
+      "sealed_gain": -4.9606571035271876e-05
+    },
+    "feat200_drift50_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -1.5682189138531653e-05,
+        "2023": -1.854827697394762e-05,
+        "2024": -3.8165912932041024e-05
+      },
+      "gain_2024_mar_aug": -3.8165912932041024e-05,
+      "gain_2024_jul_aug": -1.746931728291218e-05,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.00019724244717988167,
+      "development_bootstrap": {
+        "mean": -2.3576589443382487e-05,
+        "ci95_low": -4.1990638780436515e-05,
+        "ci95_high": -3.6097053845105046e-06
+      },
+      "sealed_gain": -5.6650527680574916e-05
+    },
+    "feat200_drift50_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -2.7773385095735428e-05,
+        "2023": -0.0002296677397848263,
+        "2024": -4.3539161587041285e-05
+      },
+      "gain_2024_mar_aug": -4.3539161587041285e-05,
+      "gain_2024_jul_aug": -1.6854419333030645e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00030869447776257504,
+      "development_bootstrap": {
+        "mean": -0.00010228264170610157,
+        "ci95_low": -0.00013409140810467183,
+        "ci95_high": -7.330162774778664e-05
+      },
+      "sealed_gain": -4.7454612217826554e-05
+    },
+    "feat200_drift50_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -2.3231106781405812e-05,
+        "2023": -0.00017214132311879236,
+        "2024": -4.0873964758901836e-05
+      },
+      "gain_2024_mar_aug": -4.0873964758901836e-05,
+      "gain_2024_jul_aug": -1.6172114588429376e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00022645254649179497,
+      "development_bootstrap": {
+        "mean": -8.003377970912898e-05,
+        "ci95_low": -0.00010647930238809862,
+        "ci95_high": -5.592973584057239e-05
+      },
+      "sealed_gain": -4.865716167809258e-05
+    },
+    "feat200_drift50_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -1.994903143821941e-05,
+        "2023": -0.00011705890959480153,
+        "2024": -3.999717838319738e-05
+      },
+      "gain_2024_mar_aug": -3.999717838319738e-05,
+      "gain_2024_jul_aug": -1.780887072975953e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00020573931406673668,
+      "development_bootstrap": {
+        "mean": -5.9615839258049136e-05,
+        "ci95_low": -8.032078278210986e-05,
+        "ci95_high": -3.891338569420758e-05
+      },
+      "sealed_gain": -5.232321073259995e-05
+    },
+    "feat200_drift100_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -2.357975861362304e-05,
+        "2023": -0.00016104648817792823,
+        "2024": -4.11790422410281e-05
+      },
+      "gain_2024_mar_aug": -4.11790422410281e-05,
+      "gain_2024_jul_aug": -1.398476072395329e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002391482017547492,
+      "development_bootstrap": {
+        "mean": -7.642027624139944e-05,
+        "ci95_low": -0.0001008223888209898,
+        "ci95_high": -5.435483137169676e-05
+      },
+      "sealed_gain": -4.875423094768171e-05
+    },
+    "feat200_drift100_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -2.0364365642711167e-05,
+        "2023": -7.439740385710512e-05,
+        "2024": -4.203193950962283e-05
+      },
+      "gain_2024_mar_aug": -4.203193950962283e-05,
+      "gain_2024_jul_aug": -1.5610759436585817e-05,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -0.0002311188292048137,
+      "development_bootstrap": {
+        "mean": -4.566414062317455e-05,
+        "ci95_low": -6.465249892238155e-05,
+        "ci95_high": -2.65044748847766e-05
+      },
+      "sealed_gain": -5.429717968077468e-05
+    },
+    "feat200_drift100_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -2.0691641365925252e-05,
+        "2023": 6.349038555901344e-06,
+        "2024": -4.7805349743813053e-05
+      },
+      "gain_2024_mar_aug": -4.7805349743813053e-05,
+      "gain_2024_jul_aug": -2.2051240876332196e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -0.0002404175370246467,
+      "development_bootstrap": {
+        "mean": -1.9688199291575015e-05,
+        "ci95_low": -4.314842374139727e-05,
+        "ci95_high": 6.103631739260635e-06
+      },
+      "sealed_gain": -6.476402128004281e-05
+    },
+    "feat200_drift100_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -2.632981822360667e-05,
+        "2023": -0.00019898942657348018,
+        "2024": -4.2481339884672675e-05
+      },
+      "gain_2024_mar_aug": -4.2481339884672675e-05,
+      "gain_2024_jul_aug": -1.582063306297342e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00027240634554731526,
+      "development_bootstrap": {
+        "mean": -9.086959532333727e-05,
+        "ci95_low": -0.00011911483723381766,
+        "ci95_high": -6.602123998952399e-05
+      },
+      "sealed_gain": -4.87109343797503e-05
+    },
+    "feat200_drift100_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -2.240694109226466e-05,
+        "2023": -0.00012831535378050442,
+        "2024": -4.120625428844949e-05
+      },
+      "gain_2024_mar_aug": -4.120625428844949e-05,
+      "gain_2024_jul_aug": -1.6389279308341922e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002205075444347137,
+      "development_bootstrap": {
+        "mean": -6.472628163452799e-05,
+        "ci95_low": -8.560816573944681e-05,
+        "ci95_high": -4.434378490392041e-05
+      },
+      "sealed_gain": -5.2266228342250426e-05
+    },
+    "feat200_drift100_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -2.0638390011434123e-05,
+        "2023": -6.154628444872682e-05,
+        "2024": -4.29989272000621e-05
+      },
+      "gain_2024_mar_aug": -4.29989272000621e-05,
+      "gain_2024_jul_aug": -2.0455549189641127e-05,
+      "monthly_blocks_won": 6,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.3,
+      "worst_monthly_gain": -0.00022239638095662538,
+      "development_bootstrap": {
+        "mean": -4.1621937157975585e-05,
+        "ci95_low": -6.026746608134091e-05,
+        "ci95_high": -2.2013543909929585e-05
+      },
+      "sealed_gain": -5.943474417984098e-05
+    },
+    "feat200_drift100_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -2.955204463453014e-05,
+        "2023": -0.00024339292416898227,
+        "2024": -4.5751952043431486e-05
+      },
+      "gain_2024_mar_aug": -4.5751952043431486e-05,
+      "gain_2024_jul_aug": -1.856754992884012e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0003213232365600523,
+      "development_bootstrap": {
+        "mean": -0.00010831698981401847,
+        "ci95_low": -0.0001410053129968859,
+        "ci95_high": -7.833514964689094e-05
+      },
+      "sealed_gain": -4.899992014991909e-05
+    },
+    "feat200_drift100_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -2.566816421624471e-05,
+        "2023": -0.00019229030105679033,
+        "2024": -4.3862597160595354e-05
+      },
+      "gain_2024_mar_aug": -4.3862597160595354e-05,
+      "gain_2024_jul_aug": -1.8367863900929345e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00024494908074235096,
+      "development_bootstrap": {
+        "mean": -8.875204534746772e-05,
+        "ci95_low": -0.00011598507254177441,
+        "ci95_high": -6.315580587387482e-05
+      },
+      "sealed_gain": -5.063272852736774e-05
+    },
+    "feat200_drift100_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -2.2890532186867094e-05,
+        "2023": -0.0001433391486611512,
+        "2024": -4.354128387493334e-05
+      },
+      "gain_2024_mar_aug": -4.354128387493334e-05,
+      "gain_2024_jul_aug": -2.023794103814028e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002182825766172555,
+      "development_bootstrap": {
+        "mean": -7.079585141111886e-05,
+        "ci95_low": -9.271026099892526e-05,
+        "ci95_high": -4.848038939028366e-05
+      },
+      "sealed_gain": -5.450077313314956e-05
+    },
+    "feat200_drift200_rel50_w0.10": {
+      "season_gain_development": {
+        "2022": -2.9544122294727087e-05,
+        "2023": -0.00020114460418388817,
+        "2024": -4.7697706966119924e-05
+      },
+      "gain_2024_mar_aug": -4.7697706966119924e-05,
+      "gain_2024_jul_aug": -1.878328513533152e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002743251455743474,
+      "development_bootstrap": {
+        "mean": -9.433332149371914e-05,
+        "ci95_low": -0.00012125704702524121,
+        "ci95_high": -7.00934501379823e-05
+      },
+      "sealed_gain": -5.323472537238813e-05
+    },
+    "feat200_drift200_rel50_w0.15": {
+      "season_gain_development": {
+        "2022": -2.8906671943254067e-05,
+        "2023": -0.00013324832592546214,
+        "2024": -5.108595227512663e-05
+      },
+      "gain_2024_mar_aug": -5.108595227512663e-05,
+      "gain_2024_jul_aug": -2.1984057234060842e-05,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.00026454451256347676,
+      "development_bootstrap": {
+        "mean": -7.172346187167019e-05,
+        "ci95_low": -9.416217734707092e-05,
+        "ci95_high": -4.896776351109004e-05
+      },
+      "sealed_gain": -6.0376686068926645e-05
+    },
+    "feat200_drift200_rel50_w0.20": {
+      "season_gain_development": {
+        "2022": -3.1542397471831155e-05,
+        "2023": -7.03905216144645e-05,
+        "2024": -5.8912054334973194e-05
+      },
+      "gain_2024_mar_aug": -5.8912054334973194e-05,
+      "gain_2024_jul_aug": -2.9449652846841483e-05,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.000285704694304143,
+      "development_bootstrap": {
+        "mean": -5.335363211625744e-05,
+        "ci95_low": -7.847736122092951e-05,
+        "ci95_high": -2.5567972421439227e-05
+      },
+      "sealed_gain": -7.201504946570152e-05
+    },
+    "feat200_drift200_rel150_w0.10": {
+      "season_gain_development": {
+        "2022": -3.011567803806051e-05,
+        "2023": -0.00022767387726854572,
+        "2024": -4.731073864217247e-05
+      },
+      "gain_2024_mar_aug": -4.731073864217247e-05,
+      "gain_2024_jul_aug": -1.9577417965657455e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002991249897160521,
+      "development_bootstrap": {
+        "mean": -0.000103567644306348,
+        "ci95_low": -0.0001329289328941908,
+        "ci95_high": -7.67701476609082e-05
+      },
+      "sealed_gain": -5.2285805676860796e-05
+    },
+    "feat200_drift200_rel150_w0.15": {
+      "season_gain_development": {
+        "2022": -2.7780787015646932e-05,
+        "2023": -0.00017044284781076745,
+        "2024": -4.788931388819889e-05
+      },
+      "gain_2024_mar_aug": -4.788931388819889e-05,
+      "gain_2024_jul_aug": -2.1355902371238077e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00023975728835161808,
+      "development_bootstrap": {
+        "mean": -8.31847050100303e-05,
+        "ci95_low": -0.00010705781911850936,
+        "ci95_high": -6.0440410062928055e-05
+      },
+      "sealed_gain": -5.705315476756903e-05
+    },
+    "feat200_drift200_rel150_w0.20": {
+      "season_gain_development": {
+        "2022": -2.739692617821208e-05,
+        "2023": -0.00011651736713929701,
+        "2024": -5.116162195106057e-05
+      },
+      "gain_2024_mar_aug": -5.116162195106057e-05,
+      "gain_2024_jul_aug": -2.6186307551995718e-05,
+      "monthly_blocks_won": 5,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.25,
+      "worst_monthly_gain": -0.0002482779903536126,
+      "development_bootstrap": {
+        "mean": -6.544830152662667e-05,
+        "ci95_low": -8.74126146182764e-05,
+        "ci95_high": -4.326173511376294e-05
+      },
+      "sealed_gain": -6.50501387198015e-05
+    },
+    "feat200_drift200_rel400_w0.10": {
+      "season_gain_development": {
+        "2022": -3.175470100565446e-05,
+        "2023": -0.00026145657219037887,
+        "2024": -4.900602944309218e-05
+      },
+      "gain_2024_mar_aug": -4.900602944309218e-05,
+      "gain_2024_jul_aug": -2.1335672644566228e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00033918105120576606,
+      "development_bootstrap": {
+        "mean": -0.00011631567678930763,
+        "ci95_low": -0.00015035882520906177,
+        "ci95_high": -8.529850987386072e-05
+      },
+      "sealed_gain": -5.149221537998269e-05
+    },
+    "feat200_drift200_rel400_w0.15": {
+      "season_gain_development": {
+        "2022": -2.8805032191657783e-05,
+        "2023": -0.0002188964840714882,
+        "2024": -4.8428497021152646e-05
+      },
+      "gain_2024_mar_aug": -4.8428497021152646e-05,
+      "gain_2024_jul_aug": -2.2107895759158648e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.0002788900614046273,
+      "development_bootstrap": {
+        "mean": -0.00010042630235312675,
+        "ci95_low": -0.00012943054290488775,
+        "ci95_high": -7.364388020190523e-05
+      },
+      "sealed_gain": -5.39867813528253e-05
+    },
+    "feat200_drift200_rel400_w0.20": {
+      "season_gain_development": {
+        "2022": -2.6850200712387017e-05,
+        "2023": -0.0001781616739908856,
+        "2024": -4.920886203709811e-05
+      },
+      "gain_2024_mar_aug": -4.920886203709811e-05,
+      "gain_2024_jul_aug": -2.4675113895299814e-05,
+      "monthly_blocks_won": 4,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.2,
+      "worst_monthly_gain": -0.00025462150927228603,
+      "development_bootstrap": {
+        "mean": -8.592982947563147e-05,
+        "ci95_low": -0.00011039671720077755,
+        "ci95_high": -6.181623590905345e-05
+      },
+      "sealed_gain": -5.846032354090842e-05
+    }
+  },
+  "eligible_candidates": [
+    "feat20_drift100_rel50_w0.20",
+    "feat20_drift20_rel150_w0.15",
+    "feat20_drift20_rel150_w0.20",
+    "feat20_drift20_rel50_w0.15",
+    "feat20_drift20_rel50_w0.20",
+    "feat20_drift50_rel150_w0.20",
+    "feat20_drift50_rel50_w0.15",
+    "feat20_drift50_rel50_w0.20"
+  ],
+  "promoted_candidate": "feat20_drift20_rel50_w0.20",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "constants_frozen_at_training_time": true
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "experiment": "V94b_league_centered_target_encoding",
+  "baseline": "V93",
+  "baseline_public_score": 951.1067955895,
+  "prior_season_league_levels": {
+    "2019": null,
+    "2020": 0.5646700054335694,
+    "2021": 0.5484693665628245,
+    "2022": 0.5431423520563061,
+    "2023": 0.5395365039034485,
+    "2024": 0.5315815109059132
+  },
+  "frozen_2025_offset": 0.5237659752747625,
+  "feature_counts": {
+    "centered": {
+      "encoded": 86,
+      "hierarchical": 89,
+      "form": 105,
+      "context": 115
+    },
+    "both": {
+      "encoded": 90,
+      "hierarchical": 95,
+      "form": 111,
+      "context": 119
+    }
+  },
+  "variants": {
+    "centered": "replace with relative",
+    "both": "keep raw + relative"
+  },
+  "retrained_components": [
+    "te_trackman_hgb",
+    "hierarchical_hgb",
+    "form",
+    "context"
+  ],
+  "reused_components": [
+    "extra_trees",
+    "trackman_hgb",
+    "logistic"
+  ],
+  "min_gain_for_submission": 1.06e-05,
+  "local_to_leaderboard_ratio": 0.944,
+  "development_results": {
+    "centered_v17_only": {
+      "season_gain_development": {
+        "2022": 1.4266866531830941e-05,
+        "2023": -1.2793869753776575e-05,
+        "2024": -8.375097900644738e-06
+      },
+      "gain_2024_mar_aug": -8.375097900644738e-06,
+      "gain_2024_jul_aug": -2.265998589248062e-05,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -4.513948205550617e-05
+    },
+    "centered_form_context_only": {
+      "season_gain_development": {
+        "2022": 1.2626620797125426e-05,
+        "2023": -1.4593561651388926e-05,
+        "2024": -3.2398815719774466e-06
+      },
+      "gain_2024_mar_aug": -3.2398815719774466e-06,
+      "gain_2024_jul_aug": -7.676547503344079e-07,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -3.833404568027853e-05
+    },
+    "centered_all": {
+      "season_gain_development": {
+        "2022": 2.3710629647374487e-05,
+        "2023": -2.996364201422727e-05,
+        "2024": -1.347467687506687e-05
+      },
+      "gain_2024_mar_aug": -1.347467687506687e-05,
+      "gain_2024_jul_aug": -2.585458624391816e-05,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -6.112666683069888e-05
+    },
+    "both_v17_only": {
+      "season_gain_development": {
+        "2022": 1.2278721684743853e-05,
+        "2023": -2.3696150975824363e-05,
+        "2024": 1.4649599923224897e-06
+      },
+      "gain_2024_mar_aug": 1.4649599923224897e-06,
+      "gain_2024_jul_aug": -4.428437690286021e-06,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -4.871987509681479e-05
+    },
+    "both_form_context_only": {
+      "season_gain_development": {
+        "2022": 9.578939945464799e-06,
+        "2023": -2.6276569917113492e-05,
+        "2024": -2.947934898406036e-07
+      },
+      "gain_2024_mar_aug": -2.947934898406036e-07,
+      "gain_2024_jul_aug": -6.177814428791471e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -4.702167509828033e-05
+    },
+    "both_all": {
+      "season_gain_development": {
+        "2022": 2.021416476527207e-05,
+        "2023": -5.0548035849876546e-05,
+        "2024": 6.577845051948771e-07
+      },
+      "gain_2024_mar_aug": 6.577845051948771e-07,
+      "gain_2024_jul_aug": -1.104832576984637e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -6.87805776043256e-05
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "final_confirmation_inspected": false,
+  "final_confirmation": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "test_row_aggregation_used": false,
+    "current_pitch_post_event_information_used": false,
+    "league_offset_frozen_at_training_time": true,
+    "final_confirmation_used_for_candidate_selection": false
+  }
+}
