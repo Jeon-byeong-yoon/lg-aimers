@@ -52,9 +52,11 @@ Score = max(0, 100000 × (1 - Brier Score / (r × (1 - r))))
 
 ---
 
-## 3. `submit.zip` 필수 구조
+## 3. 제출 ZIP 필수 구조
 
-압축 파일의 최상위 구조가 정확히 다음과 같아야 합니다.
+평가 서버는 ZIP **내부 구조만** 확인하고 ZIP 파일명은 보지 않습니다.
+따라서 팀 규칙에 따라 `submit_v<번호>.zip`처럼 버전 번호를 붙여도 채점에 영향이 없습니다.
+아래 구조에서 `submit.zip`은 파일명 예시일 뿐이며, 최상위 구성이 정확히 같아야 합니다.
 
 ```text
 submit.zip
@@ -138,6 +140,63 @@ rich==13.7.1
 
 ---
 
+## 5-2. 직렬화 호환성 — 필수 게이트
+
+### 반드시 지킬 것
+
+제출 ZIP에 들어갈 `.joblib` 모델을 **새로 학습하거나 다시 저장할 때는 반드시
+서버 미러 환경**을 사용한다.
+
+```bash
+/opt/anaconda3/envs/lgaimers_server/bin/python scripts/train_....py
+```
+
+패키징 전에 항상 로드 검사를 통과시킨다. `scripts/package_v9*.py`는 이 검사를
+내부에서 강제하므로, 실패하면 ZIP이 생성되지 않는다.
+
+```bash
+/opt/anaconda3/envs/lgaimers_server/bin/python scripts/check_server_pickle_compat.py
+```
+
+### 환경 구성
+
+| 환경 | numpy | 용도 |
+|---|---|---|
+| `lgaimers` | **2.4.6** | 탐색·검증 전용. **제출 아티팩트 저장 금지** |
+| `lgaimers_server` | **1.26.4** | 서버와 동일. 제출 아티팩트 학습·저장 전용 |
+
+```bash
+conda create -y -n lgaimers_server python=3.11
+/opt/anaconda3/envs/lgaimers_server/bin/pip install \
+  numpy==1.26.4 pandas==2.0.3 scikit-learn==1.8.0 joblib==1.5.3 scipy==1.15.3
+```
+
+### 왜 필요한가 — V93 1차 제출 실패 사례
+
+2026-08-24 V93 1차 제출이 평가 서버에서 다음 오류로 실패해 **일일 제출 기회 1회를
+낭비했다.** (7절 기준 `script.py` 실행 후 오류는 일일 횟수에 반영된다.)
+
+```
+ValueError: <class 'numpy.random._pcg64.PCG64'> is not a known BitGenerator module.
+```
+
+numpy 2.x는 `np.random.Generator`를 **클래스 참조**로 pickle하지만 numpy 1.x는
+**문자열 이름**만 해석한다. 원인 객체는
+`HistGradientBoostingClassifier._feature_subsample_rng`로, fit 전용이고 추론에는
+쓰이지도 않지만 pickle에 함께 저장된다.
+
+V41·V92가 무사했던 이유는 기존에 저장된 `v6_ensemble.joblib`,
+`v38_feature_models.joblib`을 **재사용만** 했기 때문이다. V93에서 처음으로 모델을
+새로 저장했고 그때 numpy 2.4.6 환경을 썼다.
+
+### 일반 교훈
+
+**로컬 추론 성공은 서버 호환성의 증거가 되지 않는다.** 직렬화 객체는 저장 시점의
+라이브러리 버전을 각인한다. 새로 저장한 아티팩트가 하나라도 있으면 서버와 같은
+버전의 인터프리터로 로드 검사를 통과시킨 뒤에만 제출한다.
+
+---
+
 ## 6. MacBook Pro M5·32GB 개발 안내
 
 32GB 메모리는 이 대회의 일반적인 표형 데이터 전처리와 LightGBM, XGBoost, CatBoost, scikit-learn 계열 모델 개발에 충분한 편입니다. 다만 로컬 Mac과 평가 서버는 하드웨어 및 운영체제가 다르므로 로컬 성공만으로 서버 실행을 보장할 수 없습니다.
@@ -211,6 +270,8 @@ else:
 - [ ] 실제 평가 입력 경로를 공식 베이스라인과 대조
 - [ ] 인터넷을 끈 상태에서도 모델 로딩과 추론 가능
 - [ ] Python 3.11 및 서버 패키지 버전으로 검증
+- [ ] **`check_server_pickle_compat.py`를 `lgaimers_server`로 실행해 전 아티팩트 OK 확인**
+- [ ] **새로 저장한 `.joblib`이 있으면 `lgaimers_server`에서 학습·저장했는지 확인**
 - [ ] CPU RAM 28GB 및 6 vCPU 조건을 고려
 - [ ] 전체 추론이 10분보다 충분히 빠름
 - [ ] 예측값이 유한한 `[0, 1]` 확률이며 행 수와 순서가 입력과 일치
