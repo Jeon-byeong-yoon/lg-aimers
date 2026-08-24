@@ -43,6 +43,8 @@ ENTITIES = {
     "batter": ("batter_id", "asof_batter_n", BATTER_RATES),
     "pitchmix": ("pitcher_id", "asof_pitcher_pitchmix_n", PITCHMIX_RATES),
 }
+# Chosen a priori in V92 and never refitted until V102. Kept as the defaults so
+# every existing artifact and script reproduces byte-for-byte.
 SHRINKAGE = 50.0
 RELIABILITY_SCALE = 150.0
 
@@ -92,7 +94,8 @@ def build_priors(frame, groups=("pitcher", "batter")):
     return priors
 
 
-def add_inseason_features(frame, anchors, priors, current_season=None):
+def add_inseason_features(frame, anchors, priors, current_season=None,
+                          shrinkage=SHRINKAGE, reliability_scale=RELIABILITY_SCALE):
     """Attach current-season reconstructions to ``frame`` row by row."""
     output = frame.copy()
     output["__order"] = np.arange(len(output))
@@ -111,12 +114,12 @@ def add_inseason_features(frame, anchors, priors, current_season=None):
             inside_sum = np.clip(career_sum - anchor_sum, 0.0, None)
             inside_sum = np.minimum(inside_sum, inside_n)
             prior = priors[rate]
-            inside_rate = (inside_sum + prior * SHRINKAGE) / (inside_n + SHRINKAGE)
+            inside_rate = (inside_sum + prior * shrinkage) / (inside_n + shrinkage)
             output[f"ins_{rate}"] = inside_rate
             output[f"dlt_{rate}"] = inside_rate - merged[rate].fillna(prior).to_numpy(dtype=float)
         output[f"ins_log_n_{group}"] = np.log1p(inside_n)
         if group == "pitcher":
-            output["ins_pitcher_reliability"] = inside_n / (inside_n + RELIABILITY_SCALE)
+            output["ins_pitcher_reliability"] = inside_n / (inside_n + reliability_scale)
             season_column = f"anchor_season_{group}"
             if current_season is None:
                 reference = output["season"].to_numpy(dtype=float)
@@ -128,7 +131,9 @@ def add_inseason_features(frame, anchors, priors, current_season=None):
     return output.drop(columns="__order")
 
 
-def add_training_inseason_features(frame, groups=("pitcher", "batter")):
+def add_training_inseason_features(frame, groups=("pitcher", "batter"),
+                                  shrinkage=SHRINKAGE,
+                                  reliability_scale=RELIABILITY_SCALE):
     """Build the same features for training rows, one season at a time.
 
     Each season uses an anchor frozen at the end of the *previous* season, which
@@ -147,9 +152,10 @@ def add_training_inseason_features(frame, groups=("pitcher", "batter")):
             continue
         anchors = build_anchors(history, groups)
         priors = build_priors(history, groups)
-        pieces.append(
-            add_inseason_features(current, anchors, priors, current_season=season)
-        )
+        pieces.append(add_inseason_features(
+            current, anchors, priors, current_season=season,
+            shrinkage=shrinkage, reliability_scale=reliability_scale,
+        ))
     output = pd.concat(pieces).sort_index()
     if len(output) != len(frame) or not output.index.equals(frame.index):
         raise ValueError("In-season feature construction changed row identity")
