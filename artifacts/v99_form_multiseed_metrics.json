@@ -1,0 +1,124 @@
+{
+  "experiment": "V99_form_multiseed_averaging",
+  "baseline": "V96 (single seed 42, 0.27 / 0.52 / 0.21, drift 0.15)",
+  "baseline_public_score": 962.8787800874,
+  "rationale": "Variance reduction needs no new information. V54 failed because averaging shrank probabilities against fixed calibration lookups; calibration is now refitted per candidate and Form carries 0.52 instead of 0.16.",
+  "form_config": {
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 200,
+    "l2_regularization": 20.0,
+    "learning_rate": 0.03,
+    "max_iter": 500
+  },
+  "seeds": [
+    42,
+    1004,
+    2024,
+    777
+  ],
+  "across_seed_prediction_spread": {
+    "2022": 0.006211529901197939,
+    "2023": 0.005482248471812152,
+    "2024": 0.005507833230682765
+  },
+  "form_weights": [
+    0.52,
+    0.56
+  ],
+  "context_weight": 0.21,
+  "drift_weight": 0.15,
+  "min_gain_for_submission": 1.06e-05,
+  "local_to_leaderboard_ratio": 0.932,
+  "development_results": {
+    "seeds2_form0.52": {
+      "season_gain_development": {
+        "2022": 2.2750066177348348e-05,
+        "2023": -2.327451390848332e-05,
+        "2024": 3.7487304677040943e-06
+      },
+      "gain_2024_mar_aug": 3.7487304677040943e-06,
+      "gain_2024_jul_aug": -7.806176203322916e-06,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -8.303171644565309e-05
+    },
+    "seeds2_form0.56": {
+      "season_gain_development": {
+        "2022": 2.7693936065050644e-05,
+        "2023": 3.1547549982724816e-05,
+        "2024": 6.616622698408185e-06
+      },
+      "gain_2024_mar_aug": 6.616622698408185e-06,
+      "gain_2024_jul_aug": -1.004080193919905e-05,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -4.012822301438804e-05
+    },
+    "seeds3_form0.52": {
+      "season_gain_development": {
+        "2022": 2.4621439154785603e-05,
+        "2023": -5.093708864441417e-05,
+        "2024": 4.301207406575127e-06
+      },
+      "gain_2024_mar_aug": 4.301207406575127e-06,
+      "gain_2024_jul_aug": -7.201820348757441e-06,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00012326189752559527
+    },
+    "seeds3_form0.56": {
+      "season_gain_development": {
+        "2022": 2.982514773534521e-05,
+        "2023": 2.0187793477138258e-06,
+        "2024": 7.1182775640122435e-06
+      },
+      "gain_2024_mar_aug": 7.1182775640122435e-06,
+      "gain_2024_jul_aug": -9.530126872603562e-06,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -8.323715846788626e-05
+    },
+    "seeds4_form0.52": {
+      "season_gain_development": {
+        "2022": 2.721149610245968e-05,
+        "2023": -5.250371546514803e-05,
+        "2024": 4.046022827016374e-06
+      },
+      "gain_2024_mar_aug": 4.046022827016374e-06,
+      "gain_2024_jul_aug": -6.612056319799293e-06,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -0.00010063108355805848
+    },
+    "seeds4_form0.56": {
+      "season_gain_development": {
+        "2022": 3.278103844081178e-05,
+        "2023": 4.1861844439394956e-07,
+        "2024": 6.941731857878461e-06
+      },
+      "gain_2024_mar_aug": 6.941731857878461e-06,
+      "gain_2024_jul_aug": -8.820904198864876e-06,
+      "monthly_blocks_won": 12,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.6,
+      "worst_monthly_gain": -5.8925469310025584e-05
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "final_confirmation_inspected": false,
+  "final_confirmation": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "test_row_aggregation_used": false,
+    "fixed_seeds_recorded": true,
+    "calibration_refitted_per_blend": true,
+    "final_confirmation_used_for_candidate_selection": false
+  }
+}
