@@ -1,0 +1,110 @@
+{
+  "experiment": "V94a_context_inseason_and_season_removal",
+  "baseline": "V93",
+  "baseline_public_score": 951.1067955895,
+  "hypotheses": {
+    "H1": "Context HGB (13% of the blend) has never seen the in-season reconstruction",
+    "H2": "`season` is a raw numeric feature; trees cannot extrapolate to 2025"
+  },
+  "feature_counts": {
+    "context_inseason": 131,
+    "context_noseason": 112,
+    "context_inseason_noseason": 130,
+    "form_noseason": 104
+  },
+  "drift_weight": 0.2,
+  "min_gain_for_submission": 1.06e-05,
+  "local_to_leaderboard_ratio": 0.944,
+  "development_results": {
+    "H1_ctx_inseason": {
+      "season_gain_development": {
+        "2022": 3.091866564443865e-05,
+        "2023": 0.00011770064921872364,
+        "2024": 1.6255645947559e-05
+      },
+      "gain_2024_mar_aug": 1.6255645947559e-05,
+      "gain_2024_jul_aug": -2.4321960493290554e-07,
+      "monthly_blocks_won": 18,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.9,
+      "worst_monthly_gain": -1.4616357837438487e-05
+    },
+    "H2_ctx_noseason": {
+      "season_gain_development": {
+        "2022": 2.8695016615143733e-06,
+        "2023": 0.0001299941034098797,
+        "2024": -1.983785524114786e-05
+      },
+      "gain_2024_mar_aug": -1.983785524114786e-05,
+      "gain_2024_jul_aug": -2.477868199624895e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -3.416092388105384e-05
+    },
+    "H2_form_noseason": {
+      "season_gain_development": {
+        "2022": -1.750783332496587e-05,
+        "2023": 0.0002635003052123341,
+        "2024": -1.6234099417872386e-05
+      },
+      "gain_2024_mar_aug": -1.6234099417872386e-05,
+      "gain_2024_jul_aug": -1.675457147571048e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -6.601060247249525e-05
+    },
+    "H2_both_noseason": {
+      "season_gain_development": {
+        "2022": -1.8798072035725406e-05,
+        "2023": 0.0003880067170004467,
+        "2024": -4.199771642877197e-05
+      },
+      "gain_2024_mar_aug": -4.199771642877197e-05,
+      "gain_2024_jul_aug": -4.402026439254198e-05,
+      "monthly_blocks_won": 10,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.5,
+      "worst_monthly_gain": -8.332580733373417e-05
+    },
+    "H1H2_ctx_inseason_noseason": {
+      "season_gain_development": {
+        "2022": 2.3376637740054445e-05,
+        "2023": 0.00022444914144992937,
+        "2024": 1.1967456388339215e-05
+      },
+      "gain_2024_mar_aug": 1.1967456388339215e-05,
+      "gain_2024_jul_aug": -7.84101099170355e-06,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -1.6474630203165252e-05
+    },
+    "H1H2_form_noseason_ctx_inseason_noseason": {
+      "season_gain_development": {
+        "2022": 1.4578963425185662e-07,
+        "2023": 0.0004812742905770346,
+        "2024": -1.276194200553813e-05
+      },
+      "gain_2024_mar_aug": -1.276194200553813e-05,
+      "gain_2024_jul_aug": -2.6794635004586506e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -7.353216749831674e-05
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "final_confirmation_inspected": false,
+  "final_confirmation": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "test_row_aggregation_used": false,
+    "current_pitch_post_event_information_used": false,
+    "trackman_2025_used": false,
+    "final_confirmation_used_for_candidate_selection": false
+  }
+}

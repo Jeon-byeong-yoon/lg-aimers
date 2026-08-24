@@ -1,0 +1,20 @@
+{
+  "season_gain": {
+    "2022": 3.091866564443865e-05,
+    "2023": 0.00011770064921872364,
+    "2024": 1.2095341167659013e-05
+  },
+  "gain_2024_jul_oct": -4.586398971956791e-06,
+  "gain_2024_final_confirmation_sep_oct": -1.3898356335094979e-05,
+  "monthly_blocks_won": 19,
+  "monthly_blocks_total": 22,
+  "monthly_block_win_rate": 0.8636363636363636,
+  "worst_monthly_gain": -2.3271591244300593e-05,
+  "paired_pitcher_bootstrap": {
+    "rounds": 1000,
+    "seed": 20250823,
+    "mean_gain": 5.3186560196633725e-05,
+    "ci95_low": 4.342496483644758e-05,
+    "ci95_high": 6.269313163627933e-05
+  }
+}

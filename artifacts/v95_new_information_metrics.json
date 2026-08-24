@@ -1,0 +1,139 @@
+{
+  "experiment": "V95_new_information_sources",
+  "baseline": "V93",
+  "baseline_public_score": 951.1067955895,
+  "new_information_filter": "candidate must carry information the current feature set cannot reproduce; V94 showed re-expressions of existing information do not transfer",
+  "trajectory_features": [
+    "traj_prev1_season_rate",
+    "traj_prev2_season_rate",
+    "traj_prev3_season_rate",
+    "traj_prev1_minus_prev2",
+    "traj_prev2_minus_prev3",
+    "traj_slope",
+    "traj_dispersion",
+    "traj_seasons_available",
+    "traj_prev1_log_pitches"
+  ],
+  "pitchmix_features": [
+    "ins_asof_pitcher_fastball_rate",
+    "dlt_asof_pitcher_fastball_rate",
+    "ins_asof_pitcher_breaking_rate",
+    "dlt_asof_pitcher_breaking_rate",
+    "ins_asof_pitcher_offspeed_rate",
+    "dlt_asof_pitcher_offspeed_rate",
+    "ins_log_n_pitchmix"
+  ],
+  "form_feature_counts": {
+    "traj": 114,
+    "pitchmix": 112,
+    "traj_pitchmix": 121
+  },
+  "min_gain_for_submission": 1.06e-05,
+  "local_to_leaderboard_ratio": 0.944,
+  "development_results": {
+    "traj__v93_ctx": {
+      "season_gain_development": {
+        "2022": 2.5739672338952824e-06,
+        "2023": -3.797169913100331e-06,
+        "2024": -9.776596180981962e-06
+      },
+      "gain_2024_mar_aug": -9.776596180981962e-06,
+      "gain_2024_jul_aug": -9.037199911771485e-06,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -3.0395775596261186e-05
+    },
+    "traj__ctx_inseason": {
+      "season_gain_development": {
+        "2022": 3.3513533702306445e-05,
+        "2023": 0.00011415056260168282,
+        "2024": 7.618223551340619e-06
+      },
+      "gain_2024_mar_aug": 7.618223551340619e-06,
+      "gain_2024_jul_aug": -7.897624042012715e-06,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -9.215638431055981e-06
+    },
+    "pitchmix__v93_ctx": {
+      "season_gain_development": {
+        "2022": -4.475812116930044e-06,
+        "2023": -7.266448614141467e-06,
+        "2024": -3.3406126154046704e-06
+      },
+      "gain_2024_mar_aug": -3.3406126154046704e-06,
+      "gain_2024_jul_aug": -2.1865057290570287e-06,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -4.048924049687361e-05
+    },
+    "pitchmix__ctx_inseason": {
+      "season_gain_development": {
+        "2022": 2.6929991500668642e-05,
+        "2023": 0.00011086942469759563,
+        "2024": 1.3240207521864342e-05
+      },
+      "gain_2024_mar_aug": 1.3240207521864342e-05,
+      "gain_2024_jul_aug": -2.0525827257852584e-06,
+      "monthly_blocks_won": 17,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.85,
+      "worst_monthly_gain": -1.3279223367367245e-05
+    },
+    "traj_pitchmix__v93_ctx": {
+      "season_gain_development": {
+        "2022": -9.515089050229522e-07,
+        "2023": -5.611851149142095e-06,
+        "2024": -5.713574006342117e-06
+      },
+      "gain_2024_mar_aug": -5.713574006342117e-06,
+      "gain_2024_jul_aug": -2.0949779112030197e-06,
+      "monthly_blocks_won": 8,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.4,
+      "worst_monthly_gain": -4.1710545071401194e-05
+    },
+    "traj_pitchmix__ctx_inseason": {
+      "season_gain_development": {
+        "2022": 3.077812650375514e-05,
+        "2023": 0.00011251748434968599,
+        "2024": 1.1254623516658394e-05
+      },
+      "gain_2024_mar_aug": 1.1254623516658394e-05,
+      "gain_2024_jul_aug": -1.9873398710190416e-06,
+      "monthly_blocks_won": 18,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.9,
+      "worst_monthly_gain": -2.026313899155294e-06
+    },
+    "v93_form__ctx_inseason": {
+      "season_gain_development": {
+        "2022": 3.091866564443865e-05,
+        "2023": 0.00011770064921872364,
+        "2024": 1.6255645947559e-05
+      },
+      "gain_2024_mar_aug": 1.6255645947559e-05,
+      "gain_2024_jul_aug": -2.4321960493290554e-07,
+      "monthly_blocks_won": 18,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.9,
+      "worst_monthly_gain": -1.4616357837438487e-05
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "final_confirmation_inspected": false,
+  "final_confirmation": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "test_row_aggregation_used": false,
+    "current_pitch_post_event_information_used": false,
+    "anchors_frozen_at_training_time": true,
+    "row_independent_transform": true,
+    "final_confirmation_used_for_candidate_selection": false
+  }
+}
