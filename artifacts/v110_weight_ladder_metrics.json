@@ -1,0 +1,139 @@
+{
+  "experiment": "V110_form_weight_ladder",
+  "baseline": "V106 (form 0.64, context 0.17, v17 0.19)",
+  "baseline_public_score": 973.0643764994,
+  "purpose": "Score is an exact quadratic along this line; local noise of +-5 points cannot locate the vertex, the leaderboard can.",
+  "context_weight": 0.17,
+  "drift": {
+    "shrinkage": 3.0,
+    "reliability_scale": 150.0,
+    "weight": 0.1
+  },
+  "ladder": [
+    0.7,
+    0.76,
+    0.82
+  ],
+  "results": {
+    "form70": {
+      "season_gain_development": {
+        "2022": 8.063807569511762e-07,
+        "2023": 7.676675591458406e-05,
+        "2024": -1.4707517955437154e-06
+      },
+      "gain_2024_mar_aug": -1.4707517955437154e-06,
+      "gain_2024_jul_aug": -2.6717307679092366e-06,
+      "monthly_blocks_won": 15,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.75,
+      "worst_monthly_gain": -1.160339281731738e-05,
+      "bootstrap_2024": {
+        "mean": -2.9113755118596952e-06,
+        "ci95_low": -8.280788057950292e-06,
+        "ci95_high": 2.1980824029948615e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 8.063807569511762e-07,
+          "ci95_low": -4.326397824321928e-06,
+          "ci95_high": 6.084373999163943e-06
+        },
+        "2023": {
+          "mean": 7.676675591458406e-05,
+          "ci95_low": 6.0004378524280256e-05,
+          "ci95_high": 9.540256816310052e-05
+        },
+        "2024": {
+          "mean": -2.9113755118596952e-06,
+          "ci95_low": -8.280788057950292e-06,
+          "ci95_high": 2.1980824029948615e-06
+        }
+      },
+      "global_shift": -0.009936232081283572,
+      "v17_weight": 0.13,
+      "calibration_artifact": "artifacts/v110_form70_calibration.joblib"
+    },
+    "form76": {
+      "season_gain_development": {
+        "2022": -1.0406640697336515e-06,
+        "2023": 0.00015052266359687856,
+        "2024": -5.998272780379043e-06
+      },
+      "gain_2024_mar_aug": -5.998272780379043e-06,
+      "gain_2024_jul_aug": -7.693684456401271e-06,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -2.53277216415411e-05,
+      "bootstrap_2024": {
+        "mean": -8.781983276935274e-06,
+        "ci95_low": -1.946236176149433e-05,
+        "ci95_high": 1.398764767285778e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": -1.0406640697336515e-06,
+          "ci95_low": -1.1287533655131824e-05,
+          "ci95_high": 9.48432775494191e-06
+        },
+        "2023": {
+          "mean": 0.00015052266359687856,
+          "ci95_low": 0.00011720057054125956,
+          "ci95_high": 0.00018753250982357763
+        },
+        "2024": {
+          "mean": -8.781983276935274e-06,
+          "ci95_low": -1.946236176149433e-05,
+          "ci95_high": 1.398764767285778e-06
+        }
+      },
+      "global_shift": -0.009815436406369228,
+      "v17_weight": 0.07,
+      "calibration_artifact": "artifacts/v110_form76_calibration.joblib"
+    },
+    "form82": {
+      "season_gain_development": {
+        "2022": -5.541134480054525e-06,
+        "2023": 0.00022126772304688325,
+        "2024": -1.3582562954505796e-05
+      },
+      "gain_2024_mar_aug": -1.3582562954505796e-05,
+      "gain_2024_jul_aug": -1.5065861065476478e-05,
+      "monthly_blocks_won": 11,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.55,
+      "worst_monthly_gain": -4.117298647267092e-05,
+      "bootstrap_2024": {
+        "mean": -1.761182329522677e-05,
+        "ci95_low": -3.35425241673463e-05,
+        "ci95_high": -2.2499912735723e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": -5.541134480054525e-06,
+          "ci95_low": -2.0870272390281746e-05,
+          "ci95_high": 1.0332615709654606e-05
+        },
+        "2023": {
+          "mean": 0.00022126772304688325,
+          "ci95_low": 0.0001716797743817865,
+          "ci95_high": 0.00027636678884186385
+        },
+        "2024": {
+          "mean": -1.761182329522677e-05,
+          "ci95_low": -3.35425241673463e-05,
+          "ci95_high": -2.2499912735723e-06
+        }
+      },
+      "global_shift": -0.009694640731454894,
+      "v17_weight": 0.01,
+      "calibration_artifact": "artifacts/v110_form82_calibration.joblib"
+    }
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "calibration_refitted_per_rung": true,
+    "nothing_retrained": true
+  }
+}

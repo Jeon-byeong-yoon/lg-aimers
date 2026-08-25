@@ -1,0 +1,51 @@
+{
+  "experiment": "V128_ordered_depth_sensitivity",
+  "question": "Ordered boosting moved 2023 by +232, the largest single-season movement measured here, and was blocked only by 2022 at -59.34. The 2022 fold trains on three seasons and the deployed model on six. Ordered boosting fits trees on prefixes of random permutations, so unlike plain boosting it has a mechanism that makes sample size matter.",
+  "control": "V121 measured plain boosting under this identical design and found it flat at 757/748/765/745, so any ordered slope is attributable to the method.",
+  "target_season": 2024,
+  "depths": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "training_rows": {
+    "1": 245525,
+    "2": 492997,
+    "3": 740085,
+    "4": 984172,
+    "5": 1221585
+  },
+  "config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0,
+    "boosting_type": "Ordered"
+  },
+  "ordered_standalone": {
+    "1": 668.0568222230843,
+    "2": 634.6663070845082,
+    "3": 638.2473892493134,
+    "4": 576.8280660569669,
+    "5": 578.5629782615654
+  },
+  "plain_standalone": {
+    "1": 757,
+    "2": 748,
+    "3": 765,
+    "4": 745,
+    "5": 752
+  },
+  "ordered_slope_per_log_depth": -57.470406849023554,
+  "plain_slope_per_log_depth": -3.0313904810683514,
+  "ordered_projected_at_depth_6": 571.326986551766,
+  "verdict": "method property",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

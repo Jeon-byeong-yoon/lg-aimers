@@ -162,8 +162,38 @@ def add_training_inseason_features(frame, groups=("pitcher", "batter"),
     return output
 
 
-def drift_correction(frame, weight):
-    """V92 correction: shrunk gap between current-season and career success."""
-    delta = frame["dlt_asof_pitcher_success_rate"].to_numpy(dtype=float)
-    reliability = frame["ins_pitcher_reliability"].to_numpy(dtype=float)
+def _delta(frame, name):
+    return np.nan_to_num(frame[f"dlt_asof_{name}"].to_numpy(dtype=float), nan=0.0)
+
+
+def _success(frame):
+    return _delta(frame, "pitcher_success_rate")
+
+
+def _combined(frame):
+    """Success delta averaged with the three official failure-mode deltas.
+
+    The task defines a failed pitch as one down the middle, far outside the zone,
+    or opposite to the catcher's request, so those three rates move against
+    control and enter with a negative sign. Sub-weights are fixed here rather
+    than fitted, because fitting them on the validation seasons is what sank V78
+    and V80.
+    """
+    failure = -(
+        _delta(frame, "pitcher_middle_rate")
+        + _delta(frame, "pitcher_ball_rate")
+        + _delta(frame, "pitcher_reverse_rate")
+    ) / 3.0
+    return 0.5 * _success(frame) + 0.5 * failure
+
+
+COMPOSITIONS = {"success": _success, "combined": _combined}
+
+
+def drift_correction(frame, weight, composition="success"):
+    """Shrunk current-season drift signal. ``success`` reproduces V92 exactly."""
+    delta = COMPOSITIONS[composition](frame)
+    reliability = np.nan_to_num(
+        frame["ins_pitcher_reliability"].to_numpy(dtype=float), nan=0.0
+    )
     return weight * np.nan_to_num(delta * reliability, nan=0.0)

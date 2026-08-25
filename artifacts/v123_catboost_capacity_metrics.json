@@ -1,0 +1,236 @@
+{
+  "experiment": "V123_catboost_capacity",
+  "baseline": "V122 (0.00 / 0.32 / 0.21 / 0.20 / 0.27) with no_te_strong",
+  "rationale": "V121 showed standalone skill flat in training depth (757/748/765/745 for one to four seasons), so the component is not sample-limited and the binding constraint is capacity or categorical handling.",
+  "incumbent_standalone": {
+    "2022": 2397,
+    "2023": -844,
+    "2024": 752
+  },
+  "configs": {
+    "deep8": {
+      "iterations": 1200,
+      "depth": 8,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 12.0
+    },
+    "long": {
+      "iterations": 2400,
+      "depth": 6,
+      "learning_rate": 0.01,
+      "l2_leaf_reg": 12.0
+    },
+    "ordered": {
+      "iterations": 1200,
+      "depth": 6,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 12.0,
+      "boosting_type": "Ordered"
+    },
+    "onehot": {
+      "iterations": 1200,
+      "depth": 6,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 12.0,
+      "one_hot_max_size": 16
+    }
+  },
+  "standalone_skill": {
+    "deep8": {
+      "2022": 2379.3589484639388,
+      "2023": -902.0685530207961,
+      "2024": 728.9571399680672
+    },
+    "long": {
+      "2022": 2401.3637690910696,
+      "2023": -855.9578987279438,
+      "2024": 771.2819573433727
+    },
+    "ordered": {
+      "2022": 2046.7077067149453,
+      "2023": -171.4027717269806,
+      "2024": 578.5629782615654
+    },
+    "onehot": {
+      "2022": 2403.0547145248215,
+      "2023": -764.8250362726205,
+      "2024": 796.5174038188972
+    }
+  },
+  "results": {
+    "deep8": {
+      "season_gain_development": {
+        "2022": 1.1361865531242314e-06,
+        "2023": -2.419187597997835e-05,
+        "2024": 1.9392002945217566e-06
+      },
+      "gain_2024_mar_aug": 1.9392002945217566e-06,
+      "gain_2024_jul_aug": 4.718022264128227e-06,
+      "monthly_blocks_won": 9,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.45,
+      "worst_monthly_gain": -5.3377601988831146e-05,
+      "bootstrap_2024": {
+        "mean": 1.4861638991976501e-06,
+        "ci95_low": -1.1220742488313026e-05,
+        "ci95_high": 1.4628564030162219e-05
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 1.1361865531242314e-06,
+          "ci95_low": -1.3704805923285469e-05,
+          "ci95_high": 1.5021588741081344e-05
+        },
+        "2023": {
+          "mean": -2.419187597997835e-05,
+          "ci95_low": -5.023967284384985e-05,
+          "ci95_high": -3.344158161955697e-07
+        },
+        "2024": {
+          "mean": 1.4861638991976501e-06,
+          "ci95_low": -1.1220742488313026e-05,
+          "ci95_high": 1.4628564030162219e-05
+        }
+      },
+      "config": {
+        "iterations": 1200,
+        "depth": 8,
+        "learning_rate": 0.02,
+        "l2_leaf_reg": 12.0
+      }
+    },
+    "long": {
+      "season_gain_development": {
+        "2022": 2.9068037378319864e-06,
+        "2023": -1.7046529385805574e-05,
+        "2024": 9.284873313923e-06
+      },
+      "gain_2024_mar_aug": 9.284873313923e-06,
+      "gain_2024_jul_aug": 1.1232807437620082e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -4.614253516929873e-05,
+      "bootstrap_2024": {
+        "mean": 1.0241939298716068e-05,
+        "ci95_low": 3.0821640990651726e-06,
+        "ci95_high": 1.7383995949829636e-05
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 2.9068037378319864e-06,
+          "ci95_low": -7.74339401745208e-06,
+          "ci95_high": 1.3199243567191285e-05
+        },
+        "2023": {
+          "mean": -1.7046529385805574e-05,
+          "ci95_low": -3.255867529692218e-05,
+          "ci95_high": -1.1854597519586693e-06
+        },
+        "2024": {
+          "mean": 1.0241939298716068e-05,
+          "ci95_low": 3.0821640990651726e-06,
+          "ci95_high": 1.7383995949829636e-05
+        }
+      },
+      "config": {
+        "iterations": 2400,
+        "depth": 6,
+        "learning_rate": 0.01,
+        "l2_leaf_reg": 12.0
+      }
+    },
+    "ordered": {
+      "season_gain_development": {
+        "2022": -0.00014835636590008233,
+        "2023": 0.0005801486695760931,
+        "2024": -4.771223582852268e-05
+      },
+      "gain_2024_mar_aug": -4.771223582852268e-05,
+      "gain_2024_jul_aug": -4.130159431394507e-05,
+      "monthly_blocks_won": 7,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.35,
+      "worst_monthly_gain": -0.0003608899376692103,
+      "bootstrap_2024": {
+        "mean": -3.63079461327543e-05,
+        "ci95_low": -5.648281970787162e-05,
+        "ci95_high": -1.6826044271570897e-05
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": -0.00014835636590008233,
+          "ci95_low": -0.00019107963893747333,
+          "ci95_high": -0.00010949790460937227
+        },
+        "2023": {
+          "mean": 0.0005801486695760931,
+          "ci95_low": 0.00044668690518034914,
+          "ci95_high": 0.0007490416696327034
+        },
+        "2024": {
+          "mean": -3.63079461327543e-05,
+          "ci95_low": -5.648281970787162e-05,
+          "ci95_high": -1.6826044271570897e-05
+        }
+      },
+      "config": {
+        "iterations": 1200,
+        "depth": 6,
+        "learning_rate": 0.02,
+        "l2_leaf_reg": 12.0,
+        "boosting_type": "Ordered"
+      }
+    },
+    "onehot": {
+      "season_gain_development": {
+        "2022": -5.183458322951619e-06,
+        "2023": 5.4577637449062444e-05,
+        "2024": 5.685087126581849e-06
+      },
+      "gain_2024_mar_aug": 5.685087126581849e-06,
+      "gain_2024_jul_aug": 6.482479423978889e-06,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -7.071473103450992e-05,
+      "bootstrap_2024": {
+        "mean": 4.736503490700692e-06,
+        "ci95_low": -9.529536896065043e-06,
+        "ci95_high": 1.8523585002842394e-05
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": -5.183458322951619e-06,
+          "ci95_low": -2.009885426680303e-05,
+          "ci95_high": 9.603906047006323e-06
+        },
+        "2023": {
+          "mean": 5.4577637449062444e-05,
+          "ci95_low": 2.8118723737455553e-05,
+          "ci95_high": 8.343295989140097e-05
+        },
+        "2024": {
+          "mean": 4.736503490700692e-06,
+          "ci95_low": -9.529536896065043e-06,
+          "ci95_high": 1.8523585002842394e-05
+        }
+      },
+      "config": {
+        "iterations": 1200,
+        "depth": 6,
+        "learning_rate": 0.02,
+        "l2_leaf_reg": 12.0,
+        "one_hot_max_size": 16
+      }
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

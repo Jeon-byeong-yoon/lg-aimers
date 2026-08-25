@@ -1,0 +1,239 @@
+{
+  "experiment": "V109_context_inseason_at_shrinkage20",
+  "baseline": "V106 (0.19 / 0.64 / 0.17, drift shrinkage 3, w 0.10)",
+  "baseline_public_score": 973.0643764994,
+  "rationale": "V94a gave Context the reconstruction at shrinkage 50 with a 0.13 weight and it failed on transfer. Shrinkage is now 20 and the weight 0.17. Last item on the re-validation list.",
+  "promotion_rule": "2024 point estimate >= +3 points, per the V108 correction",
+  "context_feature_count": 131,
+  "feature_shrinkage": 20.0,
+  "drift_shrinkage": 3.0,
+  "drift_weight": 0.1,
+  "form_weights": [
+    0.6,
+    0.64
+  ],
+  "context_weights": [
+    0.17,
+    0.21,
+    0.25
+  ],
+  "results": {
+    "ctx_inseason_form0.60_ctx0.17": {
+      "season_gain_development": {
+        "2022": 2.21988421574067e-05,
+        "2023": 9.014067511496578e-05,
+        "2024": -7.1330240972361695e-06
+      },
+      "gain_2024_mar_aug": -7.1330240972361695e-06,
+      "gain_2024_jul_aug": -1.4264784444826991e-05,
+      "monthly_blocks_won": 14,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.7,
+      "worst_monthly_gain": -1.853011792469716e-05,
+      "bootstrap_2024": {
+        "mean": -9.257296068163316e-06,
+        "ci95_low": -2.307749706816379e-05,
+        "ci95_high": 4.465547271116876e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 2.21988421574067e-05,
+          "ci95_low": 6.4430164911088155e-06,
+          "ci95_high": 3.7035866626115244e-05
+        },
+        "2023": {
+          "mean": 9.014067511496578e-05,
+          "ci95_low": 6.731319428456833e-05,
+          "ci95_high": 0.0001171073709764838
+        },
+        "2024": {
+          "mean": -9.257296068163316e-06,
+          "ci95_low": -2.307749706816379e-05,
+          "ci95_high": 4.465547271116876e-06
+        }
+      }
+    },
+    "ctx_inseason_form0.60_ctx0.21": {
+      "season_gain_development": {
+        "2022": 2.0684021228533593e-05,
+        "2023": 0.00012883177463106043,
+        "2024": -1.1774201892379159e-05
+      },
+      "gain_2024_mar_aug": -1.1774201892379159e-05,
+      "gain_2024_jul_aug": -1.9346975248971306e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -2.526108357049747e-05,
+      "bootstrap_2024": {
+        "mean": -1.4654973041407245e-05,
+        "ci95_low": -3.1770323515618146e-05,
+        "ci95_high": 2.4716615985089285e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 2.0684021228533593e-05,
+          "ci95_low": 1.9610413581119416e-06,
+          "ci95_high": 3.841163018952276e-05
+        },
+        "2023": {
+          "mean": 0.00012883177463106043,
+          "ci95_low": 9.834576004734942e-05,
+          "ci95_high": 0.00016386845044483793
+        },
+        "2024": {
+          "mean": -1.4654973041407245e-05,
+          "ci95_low": -3.1770323515618146e-05,
+          "ci95_high": 2.4716615985089285e-06
+        }
+      }
+    },
+    "ctx_inseason_form0.60_ctx0.25": {
+      "season_gain_development": {
+        "2022": 1.7860600299202774e-05,
+        "2023": 0.00016614900412478516,
+        "2024": -1.8077682800224296e-05
+      },
+      "gain_2024_mar_aug": -1.8077682800224296e-05,
+      "gain_2024_jul_aug": -2.57667630276118e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -3.4996694510511325e-05,
+      "bootstrap_2024": {
+        "mean": -2.1672156538992867e-05,
+        "ci95_low": -4.1947644895790886e-05,
+        "ci95_high": -1.232221311240853e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 1.7860600299202774e-05,
+          "ci95_low": -4.014987554556326e-06,
+          "ci95_high": 3.85736998212262e-05
+        },
+        "2023": {
+          "mean": 0.00016614900412478516,
+          "ci95_low": 0.0001272473874806348,
+          "ci95_high": 0.00021019995708158401
+        },
+        "2024": {
+          "mean": -2.1672156538992867e-05,
+          "ci95_low": -4.1947644895790886e-05,
+          "ci95_high": -1.232221311240853e-06
+        }
+      }
+    },
+    "ctx_inseason_form0.64_ctx0.17": {
+      "season_gain_development": {
+        "2022": 2.036869573457669e-05,
+        "2023": 0.00013901006484804302,
+        "2024": -1.090259711984648e-05
+      },
+      "gain_2024_mar_aug": -1.090259711984648e-05,
+      "gain_2024_jul_aug": -1.79279740400793e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -2.1320854352131795e-05,
+      "bootstrap_2024": {
+        "mean": -1.386380535306795e-05,
+        "ci95_low": -2.9752444093682373e-05,
+        "ci95_high": 2.1352085163869876e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 2.036869573457669e-05,
+          "ci95_low": 2.7854627355859226e-06,
+          "ci95_high": 3.6502573424945945e-05
+        },
+        "2023": {
+          "mean": 0.00013901006484804302,
+          "ci95_low": 0.00010710025017323159,
+          "ci95_high": 0.00017458772161507344
+        },
+        "2024": {
+          "mean": -1.386380535306795e-05,
+          "ci95_low": -2.9752444093682373e-05,
+          "ci95_high": 2.1352085163869876e-06
+        }
+      }
+    },
+    "ctx_inseason_form0.64_ctx0.21": {
+      "season_gain_development": {
+        "2022": 1.7925579422462455e-05,
+        "2023": 0.00017664261548838,
+        "2024": -1.673958667655493e-05
+      },
+      "gain_2024_mar_aug": -1.673958667655493e-05,
+      "gain_2024_jul_aug": -2.391019755803717e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -3.23824383458074e-05,
+      "bootstrap_2024": {
+        "mean": -2.041023473078731e-05,
+        "ci95_low": -3.9437194059922315e-05,
+        "ci95_high": -1.125492094966806e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 1.7925579422462455e-05,
+          "ci95_low": -2.926996807816498e-06,
+          "ci95_high": 3.691753465737821e-05
+        },
+        "2023": {
+          "mean": 0.00017664261548838,
+          "ci95_low": 0.00013588870649240171,
+          "ci95_high": 0.00022196475693038394
+        },
+        "2024": {
+          "mean": -2.041023473078731e-05,
+          "ci95_low": -3.9437194059922315e-05,
+          "ci95_high": -1.125492094966806e-06
+        }
+      }
+    },
+    "ctx_inseason_form0.64_ctx0.25": {
+      "season_gain_development": {
+        "2022": 1.4173863109890821e-05,
+        "2023": 0.00021290129610635166,
+        "2024": -2.4238879345965164e-05
+      },
+      "gain_2024_mar_aug": -2.4238879345965164e-05,
+      "gain_2024_jul_aug": -3.123001805049097e-05,
+      "monthly_blocks_won": 13,
+      "monthly_blocks_total": 20,
+      "monthly_block_win_rate": 0.65,
+      "worst_monthly_gain": -4.495908562664605e-05,
+      "bootstrap_2024": {
+        "mean": -2.8576170632848e-05,
+        "ci95_low": -5.0978206287928056e-05,
+        "ci95_high": -5.9685656348570554e-06
+      },
+      "season_bootstrap": {
+        "2022": {
+          "mean": 1.4173863109890821e-05,
+          "ci95_low": -9.919077861751129e-06,
+          "ci95_high": 3.637386998641581e-05
+        },
+        "2023": {
+          "mean": 0.00021290129610635166,
+          "ci95_low": 0.00016412004665653318,
+          "ci95_high": 0.0002678522420783454
+        },
+        "2024": {
+          "mean": -2.8576170632848e-05,
+          "ci95_low": -5.0978206287928056e-05,
+          "ci95_high": -5.9685656348570554e-06
+        }
+      }
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "calibration_refitted_per_blend": true
+  }
+}

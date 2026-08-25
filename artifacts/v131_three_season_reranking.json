@@ -1,0 +1,1967 @@
+{
+  "experiment": "V131_three_season_reranking",
+  "motivation": {
+    "leaderboard": [
+      {
+        "version": "V114",
+        "estimate_2024": 24.5,
+        "actual": 29.51,
+        "ratio": 1.2
+      },
+      {
+        "version": "V117",
+        "estimate_2024": 9.9,
+        "actual": 25.67,
+        "ratio": 2.59
+      },
+      {
+        "version": "V122",
+        "estimate_2024": 5.01,
+        "actual": 18.8,
+        "ratio": 3.75
+      }
+    ],
+    "argument": "The bias grows as the estimate shrinks, and V122 changed only weights, so CatBoost's season heterogeneity cannot explain it. All three folds predict the season immediately after their training window, exactly as 2025 will, and V121 showed history depth irrelevant, so they are three equally valid measurements rather than one plus two distractions."
+  },
+  "instrument": "Equally weighted average of the three per-season means, with SE combined from each season's stored interval. Deliberately not a pooled bootstrap: 2023's gains run three to seven times the others', so row pooling lets it dominate, which is how V95 was misled.",
+  "unchanged": "Monthly block win rate floor of 75%. Consistency across twenty blocks is a different kind of evidence and nothing in the leaderboard record impugns it.",
+  "candidates": [
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_gentle_cb0.08",
+      "average_points": 20.20752535757222,
+      "se_points": 1.9109214209011494,
+      "ci95_low_points": 16.46211937260597,
+      "season_points": [
+        8.546582054703878,
+        47.013649403944555,
+        5.062344614068231
+      ],
+      "blocks": 1.0,
+      "old_2024_ci_low_points": 1.4124250621778645,
+      "old_2024_mean_points": 5.062344614068231
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_gentle_cb0.14",
+      "average_points": 33.290723304506905,
+      "se_points": 3.328592681614691,
+      "ci95_low_points": 26.76668164854211,
+      "season_points": [
+        12.894915679568182,
+        80.31081383248679,
+        6.666440401465742
+      ],
+      "blocks": 1.0,
+      "old_2024_ci_low_points": 0.2463482401893185,
+      "old_2024_mean_points": 6.666440401465742
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_gentle_cb0.20",
+      "average_points": 43.08052510817845,
+      "se_points": 4.580251756750753,
+      "ci95_low_points": 34.103231664946975,
+      "season_points": [
+        15.462512645233016,
+        107.04194209961071,
+        6.737120579691607
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": -2.27339494746922,
+      "old_2024_mean_points": 6.737120579691607
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_strong_cb0.08",
+      "average_points": 18.511408495705755,
+      "se_points": 1.6264503735098554,
+      "ci95_low_points": 15.323565763626439,
+      "season_points": [
+        8.126966512930904,
+        41.26254939096749,
+        6.1447095832188765
+      ],
+      "blocks": 1.0,
+      "old_2024_ci_low_points": 2.7323621215758895,
+      "old_2024_mean_points": 6.1447095832188765
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_strong_cb0.14",
+      "average_points": 30.827341896463686,
+      "se_points": 2.8369843922851388,
+      "ci95_low_points": 25.266852487584814,
+      "season_points": [
+        12.68733652775804,
+        70.79457959213775,
+        9.000109569495276
+      ],
+      "blocks": 0.95,
+      "old_2024_ci_low_points": 3.05497364702761,
+      "old_2024_mean_points": 9.000109569495276
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_strong_cb0.20",
+      "average_points": 40.26912230513729,
+      "se_points": 3.8647059244979323,
+      "ci95_low_points": 32.69429869312134,
+      "season_points": [
+        15.910283388420824,
+        94.19308657660466,
+        10.703996950386383
+      ],
+      "blocks": 0.95,
+      "old_2024_ci_low_points": 2.4789894852532237,
+      "old_2024_mean_points": 10.703996950386383
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_gentle_cb0.08",
+      "average_points": 18.49708343782788,
+      "se_points": 1.7410510097233547,
+      "ci95_low_points": 15.084623458770105,
+      "season_points": [
+        8.312671403883288,
+        41.26124844581278,
+        5.917330463787576
+      ],
+      "blocks": 1.0,
+      "old_2024_ci_low_points": 2.821258211353709,
+      "old_2024_mean_points": 5.917330463787576
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_gentle_cb0.14",
+      "average_points": 30.453841391523643,
+      "se_points": 3.041358369312534,
+      "ci95_low_points": 24.492778987671077,
+      "season_points": [
+        12.602095792935502,
+        70.3443958981963,
+        8.415032483439132
+      ],
+      "blocks": 0.95,
+      "old_2024_ci_low_points": 3.0402045222031147,
+      "old_2024_mean_points": 8.415032483439132
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_gentle_cb0.20",
+      "average_points": 39.24293870317538,
+      "se_points": 4.139209867378838,
+      "ci95_low_points": 31.130087363112864,
+      "season_points": [
+        15.209861189115454,
+        92.91953435303779,
+        9.599420567372928
+      ],
+      "blocks": 0.9,
+      "old_2024_ci_low_points": 2.0700598176013876,
+      "old_2024_mean_points": 9.599420567372928
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_strong_cb0.08",
+      "average_points": 18.85925876253619,
+      "se_points": 1.707011906379428,
+      "ci95_low_points": 15.513515426032512,
+      "season_points": [
+        8.139346463783536,
+        41.74396600700866,
+        6.694463816816377
+      ],
+      "blocks": 0.95,
+      "old_2024_ci_low_points": 3.3685585746804407,
+      "old_2024_mean_points": 6.694463816816377
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_strong_cb0.14",
+      "average_points": 31.36787260690937,
+      "se_points": 2.9731045852225515,
+      "ci95_low_points": 25.54058761987317,
+      "season_points": [
+        12.662989369156806,
+        71.50628156879074,
+        9.934346882780552
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": 4.117007274720986,
+      "old_2024_mean_points": 9.934346882780552
+    },
+    {
+      "experiment": "V116_catboost",
+      "candidate": "no_te_strong_cb0.20",
+      "average_points": 40.94371467335725,
+      "se_points": 4.094687555491046,
+      "ci95_low_points": 32.918127064594806,
+      "season_points": [
+        15.81442364161839,
+        95.01165006006075,
+        12.005070318392615
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": 3.888969919094645,
+      "old_2024_mean_points": 12.005070318392615
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_gentle_lgb0.06",
+      "average_points": -4.612607974913866,
+      "se_points": 2.6010938451257952,
+      "ci95_low_points": -9.710751911360424,
+      "season_points": [
+        -3.606005397880854,
+        -6.342903258210319,
+        -3.888915268650425
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -11.028534945441047,
+      "old_2024_mean_points": -3.888915268650425
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_gentle_lgb0.12",
+      "average_points": -29.042304336423538,
+      "se_points": 5.546704281421136,
+      "ci95_low_points": -39.91384472800897,
+      "season_points": [
+        -22.09509532363885,
+        -48.02721488341945,
+        -17.00460280221232
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -31.815542577524315,
+      "old_2024_mean_points": -17.00460280221232
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_gentle_lgb0.18",
+      "average_points": -65.47385839335536,
+      "se_points": 8.700678454704098,
+      "ci95_low_points": -82.52718816457539,
+      "season_points": [
+        -55.23407833972411,
+        -100.24842465910936,
+        -40.939072181232625
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": -63.89926254710992,
+      "old_2024_mean_points": -40.939072181232625
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_strong_lgb0.06",
+      "average_points": 9.823470812385578,
+      "se_points": 1.7778435362558986,
+      "ci95_low_points": 6.338897481324016,
+      "season_points": [
+        5.2165167465038245,
+        25.181050765742455,
+        -0.9271550750895441
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": -5.652122471979729,
+      "old_2024_mean_points": -0.9271550750895441
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_strong_lgb0.12",
+      "average_points": 7.695781714731699,
+      "se_points": 3.3088251703573834,
+      "ci95_low_points": 1.2104843808312278,
+      "season_points": [
+        4.976335738639429,
+        21.889126509867545,
+        -3.778117104311876
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -13.333135466561856,
+      "old_2024_mean_points": -3.778117104311876
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "full_strong_lgb0.18",
+      "average_points": 1.4321633982116366,
+      "se_points": 4.969663203381871,
+      "ci95_low_points": -8.308376480416829,
+      "season_points": [
+        -0.4873515860435117,
+        14.92873744889238,
+        -10.144895668213957
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -24.870892713370434,
+      "old_2024_mean_points": -10.144895668213957
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_gentle_lgb0.06",
+      "average_points": -6.970006363472528,
+      "se_points": 2.6147235442049053,
+      "ci95_low_points": -12.094864510114142,
+      "season_points": [
+        -4.180613306746176,
+        -13.116600481113217,
+        -3.612805302558193
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -11.129578271425421,
+      "old_2024_mean_points": -3.612805302558193
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_gentle_lgb0.12",
+      "average_points": -34.92414195268407,
+      "se_points": 5.652081374593579,
+      "ci95_low_points": -46.00222144688748,
+      "season_points": [
+        -23.94064651209392,
+        -62.73029893165154,
+        -18.101480414306728
+      ],
+      "blocks": 0.1,
+      "old_2024_ci_low_points": -33.93009475206525,
+      "old_2024_mean_points": -18.101480414306728
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_gentle_lgb0.18",
+      "average_points": -76.04717607646094,
+      "se_points": 8.952772389141737,
+      "ci95_low_points": -93.59460995917874,
+      "season_points": [
+        -59.04690817849331,
+        -124.03658513509701,
+        -45.05803491579248
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": -69.63986472234306,
+      "old_2024_mean_points": -45.05803491579248
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_strong_lgb0.06",
+      "average_points": 8.538433690949484,
+      "se_points": 1.7156630778979627,
+      "ci95_low_points": 5.1757340582694775,
+      "season_points": [
+        5.882556848151179,
+        20.42675700969157,
+        -0.6940127849942952
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": -5.383049610799743,
+      "old_2024_mean_points": -0.6940127849942952
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_strong_lgb0.12",
+      "average_points": 4.505327811056383,
+      "se_points": 3.314417118233528,
+      "ci95_low_points": -1.9909297406813324,
+      "season_points": [
+        5.460180980336672,
+        11.780588501424583,
+        -3.7247860485921045
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -13.109319502871951,
+      "old_2024_mean_points": -3.7247860485921045
+    },
+    {
+      "experiment": "V118_lightgbm",
+      "candidate": "no_te_strong_lgb0.18",
+      "average_points": -4.284086948506965,
+      "se_points": 5.1126643634578315,
+      "ci95_low_points": -14.304909100884315,
+      "season_points": [
+        -1.0339361658939632,
+        -1.13399530828664,
+        -10.68432937134029
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -25.311101780470782,
+      "old_2024_mean_points": -10.68432937134029
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.14",
+      "average_points": 0.0,
+      "se_points": 0.0,
+      "ci95_low_points": 0.0,
+      "season_points": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": 0.0,
+      "old_2024_mean_points": 0.0
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.15",
+      "average_points": 1.9484497884346275,
+      "se_points": 0.2107418852134863,
+      "ci95_low_points": 1.5353956934161943,
+      "season_points": [
+        0.6222015723568719,
+        4.831581015007083,
+        0.39156677793992756
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.023592671977295993,
+      "old_2024_mean_points": 0.39156677793992756
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.16",
+      "average_points": 3.8579512381187073,
+      "se_points": 0.4213352873727601,
+      "ci95_low_points": 3.032134074868097,
+      "season_points": [
+        1.2067634556074425,
+        9.626360626598414,
+        0.7407296321502629
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.09101039635004675,
+      "old_2024_mean_points": 0.7407296321502629
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.17",
+      "average_points": 5.728504349052378,
+      "se_points": 0.6316676398013641,
+      "ci95_low_points": 4.490435775041705,
+      "season_points": [
+        1.7536856497517155,
+        14.384338834774512,
+        1.0474885626309056
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.20161138249354352,
+      "old_2024_mean_points": 1.0474885626309056
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.18",
+      "average_points": 7.560109121234949,
+      "se_points": 0.841710616991492,
+      "ci95_low_points": 5.910356311931626,
+      "season_points": [
+        2.2629681547896188,
+        19.105515639533568,
+        1.3118435693816615
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -0.3512899190084421,
+      "old_2024_mean_points": 1.3118435693816615
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.19",
+      "average_points": 9.352765554666957,
+      "se_points": 1.0514578465223665,
+      "ci95_low_points": 7.291908175483119,
+      "season_points": [
+        2.7346109707213544,
+        23.789891040876686,
+        1.5337946524028327
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -0.5464006871929423,
+      "old_2024_mean_points": 1.5337946524028327
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.21",
+      "average_points": 9.770775091256228,
+      "se_points": 1.2050110436447685,
+      "ci95_low_points": 7.4089534457124815,
+      "season_points": [
+        3.540437372570494,
+        23.193646370170367,
+        2.578241531027827
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": 0.03302843680984052,
+      "old_2024_mean_points": 2.578241531027827
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.23",
+      "average_points": 10.076210679955288,
+      "se_points": 1.3989144233316795,
+      "ci95_low_points": 7.334338410225197,
+      "season_points": [
+        4.234982967894164,
+        22.488603413492918,
+        3.5050456584787786
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": 0.3437432656426164,
+      "old_2024_mean_points": 3.5050456584787786
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.25",
+      "average_points": 10.269072320764254,
+      "se_points": 1.6154024769591255,
+      "ci95_low_points": 7.102883465924367,
+      "season_points": [
+        4.818247756692517,
+        21.674762170844875,
+        4.314207034755365
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": 0.5321692045572962,
+      "old_2024_mean_points": 4.314207034755365
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.27",
+      "average_points": 10.349360013682535,
+      "se_points": 1.8638745960377219,
+      "ci95_low_points": 6.6961658054486,
+      "season_points": [
+        5.290231738965345,
+        20.752122642224343,
+        5.005725659857913
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": 0.5913542635299534,
+      "old_2024_mean_points": 5.005725659857913
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.29",
+      "average_points": 10.31707375871071,
+      "se_points": 2.1402102463022876,
+      "ci95_low_points": 6.122261675958226,
+      "season_points": [
+        5.650934914712805,
+        19.720684827633065,
+        5.5796015337862634
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": 0.44097849272281897,
+      "old_2024_mean_points": 5.5796015337862634
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.31",
+      "average_points": 10.172213555848524,
+      "se_points": 2.4131011081042515,
+      "ci95_low_points": 5.4425353839641915,
+      "season_points": [
+        5.9003572839348,
+        18.58044872707036,
+        6.035834656540412
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": 0.2392930608893592,
+      "old_2024_mean_points": 6.035834656540412
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.33",
+      "average_points": 9.9147794050958,
+      "se_points": 2.684174173606479,
+      "ci95_low_points": 4.653798024827102,
+      "season_points": [
+        6.0384988466312715,
+        17.331414340535698,
+        6.374425028120428
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": -0.1060353676120038,
+      "old_2024_mean_points": 6.374425028120428
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.36",
+      "average_points": 9.317552026672633,
+      "se_points": 3.142931243225931,
+      "ci95_low_points": 3.157406789949808,
+      "season_points": [
+        6.037059678441009,
+        15.253865974538083,
+        6.661730427038807
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -0.9902248086810707,
+      "old_2024_mean_points": 6.661730427038807
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.39",
+      "average_points": 8.46703326549612,
+      "se_points": 3.607756046970167,
+      "ci95_low_points": 1.3958314134345926,
+      "season_points": [
+        5.785238695568508,
+        12.931521465104433,
+        6.684339635815418
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -2.1021496298690647,
+      "old_2024_mean_points": 6.684339635815418
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.42",
+      "average_points": 7.363223121566329,
+      "se_points": 4.081550739306412,
+      "ci95_low_points": -0.6366163274742372,
+      "season_points": [
+        5.283035898013746,
+        10.364380812235266,
+        6.442252654449975
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -3.3944492777721114,
+      "old_2024_mean_points": 6.442252654449975
+    },
+    {
+      "experiment": "V123_capacity",
+      "candidate": "deep8",
+      "average_points": -2.8759367370208624,
+      "se_points": 2.146937683286005,
+      "ci95_low_points": -7.0839345962614315,
+      "season_points": [
+        0.45447462124969257,
+        -9.67675039199134,
+        0.59446555967906
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -4.488296995325211,
+      "old_2024_mean_points": 0.59446555967906
+    },
+    {
+      "experiment": "V123_capacity",
+      "candidate": "long",
+      "average_points": -0.5197048465676691,
+      "se_points": 1.372185802634029,
+      "ci95_low_points": -3.2091890197303665,
+      "season_points": [
+        1.1627214951327947,
+        -6.818611754322229,
+        4.096775719486427
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": 1.232865639626069,
+      "old_2024_mean_points": 4.096775719486427
+    },
+    {
+      "experiment": "V123_capacity",
+      "candidate": "ordered",
+      "average_points": 52.73124767243419,
+      "se_points": 10.737299924217202,
+      "ci95_low_points": 31.68613982096847,
+      "season_points": [
+        -59.342546360032934,
+        232.05946783043723,
+        -14.52317845310172
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -22.593127883148647,
+      "old_2024_mean_points": -14.52317845310172
+    },
+    {
+      "experiment": "V123_capacity",
+      "candidate": "onehot",
+      "average_points": 7.217424348908202,
+      "se_points": 2.3390722989821393,
+      "ci95_low_points": 2.632842642903209,
+      "season_points": [
+        -2.073383329180648,
+        21.831054979624977,
+        1.8946013962802768
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": -3.811814758426017,
+      "old_2024_mean_points": 1.8946013962802768
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.04",
+      "average_points": -15.505840810496185,
+      "se_points": 2.7802426789999846,
+      "ci95_low_points": -20.955116461336154,
+      "season_points": [
+        -2.7851593930152925,
+        -42.493241632733515,
+        -1.2391214057397497
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -5.1090317047479,
+      "old_2024_mean_points": -1.2391214057397497
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.07",
+      "average_points": -7.335908750328814,
+      "se_points": 1.3745477335096001,
+      "ci95_low_points": -10.03002230800763,
+      "season_points": [
+        -1.099845605279507,
+        -20.627778878081553,
+        -0.28010176762538147
+      ],
+      "blocks": 0.3,
+      "old_2024_ci_low_points": -2.183691206794674,
+      "old_2024_mean_points": -0.28010176762538147
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.10",
+      "average_points": 0.188207681703754,
+      "se_points": 0.022730796155265864,
+      "ci95_low_points": 0.1436553212394329,
+      "season_points": [
+        0.10624449274986991,
+        0.4254741647526659,
+        0.03290438760872615
+      ],
+      "blocks": 0.9,
+      "old_2024_ci_low_points": -0.005651944076251029,
+      "old_2024_mean_points": 0.03290438760872615
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.13",
+      "average_points": 7.066508485601537,
+      "se_points": 1.369826085228679,
+      "ci95_low_points": 4.381649358553327,
+      "season_points": [
+        0.8331109010728631,
+        20.66651749576938,
+        -0.3001029400376304
+      ],
+      "blocks": 0.7,
+      "old_2024_ci_low_points": -2.0823666818134874,
+      "old_2024_mean_points": -0.3001029400376304
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.16",
+      "average_points": 13.298993661364488,
+      "se_points": 2.7145608075600913,
+      "ci95_low_points": 7.978454478546708,
+      "season_points": [
+        1.080753619689519,
+        40.09535111496834,
+        -1.2791237505643915
+      ],
+      "blocks": 0.65,
+      "old_2024_ci_low_points": -4.802875511629432,
+      "old_2024_mean_points": -1.2791237505643915
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.20",
+      "average_points": 20.60437180750543,
+      "se_points": 4.484547138471171,
+      "ci95_low_points": 11.814659416101936,
+      "season_points": [
+        0.6654848383016125,
+        64.7370252777397,
+        -3.589394693525025
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -9.476754488272299,
+      "old_2024_mean_points": -3.589394693525025
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.25",
+      "average_points": 28.12155541984452,
+      "se_points": 6.649943553847794,
+      "ci95_low_points": 15.087666054302844,
+      "season_points": [
+        -1.051660362699248,
+        93.50859370165963,
+        -8.092267079426833
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -17.103409072235277,
+      "old_2024_mean_points": -8.092267079426833
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.04",
+      "average_points": -15.587521668224172,
+      "se_points": 2.7866371975892847,
+      "ci95_low_points": -21.04933057549917,
+      "season_points": [
+        -2.8336858797282813,
+        -42.67067269402484,
+        -1.2582064309193963
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -5.135089745062469,
+      "old_2024_mean_points": -1.2582064309193963
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.07",
+      "average_points": -7.473252189437116,
+      "se_points": 1.3852527462445412,
+      "ci95_low_points": -10.188347572076417,
+      "season_points": [
+        -1.1794918536158072,
+        -20.931947014374938,
+        -0.3083177003206037
+      ],
+      "blocks": 0.3,
+      "old_2024_ci_low_points": -2.232947177917968,
+      "old_2024_mean_points": -0.3083177003206037
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.10",
+      "average_points": 0.0,
+      "se_points": 0.0,
+      "ci95_low_points": 0.0,
+      "season_points": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": 0.0,
+      "old_2024_mean_points": 0.0
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.13",
+      "average_points": 6.832234900087113,
+      "se_points": 1.3640371398001478,
+      "ci95_low_points": 4.158722106078824,
+      "season_points": [
+        0.7047896811191839,
+        20.125168349099898,
+        -0.3332533299577389
+      ],
+      "blocks": 0.7,
+      "old_2024_ci_low_points": -2.0988985496627843,
+      "old_2024_mean_points": -0.3332533299577389
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.16",
+      "average_points": 13.023452510824303,
+      "se_points": 2.7068451693891844,
+      "ci95_low_points": 7.7180359788215025,
+      "season_points": [
+        0.9348771897417401,
+        39.443558032924855,
+        -1.3080776901936895
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -4.8118898971532325,
+      "old_2024_mean_points": -1.3080776901936895
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.20",
+      "average_points": 20.281271319485068,
+      "se_points": 4.4721035715505435,
+      "ci95_low_points": 11.515948319246002,
+      "season_points": [
+        0.5032349329103607,
+        63.946421909819406,
+        -3.6058428842745665
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -9.491954900247636,
+      "old_2024_mean_points": -3.6058428842745665
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s3_w0.25",
+      "average_points": 27.75100160693613,
+      "se_points": 6.617734982001371,
+      "ci95_low_points": 14.780241042213442,
+      "season_points": [
+        -1.2230733193704757,
+        92.55805509275012,
+        -8.081976952571265
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -17.061261272188574,
+      "old_2024_mean_points": -8.081976952571265
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.04",
+      "average_points": -15.740094299089314,
+      "se_points": 2.794795251242903,
+      "ci95_low_points": -21.217892991525407,
+      "season_points": [
+        -2.9224179366654544,
+        -43.00345048333644,
+        -1.2944144772660489
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -5.179716319194116,
+      "old_2024_mean_points": -1.2944144772660489
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.07",
+      "average_points": -7.729662450074112,
+      "se_points": 1.3962438335746903,
+      "ci95_low_points": -10.466300363880505,
+      "season_points": [
+        -1.3248669847037553,
+        -21.50226616594995,
+        -0.36185419956862774
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -2.3056446679945095,
+      "old_2024_mean_points": -0.36185419956862774
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.10",
+      "average_points": -0.3511691675143873,
+      "se_points": 0.04298890027613479,
+      "ci95_low_points": -0.43542741205561153,
+      "season_points": [
+        -0.1935273750513525,
+        -0.7975388169353879,
+        -0.0624413105564217
+      ],
+      "blocks": 0.1,
+      "old_2024_ci_low_points": -0.13628613119001307,
+      "old_2024_mean_points": -0.0624413105564217
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.13",
+      "average_points": 6.395385548589984,
+      "se_points": 1.3376890762363705,
+      "ci95_low_points": 3.773514959166698,
+      "season_points": [
+        0.4716008922919673,
+        19.11073156370726,
+        -0.39617581022927795
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -2.14612482465488,
+      "old_2024_mean_points": -0.39617581022927795
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.16",
+      "average_points": 12.510001698238964,
+      "se_points": 2.6840358148382224,
+      "ci95_low_points": 7.249291501156048,
+      "season_points": [
+        0.6705178173260689,
+        38.22254497597816,
+        -1.363057698587334
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -4.8596773955098405,
+      "old_2024_mean_points": -1.363057698587334
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.20",
+      "average_points": 19.679807683284793,
+      "se_points": 4.440493268463217,
+      "ci95_low_points": 10.976440877096888,
+      "season_points": [
+        0.21052274044623034,
+        62.46602979709427,
+        -3.637129487686125
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -9.516223386433433,
+      "old_2024_mean_points": -3.637129487686125
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s5_w0.25",
+      "average_points": 27.062218748453493,
+      "se_points": 6.588743711752242,
+      "ci95_low_points": 14.148281073419097,
+      "season_points": [
+        -1.529999461426523,
+        90.77924340255959,
+        -8.062587695772581
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -17.002213982974,
+      "old_2024_mean_points": -8.062587695772581
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.04",
+      "average_points": -15.948472224893505,
+      "se_points": 2.807193926825789,
+      "ci95_low_points": -21.450572321472052,
+      "season_points": [
+        -3.038902310483655,
+        -43.46125086338834,
+        -1.3452635008085294
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -5.237747612056784,
+      "old_2024_mean_points": -1.3452635008085294
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.07",
+      "average_points": -8.079668498599338,
+      "se_points": 1.40837957329599,
+      "ci95_low_points": -10.840092462259477,
+      "season_points": [
+        -1.5151696415354272,
+        -22.286638508694388,
+        -0.43719734556820156
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -2.404690864953468,
+      "old_2024_mean_points": -0.43719734556820156
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.10",
+      "average_points": -0.8302416345044027,
+      "se_points": 0.10119238031167341,
+      "ci95_low_points": -1.0285786999152824,
+      "season_points": [
+        -0.44603831716753206,
+        -1.8941017032182383,
+        -0.15058488312743734
+      ],
+      "blocks": 0.1,
+      "old_2024_ci_low_points": -0.3250628873836225,
+      "old_2024_mean_points": -0.15058488312743734
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.13",
+      "average_points": 5.7998083673912415,
+      "se_points": 1.3068483971164349,
+      "ci95_low_points": 3.2383855090430287,
+      "season_points": [
+        0.16849166261997034,
+        17.716359553040174,
+        -0.4854261134864222
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -2.186334002302389,
+      "old_2024_mean_points": -0.4854261134864222
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.16",
+      "average_points": 11.810481507087605,
+      "se_points": 2.6306541493725026,
+      "ci95_low_points": 6.654399374317499,
+      "season_points": [
+        0.3284202978270336,
+        36.54474526008074,
+        -1.441721036644961
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -4.9035768947013185,
+      "old_2024_mean_points": -1.441721036644961
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.20",
+      "average_points": 18.861237241039497,
+      "se_points": 4.384761274219496,
+      "ci95_low_points": 10.267105143569285,
+      "season_points": [
+        -0.16549916902186473,
+        60.43269757068497,
+        -3.683486678544603
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -9.54350011685731,
+      "old_2024_mean_points": -3.683486678544603
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s8_w0.25",
+      "average_points": 26.126239752981192,
+      "se_points": 6.526818566608904,
+      "ci95_low_points": 13.333675362427739,
+      "season_points": [
+        -1.9194018640338784,
+        88.33744908589583,
+        -8.039327962918387
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -16.892093997769596,
+      "old_2024_mean_points": -8.039327962918387
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "incumbent_w0.14",
+      "average_points": -12.280265138165928,
+      "se_points": 1.896335764354242,
+      "ci95_low_points": -15.997083236300242,
+      "season_points": [
+        -0.22913988681860784,
+        -35.04050078534949,
+        -1.5711547423296939
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -4.862137024997155,
+      "old_2024_mean_points": -1.5711547423296939
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "incumbent_w0.20",
+      "average_points": 0.0,
+      "se_points": 0.0,
+      "ci95_low_points": 0.0,
+      "season_points": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": 0.0,
+      "old_2024_mean_points": 0.0
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "incumbent_w0.26",
+      "average_points": 9.337777627609208,
+      "se_points": 1.8796564359234689,
+      "ci95_low_points": 5.653651013199209,
+      "season_points": [
+        -2.9964082355541914,
+        32.18859277320432,
+        -1.1788516548225043
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -4.657331408479573,
+      "old_2024_mean_points": -1.1788516548225043
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "with_season_w0.14",
+      "average_points": -21.10985584895047,
+      "se_points": 3.9302337103578604,
+      "ci95_low_points": -28.813113921251876,
+      "season_points": [
+        -5.993027636714617,
+        -58.29961508953762,
+        0.9630751794008234
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -6.276820256830849,
+      "old_2024_mean_points": 0.9630751794008234
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "with_season_w0.20",
+      "average_points": -12.429334723426948,
+      "se_points": 3.5927990922720348,
+      "ci95_low_points": -19.471220944280137,
+      "season_points": [
+        -7.6924761533199275,
+        -33.14839465951738,
+        3.5528666425564666
+      ],
+      "blocks": 0.3,
+      "old_2024_ci_low_points": -4.142018384392132,
+      "old_2024_mean_points": 3.5528666425564666
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "with_season_w0.26",
+      "average_points": -6.580681333273013,
+      "se_points": 3.9947483237400854,
+      "ci95_low_points": -14.41038804780358,
+      "season_points": [
+        -12.292483270093504,
+        -10.801735348050041,
+        3.3521746183245016
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -6.14928169156816,
+      "old_2024_mean_points": 3.3521746183245016
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "base6_w0.14",
+      "average_points": -12.280265138165928,
+      "se_points": 1.896335764354242,
+      "ci95_low_points": -15.997083236300242,
+      "season_points": [
+        -0.22913988681860784,
+        -35.04050078534949,
+        -1.5711547423296939
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -4.862137024997155,
+      "old_2024_mean_points": -1.5711547423296939
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "base6_w0.20",
+      "average_points": 0.0,
+      "se_points": 0.0,
+      "ci95_low_points": 0.0,
+      "season_points": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": 0.0,
+      "old_2024_mean_points": 0.0
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "base6_w0.26",
+      "average_points": 9.337777627609208,
+      "se_points": 1.8796564359234689,
+      "ci95_low_points": 5.653651013199209,
+      "season_points": [
+        -2.9964082355541914,
+        32.18859277320432,
+        -1.1788516548225043
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -4.657331408479573,
+      "old_2024_mean_points": -1.1788516548225043
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_w0.14",
+      "average_points": -20.731949900774136,
+      "se_points": 3.4696614416459877,
+      "ci95_low_points": -27.532486326400274,
+      "season_points": [
+        -5.264191812105435,
+        -61.354879394352196,
+        4.42322150413521
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -2.246162883414096,
+      "old_2024_mean_points": 4.42322150413521
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_w0.20",
+      "average_points": -16.840997594359855,
+      "se_points": 3.702154744299365,
+      "ci95_low_points": -24.09722089318661,
+      "season_points": [
+        -13.349197897672433,
+        -42.24607588932716,
+        5.072281003920023
+      ],
+      "blocks": 0.3,
+      "old_2024_ci_low_points": -3.556431378370386,
+      "old_2024_mean_points": 5.072281003920023
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_w0.26",
+      "average_points": -18.75283013002551,
+      "se_points": 4.911313538311311,
+      "ci95_low_points": -28.37900466511568,
+      "season_points": [
+        -28.3535120511127,
+        -28.781644265184053,
+        0.8766659262202225
+      ],
+      "blocks": 0.3,
+      "old_2024_ci_low_points": -11.206006066266124,
+      "old_2024_mean_points": 0.8766659262202225
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs20_w0.14",
+      "average_points": -32.24899834216705,
+      "se_points": 5.494643705477169,
+      "ci95_low_points": -43.0185000049023,
+      "season_points": [
+        -19.879782315472724,
+        -75.29188976103354,
+        -1.5753229499948613
+      ],
+      "blocks": 0.2,
+      "old_2024_ci_low_points": -12.18851957696154,
+      "old_2024_mean_points": -1.5753229499948613
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs20_w0.20",
+      "average_points": -41.558843113402375,
+      "se_points": 6.929275903890922,
+      "ci95_low_points": -55.140223885028576,
+      "season_points": [
+        -44.965719498893456,
+        -69.78194855719585,
+        -9.92886128411783
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -25.471402010705628,
+      "old_2024_mean_points": -9.92886128411783
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs20_w0.26",
+      "average_points": -61.63042423123509,
+      "se_points": 8.952554621273428,
+      "ci95_low_points": -79.177431288931,
+      "season_points": [
+        -83.41322870803388,
+        -74.49189394923474,
+        -26.98615003643665
+      ],
+      "blocks": 0.0,
+      "old_2024_ci_low_points": -48.090606992281984,
+      "old_2024_mean_points": -26.98615003643665
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_wide_w0.14",
+      "average_points": -34.53893257166431,
+      "se_points": 6.111513660916681,
+      "ci95_low_points": -46.51749934706101,
+      "season_points": [
+        -13.044185658241776,
+        -91.07451309295163,
+        0.501901036200475
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -11.119780610441289,
+      "old_2024_mean_points": 0.501901036200475
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_wide_w0.20",
+      "average_points": -43.03535147793993,
+      "se_points": 7.598935581564735,
+      "ci95_low_points": -57.92926521780681,
+      "season_points": [
+        -31.782815213850345,
+        -90.7812828135435,
+        -6.541956406425936
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -22.930201127422674,
+      "old_2024_mean_points": -6.541956406425936
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_wide_w0.26",
+      "average_points": -61.21661098139579,
+      "se_points": 9.667055977113995,
+      "ci95_low_points": -80.16404069653922,
+      "season_points": [
+        -61.83235707320782,
+        -99.77957682789332,
+        -22.037899043086217
+      ],
+      "blocks": 0.05,
+      "old_2024_ci_low_points": -43.65530652453869,
+      "old_2024_mean_points": -22.037899043086217
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_bigemb_w0.14",
+      "average_points": -28.758841686619718,
+      "se_points": 5.097946604462809,
+      "ci95_low_points": -38.75081703136682,
+      "season_points": [
+        -0.3886379651163275,
+        -72.51822885709407,
+        -13.369658237648755
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -28.285437595152096,
+      "old_2024_mean_points": -13.369658237648755
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_bigemb_w0.20",
+      "average_points": -32.47746340142022,
+      "se_points": 6.434681192748666,
+      "ci95_low_points": -45.089438539207606,
+      "season_points": [
+        -7.948303238491444,
+        -60.764820604139025,
+        -28.719266361630197
+      ],
+      "blocks": 0.15,
+      "old_2024_ci_low_points": -49.41966583023638,
+      "old_2024_mean_points": -28.719266361630197
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_bigemb_w0.26",
+      "average_points": -44.50055648324088,
+      "se_points": 8.458122932091769,
+      "ci95_low_points": -61.07847743014074,
+      "season_points": [
+        -23.36578593879333,
+        -56.19844580717471,
+        -53.937437703754604
+      ],
+      "blocks": 0.05,
+      "old_2024_ci_low_points": -81.29277906318782,
+      "old_2024_mean_points": -53.937437703754604
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_seeds3_w0.14",
+      "average_points": -14.777597922256266,
+      "se_points": 3.7910540829253705,
+      "ci95_low_points": -22.20806392478999,
+      "season_points": [
+        5.190734791383064,
+        -53.739136725565096,
+        4.215608167413234
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -3.7811791965278236,
+      "old_2024_mean_points": 4.215608167413234
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_seeds3_w0.20",
+      "average_points": -4.754008152551122,
+      "se_points": 3.8308166693832613,
+      "ci95_low_points": -12.262408824542312,
+      "season_points": [
+        6.573894633147435,
+        -28.185317066488473,
+        7.349397975687671
+      ],
+      "blocks": 0.5,
+      "old_2024_ci_low_points": -1.9728118794448724,
+      "old_2024_mean_points": 7.349397975687671
+    },
+    {
+      "experiment": "V129_network",
+      "candidate": "epochs12_seeds3_w0.26",
+      "average_points": 1.6152601728581368,
+      "se_points": 4.738035957989771,
+      "ci95_low_points": -7.671290304801814,
+      "season_points": [
+        4.030236265397466,
+        -6.367193424979818,
+        7.182737678156761
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -4.356391557597968,
+      "old_2024_mean_points": 7.182737678156761
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent16_w0.08",
+      "average_points": 9.082980014415435,
+      "se_points": 3.342579068034047,
+      "ci95_low_points": 2.531525041068703,
+      "season_points": [
+        -0.17850344196233164,
+        36.04691457848915,
+        -8.619471093280511
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -18.096929715319334,
+      "old_2024_mean_points": -8.619471093280511
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent16_w0.14",
+      "average_points": 5.642867143437965,
+      "se_points": 5.850090758180692,
+      "ci95_low_points": -5.823310742596192,
+      "season_points": [
+        -9.853769123181877,
+        54.51635523347089,
+        -27.73398467997512
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -44.670358630315924,
+      "old_2024_mean_points": -27.73398467997512
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent16_w0.20",
+      "average_points": -6.584972483358793,
+      "se_points": 8.414661378384528,
+      "ci95_low_points": -23.077708784992463,
+      "season_points": [
+        -27.707367461328186,
+        65.6437285065507,
+        -57.69127849529888
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -82.71563937051982,
+      "old_2024_mean_points": -57.69127849529888
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent24_w0.08",
+      "average_points": 13.018164082024452,
+      "se_points": 4.041891053988308,
+      "ci95_low_points": 5.09605761620737,
+      "season_points": [
+        -3.0072469995552757,
+        49.67273684923954,
+        -7.6109976036109135
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -18.76434592640538,
+      "old_2024_mean_points": -7.6109976036109135
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent24_w0.14",
+      "average_points": 8.844174208339423,
+      "se_points": 7.0773645024462155,
+      "ci95_low_points": -5.027460216455159,
+      "season_points": [
+        -19.865965015455238,
+        75.62262353031906,
+        -29.224135889845556
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -49.120946678031906,
+      "old_2024_mean_points": -29.224135889845556
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent24_w0.20",
+      "average_points": -7.276341038376837,
+      "se_points": 10.164324043041493,
+      "ci95_low_points": -27.198416162738162,
+      "season_points": [
+        -49.241782545269544,
+        91.88279653495556,
+        -64.47003710481653
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -93.95020845794944,
+      "old_2024_mean_points": -64.47003710481653
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent32_w0.08",
+      "average_points": 4.90093104554355,
+      "se_points": 3.7414115148588984,
+      "ci95_low_points": -2.4322355235798914,
+      "season_points": [
+        -2.9580788420611683,
+        22.187453728545297,
+        -4.52658174985348
+      ],
+      "blocks": 0.5,
+      "old_2024_ci_low_points": -16.00889808043677,
+      "old_2024_mean_points": -4.52658174985348
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent32_w0.14",
+      "average_points": -7.957446399144236,
+      "se_points": 6.581796511830746,
+      "ci95_low_points": -20.857767562332498,
+      "season_points": [
+        -23.32924155740783,
+        25.264705969305286,
+        -25.807803609330165
+      ],
+      "blocks": 0.35,
+      "old_2024_ci_low_points": -45.8650045223234,
+      "old_2024_mean_points": -25.807803609330165
+    },
+    {
+      "experiment": "V130_interaction",
+      "candidate": "latent32_w0.20",
+      "average_points": -34.98788875427159,
+      "se_points": 9.435089955540205,
+      "ci95_low_points": -53.480665067130396,
+      "season_points": [
+        -59.25977877315506,
+        16.716239876649773,
+        -62.42012736630948
+      ],
+      "blocks": 0.25,
+      "old_2024_ci_low_points": -91.19820743064155,
+      "old_2024_mean_points": -62.42012736630948
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:strong_onehot",
+      "average_points": 4.516816936516,
+      "se_points": 1.171246836820482,
+      "ci95_low_points": 2.221173136347856,
+      "season_points": [
+        -0.04538450313656716,
+        11.831367676762063,
+        1.7644676359225075
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -1.0762181174376573,
+      "old_2024_mean_points": 1.7644676359225075
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:strong_onehot_long",
+      "average_points": 3.1846222481045467,
+      "se_points": 0.9907666867500523,
+      "ci95_low_points": 1.2427195420744446,
+      "season_points": [
+        0.8225264061103389,
+        5.935715760922793,
+        2.7956245772805075
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": 0.3689123507241157,
+      "old_2024_mean_points": 2.7956245772805075
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:strong_onehot_ordered10",
+      "average_points": 10.62401219029462,
+      "se_points": 1.8533568604115611,
+      "ci95_low_points": 6.99143274388796,
+      "season_points": [
+        -4.448359860652466,
+        35.547885887170544,
+        0.7725105443657821
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -1.9983399822691874,
+      "old_2024_mean_points": 0.7725105443657821
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:strong_onehot_ordered20",
+      "average_points": 16.44548473736516,
+      "se_points": 2.799019215046534,
+      "ci95_low_points": 10.959407075873955,
+      "season_points": [
+        -9.190610957762534,
+        58.88802449868143,
+        -0.36095932882341025
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -3.335286010414624,
+      "old_2024_mean_points": -0.36095932882341025
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:four_equal",
+      "average_points": 18.217209124514532,
+      "se_points": 3.118665639585732,
+      "ci95_low_points": 12.104624470926499,
+      "season_points": [
+        -11.107640457171033,
+        65.97759622267264,
+        -0.21832839195801407
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -3.2844614210044063,
+      "old_2024_mean_points": -0.21832839195801407
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:four_ordered15",
+      "average_points": 12.564685094296031,
+      "se_points": 2.1241908553104722,
+      "ci95_low_points": 8.401271017887506,
+      "season_points": [
+        -6.150462663969127,
+        42.84473172477501,
+        0.9997862220822187
+      ],
+      "blocks": 0.6,
+      "old_2024_ci_low_points": -1.6536302874157123,
+      "old_2024_mean_points": 0.9997862220822187
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:all_six",
+      "average_points": 8.58059407270309,
+      "se_points": 1.558424512941386,
+      "ci95_low_points": 5.526082027337973,
+      "season_points": [
+        -3.2398398199036587,
+        27.851613176362726,
+        1.1300088616502024
+      ],
+      "blocks": 0.7,
+      "old_2024_ci_low_points": -1.4726210721435686,
+      "old_2024_mean_points": 1.1300088616502024
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:gentle_strong_onehot",
+      "average_points": 2.8864330849891084,
+      "se_points": 1.1483277732517276,
+      "ci95_low_points": 0.6357106494157226,
+      "season_points": [
+        0.4383321734804275,
+        7.634452163443233,
+        0.5865149180436653
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -2.3686026634668176,
+      "old_2024_mean_points": 0.5865149180436653
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.21",
+      "average_points": 13.371989721133236,
+      "se_points": 2.7266387784610084,
+      "ci95_low_points": 8.027777715349659,
+      "season_points": [
+        -10.448650711368227,
+        53.493896318547485,
+        -2.9292764437795547
+      ],
+      "blocks": 0.4,
+      "old_2024_ci_low_points": -6.98362168334488,
+      "old_2024_mean_points": -2.9292764437795547
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.24",
+      "average_points": 15.905647558013541,
+      "se_points": 2.875643903640007,
+      "ci95_low_points": 10.269385506879127,
+      "season_points": [
+        -10.657210422202882,
+        59.83932037214319,
+        -1.4651672758996868
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -4.928176024988183,
+      "old_2024_mean_points": -1.4651672758996868
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.27",
+      "average_points": 18.217209124514532,
+      "se_points": 3.118665639585732,
+      "ci95_low_points": 12.104624470926499,
+      "season_points": [
+        -11.107640457171033,
+        65.97759622267264,
+        -0.21832839195801407
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -3.2844614210044063,
+      "old_2024_mean_points": -0.21832839195801407
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.30",
+      "average_points": 20.30667442063623,
+      "se_points": 3.38068607663019,
+      "ci95_low_points": 13.680529710441062,
+      "season_points": [
+        -11.799940816272844,
+        71.90872387013587,
+        0.811240208045676
+      ],
+      "blocks": 0.45,
+      "old_2024_ci_low_points": -2.0800910152560412,
+      "old_2024_mean_points": 0.811240208045676
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.33",
+      "average_points": 22.17404344637885,
+      "se_points": 3.721713243974832,
+      "ci95_low_points": 14.879485488188179,
+      "season_points": [
+        -12.734111499508217,
+        77.63270331453359,
+        1.6235385241111773
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -1.5709106788950684,
+      "old_2024_mean_points": 1.6235385241111773
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.36",
+      "average_points": 23.819316201741895,
+      "se_points": 4.055792120322974,
+      "ci95_low_points": 15.869963645908866,
+      "season_points": [
+        -13.910152506877242,
+        83.14953455586426,
+        2.218566556238667
+      ],
+      "blocks": 0.55,
+      "old_2024_ci_low_points": -1.3505078443671736,
+      "old_2024_mean_points": 2.218566556238667
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "slot_ladder:four_equal_w0.40",
+      "average_points": 25.667530121636425,
+      "se_points": 4.625934750600937,
+      "ci95_low_points": 16.600698010458586,
+      "season_points": [
+        -15.854449909799301,
+        90.18307900620373,
+        2.673961268504837
+      ],
+      "blocks": 0.5,
+      "old_2024_ci_low_points": -1.9630563736259097,
+      "old_2024_mean_points": 2.673961268504837
+    }
+  ],
+  "resurrected": [
+    {
+      "experiment": "V116_catboost",
+      "candidate": "full_gentle_cb0.20",
+      "average_points": 43.08052510817845,
+      "se_points": 4.580251756750753,
+      "ci95_low_points": 34.103231664946975,
+      "season_points": [
+        15.462512645233016,
+        107.04194209961071,
+        6.737120579691607
+      ],
+      "blocks": 0.85,
+      "old_2024_ci_low_points": -2.27339494746922,
+      "old_2024_mean_points": 6.737120579691607
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.15",
+      "average_points": 1.9484497884346275,
+      "se_points": 0.2107418852134863,
+      "ci95_low_points": 1.5353956934161943,
+      "season_points": [
+        0.6222015723568719,
+        4.831581015007083,
+        0.39156677793992756
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.023592671977295993,
+      "old_2024_mean_points": 0.39156677793992756
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.16",
+      "average_points": 3.8579512381187073,
+      "se_points": 0.4213352873727601,
+      "ci95_low_points": 3.032134074868097,
+      "season_points": [
+        1.2067634556074425,
+        9.626360626598414,
+        0.7407296321502629
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.09101039635004675,
+      "old_2024_mean_points": 0.7407296321502629
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.17",
+      "average_points": 5.728504349052378,
+      "se_points": 0.6316676398013641,
+      "ci95_low_points": 4.490435775041705,
+      "season_points": [
+        1.7536856497517155,
+        14.384338834774512,
+        1.0474885626309056
+      ],
+      "blocks": 0.8,
+      "old_2024_ci_low_points": -0.20161138249354352,
+      "old_2024_mean_points": 1.0474885626309056
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.18",
+      "average_points": 7.560109121234949,
+      "se_points": 0.841710616991492,
+      "ci95_low_points": 5.910356311931626,
+      "season_points": [
+        2.2629681547896188,
+        19.105515639533568,
+        1.3118435693816615
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -0.3512899190084421,
+      "old_2024_mean_points": 1.3118435693816615
+    },
+    {
+      "experiment": "V120b_cb_weight",
+      "candidate": "cb0.19",
+      "average_points": 9.352765554666957,
+      "se_points": 1.0514578465223665,
+      "ci95_low_points": 7.291908175483119,
+      "season_points": [
+        2.7346109707213544,
+        23.789891040876686,
+        1.5337946524028327
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -0.5464006871929423,
+      "old_2024_mean_points": 1.5337946524028327
+    },
+    {
+      "experiment": "V127_drift",
+      "candidate": "s2_w0.10",
+      "average_points": 0.188207681703754,
+      "se_points": 0.022730796155265864,
+      "ci95_low_points": 0.1436553212394329,
+      "season_points": [
+        0.10624449274986991,
+        0.4254741647526659,
+        0.03290438760872615
+      ],
+      "blocks": 0.9,
+      "old_2024_ci_low_points": -0.005651944076251029,
+      "old_2024_mean_points": 0.03290438760872615
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:strong_onehot",
+      "average_points": 4.516816936516,
+      "se_points": 1.171246836820482,
+      "ci95_low_points": 2.221173136347856,
+      "season_points": [
+        -0.04538450313656716,
+        11.831367676762063,
+        1.7644676359225075
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -1.0762181174376573,
+      "old_2024_mean_points": 1.7644676359225075
+    },
+    {
+      "experiment": "V124_mixture",
+      "candidate": "mixtures:gentle_strong_onehot",
+      "average_points": 2.8864330849891084,
+      "se_points": 1.1483277732517276,
+      "ci95_low_points": 0.6357106494157226,
+      "season_points": [
+        0.4383321734804275,
+        7.634452163443233,
+        0.5865149180436653
+      ],
+      "blocks": 0.75,
+      "old_2024_ci_low_points": -2.3686026634668176,
+      "old_2024_mean_points": 0.5865149180436653
+    }
+  ]
+}
