@@ -8,6 +8,10 @@ which fails at load time with:
 
 This cost one submission on V93. Run this script with the server-mirror
 interpreter before every packaging step.
+
+CatBoost models are saved in the native ``cbm`` format instead, which carries no
+Python object graph and so cannot hit this failure mode; they are loaded here
+anyway, because a gate that skips an artifact class is not a gate.
 """
 
 import sys
@@ -17,12 +21,23 @@ from pathlib import Path
 import joblib
 
 
+def load(path):
+    if path.endswith(".cbm"):
+        from catboost import CatBoostClassifier
+        model = CatBoostClassifier()
+        model.load_model(path)
+        return model
+    return joblib.load(path)
+
+
 def main():
-    targets = sys.argv[1:] or sorted(str(p) for p in Path("artifacts").glob("*.joblib"))
+    targets = sys.argv[1:] or sorted(
+        str(p) for p in Path("artifacts").glob("*")
+        if p.suffix in {".joblib", ".cbm"})
     failures = []
     for path in targets:
         try:
-            joblib.load(path)
+            load(path)
             print(f"  OK    {path}")
         except Exception as error:
             failures.append((path, error))

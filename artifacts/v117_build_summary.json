@@ -1,0 +1,52 @@
+{
+  "version": "V117",
+  "baseline": "V114 (1002.5719943737)",
+  "change": "CatBoost no_te/strong added at 0.14, taken from the V17 share",
+  "weights": {
+    "v17": 0.05,
+    "form": 0.4,
+    "context": 0.21,
+    "network": 0.2,
+    "catboost": 0.14
+  },
+  "global_shift": -0.010152603991917782,
+  "catboost_config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0
+  },
+  "catboost_columns": 96,
+  "catboost_categorical": [
+    "pitcher_id",
+    "batter_id",
+    "pitcher_team_id",
+    "batter_team_id",
+    "count_state",
+    "base_state",
+    "hand_matchup",
+    "pitcher_hand",
+    "batter_hand",
+    "top_bottom",
+    "game_type"
+  ],
+  "encodings_dropped": [
+    "te_pitcher_id_50",
+    "te_pitcher_id_200",
+    "te_pitcher_id_log_count",
+    "te_batter_id_50",
+    "te_batter_id_200",
+    "te_batter_id_log_count",
+    "hte_pitcher_batter_100",
+    "hte_pitcher_batter_500",
+    "hte_pitcher_batter_log_count"
+  ],
+  "validation": {
+    "instrument": "2024 paired pitcher-cluster bootstrap",
+    "ci95_low_points": 4.1,
+    "mean_points": 9.9,
+    "season_2022_points": 12.7,
+    "season_2023_points": 71.5,
+    "monthly_block_win_rate": 0.85
+  }
+}

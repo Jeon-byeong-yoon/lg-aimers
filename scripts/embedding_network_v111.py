@@ -75,27 +75,27 @@ class ControlNet(nn.Module):
         return self.body(torch.cat(parts, dim=1)).squeeze(1)
 
 
-def build_vocabularies(frame):
+def build_vocabularies(frame, specs=EMBEDDING_SPECS):
     """Map each identifier to a contiguous index, reserving 0 for unseen values."""
     vocabularies = {}
-    for column, _ in EMBEDDING_SPECS:
+    for column, _ in specs:
         values = pd.Index(frame[column].astype(str).unique()).sort_values()
         vocabularies[column] = {value: index + 1 for index, value in enumerate(values)}
     return vocabularies
 
 
-def encode_categorical(frame, vocabularies):
+def encode_categorical(frame, vocabularies, specs=EMBEDDING_SPECS):
     columns = []
-    for column, _ in EMBEDDING_SPECS:
+    for column, _ in specs:
         mapping = vocabularies[column]
         codes = frame[column].astype(str).map(mapping).fillna(0).to_numpy(dtype=np.int64)
         columns.append(codes)
     return np.column_stack(columns)
 
 
-def cardinalities(vocabularies):
+def cardinalities(vocabularies, specs=EMBEDDING_SPECS):
     return [(len(vocabularies[column]) + 1, width)
-            for column, width in EMBEDDING_SPECS]
+            for column, width in specs]
 
 
 def assert_numeric(frame, columns):
@@ -124,10 +124,11 @@ def encode_numeric(matrix, statistics):
 
 def train(categorical, numeric, target, cardinality_spec, *, epochs=6,
           batch_size=8192, learning_rate=2e-3, weight_decay=1e-5, seed=SEED,
-          verbose=True):
+          hidden=(256, 128), dropout=0.15, verbose=True):
     torch.manual_seed(seed)
     np.random.seed(seed)
-    model = ControlNet(cardinality_spec, numeric.shape[1])
+    model = ControlNet(cardinality_spec, numeric.shape[1],
+                       hidden=hidden, dropout=dropout)
     optimiser = torch.optim.AdamW(model.parameters(), lr=learning_rate,
                                   weight_decay=weight_decay)
     loss_function = nn.BCEWithLogitsLoss()
@@ -172,7 +173,8 @@ def predict(model, categorical, numeric, batch_size=65536):
     return np.concatenate(outputs).astype(np.float64)
 
 
-def state_bundle(model, vocabularies, statistics, numeric_columns, cardinality_spec):
+def state_bundle(model, vocabularies, statistics, numeric_columns, cardinality_spec,
+                 hidden=(256, 128), dropout=0.15):
     """Plain-dict artifact: weights plus everything needed to rebuild the module."""
     return {
         "state_dict": {key: value.cpu().numpy()
@@ -183,13 +185,19 @@ def state_bundle(model, vocabularies, statistics, numeric_columns, cardinality_s
         "numeric_columns": list(numeric_columns),
         "cardinalities": [list(item) for item in cardinality_spec],
         "embedding_specs": [list(item) for item in EMBEDDING_SPECS],
+        "hidden": list(hidden),
+        "dropout": dropout,
         "seed": SEED,
     }
 
 
 def restore(bundle):
-    model = ControlNet([tuple(item) for item in bundle["cardinalities"]],
-                       len(bundle["numeric_columns"]))
+    model = ControlNet(
+        [tuple(item) for item in bundle["cardinalities"]],
+        len(bundle["numeric_columns"]),
+        hidden=tuple(bundle.get("hidden", (256, 128))),
+        dropout=bundle.get("dropout", 0.15),
+    )
     model.load_state_dict(
         {key: torch.from_numpy(np.asarray(value))
          for key, value in bundle["state_dict"].items()})

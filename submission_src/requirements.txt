@@ -1,6 +1,16 @@
+# CatBoost is the only package this submission adds. Its own constraints are loose
+# (numpy<3.0,>=1.16.0, pandas<4.0,>=0.24, unpinned scipy), so pip keeps the server's
+# numpy 1.26.4 / pandas 2.0.3 / scipy 1.15.3 rather than upgrading them. Verified
+# locally in the server-mirror environment: all four versions stayed put.
+catboost==1.2.10
+
 # Evaluation server base packages; versions documented for reproducibility.
+# Listing them would risk a forced reinstall that breaks the pinned base, so they
+# stay commented out and the server default is used.
 # Python 3.11.15
 # numpy==1.26.4
-# pandas==2.3.3
+# pandas==2.0.3
+# scipy==1.15.3
 # scikit-learn==1.8.0
 # joblib==1.5.3
+# torch==2.7.1+cu128
