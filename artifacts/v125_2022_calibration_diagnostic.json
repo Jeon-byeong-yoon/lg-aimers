@@ -1,0 +1,107 @@
+{
+  "experiment": "V125_2022_calibration_artifact",
+  "question": "The blend gives 2022 no calibration, since no earlier season exists to fit residuals on, while 2023 and 2024 each get a global shift plus count and pitcher-count lookups. Level errors cost 400000*d^2, so d=0.0122 alone accounts for -59.5 -- almost exactly ordered boosting's 2022 penalty.",
+  "caveat": "Diagnostic only. The 2022 mean is removed using 2022's own rows, which no deployed model could do. It establishes whether the gate's 2022 condition is reading a level artifact, not a candidate to submit.",
+  "season": 2022,
+  "actual_rate": 0.5289204435249241,
+  "baseline": {
+    "name": "no_te_strong",
+    "skill": 2433.2250020401957,
+    "bias": 0.000482040236643666
+  },
+  "results": {
+    "no_te_strong": {
+      "mean_prediction": 0.5294024837615677,
+      "bias": 0.000482040236643666,
+      "raw_gain_2022": 0.0,
+      "gain_after_mean_removal_2022": 0.0,
+      "level_cost_estimate": 0.0,
+      "bootstrap_2022_raw": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "bootstrap_2022_centered": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      }
+    },
+    "onehot": {
+      "mean_prediction": 0.5297508318038852,
+      "bias": 0.0008303882789610917,
+      "raw_gain_2022": -2.080343259469373,
+      "gain_after_mean_removal_2022": -1.8968566307785295,
+      "level_cost_estimate": 0.18287276163699293,
+      "bootstrap_2022_raw": {
+        "mean": -5.183458322951619e-06,
+        "ci95_low": -2.009885426680303e-05,
+        "ci95_high": 9.603906047006323e-06
+      },
+      "bootstrap_2022_centered": {
+        "mean": -4.726276418859115e-06,
+        "ci95_low": -1.957165561708082e-05,
+        "ci95_high": 1.0023506004765646e-05
+      }
+    },
+    "long": {
+      "mean_prediction": 0.5291829606047082,
+      "bias": 0.0002625170797840859,
+      "raw_gain_2022": 1.1666245170795264,
+      "gain_after_mean_removal_2022": 1.1010260237976581,
+      "level_cost_estimate": -0.06537902902604696,
+      "bootstrap_2022_raw": {
+        "mean": 2.9068037378319864e-06,
+        "ci95_low": -7.74339401745208e-06,
+        "ci95_high": 1.3199243567191285e-05
+      },
+      "bootstrap_2022_centered": {
+        "mean": 2.7433561652668014e-06,
+        "ci95_low": -7.802451781630058e-06,
+        "ci95_high": 1.3273421783591111e-05
+      }
+    },
+    "deep8": {
+      "mean_prediction": 0.5295537020430494,
+      "bias": 0.0006332585181253458,
+      "raw_gain_2022": 0.4560002010211974,
+      "gain_after_mean_removal_2022": 0.5236880798897801,
+      "level_cost_estimate": 0.06746142441393096,
+      "bootstrap_2022_raw": {
+        "mean": 1.1361865531242314e-06,
+        "ci95_low": -1.3704805923285469e-05,
+        "ci95_high": 1.5021588741081344e-05
+      },
+      "bootstrap_2022_centered": {
+        "mean": 1.304840114159184e-06,
+        "ci95_low": -1.3501391603380079e-05,
+        "ci95_high": 1.4832920949865032e-05
+      }
+    },
+    "ordered": {
+      "mean_prediction": 0.5307645164784855,
+      "bias": 0.001844072953561482,
+      "raw_gain_2022": -59.54174733738819,
+      "gain_after_mean_removal_2022": -58.27019636953628,
+      "level_cost_estimate": 1.2672969073253944,
+      "bootstrap_2022_raw": {
+        "mean": -0.00014835636590008233,
+        "ci95_low": -0.00019107963893747333,
+        "ci95_high": -0.00010949790460937227
+      },
+      "bootstrap_2022_centered": {
+        "mean": -0.00014518812363176862,
+        "ci95_low": -0.00018774406242430314,
+        "ci95_high": -0.00010679961925678984
+      }
+    }
+  },
+  "ordered_level_share_of_raw_movement": 0.02128417394512065,
+  "verdict": "genuine regression",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

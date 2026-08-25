@@ -1,0 +1,93 @@
+{
+  "experiment": "V126_level_extrapolation",
+  "question": "A uniform prediction-mean error of d costs 400000*d^2 points, so the level is the highest-leverage single number in the submission. The calibration shift is a constant fitted on seasons whose own level is higher than the target's, and only the V92 drift term can react to a further decline.",
+  "weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.21,
+    "network": 0.2,
+    "catboost": 0.27
+  },
+  "drift_weight": 0.1,
+  "season_rate": {
+    "2019": 0.5646700054335694,
+    "2020": 0.5327116970588356,
+    "2021": 0.5327616072006734,
+    "2022": 0.5289204435249241,
+    "2023": 0.49995723449750534,
+    "2024": 0.4861049201797189
+  },
+  "projections_2025": {
+    "2019-2024": {
+      "slope": -0.014140856503688798,
+      "rate_2025": 0.4746946535529659
+    },
+    "2021-2024": {
+      "slope": -0.016893327009021766,
+      "rate_2025": 0.46970273382812877
+    },
+    "2022-2024": {
+      "slope": -0.02140776167260156,
+      "rate_2025": 0.4621786760555153
+    }
+  },
+  "deployed_window_gap": 0.03529146557258733,
+  "stages": {
+    "2022": {
+      "actual_rate": 0.5289204435249241,
+      "calibration_window": [],
+      "calibration_window_rate": null,
+      "window_minus_target": null,
+      "global_shift": 0.0,
+      "mean_raw": 0.5302391014828084,
+      "mean_after_calibration": 0.5302391014828084,
+      "mean_after_drift": 0.5294024837615677,
+      "drift_term_mean": -0.0008366177212405681,
+      "bias_raw": 0.0013186579578843283,
+      "bias_after_calibration": 0.0013186579578843283,
+      "bias_final": 0.000482040236643666,
+      "points_cost_of_final_bias": 0.09294511589739261
+    },
+    "2023": {
+      "actual_rate": 0.49995723449750534,
+      "calibration_window": [
+        2022
+      ],
+      "calibration_window_rate": 0.5289204435249241,
+      "window_minus_target": 0.028963209027418724,
+      "global_shift": -0.001318657957884345,
+      "mean_raw": 0.5178813969809573,
+      "mean_after_calibration": 0.5165774191054509,
+      "mean_after_drift": 0.5149689944184311,
+      "drift_term_mean": -0.0016084246870198536,
+      "bias_raw": 0.01792416248345191,
+      "bias_after_calibration": 0.01662018460794551,
+      "bias_final": 0.015011759920925793,
+      "points_cost_of_final_bias": 90.14117436940559
+    },
+    "2024": {
+      "actual_rate": 0.4861049201797189,
+      "calibration_window": [
+        2022,
+        2023
+      ],
+      "calibration_window_rate": 0.5144960314160126,
+      "window_minus_target": 0.02839111123629373,
+      "global_shift": -0.009588620044144488,
+      "mean_raw": 0.49790857610669426,
+      "mean_after_calibration": 0.48846562199407745,
+      "mean_after_drift": 0.48712886712409537,
+      "drift_term_mean": -0.0013367548699819718,
+      "bias_raw": 0.011803655926975354,
+      "bias_after_calibration": 0.0023607018143585456,
+      "bias_final": 0.0010239469443764637,
+      "points_cost_of_final_bias": 0.41938693795915877
+    }
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}
