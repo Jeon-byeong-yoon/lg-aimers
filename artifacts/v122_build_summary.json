@@ -1,0 +1,24 @@
+{
+  "version": "V122",
+  "baseline": "V117 (1028.2400)",
+  "change": "catboost 0.14 -> 0.27, v17 0.05 -> 0.00, form 0.40 -> 0.32",
+  "weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.21,
+    "network": 0.2,
+    "catboost": 0.27
+  },
+  "global_shift": -0.010340829143558272,
+  "catboost_model": "artifacts/v117_catboost.cbm (unchanged)",
+  "validation": {
+    "instrument": "2024 paired pitcher-cluster bootstrap plus season sums",
+    "ci95_low_points": 0.59,
+    "mean_points": 5.01,
+    "season_2022_points": 5.29,
+    "season_2023_points": 20.75,
+    "three_season_sum_points": 31.05,
+    "monthly_block_win_rate": 0.8,
+    "note": "Both the 2024 lower bound and the three-season sum peak at 0.27. The magnitude is held loosely: V117 over-delivered 2.59x and CatBoost's gains differ sevenfold across seasons."
+  }
+}
