@@ -9,6 +9,8 @@ __pycache__/
 *.pyo
 
 # 모델 학습/패키징 중간 산출물 (최종 제출본은 submissions/by_submitter에 보관)
+# CatBoost 모델은 100MB를 넘어 GitHub 하드 리밋에 걸린다
+artifacts/*.cbm
 artifacts/ensemble.joblib
 artifacts/v2_ensemble.joblib
 artifacts/v4_ensemble.joblib
