@@ -62,6 +62,15 @@ def field_cardinalities(vocabularies):
 class InteractionNet(nn.Module):
     def __init__(self, cardinalities, numeric_width, hidden=(256, 128), dropout=0.15):
         super().__init__()
+        # Read the latent width from the spec, never from the module global. The
+        # evaluation sweep mutated that global to compare latent sizes, so a restored
+        # model would otherwise be built at whatever width was set last rather than the
+        # width its own weights were trained at.
+        latent = cardinalities[0][1]
+        if any(width != latent for _, width in cardinalities):
+            raise ValueError(
+                "every field must share one latent width for the pairwise term to be "
+                f"defined; got {sorted({w for _, w in cardinalities})}")
         self.factors = nn.ModuleList([
             nn.Embedding(cardinality, width) for cardinality, width in cardinalities
         ])
@@ -75,12 +84,12 @@ class InteractionNet(nn.Module):
         self.numeric_norm = nn.BatchNorm1d(numeric_width)
         # The numeric block enters as one additional field, so its own values also take
         # part in the pairwise term instead of only in the dense stack.
-        self.numeric_factor = nn.Linear(numeric_width, LATENT)
+        self.numeric_factor = nn.Linear(numeric_width, latent)
         self.numeric_linear = nn.Linear(numeric_width, 1)
-        self.interaction_norm = nn.BatchNorm1d(LATENT)
+        self.interaction_norm = nn.BatchNorm1d(latent)
         # Interaction vector plus the normalised numerics. Withholding the numerics
         # here starved the model; see the module docstring.
-        layers, previous = [], LATENT + numeric_width
+        layers, previous = [], latent + numeric_width
         for size in hidden:
             layers += [nn.Linear(previous, size), nn.BatchNorm1d(size),
                        nn.ReLU(), nn.Dropout(dropout)]
@@ -158,7 +167,16 @@ def predict(model, categorical, numeric, batch_size=65536):
 
 
 def state_bundle(model, vocabularies, statistics, numeric_columns, cardinality_spec,
-                 hidden=(256, 128), dropout=0.15):
+                 dropout=0.15):
+    """Record the hidden widths read off the fitted model, never from a default.
+
+    Passing them in as a defaulted argument let the bundle disagree with the weights it
+    was describing: a build recorded (256, 128) for a model trained at (128, 64), and
+    `restore` then failed on a size mismatch at load time. Reading them from the module
+    makes that class of bug impossible.
+    """
+    hidden = tuple(layer.out_features for layer in model.body
+                   if isinstance(layer, nn.Linear))[:-1]
     return {
         "state_dict": {key: value.cpu().numpy()
                        for key, value in model.state_dict().items()},
@@ -179,7 +197,7 @@ def restore(bundle):
     model = InteractionNet(
         [tuple(item) for item in bundle["cardinalities"]],
         len(bundle["numeric_columns"]),
-        hidden=tuple(bundle.get("hidden", (256, 128))),
+        hidden=tuple(bundle["hidden"]),
         dropout=bundle.get("dropout", 0.15),
     )
     model.load_state_dict({key: torch.from_numpy(np.asarray(value))

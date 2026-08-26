@@ -1,0 +1,31 @@
+{
+  "version": "V138",
+  "baseline": "V122 (1047.03653)",
+  "change": "factorization network at 0.07 taken from Context, Context 0.21 -> 0.14",
+  "weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.27,
+    "factorization": 0.07
+  },
+  "global_shift": -0.010764370502210706,
+  "latent": 8,
+  "epochs": 8,
+  "hidden": [
+    128,
+    64
+  ],
+  "parameters": 38029,
+  "validation": {
+    "instrument": "three-season equally weighted average (V131 correction)",
+    "three_season_average_points": 25.08,
+    "three_season_ci95_low_points": 18.72,
+    "season_2022_points": 6.35,
+    "season_2023_points": 68.26,
+    "season_2024_points": 0.64,
+    "monthly_block_win_rate": 0.8,
+    "boundary": "latent 8 keeps 2024 positive through handover 0.07 and crosses at 0.08 (-0.05), so this sits at the boundary the per-season condition draws."
+  }
+}
