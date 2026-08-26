@@ -1,0 +1,160 @@
+{
+  "experiment": "V157_context_refit",
+  "baseline": "V154 (Public 1050.8512921822)",
+  "rationale": "Context is the last component with its original specification: V31 fitted `hist_gbdt_pipeline` at its defaults and nothing has touched it through four rebuilds of the blend around it. Its hyperparameters oppose this project's repeated finding on all five numbers.",
+  "control": {
+    "max_abs_difference_from_stored": 0.0,
+    "note": "the incumbent configuration is refit as a control; if it does not reproduce the stored out-of-fold predictions the harness is wrong"
+  },
+  "configs": {
+    "incumbent": {
+      "max_iter": 200,
+      "learning_rate": 0.06,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 100,
+      "l2_regularization": 5.0
+    },
+    "mid": {
+      "max_iter": 350,
+      "learning_rate": 0.045,
+      "max_leaf_nodes": 23,
+      "min_samples_leaf": 150,
+      "l2_regularization": 12.0
+    },
+    "form_like": {
+      "max_iter": 500,
+      "learning_rate": 0.03,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 200,
+      "l2_regularization": 20.0
+    },
+    "gentle_long": {
+      "max_iter": 800,
+      "learning_rate": 0.02,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 300,
+      "l2_regularization": 30.0
+    },
+    "wide_reg": {
+      "max_iter": 500,
+      "learning_rate": 0.03,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 200,
+      "l2_regularization": 20.0
+    }
+  },
+  "feature_variants": [
+    "no_matchup_hte",
+    "no_te",
+    "all_features"
+  ],
+  "ranking": "weakest season, then the three-season average",
+  "results": {
+    "no_matchup_hte__incumbent": {
+      "three_season": {
+        "average_points": 0.0,
+        "se_points": 0.0,
+        "ci95_low_points": 0.0,
+        "season_points": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.0
+    },
+    "no_matchup_hte__mid": {
+      "three_season": {
+        "average_points": -0.7394649448180995,
+        "se_points": 1.0684977425122664,
+        "ci95_low_points": -2.833720520142142,
+        "season_points": [
+          3.5463411294531224,
+          -2.6373281460285685,
+          -3.127407817878853
+        ]
+      },
+      "min_season_points": -3.127407817878853,
+      "monthly_block_win_rate": 0.4
+    },
+    "no_matchup_hte__form_like": {
+      "three_season": {
+        "average_points": 1.3407143300474964,
+        "se_points": 1.0561467060361822,
+        "ci95_low_points": -0.7293332137834209,
+        "season_points": [
+          2.8994893447306254,
+          6.233340796535669,
+          -5.110687151123805
+        ]
+      },
+      "min_season_points": -5.110687151123805,
+      "monthly_block_win_rate": 0.55
+    },
+    "no_matchup_hte__gentle_long": {
+      "three_season": {
+        "average_points": 1.6448536246230376,
+        "se_points": 1.1215480573244507,
+        "ci95_low_points": -0.5533805677328858,
+        "season_points": [
+          3.730721417078938,
+          5.778322804444616,
+          -4.574483347654441
+        ]
+      },
+      "min_season_points": -4.574483347654441,
+      "monthly_block_win_rate": 0.65
+    },
+    "no_matchup_hte__wide_reg": {
+      "three_season": {
+        "average_points": -1.0731209356896059,
+        "se_points": 1.0505345862410986,
+        "ci95_low_points": -3.1321687247221597,
+        "season_points": [
+          1.8547834729861363,
+          -2.4609637841060965,
+          -2.613182495948857
+        ]
+      },
+      "min_season_points": -2.613182495948857,
+      "monthly_block_win_rate": 0.4
+    },
+    "no_te__form_like": {
+      "three_season": {
+        "average_points": -1.06929050006838,
+        "se_points": 1.317650949914973,
+        "ci95_low_points": -3.6518863619017266,
+        "season_points": [
+          4.743184986038033,
+          -2.172192583712579,
+          -5.778863902530594
+        ]
+      },
+      "min_season_points": -5.778863902530594,
+      "monthly_block_win_rate": 0.45
+    },
+    "all_features__form_like": {
+      "three_season": {
+        "average_points": 0.8524780244737028,
+        "se_points": 1.204881505882444,
+        "ci95_low_points": -1.5090897270558876,
+        "season_points": [
+          3.523993212188857,
+          4.142451469063124,
+          -5.109010607830873
+        ]
+      },
+      "min_season_points": -5.109010607830873,
+      "monthly_block_win_rate": 0.5
+    }
+  },
+  "safe_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}
