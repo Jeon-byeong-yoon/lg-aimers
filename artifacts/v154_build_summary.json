@@ -1,0 +1,50 @@
+{
+  "version": "V154",
+  "baseline": "V138 (1050.5510725821)",
+  "change": "CatBoost retrained on in-season features built with a season-tracking prior, plus an experience segment at 0.10 in the calibration; Form, the network and the factorization network keep the career prior they were trained on",
+  "prior": {
+    "career_2025": 0.5352282202778269,
+    "projected_2025": 0.49053595744311806,
+    "gap_by_fold": {
+      "2022": [
+        0.0184,
+        -0.0041
+      ],
+      "2023": [
+        0.0444,
+        0.0173
+      ],
+      "2024": [
+        0.0541,
+        0.0126
+      ]
+    }
+  },
+  "blend_weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.27,
+    "factorization": 0.07
+  },
+  "segments": {
+    "count": 0.65,
+    "pitcher_count": 0.25,
+    "experience": 0.1
+  },
+  "global_shift": -0.010678264995403622,
+  "validation": {
+    "season_points": {
+      "2022": 2.42,
+      "2023": 2.29,
+      "2024": 2.32
+    },
+    "min_season_points": 2.29,
+    "average_points": 2.34,
+    "heterogeneity": 1.06,
+    "monthly_block_win_rate": 0.65,
+    "control": "rebuilding CatBoost with the old prior reproduces the stored predictions exactly, all folds moving 0.00, so the measured effect is the prior alone",
+    "gate": "not met: average 2.34 against a 3.0 floor and blocks 65% against 75%. Both are magnitude and consistency thresholds; every fold gains, unlike V144 (-1.86 on 2022) and V151 (-32.36 on 2023)."
+  }
+}

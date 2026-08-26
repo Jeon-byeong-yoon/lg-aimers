@@ -1,0 +1,107 @@
+{
+  "experiment": "V153_projected_prior",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "prior_comparison": {
+    "2022": {
+      "career": 0.547341,
+      "projected": 0.524781,
+      "actual": 0.52892
+    },
+    "2023": {
+      "career": 0.544313,
+      "projected": 0.517275,
+      "actual": 0.499957
+    },
+    "2024": {
+      "career": 0.540175,
+      "projected": 0.498733,
+      "actual": 0.486105
+    },
+    "2025": {
+      "career": 0.535228,
+      "projected": 0.490536
+    }
+  },
+  "rationale": "The prior shrinks a current-season estimate toward a career average, which lags a league that fell from 0.5647 to 0.4861. The gap grows every season and shows up as an over-prediction that falls monotonically with pitcher experience. The replacement recovers the population's within-season rate by the same anchor differencing V92 built for individuals, then projects it.",
+  "why_not_the_drift_term": "It reads the reconstruction at shrinkage 3, where the prior carries weight 3/(inside_n + 3) and is nearly inert; rebuilding it moved the folds by +0.01, +0.30 and +0.02.",
+  "control_arm": "`career_retrain_both` retrains the same configuration with the old prior, so the difference between the two arms isolates the prior from retraining noise.",
+  "form_config": {
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 200,
+    "l2_regularization": 20.0,
+    "learning_rate": 0.03,
+    "max_iter": 500
+  },
+  "catboost_config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0
+  },
+  "results": {
+    "career_retrain_both": {
+      "three_season": {
+        "average_points": 0.5669680597300252,
+        "se_points": 1.1840502393652477,
+        "ci95_low_points": -1.7537704094258604,
+        "season_points": [
+          1.407484717685344,
+          1.2636949641982298,
+          -0.9702755026934982
+        ]
+      },
+      "min_season_points": -0.9702755026934982,
+      "monthly_block_win_rate": 0.5
+    },
+    "projected_both": {
+      "three_season": {
+        "average_points": 2.064571189654118,
+        "se_points": 2.270605257963097,
+        "ci95_low_points": -2.3858151159535517,
+        "season_points": [
+          5.701347126279723,
+          0.9905938950039657,
+          -0.4982274523213337
+        ]
+      },
+      "min_season_points": -0.4982274523213337,
+      "monthly_block_win_rate": 0.65
+    },
+    "projected_form_only": {
+      "three_season": {
+        "average_points": 0.3137372223278175,
+        "se_points": 1.4831958887735774,
+        "ci95_low_points": -2.5933267196683945,
+        "season_points": [
+          3.7947766594711396,
+          -1.4554733847966683,
+          -1.3980916076910188
+        ]
+      },
+      "min_season_points": -1.4554733847966683,
+      "monthly_block_win_rate": 0.5
+    },
+    "projected_catboost_only": {
+      "three_season": {
+        "average_points": 2.0859483490185147,
+        "se_points": 1.8276439611642725,
+        "ci95_low_points": -1.4962338148634595,
+        "season_points": [
+          2.4202655298934572,
+          2.6271258851608468,
+          1.2104536320012396
+        ]
+      },
+      "min_season_points": 1.2104536320012396,
+      "monthly_block_win_rate": 0.65
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "row_independent": true
+  }
+}
