@@ -1,0 +1,168 @@
+{
+  "experiment": "V145_combination_rule",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "rationale": "Every experiment so far changed what goes into the blend or how much. The combination rule (linear in probability) and the calibration shape (shift plus segment means, which cannot bend the probability scale) have never been touched. Under-confidence is invisible to every diagnostic run here, all of which looked at means.",
+  "why_three_parameters": "V133's learned residual model collapsed, moving the 2024 level by -0.0188 because it re-learned league drift the global shift had already removed. A three-parameter monotone map cannot do that; it can only bend the scale.",
+  "logit_mix": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "ranking": "maximum of the weakest season among survivors",
+  "results": {
+    "logit0.00_beta": {
+      "logit_mix": 0.0,
+      "recalibrate": true,
+      "three_season": {
+        "average_points": -79.79575942214885,
+        "se_points": 8.508400652279523,
+        "ci95_low_points": -96.47222470061672,
+        "season_points": [
+          0.0,
+          -215.92370319212603,
+          -23.463575074320485
+        ]
+      },
+      "min_season_points": -215.92370319212603,
+      "monthly_block_win_rate": 0.0
+    },
+    "logit0.25": {
+      "logit_mix": 0.25,
+      "recalibrate": false,
+      "three_season": {
+        "average_points": -0.4761438513746792,
+        "se_points": 0.07396620936267807,
+        "ci95_low_points": -0.6211176217255282,
+        "season_points": [
+          0.28822820075342404,
+          -1.7377299031340872,
+          0.021070148256625443
+        ]
+      },
+      "min_season_points": -1.7377299031340872,
+      "monthly_block_win_rate": 0.45
+    },
+    "logit0.25_beta": {
+      "logit_mix": 0.25,
+      "recalibrate": true,
+      "three_season": {
+        "average_points": -79.85427233965912,
+        "se_points": 8.51668173411549,
+        "ci95_low_points": -96.54696853852548,
+        "season_points": [
+          0.28822820075342404,
+          -216.32110404721192,
+          -23.529941172518868
+        ]
+      },
+      "min_season_points": -216.32110404721192,
+      "monthly_block_win_rate": 0.25
+    },
+    "logit0.50": {
+      "logit_mix": 0.5,
+      "recalibrate": false,
+      "three_season": {
+        "average_points": -0.9546827137511404,
+        "se_points": 0.14796175109766813,
+        "ci95_low_points": -1.24468774590257,
+        "season_points": [
+          0.5727522078265663,
+          -3.478098258489517,
+          0.04129790940952896
+        ]
+      },
+      "min_season_points": -3.478098258489517,
+      "monthly_block_win_rate": 0.45
+    },
+    "logit0.50_beta": {
+      "logit_mix": 0.5,
+      "recalibrate": true,
+      "three_season": {
+        "average_points": -79.91397989339752,
+        "se_points": 8.533024586490678,
+        "ci95_low_points": -96.63870808291925,
+        "season_points": [
+          0.5727522078265663,
+          -216.7183028650321,
+          -23.596389022987047
+        ]
+      },
+      "min_season_points": -216.7183028650321,
+      "monthly_block_win_rate": 0.25
+    },
+    "logit0.75": {
+      "logit_mix": 0.75,
+      "recalibrate": false,
+      "three_season": {
+        "average_points": -1.4356165871287987,
+        "se_points": 0.22202262347250246,
+        "ci95_low_points": -1.8707809291349036,
+        "season_points": [
+          0.8535720212195631,
+          -5.22110506606448,
+          0.0606832834585202
+        ]
+      },
+      "min_season_points": -5.22110506606448,
+      "monthly_block_win_rate": 0.45
+    },
+    "logit0.75_beta": {
+      "logit_mix": 0.75,
+      "recalibrate": true,
+      "three_season": {
+        "average_points": -79.97488358394243,
+        "se_points": 8.546872639692916,
+        "ci95_low_points": -96.72675395774056,
+        "season_points": [
+          0.8535720212195631,
+          -217.11530686121003,
+          -23.662915911836834
+        ]
+      },
+      "min_season_points": -217.11530686121003,
+      "monthly_block_win_rate": 0.25
+    },
+    "logit1.00": {
+      "logit_mix": 1.0,
+      "recalibrate": false,
+      "three_season": {
+        "average_points": -1.9189454715084822,
+        "se_points": 0.2961088171744011,
+        "ci95_low_points": -2.4993187531703085,
+        "season_points": [
+          1.1306876409322666,
+          -6.9667503258613594,
+          0.07922627040364658
+        ]
+      },
+      "min_season_points": -6.9667503258613594,
+      "monthly_block_win_rate": 0.45
+    },
+    "logit1.00_beta": {
+      "logit_mix": 1.0,
+      "recalibrate": true,
+      "three_season": {
+        "average_points": -80.03698493183846,
+        "se_points": 8.566789488455633,
+        "ci95_low_points": -96.8278923292115,
+        "season_points": [
+          1.1306876409322666,
+          -217.5121232926673,
+          -23.72951914378035
+        ]
+      },
+      "min_season_points": -217.5121232926673,
+      "monthly_block_win_rate": 0.25
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}
