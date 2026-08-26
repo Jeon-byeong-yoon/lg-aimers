@@ -1,0 +1,93 @@
+{
+  "experiment": "V148_feature_frontier",
+  "question": "The per-key residual audit found about 16 points left on 2024, but it only tests additive corrections by pitcher, batter or count. This asks whether any model can predict the blend's residual from the full feature set.",
+  "why_favourable": "The residual model trains on rows from the same season it is scored on, which the deployed pipeline can never do; it sees the features the blend already used, so anything found is signal left on the table; and half a season is 125,000 rows. A near-zero result therefore bounds what any further modelling of this feature set could recover.",
+  "configs": {
+    "shallow": {
+      "iterations": 500,
+      "depth": 4,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 10.0
+    },
+    "deep": {
+      "iterations": 1000,
+      "depth": 6,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 10.0
+    }
+  },
+  "splits": 3,
+  "results": {
+    "2022_shallow": {
+      "fold": 2022,
+      "config": "shallow",
+      "gains": [
+        262.08293636138393,
+        267.5131107699346,
+        265.19408875607314
+      ],
+      "mean_gain_points": 264.93004529579724,
+      "sd_gain_points": 2.224707881723728
+    },
+    "2022_deep": {
+      "fold": 2022,
+      "config": "deep",
+      "gains": [
+        373.564286352526,
+        367.8697308063092,
+        349.8053714624531
+      ],
+      "mean_gain_points": 363.7464628737627,
+      "sd_gain_points": 10.128261220338077
+    },
+    "2023_shallow": {
+      "fold": 2023,
+      "config": "shallow",
+      "gains": [
+        1751.4876744678168,
+        1679.3926421891279,
+        1656.1508364742301
+      ],
+      "mean_gain_points": 1695.6770510437248,
+      "sd_gain_points": 40.58870654473242
+    },
+    "2023_deep": {
+      "fold": 2023,
+      "config": "deep",
+      "gains": [
+        1771.5720379751735,
+        1839.759819201063,
+        1803.344342526239
+      ],
+      "mean_gain_points": 1804.8920665674916,
+      "sd_gain_points": 27.859049569913488
+    },
+    "2024_shallow": {
+      "fold": 2024,
+      "config": "shallow",
+      "gains": [
+        143.0268772515557,
+        101.95097419541803,
+        160.15851687399504
+      ],
+      "mean_gain_points": 135.04545610698958,
+      "sd_gain_points": 24.424124942152126
+    },
+    "2024_deep": {
+      "fold": 2024,
+      "config": "deep",
+      "gains": [
+        147.65166009359945,
+        205.09548826183877,
+        179.5346872109164
+      ],
+      "mean_gain_points": 177.4272785221182,
+      "sd_gain_points": 23.49864148118309
+    }
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "diagnostic_only": true
+  }
+}
