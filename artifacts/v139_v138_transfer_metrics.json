@@ -1,0 +1,1745 @@
+{
+  "experiment": "V139_v138_pairwise_transfer",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "instrument_note": {
+    "record": [
+      {
+        "version": "V117",
+        "est_2024": 9.9,
+        "avg_3season": 31.4,
+        "actual": 25.67,
+        "ratio_3season": 0.82,
+        "heterogeneity": 7.2,
+        "min_season": 9.9
+      },
+      {
+        "version": "V122",
+        "est_2024": 5.01,
+        "avg_3season": 10.35,
+        "actual": 18.8,
+        "ratio_3season": 1.82,
+        "heterogeneity": 4.1,
+        "min_season": 5.01
+      },
+      {
+        "version": "V138",
+        "est_2024": 0.64,
+        "avg_3season": 25.08,
+        "actual": 3.51,
+        "ratio_3season": 0.14,
+        "heterogeneity": 107.0,
+        "min_season": 0.64
+      }
+    ],
+    "reading": "The three-season ratio falls monotonically as heterogeneity rises. The V131 correction stopped a fold's row count from dominating but not its magnitude: V138 averaged +25.08 with 2023 at +68.26 and 2024 at +0.64. The weakest season under-predicts consistently (2.6x-5.5x) where the average swung 0.14x-1.82x, so ranking uses the minimum as a conservative lower bound. The gate is unchanged -- it already required every season non-negative, which is that same quantity being positive."
+  },
+  "gate": {
+    "three_season_ci95_low_points": "> 0",
+    "three_season_average_points": ">= 3.0",
+    "each_season_mean_points": ">= 0",
+    "monthly_block_win_rate": ">= 0.75",
+    "ranking": "maximum of the weakest season among survivors"
+  },
+  "live_components": [
+    "form",
+    "context",
+    "network",
+    "catboost",
+    "factorization"
+  ],
+  "steps": [
+    0.02,
+    0.04,
+    0.07
+  ],
+  "results": {
+    "form->context_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.3,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "context",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -2.8259346772175076,
+        "se_points": 0.3826655756977418,
+        "ci95_low_points": -3.575959205585081,
+        "season_points": [
+          -1.037250426174878,
+          -8.400257677626705,
+          0.9597040721490611
+        ]
+      },
+      "min_season_points": -8.400257677626705,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "form->context_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.18,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "context",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -5.812736142595717,
+        "se_points": 0.7664865088465272,
+        "ci95_low_points": -7.315049699934911,
+        "season_points": [
+          -2.241564820144785,
+          -16.97110295014154,
+          1.7744593424991757
+        ]
+      },
+      "min_season_points": -16.97110295014154,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "form->context_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.25,
+        "context": 0.21,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "context",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -10.594563568465315,
+        "se_points": 1.3456538320457583,
+        "ci95_low_points": -13.232045079275,
+        "season_points": [
+          -4.36128135071518,
+          -30.147222599332167,
+          2.7248132446514064
+        ]
+      },
+      "min_season_points": -30.147222599332167,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "form->network_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.3,
+        "context": 0.14,
+        "network": 0.22,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "network",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 2.8220379448001967,
+        "se_points": 0.6223681228294181,
+        "ci95_low_points": 1.6021964240545368,
+        "season_points": [
+          -1.19397172005083,
+          10.47894362675229,
+          -0.8188580723008696
+        ]
+      },
+      "min_season_points": -1.19397172005083,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->network_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.14,
+        "network": 0.24,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "network",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 5.317132832872003,
+        "se_points": 1.2427677543249356,
+        "ci95_low_points": 2.8813080343951296,
+        "season_points": [
+          -2.746337675920696,
+          20.641008585488514,
+          -1.9432724109518087
+        ]
+      },
+      "min_season_points": -2.746337675920696,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->network_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.25,
+        "context": 0.14,
+        "network": 0.27,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "network",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 8.446756933613452,
+        "se_points": 2.170464947467336,
+        "ci95_low_points": 4.192645636577474,
+        "season_points": [
+          -5.746875801886778,
+          35.289958521062516,
+          -4.202811918335385
+        ]
+      },
+      "min_season_points": -5.746875801886778,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->catboost_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.3,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.29,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "catboost",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -0.21850815290869935,
+        "se_points": 0.3104021683880734,
+        "ci95_low_points": -0.8268964029493231,
+        "season_points": [
+          0.19965531997266533,
+          -1.1429848692402658,
+          0.28780509054150244
+        ]
+      },
+      "min_season_points": -1.1429848692402658,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->catboost_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.31,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "catboost",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -0.5495902537072949,
+        "se_points": 0.6210001957850955,
+        "ci95_low_points": -1.7667506374460822,
+        "season_points": [
+          0.2880298334200087,
+          -2.3947680244506375,
+          0.45796742990874423
+        ]
+      },
+      "min_season_points": -2.3947680244506375,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->catboost_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.25,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.34,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "form",
+        "to": "catboost",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -1.257289557200217,
+        "se_points": 1.0884400921672714,
+        "ci95_low_points": -3.390632137848069,
+        "season_points": [
+          0.21194009135578748,
+          -4.4764395434644495,
+          0.49263078050801073
+        ]
+      },
+      "min_season_points": -4.4764395434644495,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "form->factorization_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.3,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "transfer": {
+        "from": "form",
+        "to": "factorization",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 2.9354771262289723,
+        "se_points": 0.7597946557643745,
+        "ci95_low_points": 1.4462796009307985,
+        "season_points": [
+          -0.30570869638019843,
+          9.601374893607685,
+          -0.48923481854057044
+        ]
+      },
+      "min_season_points": -0.48923481854057044,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "form->factorization_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.11
+      },
+      "transfer": {
+        "from": "form",
+        "to": "factorization",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 5.2900232709221635,
+        "se_points": 1.517168456895785,
+        "ci95_low_points": 2.316373095406425,
+        "season_points": [
+          -1.0740211245112528,
+          18.593222476121856,
+          -1.6491315388441161
+        ]
+      },
+      "min_season_points": -1.6491315388441161,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "form->factorization_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.25,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.14
+      },
+      "transfer": {
+        "from": "form",
+        "to": "factorization",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 7.7325968975806205,
+        "se_points": 2.6448551043263304,
+        "ci95_low_points": 2.5486808931010128,
+        "season_points": [
+          -3.0938717637412,
+          30.93813014158787,
+          -4.646467685104808
+        ]
+      },
+      "min_season_points": -4.646467685104808,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "context->form_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.34,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "form",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 2.6650678890561723,
+        "se_points": 0.38059451339953176,
+        "ci95_low_points": 1.9191026427930902,
+        "season_points": [
+          0.8701864583798585,
+          8.22967008273656,
+          -1.1046528739478996
+        ]
+      },
+      "min_season_points": -1.1046528739478996,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "context->form_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.1,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "form",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 5.169268989950942,
+        "se_points": 0.7597303625211536,
+        "ci95_low_points": 3.680197479409481,
+        "season_points": [
+          1.5733089489647403,
+          16.28875257058285,
+          -2.354254549694766
+        ]
+      },
+      "min_season_points": -2.354254549694766,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "context->form_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.39,
+        "context": 0.07,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "form",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 8.623945413491255,
+        "se_points": 1.3264241537835995,
+        "ci95_low_points": 6.0241540720754,
+        "season_points": [
+          2.314747745226474,
+          28.057524561935313,
+          -4.500436066688019
+        ]
+      },
+      "min_season_points": -4.500436066688019,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "context->network_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.22,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "network",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 5.502200218549065,
+        "se_points": 0.803573713106398,
+        "ci95_low_points": 3.9271957408605247,
+        "season_points": [
+          -0.28838720449201544,
+          18.7160015438348,
+          -1.9210136836955878
+        ]
+      },
+      "min_season_points": -1.9210136836955878,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "context->network_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.1,
+        "network": 0.24,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "network",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 10.546779361593414,
+        "se_points": 1.6037462204763044,
+        "ci95_low_points": 7.403436769459857,
+        "season_points": [
+          -1.031436498240441,
+          36.95931249345453,
+          -4.28753791043385
+        ]
+      },
+      "min_season_points": -4.28753791043385,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "context->network_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.07,
+        "network": 0.27,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "network",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 17.255608559589376,
+        "se_points": 2.7946056645807666,
+        "ci95_low_points": 11.778181457011073,
+        "season_points": [
+          -2.9985018562189056,
+          63.43798405373376,
+          -8.672656518746718
+        ]
+      },
+      "min_season_points": -8.672656518746718,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "context->catboost_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.29,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "catboost",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 2.4840924994157283,
+        "se_points": 0.36601069753957527,
+        "ci95_low_points": 1.7667115322381608,
+        "season_points": [
+          1.107365608189408,
+          7.12949610038995,
+          -0.7845842103321735
+        ]
+      },
+      "min_season_points": -0.7845842103321735,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "context->catboost_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.1,
+        "network": 0.2,
+        "catboost": 0.31,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "catboost",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 4.769809789316014,
+        "se_points": 0.731322056166237,
+        "ci95_low_points": 3.33641855923019,
+        "season_points": [
+          2.0114341017319752,
+          14.065228093705064,
+          -1.7672328274889981
+        ]
+      },
+      "min_season_points": -1.7672328274889981,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "context->catboost_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.07,
+        "network": 0.2,
+        "catboost": 0.34,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "context",
+        "to": "catboost",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 7.826432206326061,
+        "se_points": 1.279419013498679,
+        "ci95_low_points": 5.31877093986865,
+        "season_points": [
+          2.9863547520830185,
+          24.105518382915317,
+          -3.6125765160201513
+        ]
+      },
+      "min_season_points": -3.6125765160201513,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "context->factorization_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "transfer": {
+        "from": "context",
+        "to": "factorization",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 5.630105223678668,
+        "se_points": 0.9111618017571508,
+        "ci95_low_points": 3.8442280922346526,
+        "season_points": [
+          0.6121746412625739,
+          17.855210384008853,
+          -1.5770693542354208
+        ]
+      },
+      "min_season_points": -1.5770693542354208,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "context->factorization_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.1,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.11
+      },
+      "transfer": {
+        "from": "context",
+        "to": "factorization",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 10.57753309444695,
+        "se_points": 1.816561758930646,
+        "ci95_low_points": 7.017072046942884,
+        "season_points": [
+          0.6900753415049231,
+          34.978636677362125,
+          -3.936112735526196
+        ]
+      },
+      "min_season_points": -3.936112735526196,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "context->factorization_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.07,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.14
+      },
+      "transfer": {
+        "from": "context",
+        "to": "factorization",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 16.718654863891476,
+        "se_points": 3.1609552017161944,
+        "ci95_low_points": 10.523182668527735,
+        "season_points": [
+          -0.19483724754484438,
+          59.29168094741076,
+          -8.94087910819149
+        ]
+      },
+      "min_season_points": -8.94087910819149,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "network->form_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.34,
+        "context": 0.14,
+        "network": 0.18,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "form",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -3.1489810015289166,
+        "se_points": 0.6242672876057043,
+        "ci95_low_points": -4.372544885236097,
+        "season_points": [
+          0.835577484231531,
+          -10.795822294768946,
+          0.5133018059506658
+        ]
+      },
+      "min_season_points": -10.795822294768946,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "network->form_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.14,
+        "network": 0.16,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "form",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -6.624905059786217,
+        "se_points": 1.2503568641382705,
+        "ci95_low_points": -9.075604513497227,
+        "season_points": [
+          1.312760732643997,
+          -21.908523257553483,
+          0.7210473455508336
+        ]
+      },
+      "min_season_points": -21.908523257553483,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "network->form_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.39,
+        "context": 0.14,
+        "network": 0.13,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "form",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -12.451809378538224,
+        "se_points": 2.1939719534112667,
+        "ci95_low_points": -16.75199440722431,
+        "season_points": [
+          1.3565464131015847,
+          -39.17172220426091,
+          0.45974765554465535
+        ]
+      },
+      "min_season_points": -39.17172220426091,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "network->context_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.18,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "context",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -5.959821294053719,
+        "se_points": 0.8090062642268985,
+        "ci95_low_points": -7.545473571938441,
+        "season_points": [
+          -0.16627488476442798,
+          -19.18869213804954,
+          1.4755031406528103
+        ]
+      },
+      "min_season_points": -19.18869213804954,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "network->context_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.18,
+        "network": 0.16,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "context",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -12.37726366361122,
+        "se_points": 1.622804898775458,
+        "ci95_low_points": -15.557961265211118,
+        "season_points": [
+          -0.7872118587853069,
+          -38.8500748703112,
+          2.5054957382628364
+        ]
+      },
+      "min_season_points": -38.8500748703112,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "network->context_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.21,
+        "network": 0.13,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "context",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -22.861466734518867,
+        "se_points": 2.849687109431224,
+        "ci95_low_points": -28.44685346900406,
+        "season_points": [
+          -2.5711087371722585,
+          -69.22844383285707,
+          3.2151523664727213
+        ]
+      },
+      "min_season_points": -69.22844383285707,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "network->catboost_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.18,
+        "catboost": 0.29,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "catboost",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -3.3035497441830057,
+        "se_points": 0.6079293202580975,
+        "ci95_low_points": -4.495091211888877,
+        "season_points": [
+          1.1090688905352901,
+          -11.892189479006824,
+          0.872471355922515
+        ]
+      },
+      "min_season_points": -11.892189479006824,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "network->catboost_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.16,
+        "catboost": 0.31,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "catboost",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -6.918737672475822,
+        "se_points": 1.2159135951699154,
+        "ci95_low_points": -9.301928319008855,
+        "season_points": [
+          1.896134911387877,
+          -24.116820541997296,
+          1.4644726131819568
+        ]
+      },
+      "min_season_points": -24.116820541997296,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "network->catboost_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.13,
+        "catboost": 0.34,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "network",
+        "to": "catboost",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -12.925841160120735,
+        "se_points": 2.130651307796535,
+        "ci95_low_points": -17.101917723401943,
+        "season_points": [
+          2.47297856201166,
+          -43.07709510645081,
+          1.8265930640769437
+        ]
+      },
+      "min_season_points": -43.07709510645081,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "network->factorization_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.18,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "transfer": {
+        "from": "network",
+        "to": "factorization",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -0.021981589331707064,
+        "se_points": 0.5862134749144358,
+        "ci95_low_points": -1.1709600001640013,
+        "season_points": [
+          0.7234277623689358,
+          -1.024926433768274,
+          0.23555390340421692
+        ]
+      },
+      "min_season_points": -1.024926433768274,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.6
+    },
+    "network->factorization_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.16,
+        "catboost": 0.27,
+        "factorization": 0.11
+      },
+      "transfer": {
+        "from": "network",
+        "to": "factorization",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -0.5687926449911906,
+        "se_points": 1.1740566264006245,
+        "ci95_low_points": -2.8699436327364145,
+        "season_points": [
+          1.012975506202752,
+          -2.6372169118600044,
+          -0.08213652931631929
+        ]
+      },
+      "min_season_points": -2.6372169118600044,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "network->factorization_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.13,
+        "catboost": 0.27,
+        "factorization": 0.14
+      },
+      "transfer": {
+        "from": "network",
+        "to": "factorization",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -2.3730644778465666,
+        "se_points": 2.0603658209174043,
+        "ci95_low_points": -6.411381486844678,
+        "season_points": [
+          0.633772087200109,
+          -6.156960212108732,
+          -1.5960053086310768
+        ]
+      },
+      "min_season_points": -6.156960212108732,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->form_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.34,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.25,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "form",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 0.10593420501811177,
+        "se_points": 0.30991080057653103,
+        "ci95_low_points": -0.501490964111889,
+        "season_points": [
+          -0.31093612649816543,
+          1.0341865832680812,
+          -0.4054478417155804
+        ]
+      },
+      "min_season_points": -0.4054478417155804,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "catboost->form_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.23,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "form",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 0.09929446214580631,
+        "se_points": 0.6188189687743152,
+        "ci95_low_points": -1.1135907166518515,
+        "season_points": [
+          -0.7331530595217212,
+          1.9595748805644924,
+          -0.928538434605352
+        ]
+      },
+      "min_season_points": -0.928538434605352,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->form_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.39,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.2,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "form",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -0.12174130445658905,
+        "se_points": 1.0819133186678693,
+        "ci95_low_points": -2.242291409045613,
+        "season_points": [
+          -1.5751299712922444,
+          3.1436605403140905,
+          -1.933754482391613
+        ]
+      },
+      "min_season_points": -1.933754482391613,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->context_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.25,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "context",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -2.6824677089311035,
+        "se_points": 0.36659569526142033,
+        "ci95_low_points": -3.4009952716434877,
+        "season_points": [
+          -1.310662722836256,
+          -7.32326020746466,
+          0.5865198035076047
+        ]
+      },
+      "min_season_points": -7.32326020746466,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "catboost->context_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.18,
+        "network": 0.2,
+        "catboost": 0.23,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "context",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -5.563310627377203,
+        "se_points": 0.7339424251172539,
+        "ci95_low_points": -7.001837780607021,
+        "season_points": [
+          -2.824622560319356,
+          -14.840284522003078,
+          0.9749752001908262
+        ]
+      },
+      "min_season_points": -14.840284522003078,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "catboost->context_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.21,
+        "network": 0.2,
+        "catboost": 0.2,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "context",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -10.256528522887002,
+        "se_points": 1.2868405697695997,
+        "ci95_low_points": -12.778736039635417,
+        "season_points": [
+          -5.476744406506665,
+          -26.479128694574104,
+          1.186287532419766
+        ]
+      },
+      "min_season_points": -26.479128694574104,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "catboost->network_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.22,
+        "catboost": 0.25,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "network",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 2.9919115600730537,
+        "se_points": 0.6059179138617989,
+        "ci95_low_points": 1.804312448903928,
+        "season_points": [
+          -1.431071760217915,
+          11.559747895022902,
+          -1.1529414545858245
+        ]
+      },
+      "min_season_points": -1.431071760217915,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->network_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.24,
+        "catboost": 0.23,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "network",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 5.6721849360362215,
+        "se_points": 1.2095570077555222,
+        "ci95_low_points": 3.301453200835398,
+        "season_points": [
+          -3.1841463901186646,
+          22.78705420606235,
+          -2.5863530078350223
+        ]
+      },
+      "min_season_points": -3.1841463901186646,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->network_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.27,
+        "catboost": 0.2,
+        "factorization": 0.07
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "network",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 9.108273404774444,
+        "se_points": 2.1116639644019712,
+        "ci95_low_points": 4.969412034546581,
+        "season_points": [
+          -6.417513715624757,
+          39.00468570265069,
+          -5.262351772702601
+        ]
+      },
+      "min_season_points": -6.417513715624757,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "catboost->factorization_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.25,
+        "factorization": 0.09
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "factorization",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": 3.1321503510687774,
+        "se_points": 0.7345851713835336,
+        "ci95_low_points": 1.6923634151570517,
+        "season_points": [
+          -0.5331073199630457,
+          10.710242950812162,
+          -0.7806845776427834
+        ]
+      },
+      "min_season_points": -0.7806845776427834,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.55
+    },
+    "catboost->factorization_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.23,
+        "factorization": 0.11
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "factorization",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": 5.752273812354193,
+        "se_points": 1.4686959835160456,
+        "ci95_low_points": 2.873629684662744,
+        "season_points": [
+          -1.4730241723719024,
+          20.851523252430383,
+          -2.121677642995903
+        ]
+      },
+      "min_season_points": -2.121677642995903,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.5
+    },
+    "catboost->factorization_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.2,
+        "factorization": 0.14
+      },
+      "transfer": {
+        "from": "catboost",
+        "to": "factorization",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": 8.722408585937126,
+        "se_points": 2.562870714521228,
+        "ci95_low_points": 3.699181985475519,
+        "season_points": [
+          -3.6456673243211952,
+          34.996638737614994,
+          -5.183745655482416
+        ]
+      },
+      "min_season_points": -5.183745655482416,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.45
+    },
+    "factorization->form_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.34,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "form",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -3.51640810776557,
+        "se_points": 0.7620004307645262,
+        "ci95_low_points": -5.009928952064041,
+        "season_points": [
+          -0.15689503537087082,
+          -10.21090220470359,
+          -0.18142708322225057
+        ]
+      },
+      "min_season_points": -10.21090220470359,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "factorization->form_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.03
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "form",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -7.61374719706777,
+        "se_points": 1.5280268122047642,
+        "ci95_low_points": -10.608679748989108,
+        "season_points": [
+          -0.7763938024925833,
+          -21.031331720503182,
+          -1.0335160682075446
+        ]
+      },
+      "min_season_points": -21.031331720503182,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.3
+    },
+    "factorization->form_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.39,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.0
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "form",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -14.849001421401447,
+        "se_points": 2.6819341371616905,
+        "ci95_low_points": -20.105592330238363,
+        "season_points": [
+          -2.573023950208491,
+          -38.40483970250499,
+          -3.569140611490866
+        ]
+      },
+      "min_season_points": -38.40483970250499,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.3
+    },
+    "factorization->context_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "context",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -6.312782576589397,
+        "se_points": 0.918437368470101,
+        "ci95_low_points": -8.112919818790795,
+        "season_points": [
+          -1.1464485822828565,
+          -18.58699447466529,
+          0.7950953271799561
+        ]
+      },
+      "min_season_points": -18.58699447466529,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "factorization->context_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.18,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.03
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "context",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -13.308242506089572,
+        "se_points": 1.843461467041998,
+        "ci95_low_points": -16.921426981491887,
+        "season_points": [
+          -2.8271711055859723,
+          -37.90577303998707,
+          0.808216627304324
+        ]
+      },
+      "min_season_points": -37.90577303998707,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.3
+    },
+    "factorization->context_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.21,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.0
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "context",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -25.081452437047204,
+        "se_points": 3.246917422083104,
+        "ci95_low_points": -31.445410584330084,
+        "season_points": [
+          -6.350018529953721,
+          -68.25603605794974,
+          -0.6383027232381512
+        ]
+      },
+      "min_season_points": -68.25603605794974,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.2
+    },
+    "factorization->network_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.22,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "network",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -0.5028478769975282,
+        "se_points": 0.5855934828928687,
+        "ci95_low_points": -1.650611103467551,
+        "season_points": [
+          -1.1573077809040697,
+          0.4375623894404503,
+          -0.7887982395289653
+        ]
+      },
+      "min_season_points": -1.1573077809040697,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.4
+    },
+    "factorization->network_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.24,
+        "catboost": 0.27,
+        "factorization": 0.03
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "network",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -1.5305252203227815,
+        "se_points": 1.1713755964036894,
+        "ci95_low_points": -3.826421389274013,
+        "season_points": [
+          -2.74849558034331,
+          0.2877607345575773,
+          -2.1308408151826113
+        ]
+      },
+      "min_season_points": -2.74849558034331,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "factorization->network_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.27,
+        "catboost": 0.27,
+        "factorization": 0.0
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "network",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -4.056096484677116,
+        "se_points": 2.0492308579119958,
+        "ci95_low_points": -8.072588966184627,
+        "season_points": [
+          -5.9488023142554525,
+          -1.0382493308787808,
+          -5.181237808897115
+        ]
+      },
+      "min_season_points": -5.9488023142554525,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.35
+    },
+    "factorization->catboost_0.02": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.29,
+        "factorization": 0.05
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "catboost",
+        "amount": 0.02
+      },
+      "three_season": {
+        "average_points": -3.6441772408526427,
+        "se_points": 0.740600925517465,
+        "ci95_low_points": -5.095755054866874,
+        "season_points": [
+          0.12629778751713505,
+          -11.279205600007625,
+          0.2203760899325624
+        ]
+      },
+      "min_season_points": -11.279205600007625,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.25
+    },
+    "factorization->catboost_0.04": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.31,
+        "factorization": 0.03
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "catboost",
+        "amount": 0.04
+      },
+      "three_season": {
+        "average_points": -7.800381371489457,
+        "se_points": 1.4844748831011345,
+        "ci95_low_points": -10.70995214236768,
+        "season_points": [
+          -0.15421395741149072,
+          -23.127373849211597,
+          -0.11955630784528583
+        ]
+      },
+      "min_season_points": -23.127373849211597,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.25
+    },
+    "factorization->catboost_0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.34,
+        "factorization": 0.0
+      },
+      "transfer": {
+        "from": "factorization",
+        "to": "catboost",
+        "amount": 0.07
+      },
+      "three_season": {
+        "average_points": -14.994737985788523,
+        "se_points": 2.610526693380271,
+        "ci95_low_points": -20.111370304813857,
+        "season_points": [
+          -1.3377494481404562,
+          -41.9664311902563,
+          -1.6800333189688081
+        ]
+      },
+      "min_season_points": -41.9664311902563,
+      "heterogeneity": null,
+      "monthly_block_win_rate": 0.2
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

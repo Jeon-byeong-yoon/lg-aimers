@@ -1,0 +1,212 @@
+{
+  "experiment": "V142_environment_removal",
+  "baseline": "V122 (0.00 / 0.32 / 0.21 / 0.20 / 0.27), Public 1047.03653",
+  "rationale": "The 27 tm_ctx_* and 8 tm_*_std columns are read by exactly one component, V141's identity-only model scored -589 on 2023 against the deployed 96-column CatBoost's -844, while its situation-only model scored -2305. The columns separating them describe the league scoring environment, which is re-based every season.",
+  "columns_removed": {
+    "no_env": [
+      "away_win_expectancy",
+      "home_win_expectancy",
+      "li",
+      "run_bot_before",
+      "run_top_before",
+      "run_total_before",
+      "score_diff_home",
+      "score_diff_pitcher_team",
+      "season"
+    ],
+    "no_season": [
+      "season"
+    ]
+  },
+  "environment_columns": [
+    "season",
+    "home_win_expectancy",
+    "away_win_expectancy",
+    "li",
+    "run_top_before",
+    "run_bot_before",
+    "run_total_before",
+    "score_diff_home",
+    "score_diff_pitcher_team"
+  ],
+  "config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0
+  },
+  "context_ladder": [
+    0.09,
+    0.13,
+    0.17,
+    0.21,
+    0.25
+  ],
+  "gate": {
+    "three_season_ci95_low_points": "> 0",
+    "three_season_average_points": ">= 3.0",
+    "each_season_mean_points": ">= 0",
+    "monthly_block_win_rate": ">= 0.75"
+  },
+  "incumbent_standalone": {
+    "2022": 2397,
+    "2023": -844,
+    "2024": 752
+  },
+  "standalone_skill": {
+    "no_env": {
+      "2022": 2352.9132460920478,
+      "2023": -519.4493641283104,
+      "2024": 601.5500085375769
+    },
+    "no_season": {
+      "2022": 2341.0073491743065,
+      "2023": -531.3890201060544,
+      "2024": 577.5683418183797
+    }
+  },
+  "stage_one": {
+    "no_env": {
+      "three_season": {
+        "average_points": 17.286451245338462,
+        "se_points": 4.3294683528078,
+        "ci95_low_points": 8.800693273835172,
+        "season_points": [
+          -6.085230950403834,
+          79.48400253272683,
+          -21.539417846307618
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "no_season": {
+      "three_season": {
+        "average_points": 13.107586104632043,
+        "se_points": 3.993233554622254,
+        "ci95_low_points": 5.280848337572426,
+        "season_points": [
+          -9.33102286333267,
+          74.59168381456153,
+          -25.937902637332737
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    }
+  },
+  "best_variant": "no_env",
+  "ladder": {
+    "no_env_ctx0.09": {
+      "context_weight": 0.09,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.44,
+        "context": 0.09,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 32.80116559836196,
+        "se_points": 5.935532972188707,
+        "ci95_low_points": 21.167520972872097,
+        "season_points": [
+          -1.3103161884257126,
+          127.93224737515459,
+          -28.218434391643015
+        ]
+      },
+      "monthly_block_win_rate": 0.55
+    },
+    "no_env_ctx0.13": {
+      "context_weight": 0.13,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.4,
+        "context": 0.13,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 28.27306129999862,
+        "se_points": 5.361103877442353,
+        "ci95_low_points": 17.765297700211608,
+        "season_points": [
+          -2.233698571238469,
+          112.4651828072366,
+          -25.412300336002268
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "no_env_ctx0.17": {
+      "context_weight": 0.17,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.17,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 23.10148984899076,
+        "se_points": 4.841372379294531,
+        "ci95_low_points": 13.61239998557348,
+        "season_points": [
+          -3.82533682523124,
+          96.31576785976073,
+          -23.185961487557204
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "no_env_ctx0.21": {
+      "context_weight": 0.21,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.21,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 17.286451245338462,
+        "se_points": 4.3294683528078,
+        "ci95_low_points": 8.800693273835172,
+        "season_points": [
+          -6.085230950403834,
+          79.48400253272683,
+          -21.539417846307618
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "no_env_ctx0.25": {
+      "context_weight": 0.25,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.25,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 10.82794548904147,
+        "se_points": 3.967837001380409,
+        "ci95_low_points": 3.050984966335869,
+        "season_points": [
+          -9.013380946756627,
+          61.96988682613493,
+          -20.472669412253893
+        ]
+      },
+      "monthly_block_win_rate": 0.5
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

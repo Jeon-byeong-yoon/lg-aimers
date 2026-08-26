@@ -1,0 +1,254 @@
+{
+  "experiment": "V141_disjoint_subset_components",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "rationale": "V138 and V140 together show the slot rewards independence up to the point the component stops predicting: latent 8 (corr 0.710, 2024 skill +147) beat both Context (0.817, +725) and the stronger latent 6, while latents 16 and 24 (0.659, 0.598) fail because 2022 collapses. Every existing component mixes identity and situation over one frame, which is why they all sit at 0.854-0.875. A disjoint column slice is orthogonal by construction.",
+  "subsets": {
+    "situation": [
+      "season",
+      "game_month",
+      "game_dayofweek",
+      "inning",
+      "top_bottom",
+      "game_type",
+      "balls_before",
+      "strikes_before",
+      "outs_before",
+      "run_top_before",
+      "run_bot_before",
+      "run_total_before",
+      "score_diff_home",
+      "score_diff_pitcher_team",
+      "runner_on_1b",
+      "runner_on_2b",
+      "runner_on_3b",
+      "num_runners_on",
+      "base_state",
+      "home_win_expectancy",
+      "away_win_expectancy",
+      "li"
+    ],
+    "identity": [
+      "pitcher_id",
+      "batter_id",
+      "pitcher_hand",
+      "batter_hand",
+      "pitcher_team_id",
+      "batter_team_id",
+      "asof_pitcher_n",
+      "asof_pitcher_success_rate",
+      "asof_pitcher_reverse_rate",
+      "asof_pitcher_middle_rate",
+      "asof_pitcher_ball_rate",
+      "asof_pitcher_strike_rate",
+      "asof_pitcher_prev1_game_success_rate",
+      "asof_pitcher_prev3_game_success_rate",
+      "asof_pitcher_prev5_game_success_rate",
+      "asof_pitcher_prev1_game_middle_rate",
+      "asof_pitcher_prev3_game_middle_rate",
+      "asof_pitcher_prev5_game_middle_rate",
+      "asof_batter_n",
+      "asof_batter_success_rate",
+      "asof_batter_middle_rate",
+      "asof_pitcher_pitchmix_n",
+      "asof_pitcher_fastball_rate",
+      "asof_pitcher_breaking_rate",
+      "asof_pitcher_offspeed_rate"
+    ]
+  },
+  "config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0
+  },
+  "handovers": [
+    0.03,
+    0.05,
+    0.07,
+    0.1,
+    0.14
+  ],
+  "ranking": "maximum of the weakest season among survivors",
+  "standalone_skill": {
+    "situation": {
+      "2022": 1782.8290151162273,
+      "2023": -2305.2208595893962,
+      "2024": -30.214930336280865
+    },
+    "identity": {
+      "2022": 1635.008396163873,
+      "2023": -589.425051607928,
+      "2024": 39.15372493775715
+    }
+  },
+  "results": {
+    "situation_h0.03": {
+      "subset": "situation",
+      "handover": 0.03,
+      "three_season": {
+        "average_points": -3.753362971422541,
+        "se_points": 0.9130952346948213,
+        "ci95_low_points": -5.543029631424391,
+        "season_points": [
+          0.49930528214558845,
+          -7.4222917221351095,
+          -4.337102474278101
+        ]
+      },
+      "min_season_points": -7.4222917221351095,
+      "monthly_block_win_rate": 0.2
+    },
+    "situation_h0.05": {
+      "subset": "situation",
+      "handover": 0.05,
+      "three_season": {
+        "average_points": -6.885060486342084,
+        "se_points": 1.5295019901993645,
+        "ci95_low_points": -9.882884387132838,
+        "season_points": [
+          0.219946405091632,
+          -13.014593995311946,
+          -7.86053386880594
+        ]
+      },
+      "min_season_points": -13.014593995311946,
+      "monthly_block_win_rate": 0.2
+    },
+    "situation_h0.07": {
+      "subset": "situation",
+      "handover": 0.07,
+      "three_season": {
+        "average_points": -10.520322428438154,
+        "se_points": 2.154477822326579,
+        "ci95_low_points": -14.74309896019825,
+        "season_points": [
+          -0.5491957240830839,
+          -19.122182501890016,
+          -11.889589059341365
+        ]
+      },
+      "min_season_points": -19.122182501890016,
+      "monthly_block_win_rate": 0.2
+    },
+    "situation_h0.10": {
+      "subset": "situation",
+      "handover": 0.1,
+      "three_season": {
+        "average_points": -16.917398642539027,
+        "se_points": 3.1002934299624014,
+        "ci95_low_points": -22.993973765265334,
+        "season_points": [
+          -2.62125251557174,
+          -29.249726949386968,
+          -18.881216462658376
+        ]
+      },
+      "min_season_points": -29.249726949386968,
+      "monthly_block_win_rate": 0.2
+    },
+    "situation_h0.14": {
+      "subset": "situation",
+      "handover": 0.14,
+      "three_season": {
+        "average_points": -27.209309089792697,
+        "se_points": 4.39693181666495,
+        "ci95_low_points": -35.827295450456,
+        "season_points": [
+          -7.098236286645988,
+          -44.556621362958474,
+          -29.973069619773646
+        ]
+      },
+      "min_season_points": -44.556621362958474,
+      "monthly_block_win_rate": 0.2
+    },
+    "identity_h0.03": {
+      "subset": "identity",
+      "handover": 0.03,
+      "three_season": {
+        "average_points": 8.730673944233542,
+        "se_points": 1.8223391245836695,
+        "ci95_low_points": 5.15888926004955,
+        "season_points": [
+          -6.074635433958865,
+          37.11703547123703,
+          -4.850378204577542
+        ]
+      },
+      "min_season_points": -6.074635433958865,
+      "monthly_block_win_rate": 0.4
+    },
+    "identity_h0.05": {
+      "subset": "identity",
+      "handover": 0.05,
+      "three_season": {
+        "average_points": 13.830254699784497,
+        "se_points": 3.020316672818533,
+        "ci95_low_points": 7.910434021060172,
+        "season_points": [
+          -10.79254138664774,
+          61.027392296054266,
+          -8.744086810053041
+        ]
+      },
+      "min_season_points": -10.79254138664774,
+      "monthly_block_win_rate": 0.4
+    },
+    "identity_h0.07": {
+      "subset": "identity",
+      "handover": 0.07,
+      "three_season": {
+        "average_points": 18.35314062285169,
+        "se_points": 4.199964969155734,
+        "ci95_low_points": 10.121209283306452,
+        "season_points": [
+          -16.04496653670972,
+          84.27028232939902,
+          -13.165893924134222
+        ]
+      },
+      "min_season_points": -16.04496653670972,
+      "monthly_block_win_rate": 0.35
+    },
+    "identity_h0.10": {
+      "subset": "identity",
+      "handover": 0.1,
+      "three_season": {
+        "average_points": 24.056166696545706,
+        "se_points": 5.937661425051013,
+        "ci95_low_points": 12.418350303445722,
+        "season_points": [
+          -24.925827756877023,
+          117.8831171454057,
+          -20.788789298891555
+        ]
+      },
+      "min_season_points": -24.925827756877023,
+      "monthly_block_win_rate": 0.35
+    },
+    "identity_h0.14": {
+      "subset": "identity",
+      "handover": 0.14,
+      "three_season": {
+        "average_points": 29.64176954777747,
+        "se_points": 8.224648664260995,
+        "ci95_low_points": 13.52145816582592,
+        "season_points": [
+          -38.637793241239045,
+          160.36409646325936,
+          -32.800994578687906
+        ]
+      },
+      "min_season_points": -38.637793241239045,
+      "monthly_block_win_rate": 0.35
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

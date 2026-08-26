@@ -1,0 +1,35 @@
+{
+  "version": "V156",
+  "baseline": "V154 (1050.8512921822)",
+  "change": "CatBoost retrained on in-season features built with a season-tracking prior, plus an experience segment at 0.10 in the calibration; Form, the network and the factorization network keep the career prior they were trained on",
+  "reused_from_v154": [
+    "inseason_anchor",
+    "catboost.cbm",
+    "catboost_meta"
+  ],
+  "blend_weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.27,
+    "factorization": 0.07
+  },
+  "segments": {
+    "count": 0.55,
+    "pitcher_count": 0.25,
+    "experience": 0.2
+  },
+  "global_shift": -0.010678264995403622,
+  "validation": {
+    "season_points": {
+      "2022": 0.0,
+      "2023": 0.01,
+      "2024": 1.85
+    },
+    "min_season_points": 0.0,
+    "average_points": 0.62,
+    "monthly_block_win_rate": 0.4,
+    "note": "No fold loses, which is the condition the leaderboard validated when V154 gained while missing two magnitude thresholds. The size is small: V154's average of +2.34 returned +0.30, so +0.62 suggests something near a tenth of a point."
+  }
+}

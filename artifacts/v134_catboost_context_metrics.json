@@ -1,0 +1,199 @@
+{
+  "experiment": "V134_catboost_context_features",
+  "baseline": "V122 (0.00 / 0.32 / 0.21 / 0.20 / 0.27), Public 1047.03653",
+  "rationale": "The 27 tm_ctx_* and 8 tm_*_std columns are read by exactly one component, the oldest and most lightly fitted learner in the ensemble (200 boosting iterations at lr 0.06, chosen in V31 before three blend restructurings). CatBoost, which has beaten everything else here, has never been handed them.",
+  "columns_added": [
+    "inning_bucket",
+    "tm_ctx_extension_s100",
+    "tm_ctx_extension_s500",
+    "tm_ctx_history_n",
+    "tm_ctx_horz_break_s100",
+    "tm_ctx_horz_break_s500",
+    "tm_ctx_induced_vert_break_s100",
+    "tm_ctx_induced_vert_break_s500",
+    "tm_ctx_log1p_n",
+    "tm_ctx_pitch_group_breaking_s100",
+    "tm_ctx_pitch_group_breaking_s500",
+    "tm_ctx_pitch_group_fastball_s100",
+    "tm_ctx_pitch_group_fastball_s500",
+    "tm_ctx_pitch_group_offspeed_s100",
+    "tm_ctx_pitch_group_offspeed_s500",
+    "tm_ctx_pitch_group_other_s100",
+    "tm_ctx_pitch_group_other_s500",
+    "tm_ctx_rel_height_s100",
+    "tm_ctx_rel_height_s500",
+    "tm_ctx_rel_side_s100",
+    "tm_ctx_rel_side_s500",
+    "tm_ctx_rel_speed_s100",
+    "tm_ctx_rel_speed_s500",
+    "tm_ctx_spin_rate_s100",
+    "tm_ctx_spin_rate_s500",
+    "tm_ctx_zone_speed_s100",
+    "tm_ctx_zone_speed_s500"
+  ],
+  "frame_columns": 123,
+  "configs": {
+    "strong": {
+      "iterations": 1200,
+      "depth": 6,
+      "learning_rate": 0.02,
+      "l2_leaf_reg": 12.0
+    }
+  },
+  "context_ladder": [
+    0.09,
+    0.13,
+    0.17,
+    0.21,
+    0.25
+  ],
+  "gate": {
+    "three_season_ci95_low_points": "> 0",
+    "three_season_average_points": ">= 3.0",
+    "each_season_mean_points": ">= 0",
+    "monthly_block_win_rate": ">= 0.75"
+  },
+  "incumbent_standalone": {
+    "2022": 2397,
+    "2023": -844,
+    "2024": 752
+  },
+  "standalone_skill": {
+    "ctx_strong": {
+      "2022": 2400.701803635308,
+      "2023": -833.3402360721553,
+      "2024": 768.1532953258019
+    }
+  },
+  "stage_one": {
+    "ctx_strong": {
+      "three_season": {
+        "average_points": 1.5867029631268528,
+        "se_points": 1.46901178322778,
+        "ci95_low_points": -1.2925601319995959,
+        "season_points": [
+          -0.32747402548371346,
+          4.788955031771221,
+          0.2986278830930507
+        ]
+      },
+      "monthly_block_win_rate": 0.55
+    }
+  },
+  "best_variant": "ctx_strong",
+  "ladder": {
+    "ctx_strong_ctx0.09": {
+      "context_weight": 0.09,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.44,
+        "context": 0.09,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 18.077990724141458,
+        "se_points": 2.8876577664192715,
+        "ci95_low_points": 12.418181501959685,
+        "season_points": [
+          5.082113632317004,
+          54.64530581620737,
+          -5.493447276099997
+        ]
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "ctx_strong_ctx0.13": {
+      "context_weight": 0.13,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.4,
+        "context": 0.13,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 13.224361956447787,
+        "se_points": 2.2662603441292064,
+        "ci95_low_points": 8.782491681954541,
+        "season_points": [
+          3.9471736175634162,
+          38.708872600953335,
+          -2.982960349173389
+        ]
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "ctx_strong_ctx0.17": {
+      "context_weight": 0.17,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.36,
+        "context": 0.17,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 7.727266036109562,
+        "se_points": 1.7571913031430004,
+        "ci95_low_points": 4.2831710819492805,
+        "season_points": [
+          2.14397773162988,
+          22.090089006141252,
+          -1.0522686294424481
+        ]
+      },
+      "monthly_block_win_rate": 0.7
+    },
+    "ctx_strong_ctx0.21": {
+      "context_weight": 0.21,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.21,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": 1.5867029631268528,
+        "se_points": 1.46901178322778,
+        "ci95_low_points": -1.2925601319995959,
+        "season_points": [
+          -0.32747402548371346,
+          4.788955031771221,
+          0.2986278830930507
+        ]
+      },
+      "monthly_block_win_rate": 0.55
+    },
+    "ctx_strong_ctx0.25": {
+      "context_weight": 0.25,
+      "weights": {
+        "v17": 0.0,
+        "form": 0.28,
+        "context": 0.25,
+        "network": 0.2,
+        "catboost": 0.27
+      },
+      "three_season": {
+        "average_points": -5.197327262499934,
+        "se_points": 1.5432499978065517,
+        "ci95_low_points": -8.222097258200774,
+        "season_points": [
+          -3.467181653777318,
+          -13.194529322155068,
+          1.0697291884325821
+        ]
+      },
+      "monthly_block_win_rate": 0.2
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

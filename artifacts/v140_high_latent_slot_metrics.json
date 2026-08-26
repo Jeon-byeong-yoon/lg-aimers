@@ -1,0 +1,624 @@
+{
+  "experiment": "V140_high_latent_context_slot",
+  "baseline": "V122 (0.00 / 0.32 / 0.21 / 0.20 / 0.27), Public 1047.03653",
+  "rationale": "V136 showed the Context axis unanimous in direction and blocked in practice, because Context still earns diversity on 2024 where every correlation drops. V120 solved the same shape for v17 by replacing it rather than emptying its weight. The factorization network was rejected as an addition, but it fixes precisely Context's weakness: -558 against -1333 on 2023, and lower correlation on all three seasons.",
+  "profile": {
+    "context": {
+      "2022": 2224,
+      "2023": -1333,
+      "2024": 725,
+      "corr": [
+        0.919,
+        0.903,
+        0.817
+      ]
+    },
+    "factorization_latent6": {
+      "2022": 2150,
+      "2023": -558,
+      "2024": 338,
+      "corr": [
+        0.888,
+        0.841,
+        0.777
+      ]
+    }
+  },
+  "gate": {
+    "three_season_ci95_low_points": "> 0",
+    "three_season_average_points": ">= 3.0",
+    "each_season_mean_points": ">= 0",
+    "monthly_block_win_rate": ">= 0.75"
+  },
+  "handovers": [
+    0.05,
+    0.07,
+    0.09,
+    0.12,
+    0.16,
+    0.21
+  ],
+  "results": {
+    "latent8_fm0.05": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "handover": 0.05,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 18.76866986045781,
+        "se_points": 2.3255621963600235,
+        "ci95_low_points": 14.210567955592163,
+        "season_points": [
+          5.203569947670863,
+          49.669041583284454,
+          1.4333980504181074
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": 3.5834951260452684e-06,
+        "ci95_low": -7.195056867316291e-06,
+        "ci95_high": 1.458609841369623e-05
+      },
+      "monthly_block_win_rate": 0.8
+    },
+    "latent8_fm0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "handover": 0.07,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 25.081452437047204,
+        "se_points": 3.246917422083104,
+        "ci95_low_points": 18.71749428976432,
+        "season_points": [
+          6.350018529953721,
+          68.25603605794974,
+          0.6383027232381512
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": 1.595756808095378e-06,
+        "ci95_low": -1.360865232746653e-05,
+        "ci95_high": 1.710765099151192e-05
+      },
+      "monthly_block_win_rate": 0.8
+    },
+    "latent8_fm0.09": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "handover": 0.09,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 30.71155766072588,
+        "se_points": 4.158489213457407,
+        "ci95_low_points": 22.560918802349363,
+        "season_points": [
+          6.962193171216292,
+          86.11124644195861,
+          -0.9387666309972709
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -2.346916577493177e-06,
+        "ci95_low": -2.2102368874116947e-05,
+        "ci95_high": 1.7610248295339166e-05
+      },
+      "monthly_block_win_rate": 0.75
+    },
+    "latent8_fm0.12": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.09,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.12
+      },
+      "handover": 0.12,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 37.876695459536755,
+        "se_points": 5.510624210820648,
+        "ci95_low_points": 27.075872006328282,
+        "season_points": [
+          6.878691493697093,
+          111.52196684799239,
+          -4.770571963079227
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -1.192642990769807e-05,
+        "ci95_low": -3.8221843800998385e-05,
+        "ci95_high": 1.4629723244811503e-05
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "latent8_fm0.16": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.05,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.16
+      },
+      "handover": 0.16,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 45.040841789430345,
+        "se_points": 7.289294414057357,
+        "ci95_low_points": 30.753824737877924,
+        "season_points": [
+          4.897397130100597,
+          142.84168307207332,
+          -12.616554833882887
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -3.154138708470722e-05,
+        "ci95_low": -6.692839624534172e-05,
+        "ci95_high": 3.855665104680865e-06
+      },
+      "monthly_block_win_rate": 0.6
+    },
+    "latent8_fm0.21": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.0,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.21
+      },
+      "handover": 0.21,
+      "variant": "latent8",
+      "three_season": {
+        "average_points": 50.15596459167489,
+        "se_points": 9.482865605148621,
+        "ci95_low_points": 31.569548005583584,
+        "season_points": [
+          -0.5845117426342405,
+          177.87504284223337,
+          -26.822637324574462
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -6.705659331143616e-05,
+        "ci95_low": -0.00011445310324818947,
+        "ci95_high": -2.009032615275238e-05
+      },
+      "monthly_block_win_rate": 0.4
+    },
+    "latent16_fm0.05": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "handover": 0.05,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 15.123805127312433,
+        "se_points": 2.4103731455470734,
+        "ci95_low_points": 10.399473762040168,
+        "season_points": [
+          -1.6760539272696013,
+          47.23765145718692,
+          -0.19018214798002794
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -4.7545536995006983e-07,
+        "ci95_low": -1.3257950793571137e-05,
+        "ci95_high": 1.2102604660144361e-05
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "latent16_fm0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "handover": 0.07,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 19.53953213288809,
+        "se_points": 3.3632826382518837,
+        "ci95_low_points": 12.9474981619144,
+        "season_points": [
+          -4.083235781722223,
+          64.62005935130945,
+          -1.918227170922966
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -4.795567927307415e-06,
+        "ci95_low": -2.2682679357171945e-05,
+        "ci95_high": 1.2815709588148446e-05
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "latent16_fm0.09": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "handover": 0.09,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 23.02166196969336,
+        "se_points": 4.319025332756585,
+        "ci95_low_points": 14.556372317490453,
+        "season_points": [
+          -7.482852083914705,
+          81.13809428043261,
+          -4.590256287437828
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -1.147564071859457e-05,
+        "ci95_low": -3.452138069230996e-05,
+        "ci95_high": 1.1266624320532814e-05
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "latent16_fm0.12": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.09,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.12
+      },
+      "handover": 0.12,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 26.494362033455864,
+        "se_points": 5.745664870481492,
+        "ci95_low_points": 15.23285888731214,
+        "season_points": [
+          -14.443091126715732,
+          104.29444736474092,
+          -10.368270137657593
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -2.5920675344143983e-05,
+        "ci95_low": -5.6745068209857894e-05,
+        "ci95_high": 4.21570373422213e-06
+      },
+      "monthly_block_win_rate": 0.45
+    },
+    "latent16_fm0.16": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.05,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.16
+      },
+      "handover": 0.16,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 27.857038694441147,
+        "se_points": 7.645670644615818,
+        "ci95_low_points": 12.871524230994146,
+        "season_points": [
+          -27.196930417539754,
+          132.14427943298216,
+          -21.37623293211897
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -5.344058233029743e-05,
+        "ci95_low": -9.456414172153113e-05,
+        "ci95_high": -1.3132494724305317e-05
+      },
+      "monthly_block_win_rate": 0.45
+    },
+    "latent16_fm0.21": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.0,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.21
+      },
+      "handover": 0.21,
+      "variant": "latent16",
+      "three_season": {
+        "average_points": 24.308900446336764,
+        "se_points": 9.98122216784118,
+        "ci95_low_points": 4.745704997368051,
+        "season_points": [
+          -48.72167329960653,
+          162.094471590155,
+          -40.44609695153817
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -0.00010111524237884544,
+        "ci95_low": -0.00015579412038762815,
+        "ci95_high": -4.8269083656455855e-05
+      },
+      "monthly_block_win_rate": 0.4
+    },
+    "latent24_fm0.05": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.16,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.05
+      },
+      "handover": 0.05,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 16.74318696144011,
+        "se_points": 2.5099282520728092,
+        "ci95_low_points": 11.823727587377405,
+        "season_points": [
+          1.553607877338242,
+          47.9870016259239,
+          0.6889513810581885
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": 1.7223784526454713e-06,
+        "ci95_low": -1.336225098623817e-05,
+        "ci95_high": 1.687698714442527e-05
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "latent24_fm0.07": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "handover": 0.07,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 21.580451812644974,
+        "se_points": 3.507131842294394,
+        "ci95_low_points": 14.706473401747964,
+        "season_points": [
+          0.5263140403102099,
+          65.52235156491342,
+          -1.307310167288696
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -3.2682754182217398e-06,
+        "ci95_low": -2.4495170832754882e-05,
+        "ci95_high": 1.793415086603096e-05
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "latent24_fm0.09": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.12,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.09
+      },
+      "handover": 0.09,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 25.354853844781093,
+        "se_points": 4.493736240304742,
+        "ci95_low_points": 16.547130813783802,
+        "season_points": [
+          -1.4431152184112472,
+          82.1094439545448,
+          -4.601767201790257
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -1.1504418004475643e-05,
+        "ci95_low": -3.889224726962933e-05,
+        "ci95_high": 1.5765817542065498e-05
+      },
+      "monthly_block_win_rate": 0.65
+    },
+    "latent24_fm0.12": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.09,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.12
+      },
+      "handover": 0.12,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 29.02358910723076,
+        "se_points": 5.950543525037684,
+        "ci95_low_points": 17.360523798156898,
+        "season_points": [
+          -6.163763022168246,
+          105.21209963394247,
+          -11.97756929008195
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -2.9943923225204877e-05,
+        "ci95_low": -6.638788335435571e-05,
+        "ci95_high": 6.039715348813333e-06
+      },
+      "monthly_block_win_rate": 0.55
+    },
+    "latent24_fm0.16": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.05,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.16
+      },
+      "handover": 0.16,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 30.195216257088024,
+        "se_points": 7.894982926252053,
+        "ci95_low_points": 14.721049721634001,
+        "season_points": [
+          -15.75543406977112,
+          132.69673911704686,
+          -26.355656276011675
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -6.588914069002919e-05,
+        "ci95_low": -0.00011476680869098438,
+        "ci95_high": -1.736336277489534e-05
+      },
+      "monthly_block_win_rate": 0.5
+    },
+    "latent24_fm0.21": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.0,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.21
+      },
+      "handover": 0.21,
+      "variant": "latent24",
+      "three_season": {
+        "average_points": 25.681146837146613,
+        "se_points": 10.274425133483232,
+        "ci95_low_points": 5.543273575519478,
+        "season_points": [
+          -33.0445346262997,
+          161.71858975578198,
+          -51.630614618042436
+        ]
+      },
+      "bootstrap_2024": {
+        "mean": -0.00012907653654510608,
+        "ci95_low": -0.0001943070228585304,
+        "ci95_high": -6.443148989670359e-05
+      },
+      "monthly_block_win_rate": 0.5
+    }
+  },
+  "blocked_by": {
+    "latent8_fm0.05": [],
+    "latent8_fm0.07": [],
+    "latent8_fm0.09": [
+      "season"
+    ],
+    "latent8_fm0.12": [
+      "season",
+      "blocks"
+    ],
+    "latent8_fm0.16": [
+      "season",
+      "blocks"
+    ],
+    "latent8_fm0.21": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.05": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.07": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.09": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.12": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.16": [
+      "season",
+      "blocks"
+    ],
+    "latent16_fm0.21": [
+      "season",
+      "blocks"
+    ],
+    "latent24_fm0.05": [
+      "blocks"
+    ],
+    "latent24_fm0.07": [
+      "season",
+      "blocks"
+    ],
+    "latent24_fm0.09": [
+      "season",
+      "blocks"
+    ],
+    "latent24_fm0.12": [
+      "season",
+      "blocks"
+    ],
+    "latent24_fm0.16": [
+      "season",
+      "blocks"
+    ],
+    "latent24_fm0.21": [
+      "season",
+      "blocks"
+    ]
+  },
+  "eligible_candidates": [
+    "latent8_fm0.05",
+    "latent8_fm0.07"
+  ],
+  "promoted_candidate": "latent8_fm0.05",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}

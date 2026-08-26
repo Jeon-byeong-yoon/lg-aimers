@@ -1,0 +1,91 @@
+{
+  "experiment": "V147_rate_forecast",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "rationale": "On 2024 the blend scores 903 against a pitcher-rate oracle's 991, and V146 showed the pitcher-by-count interaction cannot be estimated. What is left is estimating each pitcher's current rate better. Every component learns from a binary label with standard deviation 0.5, while the quantity that matters is a rate whose standard error is nearer 0.02.",
+  "construction": "Stage-one target is the pitcher's success rate over the rest of that season, counting strictly the rows after the current pitch so the label never contains its own answer. Rows with fewer than 100 pitches remaining are dropped from training. Features are the row's own official asof columns plus the in-season block, so the function applies to a 2025 row unchanged and no evaluation row touches another.",
+  "min_remaining": 100,
+  "stage_one_config": {
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.03,
+    "l2_leaf_reg": 8.0
+  },
+  "stage_two_config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0
+  },
+  "component_weights": [
+    0.05,
+    0.1,
+    0.16
+  ],
+  "results": {
+    "component_w0.05": {
+      "three_season": {
+        "average_points": 17.84996103203533,
+        "se_points": 3.4049561833611555,
+        "ci95_low_points": 11.176246912647466,
+        "season_points": [
+          -17.244314330445462,
+          74.50929696132184,
+          -3.715099534770383
+        ]
+      },
+      "min_season_points": -17.244314330445462,
+      "monthly_block_win_rate": 0.4
+    },
+    "component_w0.10": {
+      "three_season": {
+        "average_points": 31.545400096479227,
+        "se_points": 6.718719409110218,
+        "ci95_low_points": 18.3767100546232,
+        "season_points": [
+          -39.369164403061944,
+          143.84653502758962,
+          -9.841170335090007
+        ]
+      },
+      "min_season_points": -39.369164403061944,
+      "monthly_block_win_rate": 0.4
+    },
+    "component_w0.16": {
+      "three_season": {
+        "average_points": 42.49595797659051,
+        "se_points": 10.62037978754388,
+        "ci95_low_points": 21.68001359300451,
+        "season_points": [
+          -72.36129166986743,
+          220.22410296563785,
+          -20.37493736599891
+        ]
+      },
+      "min_season_points": -72.36129166986743,
+      "monthly_block_win_rate": 0.4
+    },
+    "feature": {
+      "three_season": {
+        "average_points": -0.37358450678605654,
+        "se_points": 1.2295191898979965,
+        "ci95_low_points": -2.7834421189861294,
+        "season_points": [
+          0.0,
+          -3.1589676530467043,
+          2.038214132688535
+        ]
+      },
+      "min_season_points": -3.1589676530467043,
+      "monthly_block_win_rate": 0.45
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true,
+    "row_independent": true
+  }
+}

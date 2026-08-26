@@ -1,0 +1,62 @@
+{
+  "version": "V144",
+  "baseline": "V138 (1050.5510725821)",
+  "change": "onehot CatBoost replaces no_te_strong and rises to 0.36, funded from Form; every other weight unchanged from V138",
+  "weights": {
+    "v17": 0.0,
+    "form": 0.23,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.36,
+    "factorization": 0.07
+  },
+  "global_shift": -0.010736871903162928,
+  "catboost_config": {
+    "iterations": 1200,
+    "depth": 6,
+    "learning_rate": 0.02,
+    "l2_leaf_reg": 12.0,
+    "one_hot_max_size": 16
+  },
+  "catboost_columns": 96,
+  "catboost_categorical": [
+    "pitcher_id",
+    "batter_id",
+    "pitcher_team_id",
+    "batter_team_id",
+    "count_state",
+    "base_state",
+    "hand_matchup",
+    "pitcher_hand",
+    "batter_hand",
+    "top_bottom",
+    "game_type"
+  ],
+  "encodings_dropped": [
+    "te_pitcher_id_50",
+    "te_pitcher_id_200",
+    "te_pitcher_id_log_count",
+    "te_batter_id_50",
+    "te_batter_id_200",
+    "te_batter_id_log_count",
+    "hte_pitcher_batter_100",
+    "hte_pitcher_batter_500",
+    "hte_pitcher_batter_log_count"
+  ],
+  "gate_status": "deliberately violated once; see V143 for the pre-registration",
+  "validation": {
+    "instrument": "three-season equally weighted average, V138 baseline",
+    "three_season_average_points": 8.43,
+    "min_season_points": -1.86,
+    "season_2022_points": -1.86,
+    "season_2023_points": 22.57,
+    "season_2024_points": 4.58,
+    "monthly_block_win_rate": 0.8,
+    "failing_condition": "2022 mean below zero; 2022 is the only fold that receives no calibration, so the raw blend is used"
+  },
+  "pre_registered_interpretation": {
+    "gain_above_2_points": "the 2022 veto is too strict; reopen the family",
+    "loss": "the veto is validated; keep V138 and close the line",
+    "within_2_points": "inconclusive, counted as validated"
+  }
+}

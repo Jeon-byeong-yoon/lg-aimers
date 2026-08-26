@@ -1,0 +1,47 @@
+{
+  "version": "V151",
+  "baseline": "V138 (1050.5510725821)",
+  "change": "a game_type segment at 0.10 added to the calibration, taken from the count segment; blend weights and every model file unchanged",
+  "blend_weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.27,
+    "factorization": 0.07
+  },
+  "segments": {
+    "count": 0.65,
+    "pitcher_count": 0.25,
+    "game_type": 0.1
+  },
+  "global_shift": -0.010764370502210706,
+  "discovery": {
+    "f_rate_by_season": {
+      "2019": 0.68925,
+      "2020": 0.587774,
+      "2021": 0.70384,
+      "2022": 0.708749,
+      "2023": 0.472904,
+      "2024": 0.45928
+    },
+    "points_lost_on_f": {
+      "2022": 20.23,
+      "2023": 1306.62,
+      "2024": 5.95
+    },
+    "note": "The F break of 0.236 between 2022 and 2023 is the single cause of the 2023 anomaly that distorted the dispersion audit, the shrinkage optimum and nine rejected experiments."
+  },
+  "validation": {
+    "fold_2024_gain_points": 4.14,
+    "fold_2024_monthly_blocks": "12 of 12, worst month +0.04",
+    "f_2024_bias": {
+      "before": 0.01121,
+      "after": 0.005206
+    },
+    "fold_2022_gain_points": 0.0,
+    "fold_2023_gain_points": -32.36,
+    "why_2023_rejects": "That fold fits its segments on 2022 alone, entirely pre-break, so it corrects a 0.47 season with a 0.71 prior. Verified directly: refitting the 2024 fold's segment on 2022 only turns +4.14 into -2.51 and makes the F bias worse (+0.0206 to +0.0248). The deployed model fits on 2022-2024, two thirds post-break.",
+    "evidentiary_status": "One informative fold. 2022 is exactly zero because it receives no calibration, and 2023 is unfalsifiable by construction for a segment that broke inside it."
+  }
+}

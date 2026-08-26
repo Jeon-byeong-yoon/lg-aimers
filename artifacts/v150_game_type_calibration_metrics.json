@@ -1,0 +1,325 @@
+{
+  "experiment": "V150_game_type_calibration",
+  "baseline": "V138 (0.00 / 0.32 / 0.14 / 0.20 / 0.27 / 0.07), Public 1050.5511",
+  "discovery": {
+    "f_rate_by_season": {
+      "2019": 0.68925,
+      "2020": 0.587774,
+      "2021": 0.70384,
+      "2022": 0.708749,
+      "2023": 0.472904,
+      "2024": 0.45928
+    },
+    "blend_bias_on_f": {
+      "2022": -0.020272,
+      "2023": 0.176703,
+      "2024": 0.01121
+    },
+    "points_lost_on_f": {
+      "2022": 20.23,
+      "2023": 1306.62,
+      "2024": 5.95
+    },
+    "reading": "The F success rate fell 0.236 between 2022 and 2023 and the 2023-fold model, trained where F ran near 0.70, predicted 0.6496 for it. Those 25,686 rows cost 1,307 points on that fold alone. That is the 'dispersion collapse', the lambda* of 0.35, and what all nine rejected experiments were partly repairing."
+  },
+  "motivation": "F is still the worst-predicted group on 2024 -- skill 584 against R's 902 on 12% of rows -- and the calibration layer has no game_type term at all. F is also 5.7% of March and 68.5% of October, so the correction is partly a late-season one.",
+  "block_floor_note": "2022 is exactly zero for any calibration-layer change, so pooled block rate is capped near 65-70% for this class (V149). The floor is applied to the 2023-2024 blocks; the pooled figure is reported alongside.",
+  "segments": {
+    "count": {
+      "columns": [
+        "balls_before",
+        "strikes_before"
+      ],
+      "smoothing": 500.0
+    },
+    "pitcher_count": {
+      "columns": [
+        "pitcher_id",
+        "balls_before",
+        "strikes_before"
+      ],
+      "smoothing": 300.0
+    },
+    "game_type": {
+      "columns": [
+        "game_type"
+      ],
+      "smoothing": 2000.0
+    },
+    "game_type_count": {
+      "columns": [
+        "game_type",
+        "balls_before",
+        "strikes_before"
+      ],
+      "smoothing": 1000.0
+    },
+    "game_type_month": {
+      "columns": [
+        "game_type",
+        "game_month"
+      ],
+      "smoothing": 1000.0
+    }
+  },
+  "recipes": {
+    "incumbent": [
+      0.75,
+      0.25,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gt10": [
+      0.65,
+      0.25,
+      0.1,
+      0.0,
+      0.0
+    ],
+    "gt20": [
+      0.55,
+      0.25,
+      0.2,
+      0.0,
+      0.0
+    ],
+    "gt30": [
+      0.45,
+      0.25,
+      0.3,
+      0.0,
+      0.0
+    ],
+    "gtc10": [
+      0.65,
+      0.25,
+      0.0,
+      0.1,
+      0.0
+    ],
+    "gtc20": [
+      0.55,
+      0.25,
+      0.0,
+      0.2,
+      0.0
+    ],
+    "gtm10": [
+      0.65,
+      0.25,
+      0.0,
+      0.0,
+      0.1
+    ],
+    "gtm20": [
+      0.55,
+      0.25,
+      0.0,
+      0.0,
+      0.2
+    ],
+    "gt10_gtm10": [
+      0.55,
+      0.25,
+      0.1,
+      0.0,
+      0.1
+    ]
+  },
+  "incumbent_f_2024_bias": 0.011210119956029052,
+  "results": {
+    "gt10": {
+      "recipe": [
+        0.65,
+        0.25,
+        0.1,
+        0.0,
+        0.0
+      ],
+      "three_season": {
+        "average_points": -9.406939377133677,
+        "se_points": 1.4943668264973986,
+        "ci95_low_points": -12.33589835706858,
+        "season_points": [
+          0.0,
+          -32.35756684644982,
+          4.136748715048794
+        ]
+      },
+      "min_season_points": -32.35756684644982,
+      "recent_block_win_rate": 0.46153846153846156,
+      "monthly_block_win_rate": 0.3,
+      "f_2024_bias": 0.005206383138172954
+    },
+    "gt20": {
+      "recipe": [
+        0.55,
+        0.25,
+        0.2,
+        0.0,
+        0.0
+      ],
+      "three_season": {
+        "average_points": -20.28143429719558,
+        "se_points": 2.974977385898284,
+        "ci95_low_points": -26.112389973556212,
+        "season_points": [
+          0.0,
+          -65.2088734071359,
+          4.3645705155491505
+        ]
+      },
+      "min_season_points": -65.2088734071359,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": -0.0007973536796830327
+    },
+    "gt30": {
+      "recipe": [
+        0.45,
+        0.25,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "three_season": {
+        "average_points": -32.62348476018565,
+        "se_points": 4.456668330349891,
+        "ci95_low_points": -41.358554687671436,
+        "season_points": [
+          0.0,
+          -98.55391968205812,
+          0.6834654015011626
+        ]
+      },
+      "min_season_points": -98.55391968205812,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": -0.006801090497539186
+    },
+    "gtc10": {
+      "recipe": [
+        0.65,
+        0.25,
+        0.0,
+        0.1,
+        0.0
+      ],
+      "three_season": {
+        "average_points": -7.032297236962518,
+        "se_points": 1.1996122832899356,
+        "ci95_low_points": -9.383537312210791,
+        "season_points": [
+          0.0,
+          -24.718452101900123,
+          3.6215603910125727
+        ]
+      },
+      "min_season_points": -24.718452101900123,
+      "recent_block_win_rate": 0.46153846153846156,
+      "monthly_block_win_rate": 0.3,
+      "f_2024_bias": 0.005985111797317755
+    },
+    "gtc20": {
+      "recipe": [
+        0.55,
+        0.25,
+        0.0,
+        0.2,
+        0.0
+      ],
+      "three_season": {
+        "average_points": -15.203478206765446,
+        "se_points": 2.3915631106851314,
+        "ci95_low_points": -19.890941903708303,
+        "season_points": [
+          0.0,
+          -49.740524203436294,
+          4.130089583139958
+        ]
+      },
+      "min_season_points": -49.740524203436294,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": 0.0007601036386064575
+    },
+    "gtm10": {
+      "recipe": [
+        0.65,
+        0.25,
+        0.0,
+        0.0,
+        0.1
+      ],
+      "three_season": {
+        "average_points": -10.164033065642679,
+        "se_points": 1.6948182300748882,
+        "ci95_low_points": -13.485876796589459,
+        "season_points": [
+          0.0,
+          -34.66614311531727,
+          4.174043918389234
+        ]
+      },
+      "min_season_points": -34.66614311531727,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": 0.0057787249011932995
+    },
+    "gtm20": {
+      "recipe": [
+        0.55,
+        0.25,
+        0.0,
+        0.0,
+        0.2
+      ],
+      "three_season": {
+        "average_points": -22.097295599806596,
+        "se_points": 3.3918591143669174,
+        "ci95_low_points": -28.745339463965756,
+        "season_points": [
+          0.0,
+          -70.82334850929308,
+          4.531461709873297
+        ]
+      },
+      "min_season_points": -70.82334850929308,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": 0.00034732984635760245
+    },
+    "gt10_gtm10": {
+      "recipe": [
+        0.55,
+        0.25,
+        0.1,
+        0.0,
+        0.1
+      ],
+      "three_season": {
+        "average_points": -20.910905932198204,
+        "se_points": 3.098336107261856,
+        "ci95_low_points": -26.983644702431445,
+        "season_points": [
+          0.0,
+          -67.51316535325073,
+          4.7804475566561075
+        ]
+      },
+      "min_season_points": -67.51316535325073,
+      "recent_block_win_rate": 0.38461538461538464,
+      "monthly_block_win_rate": 0.25,
+      "f_2024_bias": -0.0002250119166627429
+    }
+  },
+  "eligible_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}
