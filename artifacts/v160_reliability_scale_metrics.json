@@ -1,0 +1,85 @@
+{
+  "experiment": "V160_reliability_scale",
+  "baseline": "V156 (Public 1052.1807428872)",
+  "constant": {
+    "name": "RELIABILITY_SCALE",
+    "value": 150.0,
+    "role": "builds ins_pitcher_reliability = inside_n / (inside_n + scale), so 150 sets the half-trust point at 150 current-season pitches",
+    "why_untested": "V155 gridded the drift term's use of the same constant across 18 combinations, but the drift term reads the reconstruction at shrinkage 3 as a multiplier while the feature side reads it at shrinkage 20 as an input"
+  },
+  "scope": "Form, the network and the factorization network are refit; CatBoost keeps 150 because it already takes its own reconstruction (V154), which also means no fourth reconstruction is needed in deployment",
+  "control": "each component refit with its own historical prior convention -- per-fold for Form as V102 used, global for the two networks as V112 and V130 used -- so reliability 150 reproduces the stored predictions and the comparison isolates the constant",
+  "scales": [
+    75.0,
+    150.0,
+    300.0,
+    600.0
+  ],
+  "results": {
+    "75": {
+      "three_season": {
+        "average_points": -0.6344194533152966,
+        "se_points": 0.868160516472648,
+        "ci95_low_points": -2.336014065601687,
+        "season_points": [
+          -0.354352321868227,
+          -0.8242850358535345,
+          -0.7246210022241282
+        ]
+      },
+      "min_season_points": -0.8242850358535345,
+      "monthly_block_win_rate": 0.4
+    },
+    "150": {
+      "three_season": {
+        "average_points": 0.0,
+        "se_points": 0.0,
+        "ci95_low_points": 0.0,
+        "season_points": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.0
+    },
+    "300": {
+      "three_season": {
+        "average_points": 1.5600320792801459,
+        "se_points": 0.883600041914583,
+        "ci95_low_points": -0.1718240028724367,
+        "season_points": [
+          0.5412709558206776,
+          3.3702218173243392,
+          0.7686034646954203
+        ]
+      },
+      "min_season_points": 0.5412709558206776,
+      "monthly_block_win_rate": 0.65
+    },
+    "600": {
+      "three_season": {
+        "average_points": 2.0443839060812965,
+        "se_points": 0.9789537266627616,
+        "ci95_low_points": 0.12563460182228392,
+        "season_points": [
+          0.640344027044283,
+          5.738334871875884,
+          -0.2455271806762766
+        ]
+      },
+      "min_season_points": -0.2455271806762766,
+      "monthly_block_win_rate": 0.6
+    }
+  },
+  "safe_candidates": [
+    "300"
+  ],
+  "promoted_candidate": "300",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}

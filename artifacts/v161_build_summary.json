@@ -1,0 +1,26 @@
+{
+  "version": "V161",
+  "baseline": "V156 (1052.1807428872)",
+  "change": "feature-side RELIABILITY_SCALE 150 -> 300 for Form, the network and the factorization network; CatBoost keeps 150 on its own block",
+  "validation": {
+    "season_points": {
+      "2022": 0.54,
+      "2023": 3.37,
+      "2024": 0.77
+    },
+    "min_season_points": 0.54,
+    "average_points": 1.56,
+    "monthly_block_win_rate": 0.65,
+    "control": "reliability 150 reproduced the stored Form, network and factorization predictions to 0.000e+00",
+    "note": "Form's predictions were identical at every scale, so the movement is entirely the two networks."
+  },
+  "blend_weights": {
+    "v17": 0.0,
+    "form": 0.32,
+    "context": 0.14,
+    "network": 0.2,
+    "catboost": 0.27,
+    "factorization": 0.07
+  },
+  "global_shift": -0.010674754698547216
+}
