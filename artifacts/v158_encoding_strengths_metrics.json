@@ -1,0 +1,105 @@
+{
+  "experiment": "V158_encoding_strengths",
+  "baseline": "V154 (Public 1050.8512921822)",
+  "rationale": "The target-encoding strengths were set in V5 and V6 and never revisited, while the shrinkage one layer down was gridded four times and moved from 50 to 20. Form, Context, the network and the factorization network read them, 0.73 of the blend; CatBoost's winning no_te variant does not, so every affected component can be refit per variant and no model is handed encodings built with a strength it was not fitted on.",
+  "incumbent_strengths": {
+    "flat": [
+      50.0,
+      200.0
+    ],
+    "hierarchical": {
+      "pitcher_vs_batter_hand": [
+        30.0,
+        100.0
+      ],
+      "pitcher_count": [
+        50.0,
+        200.0
+      ],
+      "batter_vs_pitcher_hand": [
+        30.0,
+        100.0
+      ],
+      "pitcher_batter": [
+        100.0,
+        500.0
+      ]
+    }
+  },
+  "scales": {
+    "incumbent": 1.0,
+    "half": 0.5,
+    "double": 2.0,
+    "quadruple": 4.0
+  },
+  "control": {
+    "form_max_abs_difference": 0.03763851853707001
+  },
+  "ranking": "weakest season, then the three-season average",
+  "results": {
+    "incumbent": {
+      "three_season": {
+        "average_points": 0.6031809367950604,
+        "se_points": 1.1812181862021833,
+        "ci95_low_points": -1.712006708161219,
+        "season_points": [
+          1.3706984231273804,
+          1.4281611408728045,
+          -0.9893167536150039
+        ]
+      },
+      "min_season_points": -0.9893167536150039,
+      "monthly_block_win_rate": 0.45
+    },
+    "half": {
+      "three_season": {
+        "average_points": -0.27906372163390925,
+        "se_points": 2.016710612456136,
+        "ci95_low_points": -4.231816522047935,
+        "season_points": [
+          0.2622831601474435,
+          2.5481343993120142,
+          -3.6476087243611857
+        ]
+      },
+      "min_season_points": -3.6476087243611857,
+      "monthly_block_win_rate": 0.45
+    },
+    "double": {
+      "three_season": {
+        "average_points": -2.2930417439951367,
+        "se_points": 2.029069900051393,
+        "ci95_low_points": -6.2700187480958665,
+        "season_points": [
+          1.9597225788211203,
+          -0.9343736004342109,
+          -7.904474210372318
+        ]
+      },
+      "min_season_points": -7.904474210372318,
+      "monthly_block_win_rate": 0.4
+    },
+    "quadruple": {
+      "three_season": {
+        "average_points": 1.942545530506764,
+        "se_points": 2.074397470203325,
+        "ci95_low_points": -2.1232735110917536,
+        "season_points": [
+          5.412014388816326,
+          8.200446357482791,
+          -7.784824154778826
+        ]
+      },
+      "min_season_points": -7.784824154778826,
+      "monthly_block_win_rate": 0.55
+    }
+  },
+  "safe_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "fixed_seed": true
+  }
+}
