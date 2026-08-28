@@ -1,0 +1,750 @@
+{
+  "experiment": "V165_segment_audit",
+  "baseline": "V161 (Public 1053.2326413884)",
+  "statistic": "400000 * sum_g (n_g/N) * max(0, mean_g^2 - var_g/n_g); the subtraction removes the one-variance-per-cell inflation that makes fine segments look informative when they are noise",
+  "audit": {
+    "count (in use)": {
+      "2022": 0.6163288053995134,
+      "2023": 91.43300649091027,
+      "2024": 6.014876191986312,
+      "cells_2024": 12,
+      "rows_per_cell_2024": 21125.583333333332
+    },
+    "pitcher x count (in use)": {
+      "2022": 1099.7027873263553,
+      "2023": 2112.131435590745,
+      "2024": 1139.129581972726,
+      "cells_2024": 4512,
+      "rows_per_cell_2024": 56.185062056737586
+    },
+    "experience (in use)": {
+      "2022": 4.535706576031174,
+      "2023": 246.83759302412412,
+      "2024": 2.339967797328543,
+      "cells_2024": 7,
+      "rows_per_cell_2024": 36215.28571428572
+    },
+    "game_type (V151, lost)": {
+      "2022": 24.721343042615114,
+      "2023": 1315.4960935318154,
+      "2024": 4.2967841676174645,
+      "cells_2024": 2,
+      "rows_per_cell_2024": 126753.5
+    },
+    "inning": {
+      "2022": 7.427827691649563,
+      "2023": 98.57816539811503,
+      "2024": 2.6173101795379137,
+      "cells_2024": 10,
+      "rows_per_cell_2024": 25350.7
+    },
+    "outs": {
+      "2022": 0.26135825912953203,
+      "2023": 92.98190702873158,
+      "2024": 1.449972760236642,
+      "cells_2024": 3,
+      "rows_per_cell_2024": 84502.33333333333
+    },
+    "runners": {
+      "2022": 3.3454299158614433,
+      "2023": 95.44138784788029,
+      "2024": 3.3206289833374654,
+      "cells_2024": 4,
+      "rows_per_cell_2024": 63376.75
+    },
+    "base_state": {
+      "2022": 3.3040574036091854,
+      "2023": 95.13560508655195,
+      "2024": 3.8084455088653315,
+      "cells_2024": 8,
+      "rows_per_cell_2024": 31688.375
+    },
+    "leverage": {
+      "2022": 0.8843899017347974,
+      "2023": 91.77280525780519,
+      "2024": 2.4415475696717412,
+      "cells_2024": 6,
+      "rows_per_cell_2024": 42251.166666666664
+    },
+    "score_gap": {
+      "2022": 8.693503645788418,
+      "2023": 95.15721783190266,
+      "2024": 3.4360193153885823,
+      "cells_2024": 8,
+      "rows_per_cell_2024": 31688.375
+    },
+    "handedness": {
+      "2022": 1.132659200938513,
+      "2023": 126.36688454660707,
+      "2024": 5.91869215729476,
+      "cells_2024": 4,
+      "rows_per_cell_2024": 63376.75
+    },
+    "game_month": {
+      "2022": 43.04079210942205,
+      "2023": 160.23711172741037,
+      "2024": 3.8352373569576286,
+      "cells_2024": 8,
+      "rows_per_cell_2024": 31688.375
+    },
+    "dayofweek": {
+      "2022": 0.6072069272289037,
+      "2023": 112.51519568266444,
+      "2024": 3.6939683512636594,
+      "cells_2024": 7,
+      "rows_per_cell_2024": 36215.28571428572
+    },
+    "top_bottom": {
+      "2022": 0.0,
+      "2023": 92.94599771019803,
+      "2024": 0.2803837232565749,
+      "cells_2024": 2,
+      "rows_per_cell_2024": 126753.5
+    },
+    "batter_experience": {
+      "2022": 9.785148917487469,
+      "2023": 404.77083807758345,
+      "2024": 7.464077576615503,
+      "cells_2024": 6,
+      "rows_per_cell_2024": 42251.166666666664
+    },
+    "pitch_mix": {
+      "2022": 7.2690100439475245,
+      "2023": 133.50151573337806,
+      "2024": 2.3614515345302345,
+      "cells_2024": 7,
+      "rows_per_cell_2024": 36215.28571428572
+    },
+    "pitcher_team": {
+      "2022": 8.117866334008205,
+      "2023": 162.1746908505973,
+      "2024": 4.505260232289453,
+      "cells_2024": 12,
+      "rows_per_cell_2024": 21125.583333333332
+    },
+    "batter_team": {
+      "2022": 5.478662489127324,
+      "2023": 159.53042979815666,
+      "2024": 14.958006273244589,
+      "cells_2024": 12,
+      "rows_per_cell_2024": 21125.583333333332
+    },
+    "batter_id": {
+      "2022": 95.63739019972786,
+      "2023": 1091.1317981131822,
+      "2024": 97.83920386475691,
+      "cells_2024": 424,
+      "rows_per_cell_2024": 597.8938679245283
+    },
+    "pitcher_id": {
+      "2022": 146.826982734801,
+      "2023": 1232.3997609053704,
+      "2024": 139.260368211672,
+      "cells_2024": 391,
+      "rows_per_cell_2024": 648.3554987212276
+    },
+    "pitcher x strikes": {
+      "2022": 322.62564717213763,
+      "2023": 1399.9493110485575,
+      "2024": 325.7761810938454,
+      "cells_2024": 1168,
+      "rows_per_cell_2024": 217.04366438356163
+    },
+    "experience x count": {
+      "2022": 18.552391244789185,
+      "2023": 252.79006380362583,
+      "2024": 28.28503538934641,
+      "cells_2024": 84,
+      "rows_per_cell_2024": 3017.940476190476
+    },
+    "experience x game_type": {
+      "2022": 30.90870387395698,
+      "2023": 1332.5685062394543,
+      "2024": 4.287032632708283,
+      "cells_2024": 14,
+      "rows_per_cell_2024": 18107.64285714286
+    },
+    "count x handedness": {
+      "2022": 17.72346940027084,
+      "2023": 143.20976348647432,
+      "2024": 25.004966609951413,
+      "cells_2024": 48,
+      "rows_per_cell_2024": 5281.395833333333
+    },
+    "count x inning": {
+      "2022": 37.81533427272024,
+      "2023": 107.79487802301126,
+      "2024": 25.90454792814855,
+      "cells_2024": 120,
+      "rows_per_cell_2024": 2112.5583333333334
+    },
+    "experience x leverage": {
+      "2022": 12.617699692406573,
+      "2023": 271.7987250012631,
+      "2024": 10.502552381814706,
+      "cells_2024": 42,
+      "rows_per_cell_2024": 6035.880952380952
+    },
+    "pitcher x experience-free": {
+      "2022": 373.3188093792188,
+      "2023": 1500.9548503819558,
+      "2024": 374.3974910039819,
+      "cells_2024": 777,
+      "rows_per_cell_2024": 326.2638352638353
+    }
+  },
+  "ranked_unused": [
+    "pitcher x experience-free",
+    "pitcher x strikes",
+    "pitcher_id",
+    "batter_id",
+    "count x inning",
+    "experience x count",
+    "count x handedness",
+    "experience x leverage",
+    "batter_experience",
+    "batter_team",
+    "pitcher_team",
+    "experience x game_type",
+    "game_month",
+    "score_gap",
+    "runners",
+    "base_state",
+    "inning",
+    "pitch_mix",
+    "handedness",
+    "leverage",
+    "dayofweek",
+    "outs",
+    "top_bottom"
+  ],
+  "results": {
+    "pitcher x experience-free|w0.05|s500": {
+      "three_season": {
+        "average_points": 1.2347706188894947,
+        "se_points": 0.7193742269050607,
+        "ci95_low_points": -0.17520286584442424,
+        "season_points": [
+          0.0,
+          2.4110187262652785,
+          1.2932931304032058
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5
+    },
+    "pitcher x experience-free|w0.05|s2000": {
+      "three_season": {
+        "average_points": 0.5939706808007327,
+        "se_points": 0.32819613751164217,
+        "ci95_low_points": -0.04929374872208597,
+        "season_points": [
+          0.0,
+          1.0371182589102006,
+          0.7447937834919977
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5
+    },
+    "pitcher x experience-free|w0.10|s500": {
+      "three_season": {
+        "average_points": 2.061369904665634,
+        "se_points": 1.4594986200021136,
+        "ci95_low_points": -0.7992473905385089,
+        "season_points": [
+          0.0,
+          4.378523617067831,
+          1.8055860969290707
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5
+    },
+    "pitcher x experience-free|w0.10|s2000": {
+      "three_season": {
+        "average_points": 1.0916907613005913,
+        "se_points": 0.659388560993752,
+        "ci95_low_points": -0.20071081824716272,
+        "season_points": [
+          0.0,
+          1.97852822819412,
+          1.2965440557076535
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5
+    },
+    "pitcher x experience-free|w0.20|s500": {
+      "three_season": {
+        "average_points": 2.4900544768775212,
+        "se_points": 2.988021297312597,
+        "ci95_low_points": -3.366467265855169,
+        "season_points": [
+          0.0,
+          6.982991892284309,
+          0.4871715383482541
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.45
+    },
+    "pitcher x experience-free|w0.20|s2000": {
+      "three_season": {
+        "average_points": 1.7983791213976437,
+        "se_points": 1.3292024664384303,
+        "ci95_low_points": -0.8068577128216796,
+        "season_points": [
+          0.0,
+          3.574223297883294,
+          1.8209140663096373
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5
+    },
+    "pitcher x strikes|w0.05|s500": {
+      "three_season": {
+        "average_points": -0.027335293005892183,
+        "se_points": 0.5786703523638886,
+        "ci95_low_points": -1.161529183639114,
+        "season_points": [
+          0.0,
+          0.4540377646453813,
+          -0.5360436436630579
+        ]
+      },
+      "min_season_points": -0.5360436436630579,
+      "monthly_block_win_rate": 0.4
+    },
+    "pitcher x strikes|w0.05|s2000": {
+      "three_season": {
+        "average_points": 0.0672632569608815,
+        "se_points": 0.27182934770920203,
+        "ci95_low_points": -0.4655222645491544,
+        "season_points": [
+          0.0,
+          0.2996815300938149,
+          -0.09789175921117041
+        ]
+      },
+      "min_season_points": -0.09789175921117041,
+      "monthly_block_win_rate": 0.4
+    },
+    "pitcher x strikes|w0.10|s500": {
+      "three_season": {
+        "average_points": -0.3219504729585501,
+        "se_points": 1.1602963171226057,
+        "ci95_low_points": -2.5961312545188573,
+        "season_points": [
+          0.0,
+          0.6356026606737901,
+          -1.6014540795494405
+        ]
+      },
+      "min_season_points": -1.6014540795494405,
+      "monthly_block_win_rate": 0.4
+    },
+    "pitcher x strikes|w0.10|s2000": {
+      "three_season": {
+        "average_points": 0.08152384087121572,
+        "se_points": 0.5437045346992351,
+        "ci95_low_points": -0.984137047139285,
+        "season_points": [
+          0.0,
+          0.5514378586349045,
+          -0.3068663360212573
+        ]
+      },
+      "min_season_points": -0.3068663360212573,
+      "monthly_block_win_rate": 0.4
+    },
+    "pitcher x strikes|w0.20|s500": {
+      "three_season": {
+        "average_points": -1.7130204937044486,
+        "se_points": 2.3481982607064658,
+        "ci95_low_points": -6.315489084689121,
+        "season_points": [
+          0.0,
+          0.18131384687917407,
+          -5.3203753279925206
+        ]
+      },
+      "min_season_points": -5.3203753279925206,
+      "monthly_block_win_rate": 0.3
+    },
+    "pitcher x strikes|w0.20|s2000": {
+      "three_season": {
+        "average_points": -0.0489630104595995,
+        "se_points": 1.0852694571913721,
+        "ci95_low_points": -2.1760911465546884,
+        "season_points": [
+          0.0,
+          0.9111749110592997,
+          -1.0580639424380982
+        ]
+      },
+      "min_season_points": -1.0580639424380982,
+      "monthly_block_win_rate": 0.4
+    },
+    "pitcher_id|w0.05|s500": {
+      "three_season": {
+        "average_points": -0.643706426658395,
+        "se_points": 0.6809071076245244,
+        "ci95_low_points": -1.9782843576024627,
+        "season_points": [
+          0.0,
+          -0.3278181895722286,
+          -1.6033010904029565
+        ]
+      },
+      "min_season_points": -1.6033010904029565,
+      "monthly_block_win_rate": 0.25
+    },
+    "pitcher_id|w0.05|s2000": {
+      "three_season": {
+        "average_points": -0.391456309340186,
+        "se_points": 0.3710525970123128,
+        "ci95_low_points": -1.1187193994843192,
+        "season_points": [
+          0.0,
+          -0.19763742469165005,
+          -0.9767315033289081
+        ]
+      },
+      "min_season_points": -0.9767315033289081,
+      "monthly_block_win_rate": 0.35
+    },
+    "pitcher_id|w0.10|s500": {
+      "three_season": {
+        "average_points": -1.6650840787475518,
+        "se_points": 1.3936149808446163,
+        "ci95_low_points": -4.396569441203,
+        "season_points": [
+          0.0,
+          -0.9506588235622926,
+          -4.0445934126803635
+        ]
+      },
+      "min_season_points": -4.0445934126803635,
+      "monthly_block_win_rate": 0.25
+    },
+    "pitcher_id|w0.10|s2000": {
+      "three_season": {
+        "average_points": -0.9049614892221605,
+        "se_points": 0.7511217439403997,
+        "ci95_low_points": -2.377160107345344,
+        "season_points": [
+          0.0,
+          -0.4905757774542504,
+          -2.224308690212231
+        ]
+      },
+      "min_season_points": -2.224308690212231,
+      "monthly_block_win_rate": 0.35
+    },
+    "pitcher_id|w0.20|s500": {
+      "three_season": {
+        "average_points": -4.840853059218212,
+        "se_points": 2.885967433269901,
+        "ci95_low_points": -10.497349228427217,
+        "season_points": [
+          0.0,
+          -3.0814074247959757,
+          -11.441151752858659
+        ]
+      },
+      "min_season_points": -11.441151752858659,
+      "monthly_block_win_rate": 0.2
+    },
+    "pitcher_id|w0.20|s2000": {
+      "three_season": {
+        "average_points": -2.2981184606114278,
+        "se_points": 1.5428846345681362,
+        "ci95_low_points": -5.322172344364975,
+        "season_points": [
+          0.0,
+          -1.3623552671921144,
+          -5.532000114642169
+        ]
+      },
+      "min_season_points": -5.532000114642169,
+      "monthly_block_win_rate": 0.25
+    },
+    "batter_id|w0.05|s500": {
+      "three_season": {
+        "average_points": -0.37879946627776706,
+        "se_points": 0.27698028278226844,
+        "ci95_low_points": -0.9216808205310132,
+        "season_points": [
+          0.0,
+          -2.5413451388265074,
+          1.4049467399932063
+        ]
+      },
+      "min_season_points": -2.5413451388265074,
+      "monthly_block_win_rate": 0.25
+    },
+    "batter_id|w0.05|s2000": {
+      "three_season": {
+        "average_points": -0.08235717691240936,
+        "se_points": 0.16167073912308455,
+        "ci95_low_points": -0.39923182559365505,
+        "season_points": [
+          0.0,
+          -1.2084734446505534,
+          0.9614019139133254
+        ]
+      },
+      "min_season_points": -1.2084734446505534,
+      "monthly_block_win_rate": 0.25
+    },
+    "batter_id|w0.10|s500": {
+      "three_season": {
+        "average_points": -1.0363129708120387,
+        "se_points": 0.5536722493978753,
+        "ci95_low_points": -2.1215105796318743,
+        "season_points": [
+          0.0,
+          -5.247685342152594,
+          2.1387464297164778
+        ]
+      },
+      "min_season_points": -5.247685342152594,
+      "monthly_block_win_rate": 0.2
+    },
+    "batter_id|w0.10|s2000": {
+      "three_season": {
+        "average_points": -0.25106388287746256,
+        "se_points": 0.3232802579048395,
+        "ci95_low_points": -0.8846931883709479,
+        "season_points": [
+          0.0,
+          -2.462428304469218,
+          1.7092366558368304
+        ]
+      },
+      "min_season_points": -2.462428304469218,
+      "monthly_block_win_rate": 0.25
+    },
+    "batter_id|w0.20|s500": {
+      "three_season": {
+        "average_points": -3.187482094649895,
+        "se_points": 1.109219382576461,
+        "ci95_low_points": -5.361552084499759,
+        "season_points": [
+          0.0,
+          -11.155350942302984,
+          1.5929046583532993
+        ]
+      },
+      "min_season_points": -11.155350942302984,
+      "monthly_block_win_rate": 0.15
+    },
+    "batter_id|w0.20|s2000": {
+      "three_season": {
+        "average_points": -0.8475258819656561,
+        "se_points": 0.6463833660013192,
+        "ci95_low_points": -2.1144372793282415,
+        "season_points": [
+          0.0,
+          -5.10678226961107,
+          2.5642046237141023
+        ]
+      },
+      "min_season_points": -5.10678226961107,
+      "monthly_block_win_rate": 0.15
+    },
+    "count x inning|w0.05|s500": {
+      "three_season": {
+        "average_points": 0.3626132174700993,
+        "se_points": 0.1648074987234631,
+        "ci95_low_points": 0.03959051997211162,
+        "season_points": [
+          0.0,
+          0.14095938958681153,
+          0.9468802628234864
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.45
+    },
+    "count x inning|w0.05|s2000": {
+      "three_season": {
+        "average_points": 0.2698903692049937,
+        "se_points": 0.11239546973841336,
+        "ci95_low_points": 0.04959524851770357,
+        "season_points": [
+          0.0,
+          0.11972343718715171,
+          0.6899476704278295
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.45
+    },
+    "count x inning|w0.10|s500": {
+      "three_season": {
+        "average_points": 0.6332966736819466,
+        "se_points": 0.3297750648450695,
+        "ci95_low_points": -0.013062453414389684,
+        "season_points": [
+          0.0,
+          0.11622839077986465,
+          1.7836616302659751
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.4
+    },
+    "count x inning|w0.10|s2000": {
+      "three_season": {
+        "average_points": 0.4963411021088899,
+        "se_points": 0.2247409992402688,
+        "ci95_low_points": 0.05584874359796301,
+        "season_points": [
+          0.0,
+          0.1716378188597499,
+          1.3173854874669197
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.45
+    },
+    "count x inning|w0.20|s500": {
+      "three_season": {
+        "average_points": 0.8988743023308612,
+        "se_points": 0.6601904390759984,
+        "ci95_low_points": -0.3950989582580955,
+        "season_points": [
+          0.0,
+          -0.43030477201515416,
+          3.126927679007738
+        ]
+      },
+      "min_season_points": -0.43030477201515416,
+      "monthly_block_win_rate": 0.4
+    },
+    "count x inning|w0.20|s2000": {
+      "three_season": {
+        "average_points": 0.8189236590131697,
+        "se_points": 0.4496216591144092,
+        "ci95_low_points": -0.06233479285107251,
+        "season_points": [
+          0.0,
+          0.07203941566073226,
+          2.3847315613787767
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.4
+    },
+    "experience x count|w0.05|s500": {
+      "three_season": {
+        "average_points": 0.11312650294689969,
+        "se_points": 0.20565174998490465,
+        "ci95_low_points": -0.28995092702351344,
+        "season_points": [
+          0.0,
+          0.0049538514502455175,
+          0.33442565739045355
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.4
+    },
+    "experience x count|w0.05|s2000": {
+      "three_season": {
+        "average_points": 0.10838949514837411,
+        "se_points": 0.15949600428511745,
+        "ci95_low_points": -0.20422267325045612,
+        "season_points": [
+          0.0,
+          0.1620790013777735,
+          0.1630894840673488
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.35
+    },
+    "experience x count|w0.10|s500": {
+      "three_season": {
+        "average_points": 0.13324770184297097,
+        "se_points": 0.4112331234166189,
+        "ci95_low_points": -0.672769220053602,
+        "season_points": [
+          0.0,
+          -0.09321755260206133,
+          0.49296065813097417
+        ]
+      },
+      "min_season_points": -0.09321755260206133,
+      "monthly_block_win_rate": 0.35
+    },
+    "experience x count|w0.10|s2000": {
+      "three_season": {
+        "average_points": 0.16257556135241938,
+        "se_points": 0.3193032349723697,
+        "ci95_low_points": -0.46325877919342523,
+        "season_points": [
+          0.0,
+          0.269365735116522,
+          0.21836094894073615
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.35
+    },
+    "experience x count|w0.20|s500": {
+      "three_season": {
+        "average_points": -0.1055258125173885,
+        "se_points": 0.8204585082569874,
+        "ci95_low_points": -1.7136244887010836,
+        "season_points": [
+          0.0,
+          -0.5989361272142801,
+          0.28235868966211464
+        ]
+      },
+      "min_season_points": -0.5989361272142801,
+      "monthly_block_win_rate": 0.3
+    },
+    "experience x count|w0.20|s2000": {
+      "three_season": {
+        "average_points": 0.10833740692691178,
+        "se_points": 0.6390352039075995,
+        "ci95_low_points": -1.1441715927319833,
+        "season_points": [
+          0.0,
+          0.31956239967538297,
+          0.005449821105352416
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.35
+    }
+  },
+  "safe_candidates": [
+    "count x inning|w0.05|s2000",
+    "count x inning|w0.05|s500",
+    "count x inning|w0.10|s2000",
+    "count x inning|w0.10|s500",
+    "count x inning|w0.20|s2000",
+    "experience x count|w0.05|s2000",
+    "experience x count|w0.05|s500",
+    "experience x count|w0.10|s2000",
+    "experience x count|w0.20|s2000",
+    "pitcher x experience-free|w0.05|s2000",
+    "pitcher x experience-free|w0.05|s500",
+    "pitcher x experience-free|w0.10|s2000",
+    "pitcher x experience-free|w0.10|s500",
+    "pitcher x experience-free|w0.20|s2000",
+    "pitcher x experience-free|w0.20|s500"
+  ],
+  "promoted_candidate": "pitcher x experience-free|w0.20|s500",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true
+  }
+}

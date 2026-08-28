@@ -1,0 +1,290 @@
+{
+  "experiment": "V166_restore_dropped_groups",
+  "baseline": "V161 (Public 1053.2326413884)",
+  "why_untried": "V2_DROPPED_GROUPS was set after the V2 single-HGB ablation, when the score was in the 800s, and has never been re-asked. Eighteen features have been withheld from Form, the network and the factorization network for the entire project. The in-season reconstruction, the embedding network, CatBoost and the factorization network all arrived afterwards.",
+  "groups": {
+    "game_context": [
+      "is_full_count",
+      "is_two_strike",
+      "is_three_ball",
+      "is_late_inning",
+      "is_high_leverage",
+      "is_close_game",
+      "pressure_index",
+      "count_pressure"
+    ],
+    "recent_form": [
+      "success_form_gap_1",
+      "middle_form_gap_1",
+      "success_form_gap_3",
+      "middle_form_gap_3",
+      "success_form_gap_5",
+      "middle_form_gap_5",
+      "recent_success_weighted",
+      "recent_middle_weighted"
+    ],
+    "failure_proxies": [
+      "location_failure_history",
+      "location_quality_history"
+    ]
+  },
+  "baseline_width": 105,
+  "widths": {
+    "game_context": 113,
+    "recent_form": 113,
+    "failure_proxies": 107,
+    "all_three": 123
+  },
+  "results": {
+    "game_context": {
+      "scope": "all",
+      "three_season": {
+        "average_points": 2.489666450189151,
+        "se_points": 4.073111417369662,
+        "ci95_low_points": -5.493631927855388,
+        "season_points": [
+          -5.962468209422107,
+          15.334192746118376,
+          -1.9027251861288172
+        ]
+      },
+      "min_season_points": -5.962468209422107,
+      "monthly_block_win_rate": 0.45
+    },
+    "recent_form": {
+      "scope": "all",
+      "three_season": {
+        "average_points": 0.754935527470383,
+        "se_points": 4.309267354094592,
+        "ci95_low_points": -7.691228486555019,
+        "season_points": [
+          -10.183557769425338,
+          14.502715948677851,
+          -2.0543515968413653
+        ]
+      },
+      "min_season_points": -10.183557769425338,
+      "monthly_block_win_rate": 0.4
+    },
+    "failure_proxies": {
+      "scope": "all",
+      "three_season": {
+        "average_points": 1.7339836832389548,
+        "se_points": 4.180255863477876,
+        "ci95_low_points": -6.459317809177683,
+        "season_points": [
+          3.15862042730931,
+          2.7589607739491244,
+          -0.7156301515415702
+        ]
+      },
+      "min_season_points": -0.7156301515415702,
+      "monthly_block_win_rate": 0.55
+    },
+    "all_three": {
+      "scope": "all",
+      "three_season": {
+        "average_points": -5.764091860472936,
+        "se_points": 4.68147139114873,
+        "ci95_low_points": -14.939775787124445,
+        "season_points": [
+          -5.812719469661289,
+          -4.179483162471154,
+          -7.300072949286366
+        ]
+      },
+      "min_season_points": -7.300072949286366,
+      "monthly_block_win_rate": 0.45
+    },
+    "game_context|form": {
+      "scope": "form",
+      "three_season": {
+        "average_points": 3.4074258414803205,
+        "se_points": 1.424297369340631,
+        "ci95_low_points": 0.6158029975726841,
+        "season_points": [
+          0.48580327320281447,
+          11.924058847842108,
+          -2.1875845966039584
+        ]
+      },
+      "min_season_points": -2.1875845966039584,
+      "monthly_block_win_rate": 0.5
+    },
+    "game_context|network": {
+      "scope": "network",
+      "three_season": {
+        "average_points": 2.9770574593121344,
+        "se_points": 3.1895448214612303,
+        "ci95_low_points": -3.2744503907518765,
+        "season_points": [
+          -1.9699245849734806,
+          7.602184326298591,
+          3.298912636611294
+        ]
+      },
+      "min_season_points": -1.9699245849734806,
+      "monthly_block_win_rate": 0.65
+    },
+    "game_context|factorization": {
+      "scope": "factorization",
+      "three_season": {
+        "average_points": -3.582821678268066,
+        "se_points": 2.1570076966451235,
+        "ci95_low_points": -7.810556763692509,
+        "season_points": [
+          -3.364801008789434,
+          -4.778221282470161,
+          -2.6054427435446055
+        ]
+      },
+      "min_season_points": -4.778221282470161,
+      "monthly_block_win_rate": 0.35
+    },
+    "recent_form|form": {
+      "scope": "form",
+      "three_season": {
+        "average_points": 0.14359462236906034,
+        "se_points": 1.682710142639278,
+        "ci95_low_points": -3.154517257203924,
+        "season_points": [
+          -0.8882684168601407,
+          6.040286362572411,
+          -4.7212340786050895
+        ]
+      },
+      "min_season_points": -4.7212340786050895,
+      "monthly_block_win_rate": 0.5
+    },
+    "recent_form|network": {
+      "scope": "network",
+      "three_season": {
+        "average_points": 0.973177713987996,
+        "se_points": 3.1956214942745262,
+        "ci95_low_points": -5.290240414790075,
+        "season_points": [
+          -4.158941408898691,
+          2.5749973367543753,
+          4.503477214108305
+        ]
+      },
+      "min_season_points": -4.158941408898691,
+      "monthly_block_win_rate": 0.55
+    },
+    "recent_form|factorization": {
+      "scope": "factorization",
+      "three_season": {
+        "average_points": -0.06052502346639193,
+        "se_points": 2.20364177721636,
+        "ci95_low_points": -4.379662906810458,
+        "season_points": [
+          -4.584917094313417,
+          5.805654304766028,
+          -1.4023122808517865
+        ]
+      },
+      "min_season_points": -4.584917094313417,
+      "monthly_block_win_rate": 0.5
+    },
+    "failure_proxies|form": {
+      "scope": "form",
+      "three_season": {
+        "average_points": -0.12473516696103408,
+        "se_points": 1.5744018724841213,
+        "ci95_low_points": -3.210562837029912,
+        "season_points": [
+          0.6301011863677229,
+          1.4813699607111754,
+          -2.4856766479620007
+        ]
+      },
+      "min_season_points": -2.4856766479620007,
+      "monthly_block_win_rate": 0.45
+    },
+    "failure_proxies|network": {
+      "scope": "network",
+      "three_season": {
+        "average_points": 4.094302392758655,
+        "se_points": 3.628916218616835,
+        "ci95_low_points": -3.0183733957303414,
+        "season_points": [
+          -1.876259606964438,
+          10.245682717566567,
+          3.913484067673835
+        ]
+      },
+      "min_season_points": -1.876259606964438,
+      "monthly_block_win_rate": 0.65
+    },
+    "failure_proxies|factorization": {
+      "scope": "factorization",
+      "three_season": {
+        "average_points": -2.218707686788114,
+        "se_points": 2.026553429152854,
+        "ci95_low_points": -6.190752407927709,
+        "season_points": [
+          4.386160076792917,
+          -9.265636710285527,
+          -1.7766464268717321
+        ]
+      },
+      "min_season_points": -9.265636710285527,
+      "monthly_block_win_rate": 0.35
+    },
+    "all_three|form": {
+      "scope": "form",
+      "three_season": {
+        "average_points": -3.074841519791597,
+        "se_points": 1.9151141677787176,
+        "ci95_low_points": -6.828465288637883,
+        "season_points": [
+          -3.2667932987411676,
+          -2.583778147503753,
+          -3.3739531131298723
+        ]
+      },
+      "min_season_points": -3.3739531131298723,
+      "monthly_block_win_rate": 0.2
+    },
+    "all_three|network": {
+      "scope": "network",
+      "three_season": {
+        "average_points": 4.018499193434248,
+        "se_points": 3.343177782912776,
+        "ci95_low_points": -2.534129261074792,
+        "season_points": [
+          2.9495510830259284,
+          6.394759363064444,
+          2.7111871342123726
+        ]
+      },
+      "min_season_points": 2.7111871342123726,
+      "monthly_block_win_rate": 0.55
+    },
+    "all_three|factorization": {
+      "scope": "factorization",
+      "three_season": {
+        "average_points": -6.183235559704867,
+        "se_points": 2.230493627844538,
+        "ci95_low_points": -10.555003070280161,
+        "season_points": [
+          -3.868602604558719,
+          -8.144362864305734,
+          -6.536741210250147
+        ]
+      },
+      "min_season_points": -8.144362864305734,
+      "monthly_block_win_rate": 0.4
+    }
+  },
+  "safe_candidates": [
+    "all_three|network"
+  ],
+  "promoted_candidate": "all_three|network",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true,
+    "row_level_features_only": true
+  }
+}

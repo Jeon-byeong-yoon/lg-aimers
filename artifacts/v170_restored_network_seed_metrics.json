@@ -1,0 +1,112 @@
+{
+  "experiment": "V170_restored_network_seed_robustness",
+  "baseline": "V161 (Public 1053.2326413884)",
+  "question": "V166's only safe arm gave the eighteen restored features to the embedding network and gained every fold, but V164 measured this network moving the blend by +8.11 on 2022 and +16.52 on 2023 from a seed change alone -- three to six times the claimed effect",
+  "design": "paired at matched seed, which cancels the draw; the baseline networks at all five seeds are cached from V164",
+  "control_vs_v166_seed42": 0.0,
+  "per_seed": {
+    "42": {
+      "baseline": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "restored": [
+        2.9495510830312988,
+        6.3947593630597765,
+        2.711187134241122
+      ]
+    },
+    "1004": {
+      "baseline": [
+        7.678969216695641,
+        26.083220162131937,
+        -10.061900385227585
+      ],
+      "restored": [
+        5.060568535386611,
+        10.307306075540978,
+        -13.67510123851945
+      ]
+    },
+    "2024": {
+      "baseline": [
+        3.377265598536461,
+        16.102971965947788,
+        -8.104677927056603
+      ],
+      "restored": [
+        -2.349720914496256,
+        -8.4887514180787,
+        -7.298295273516775
+      ]
+    },
+    "777": {
+      "baseline": [
+        -1.8479391612591378,
+        -12.97620456817139,
+        -9.359500122152475
+      ],
+      "restored": [
+        -10.289223280535165,
+        9.38720517309477,
+        -3.994238669557948
+      ]
+    },
+    "999": {
+      "baseline": [
+        11.5029541419287,
+        -1.676990535126599,
+        -13.016176532187895
+      ],
+      "restored": [
+        4.609655211662567,
+        -24.872502644912586,
+        -3.1049986299436227
+      ]
+    }
+  },
+  "paired_effect": {
+    "42": [
+      2.9495510830312988,
+      6.3947593630597765,
+      2.711187134241122
+    ],
+    "1004": [
+      -2.61840068130903,
+      -15.775914086590959,
+      -3.6132008532918647
+    ],
+    "2024": [
+      -5.726986513032717,
+      -24.591723384026487,
+      0.8063826535398277
+    ],
+    "777": [
+      -8.441284119276027,
+      22.36340974126616,
+      5.3652614525945275
+    ],
+    "999": [
+      -6.893298930266134,
+      -23.195512109785987,
+      9.911177902244273
+    ]
+  },
+  "mean_paired_effect": [
+    -4.146083832170522,
+    -6.960996095215499,
+    3.036161657865577
+  ],
+  "sd_across_seeds": [
+    4.504915100397848,
+    20.55724820883363,
+    5.049309330695641
+  ],
+  "positive_on_every_season_for_every_seed": false,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}
