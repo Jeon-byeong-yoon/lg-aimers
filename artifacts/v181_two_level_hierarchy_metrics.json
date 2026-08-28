@@ -1,0 +1,111 @@
+{
+  "experiment": "V181_two_level_hierarchy",
+  "baseline": "V175 (Public 1067.8617513573)",
+  "why_v180_failed": "its first level was the pitcher marginal, which V165 measured losing out of fold at every weight and which V168 used as a control showing the platoon effect is an interaction; shrinking toward a harmful parent is worse than shrinking toward zero, and the loss fell monotonically as the hierarchy was smoothed away",
+  "repair": "start at pitcher x batter_hand -- the quantity the leaderboard paid +7.31 for -- so the pitcher marginal never enters",
+  "pre_registered": {
+    "smoothings": [
+      1000.0,
+      1500.0
+    ],
+    "hierarchical": [
+      0.0,
+      2.0271427143114806,
+      -9.836123331130597
+    ],
+    "placebo": [
+      0.0,
+      -2.3572041713215697,
+      -13.027065586035391
+    ]
+  },
+  "grid": {
+    "p300_l500": [
+      0.0,
+      -2.4777294110434056,
+      -34.00861337804484
+    ],
+    "p300_l1000": [
+      0.0,
+      -1.404585927211599,
+      -28.921310074336848
+    ],
+    "p300_l1500": [
+      0.0,
+      -1.3931628223717851,
+      -27.39421144120069
+    ],
+    "p300_l3000": [
+      0.0,
+      -1.7496240985570566,
+      -26.35636995922397
+    ],
+    "p1000_l500": [
+      0.0,
+      1.8325854134859654,
+      -17.71887185232357
+    ],
+    "p1000_l1000": [
+      0.0,
+      2.332260241155737,
+      -11.64336961142487
+    ],
+    "p1000_l1500": [
+      0.0,
+      2.0271427143114806,
+      -9.836123331130597
+    ],
+    "p1000_l3000": [
+      0.0,
+      1.2217130533676013,
+      -8.621681397513736
+    ],
+    "p3000_l500": [
+      0.0,
+      3.020583650670261,
+      -9.8260243352577
+    ],
+    "p3000_l1000": [
+      0.0,
+      2.623856693162452,
+      -4.106538459025533
+    ],
+    "p3000_l1500": [
+      0.0,
+      1.7620302383392072,
+      -2.756081622978801
+    ],
+    "p3000_l3000": [
+      0.0,
+      0.09685249662272355,
+      -2.4387688460469903
+    ],
+    "p10000_l500": [
+      0.0,
+      3.305745970827445,
+      -6.374487643534543
+    ],
+    "p10000_l1000": [
+      0.0,
+      2.1637341064417726,
+      -1.33314028812892
+    ],
+    "p10000_l1500": [
+      0.0,
+      0.8092341657217617,
+      -0.578083149194164
+    ],
+    "p10000_l3000": [
+      0.0,
+      -1.6508683608584818,
+      -1.361930085563845
+    ]
+  },
+  "safe": [],
+  "verdict": {},
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true
+  }
+}
