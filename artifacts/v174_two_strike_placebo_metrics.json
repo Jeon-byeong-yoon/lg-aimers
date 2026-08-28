@@ -1,0 +1,431 @@
+{
+  "experiment": "V174_two_strike_placebo",
+  "baseline": "V169 (Public 1060.5433916316)",
+  "shipped_setting": {
+    "weight": 0.8,
+    "smoothing": 1500.0
+  },
+  "why": "V173's optimum changed two things at once -- the split became three-way, and the term went from 17% to 44% of correction mass at heavier smoothing. Only the first is a claim about baseball, so the placebos reproduce the geometry exactly and carry no content.",
+  "grid": {
+    "two_strike|w0.40|s1000": {
+      "season_points": [
+        0.0,
+        2.66686350707257,
+        4.021742216786528
+      ]
+    },
+    "two_strike|w0.40|s1500": {
+      "season_points": [
+        0.0,
+        1.0552100442318135,
+        3.388170472351515
+      ]
+    },
+    "two_strike|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -0.004879041193284195,
+        2.7093576508763206
+      ]
+    },
+    "two_strike|w0.65|s1000": {
+      "season_points": [
+        0.0,
+        4.202467215241867,
+        4.499709874306035
+      ]
+    },
+    "two_strike|w0.65|s1500": {
+      "season_points": [
+        0.0,
+        2.468792043353041,
+        4.386895105268351
+      ]
+    },
+    "two_strike|w0.65|s2000": {
+      "season_points": [
+        0.0,
+        1.2250091822929576,
+        3.7984889161513102
+      ]
+    },
+    "two_strike|w0.80|s1000": {
+      "season_points": [
+        0.0,
+        4.6939489231068166,
+        4.374411063057249
+      ]
+    },
+    "two_strike|w0.80|s1500": {
+      "season_points": [
+        0.0,
+        2.9951761667312837,
+        4.64766252349369
+      ]
+    },
+    "two_strike|w0.80|s2000": {
+      "season_points": [
+        0.0,
+        1.7066337543392152,
+        4.166794125437523
+      ]
+    },
+    "two_strike|w1.00|s1000": {
+      "season_points": [
+        0.0,
+        5.069105785193706,
+        3.9805448379226505
+      ]
+    },
+    "two_strike|w1.00|s1500": {
+      "season_points": [
+        0.0,
+        3.4762324073511763,
+        4.783608186920141
+      ]
+    },
+    "two_strike|w1.00|s2000": {
+      "season_points": [
+        0.0,
+        2.1685631834467145,
+        4.469062160494808
+      ]
+    },
+    "placebo_batter_parity|w0.40|s1000": {
+      "season_points": [
+        0.0,
+        -0.13430208858355996,
+        -2.479586427128755
+      ]
+    },
+    "placebo_batter_parity|w0.40|s1500": {
+      "season_points": [
+        0.0,
+        -1.1474639116659802,
+        -1.9196569003510078
+      ]
+    },
+    "placebo_batter_parity|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -1.8313357461385849,
+        -1.7964468545961232
+      ]
+    },
+    "placebo_batter_parity|w0.65|s1000": {
+      "season_points": [
+        0.0,
+        0.4018945143346997,
+        -4.261187886589468
+      ]
+    },
+    "placebo_batter_parity|w0.65|s1500": {
+      "season_points": [
+        0.0,
+        -0.54127361373002,
+        -2.828270173305114
+      ]
+    },
+    "placebo_batter_parity|w0.65|s2000": {
+      "season_points": [
+        0.0,
+        -1.2853617741725998,
+        -2.3644452595172893
+      ]
+    },
+    "placebo_batter_parity|w0.80|s1000": {
+      "season_points": [
+        0.0,
+        0.4385767553127806,
+        -5.402770934226364
+      ]
+    },
+    "placebo_batter_parity|w0.80|s1500": {
+      "season_points": [
+        0.0,
+        -0.386603917834627,
+        -3.4381881295453276
+      ]
+    },
+    "placebo_batter_parity|w0.80|s2000": {
+      "season_points": [
+        0.0,
+        -1.1214069382203817,
+        -2.7601380147901367
+      ]
+    },
+    "placebo_batter_parity|w1.00|s1000": {
+      "season_points": [
+        0.0,
+        0.3219732327197633,
+        -6.8864865261031305
+      ]
+    },
+    "placebo_batter_parity|w1.00|s1500": {
+      "season_points": [
+        0.0,
+        -0.3107082980235987,
+        -4.245733226715398
+      ]
+    },
+    "placebo_batter_parity|w1.00|s2000": {
+      "season_points": [
+        0.0,
+        -1.007818886611389,
+        -3.291410767902736
+      ]
+    },
+    "placebo_day_parity|w0.40|s1000": {
+      "season_points": [
+        0.0,
+        -1.2621400439005726,
+        1.4545272724264535
+      ]
+    },
+    "placebo_day_parity|w0.40|s1500": {
+      "season_points": [
+        0.0,
+        -1.8306654834265856,
+        1.0284623350065303
+      ]
+    },
+    "placebo_day_parity|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -2.2965003061425904,
+        0.5634483745020624
+      ]
+    },
+    "placebo_day_parity|w0.65|s1000": {
+      "season_points": [
+        0.0,
+        -1.2712813260318256,
+        1.0468174366562444
+      ]
+    },
+    "placebo_day_parity|w0.65|s1500": {
+      "season_points": [
+        0.0,
+        -1.5490595204781243,
+        1.1667066713183516
+      ]
+    },
+    "placebo_day_parity|w0.65|s2000": {
+      "season_points": [
+        0.0,
+        -1.9687410325319732,
+        0.8418904102858171
+      ]
+    },
+    "placebo_day_parity|w0.80|s1000": {
+      "season_points": [
+        0.0,
+        -1.5113019258272686,
+        0.5245148807841993
+      ]
+    },
+    "placebo_day_parity|w0.80|s1500": {
+      "season_points": [
+        0.0,
+        -1.5582343855458092,
+        1.0321872840779456
+      ]
+    },
+    "placebo_day_parity|w0.80|s2000": {
+      "season_points": [
+        0.0,
+        -1.914520167134448,
+        0.832279229179278
+      ]
+    },
+    "placebo_day_parity|w1.00|s1000": {
+      "season_points": [
+        0.0,
+        -1.9486042666772008,
+        -0.2940658354932957
+      ]
+    },
+    "placebo_day_parity|w1.00|s1500": {
+      "season_points": [
+        0.0,
+        -1.6716611081823984,
+        0.7379264011286857
+      ]
+    },
+    "placebo_day_parity|w1.00|s2000": {
+      "season_points": [
+        0.0,
+        -1.9274463100460437,
+        0.7191370935744068
+      ]
+    },
+    "placebo_inning_parity|w0.40|s1000": {
+      "season_points": [
+        0.0,
+        -0.5977269221357773,
+        -0.16883313073146056
+      ]
+    },
+    "placebo_inning_parity|w0.40|s1500": {
+      "season_points": [
+        0.0,
+        -1.4552016828206504,
+        -0.1120318129488318
+      ]
+    },
+    "placebo_inning_parity|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -2.060858707264579,
+        -0.30893331536274715
+      ]
+    },
+    "placebo_inning_parity|w0.65|s1000": {
+      "season_points": [
+        0.0,
+        -0.22120474354458963,
+        -1.0318662097441589
+      ]
+    },
+    "placebo_inning_parity|w0.65|s1500": {
+      "season_points": [
+        0.0,
+        -0.9537259385350438,
+        -0.3092402496962521
+      ]
+    },
+    "placebo_inning_parity|w0.65|s2000": {
+      "season_points": [
+        0.0,
+        -1.5929923863344797,
+        -0.2955808057314435
+      ]
+    },
+    "placebo_inning_parity|w0.80|s1000": {
+      "season_points": [
+        0.0,
+        -0.25605401787753834,
+        -1.7366453217704247
+      ]
+    },
+    "placebo_inning_parity|w0.80|s1500": {
+      "season_points": [
+        0.0,
+        -0.845694305651179,
+        -0.5821490772994764
+      ]
+    },
+    "placebo_inning_parity|w0.80|s2000": {
+      "season_points": [
+        0.0,
+        -1.4638269069999765,
+        -0.4166108782399647
+      ]
+    },
+    "placebo_inning_parity|w1.00|s1000": {
+      "season_points": [
+        0.0,
+        -0.4491495435354764,
+        -2.7338946462673874
+      ]
+    },
+    "placebo_inning_parity|w1.00|s1500": {
+      "season_points": [
+        0.0,
+        -0.8194624396606898,
+        -1.015294282080692
+      ]
+    },
+    "placebo_inning_parity|w1.00|s2000": {
+      "season_points": [
+        0.0,
+        -1.3872864005337604,
+        -0.6432809720013921
+      ]
+    }
+  },
+  "at_shipped_setting": {
+    "two_strike": {
+      "three_season": {
+        "average_points": 2.5476128967439453,
+        "se_points": 1.5028828038036848,
+        "ci95_low_points": -0.3980373987112765,
+        "season_points": [
+          0.0,
+          2.995176166720444,
+          4.647662523511393
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.5,
+      "bootstrap_2024": {
+        "mean": 1.1619156308778482e-05,
+        "ci95_low": -4.309614646112089e-06,
+        "ci95_high": 3.1533404729094177e-05
+      }
+    },
+    "placebo_batter_parity": {
+      "three_season": {
+        "average_points": -1.274930682463846,
+        "se_points": 0.9274664264513128,
+        "ci95_low_points": -3.092764878308419,
+        "season_points": [
+          0.0,
+          -0.3866039178174465,
+          -3.4381881295740917
+        ]
+      },
+      "min_season_points": -3.4381881295740917,
+      "monthly_block_win_rate": 0.25,
+      "bootstrap_2024": {
+        "mean": -8.595470323935229e-06,
+        "ci95_low": -1.91795037674484e-05,
+        "ci95_high": 9.605340065639057e-07
+      }
+    },
+    "placebo_day_parity": {
+      "three_season": {
+        "average_points": -0.1753490338168123,
+        "se_points": 1.1919110776217212,
+        "ci95_low_points": -2.511494745955386,
+        "season_points": [
+          0.0,
+          -1.5582343855269993,
+          1.0321872840765625
+        ]
+      },
+      "min_season_points": -1.5582343855269993,
+      "monthly_block_win_rate": 0.25,
+      "bootstrap_2024": {
+        "mean": 2.580468210191406e-06,
+        "ci95_low": -1.1855989612743749e-05,
+        "ci95_high": 1.5543586355922048e-05
+      }
+    },
+    "placebo_inning_parity": {
+      "three_season": {
+        "average_points": -0.4759477942987702,
+        "se_points": 0.8950303927949314,
+        "ci95_low_points": -2.2302073641768354,
+        "season_points": [
+          0.0,
+          -0.8456943056132307,
+          -0.5821490772830799
+        ]
+      },
+      "min_season_points": -0.8456943056132307,
+      "monthly_block_win_rate": 0.3,
+      "bootstrap_2024": {
+        "mean": -1.4553726932076997e-06,
+        "ci95_low": -1.087387065793033e-05,
+        "ci95_high": 7.361459644771708e-06
+      }
+    }
+  },
+  "verdict_content_not_geometry": true,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true
+  }
+}

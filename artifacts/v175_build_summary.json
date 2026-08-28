@@ -1,0 +1,48 @@
+{
+  "version": "V175",
+  "baseline": "V169 (1060.5433916316)",
+  "change": "replace pitcher_id x batter_hand with pitcher_id x batter_hand x two_strike at 0.80 of the pre-normalisation mass, smoothing 1500",
+  "segment_weights": {
+    "count": 0.3055555555555556,
+    "pitcher_count": 0.1388888888888889,
+    "experience": 0.11111111111111112,
+    "platoon_two_strike": 0.4444444444444445
+  },
+  "smoothing": {
+    "count": 500,
+    "pitcher_count": 300,
+    "experience": 2000,
+    "platoon_two_strike": 1500.0
+  },
+  "models_retrained": [],
+  "validation": {
+    "season_points": {
+      "2022": 0.0,
+      "2023": 3.0,
+      "2024": 4.65
+    },
+    "note_2022": "the 2022 fold receives no calibration; two folds are informative",
+    "plateau_2024": "the eight neighbouring grid points are all >= +3.80; worst +3.80, mean +4.31",
+    "placebos_at_the_shipped_setting": {
+      "batter_id parity": {
+        "2023": -0.39,
+        "2024": -3.44
+      },
+      "day-of-week parity": {
+        "2023": -1.56,
+        "2024": 1.03
+      },
+      "inning parity": {
+        "2023": -0.85,
+        "2024": -0.58
+      }
+    },
+    "alternatives": {
+      "strikes_before (3 levels)": 1.55,
+      "count_state (12 levels)": -0.54,
+      "experience": 0.65,
+      "keep coarse platoon underneath": "worse at every setting"
+    }
+  },
+  "global_shift": -0.010674754698547216
+}
