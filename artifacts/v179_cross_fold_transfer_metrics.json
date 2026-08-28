@@ -1,0 +1,112 @@
+{
+  "experiment": "V179_cross_fold_transfer",
+  "baseline": "V175 (Public 1067.8617513573)",
+  "why_not_the_holdout": "V178 scored V177's within-2024 holdout against two known answers and it rejected V169, which returned +7.31; single months swing 25 points on that fold so 77,000 rows cannot resolve effects of this size",
+  "design": "climb the eight parameters against one season with the other never consulted, then read the other; in-fold minus out-of-fold is the selection bias in points",
+  "results": {
+    "fit_2023": {
+      "config": {
+        "count": [
+          1.1,
+          75.0
+        ],
+        "pitcher_count": [
+          0.2125,
+          240.0
+        ],
+        "experience": [
+          0.0,
+          2000.0
+        ],
+        "platoon2k": [
+          1.12,
+          600.0
+        ]
+      },
+      "readings": {
+        "2022": 0.0,
+        "2023": 3.69664907557965,
+        "2024": -3.147896697908159
+      },
+      "evaluations": 361,
+      "in_fold": 3.69664907557965,
+      "out_of_fold": -3.147896697908159,
+      "selection_bias": 6.844545773487809
+    },
+    "fit_2024": {
+      "config": {
+        "count": [
+          0.649,
+          75.0
+        ],
+        "pitcher_count": [
+          0.0,
+          300.0
+        ],
+        "experience": [
+          0.6,
+          300.0
+        ],
+        "platoon2k": [
+          0.944,
+          900.0
+        ]
+      },
+      "readings": {
+        "2022": 0.0,
+        "2023": -0.43664398263754123,
+        "2024": 3.7687727466595433
+      },
+      "evaluations": 361,
+      "in_fold": 3.7687727466595433,
+      "out_of_fold": -0.43664398263754123,
+      "selection_bias": 4.2054167292970845
+    }
+  },
+  "transfers_across_seasons": false,
+  "finalists": {
+    "fit_2023": {
+      "three_season": {
+        "average_points": 0.18291745921374541,
+        "se_points": 2.410365323642468,
+        "ci95_low_points": -4.541398575125492,
+        "season_points": [
+          0.0,
+          3.6966490755667682,
+          -3.147896697925532
+        ]
+      },
+      "min_season_points": -3.147896697925532,
+      "monthly_block_win_rate": 0.3,
+      "bootstrap_2024": {
+        "mean": -7.86974174481383e-06,
+        "ci95_low": -3.8790906921881594e-05,
+        "ci95_high": 1.5774519512183603e-05
+      }
+    },
+    "fit_2024": {
+      "three_season": {
+        "average_points": 1.1107095880175157,
+        "se_points": 1.0938941615922946,
+        "ci95_low_points": -1.0333229687033818,
+        "season_points": [
+          0.0,
+          -0.43664398261029835,
+          3.768772746662846
+        ]
+      },
+      "min_season_points": -0.43664398261029835,
+      "monthly_block_win_rate": 0.3,
+      "bootstrap_2024": {
+        "mean": 9.421931866657115e-06,
+        "ci95_low": -2.3122796384483256e-06,
+        "ci95_high": 2.0357251250430565e-05
+      }
+    }
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true
+  }
+}

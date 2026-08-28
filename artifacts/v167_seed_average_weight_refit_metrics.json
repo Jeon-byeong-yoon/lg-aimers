@@ -1,0 +1,108 @@
+{
+  "experiment": "V167_seed_average_weight_refit",
+  "baseline": "V161 (Public 1053.2326413884)",
+  "premise": "V164's seed averaging improved every season of both neural components standalone and still lost 2024 in the blend, because averaging contracts spread and the weights were fitted against single-seed components. V54 saw the same contraction in trees and stopped at 'rejected' without refitting.",
+  "control": "control_seed42 runs the identical climb on the single-seed components; V163 showed that space locally optimal in 60 directions, so this must find nothing",
+  "steps": [
+    0.05,
+    0.02,
+    0.01
+  ],
+  "results": {
+    "control_seed42": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.32,
+        "context": 0.14,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "three_season": {
+        "average_points": 0.0,
+        "se_points": 0.0,
+        "ci95_low_points": 0.0,
+        "season_points": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "min_season_points": 0.0,
+      "monthly_block_win_rate": 0.0
+    },
+    "net3_fact3": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.27,
+        "context": 0.19,
+        "network": 0.2,
+        "catboost": 0.27,
+        "factorization": 0.07
+      },
+      "three_season": {
+        "average_points": 1.3086691494579799,
+        "se_points": 2.875476173347048,
+        "ci95_low_points": -4.327264150302234,
+        "season_points": [
+          7.18514006876813,
+          -1.4475786273614608,
+          -1.81155399303273
+        ]
+      },
+      "min_season_points": -1.81155399303273,
+      "monthly_block_win_rate": 0.4
+    },
+    "net3_fact5": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.21,
+        "context": 0.19,
+        "network": 0.23,
+        "catboost": 0.33,
+        "factorization": 0.04
+      },
+      "three_season": {
+        "average_points": 1.786665778851316,
+        "se_points": 3.259392576292116,
+        "ci95_low_points": -4.601743670681231,
+        "season_points": [
+          7.905314471135087,
+          -0.2481812319328407,
+          -2.2971359026482974
+        ]
+      },
+      "min_season_points": -2.2971359026482974,
+      "monthly_block_win_rate": 0.4
+    },
+    "net5_fact5": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.29,
+        "context": 0.19,
+        "network": 0.22,
+        "catboost": 0.25,
+        "factorization": 0.05
+      },
+      "three_season": {
+        "average_points": -0.1710193661162932,
+        "se_points": 2.9850655289466053,
+        "ci95_low_points": -6.021747802851639,
+        "season_points": [
+          8.13053427791839,
+          -4.3028697422397935,
+          -4.340722634027475
+        ]
+      },
+      "min_season_points": -4.340722634027475,
+      "monthly_block_win_rate": 0.45
+    }
+  },
+  "safe_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}

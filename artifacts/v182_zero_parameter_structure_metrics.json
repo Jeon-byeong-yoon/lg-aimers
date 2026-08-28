@@ -1,0 +1,65 @@
+{
+  "experiment": "V182_zero_parameter_structure",
+  "baseline": "V175 (Public 1067.8617513573)",
+  "why_allowed": "V179 showed the layer rejects parameter refits because an eight-parameter climb manufactures +4 to +7 points of selection bias; both changes here replace a formula and add no constant, so there is nothing to overfit",
+  "A": "apply each correction scaled by the row's p(1-p) relative to its cell average -- the first-order effect of a log-odds shift, leaving the cell's average shift exactly as fitted",
+  "B": "replace n with the sum of 4p(1-p) in the shrinkage denominator, the empirical-Bayes information count, scaled so a cell at p=0.5 is unchanged and every existing smoothing constant keeps its meaning",
+  "arms": {
+    "A_variance_scaled_fine": {
+      "season_points": [
+        0.0,
+        -0.4032811524945501,
+        -0.3356366292117663
+      ],
+      "safe": false
+    },
+    "A_variance_scaled_all": {
+      "season_points": [
+        0.0,
+        -0.6604576538560281,
+        -0.37590895439754135
+      ],
+      "safe": false
+    },
+    "B_effective_n_fine": {
+      "season_points": [
+        0.0,
+        -0.18427345560567687,
+        -0.10725579674408792
+      ],
+      "safe": false
+    },
+    "B_effective_n_all": {
+      "season_points": [
+        0.0,
+        -0.320490182481592,
+        -0.09792894688498421
+      ],
+      "safe": false
+    },
+    "AB_fine": {
+      "season_points": [
+        0.0,
+        -0.5969774297120978,
+        -0.47121549581197186
+      ],
+      "safe": false
+    },
+    "AB_all": {
+      "season_points": [
+        0.0,
+        -0.9917199684350564,
+        -0.5212092946682567
+      ],
+      "safe": false
+    }
+  },
+  "safe": [],
+  "promoted_candidate": null,
+  "finalists": {},
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "version": "V187",
+  "baseline": "V175 (1067.8617513573)",
+  "change": "pass all four hierarchical encoding groups instead of only pitcher_batter, and retrain the embedding network on them; Form, Context, CatBoost and the factorization network are unchanged",
+  "groups": [
+    "pitcher_batter",
+    "pitcher_vs_batter_hand",
+    "pitcher_count",
+    "batter_vs_pitcher_hand"
+  ],
+  "models_retrained": [
+    "embedding network"
+  ],
+  "validation": {
+    "paired_across_five_seeds": {
+      "2024": [
+        2.52,
+        1.23,
+        5.36,
+        0.52,
+        3.88
+      ],
+      "2023": [
+        5.38,
+        -0.42,
+        5.26,
+        30.81,
+        3.05
+      ],
+      "2024_mean": 2.7,
+      "2023_mean": 8.81,
+      "positive_2024_every_seed": true
+    },
+    "shipping_seed_42": {
+      "2022": 0.07,
+      "2023": 5.38,
+      "2024": 2.52,
+      "monthly_block_win_rate": 0.6
+    },
+    "not_shipped": "the platoon-only arm has a stronger 2024 (+4.42 mean, +9.45 at seed 42, bootstrap CI low +1.78) but loses 2023 by 0.17 at the shipping seed; the no-losing-fold gate has been overridden twice and lost twice"
+  },
+  "global_shift": -0.010794434176535429
+}

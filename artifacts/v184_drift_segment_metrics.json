@@ -1,0 +1,402 @@
+{
+  "experiment": "V184_drift_segment",
+  "baseline": "V175 (Public 1067.8617513573)",
+  "premise": "V183 left one honest reading -- pitcher-level structure worth 144 de-noised points on 2024 that V165 showed does not transfer from prior seasons, i.e. this season's form. The pipeline reconstructs exactly that, but delivers it to the prediction as a fixed straight line, `weight * delta * reliability`, with one weight fitted at V96 against a three-component blend. The calibration layer, which has twice paid for learning a segment's shape instead of assuming it, has no term on this signal.",
+  "design": "ten quantile bins of the shrunk drift signal, optionally crossed with five reliability bins; edges from each fold's training seasons only; the linear term kept and switched off; matched placebo throughout",
+  "arms": {
+    "bin + linear|w0.10|s500": {
+      "season_points": [
+        0.0,
+        1.8232131797635276,
+        -0.8974820026819152
+      ],
+      "safe": false
+    },
+    "bin + linear|w0.10|s2000": {
+      "season_points": [
+        0.0,
+        1.7027109845413335,
+        -0.8702832860141285
+      ],
+      "safe": false
+    },
+    "bin + linear|w0.20|s500": {
+      "season_points": [
+        0.0,
+        3.3802610859057225,
+        -2.038776995805236
+      ],
+      "safe": false
+    },
+    "bin + linear|w0.20|s2000": {
+      "season_points": [
+        0.0,
+        3.157093315753201,
+        -1.9704257247288304
+      ],
+      "safe": false
+    },
+    "bin + linear|w0.40|s500": {
+      "season_points": [
+        0.0,
+        5.882617650776467,
+        -4.754414806140694
+      ],
+      "safe": false
+    },
+    "bin + linear|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        5.495030236302156,
+        -4.577776052405724
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.10|s500": {
+      "season_points": [
+        0.0,
+        -0.699229972478399,
+        -0.03737140367165992
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.10|s2000": {
+      "season_points": [
+        0.0,
+        -0.6796749734583329,
+        -0.040313980320672016
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.20|s500": {
+      "season_points": [
+        0.0,
+        -1.369444696730504,
+        -0.1496191383676404
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.20|s2000": {
+      "season_points": [
+        0.0,
+        -1.3312863123227103,
+        -0.15452771641166763
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.40|s500": {
+      "season_points": [
+        0.0,
+        -2.6183700649662356,
+        -0.5189200789179615
+      ],
+      "safe": false
+    },
+    "PLACEBO bin + linear|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -2.5458384840915116,
+        -0.5257019507376448
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.10|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -68.29175266058752,
+        -1.7763854479491137
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.10|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -68.4339832305092,
+        -1.787447153633881
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.20|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -66.42836768326887,
+        -1.832616637742479
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.20|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -66.69281936533267,
+        -1.8369601691881066
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.40|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -63.396883449917674,
+        -2.6740533333735605
+      ],
+      "safe": false
+    },
+    "bin (linear off)|w0.40|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -63.85953252237009,
+        -2.6295869477777067
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.10|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -71.2002226682884,
+        -2.2172154482635875
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.10|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -71.18074807503928,
+        -2.2203789390107254
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.20|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -71.91152449115279,
+        -2.4152459190296405
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.20|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -71.87351887780747,
+        -2.4205742339189484
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.40|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -73.23141848445403,
+        -2.932717040193822
+      ],
+      "safe": false
+    },
+    "PLACEBO bin (linear off)|w0.40|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -73.15916466901217,
+        -2.9402620698171233
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.10|s500": {
+      "season_points": [
+        0.0,
+        1.639739771386317,
+        -1.9623215705366626
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.10|s2000": {
+      "season_points": [
+        0.0,
+        1.1882375285265923,
+        -1.6346677271017462
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.20|s500": {
+      "season_points": [
+        0.0,
+        2.9013351958484535,
+        -4.29124239241796
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.20|s2000": {
+      "season_points": [
+        0.0,
+        2.1199456862186494,
+        -3.544872927463416
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.40|s500": {
+      "season_points": [
+        0.0,
+        4.602553740107318,
+        -9.56982860772504
+      ],
+      "safe": false
+    },
+    "bin x reliability + linear|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        3.4219827778292355,
+        -7.823914524685005
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.10|s500": {
+      "season_points": [
+        0.0,
+        -2.034936249395436,
+        -0.7220458097090265
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.10|s2000": {
+      "season_points": [
+        0.0,
+        -1.6282951698975978,
+        -0.6273118132615885
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.20|s500": {
+      "season_points": [
+        0.0,
+        -4.038645422332898,
+        -1.6849423219444937
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.20|s2000": {
+      "season_points": [
+        0.0,
+        -3.211420969506662,
+        -1.4440788463687682
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.40|s500": {
+      "season_points": [
+        0.0,
+        -7.883994060553512,
+        -4.046680318725571
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability + linear|w0.40|s2000": {
+      "season_points": [
+        0.0,
+        -6.2084584219412875,
+        -3.4175882532849755
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.10|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -68.5580255898488,
+        -2.905521944129852
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.10|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -69.0806624589424,
+        -2.7318822359290174
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.20|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -67.06461266303698,
+        -4.207246198306702
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.20|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -67.98115796244898,
+        -3.753503590198104
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.40|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -64.96298206914997,
+        -7.711583796554677
+      ],
+      "safe": false
+    },
+    "bin x reliability (linear off)|w0.40|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -66.38929083111478,
+        -6.497718544196118
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.10|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -72.60216440787559,
+        -2.969447617962029
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.10|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -72.18176491774474,
+        -2.866960196556967
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.20|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -74.70657259582848,
+        -4.078928853623598
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.20|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -73.85320716295496,
+        -3.823333870578427
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.40|s500": {
+      "season_points": [
+        -5.112933669737529,
+        -78.72585589652203,
+        -6.693858645390183
+      ],
+      "safe": false
+    },
+    "PLACEBO bin x reliability (linear off)|w0.40|s2000": {
+      "season_points": [
+        -5.112933669737529,
+        -77.00279120326226,
+        -6.037982020967725
+      ],
+      "safe": false
+    }
+  },
+  "real_safe": [],
+  "best_placebo_2024": -0.03737140367165992,
+  "promoted_candidate": null,
+  "finalists": {},
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "row_independent_segments": true,
+    "bin_edges_from_training_seasons_only": true
+  }
+}

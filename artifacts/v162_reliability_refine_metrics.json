@@ -1,0 +1,246 @@
+{
+  "experiment": "V162_reliability_refine",
+  "baseline": "V161 (Public 1053.2326413884)",
+  "loose_ends": {
+    "coarse_ladder": "V160 sampled 75 / 150 / 300 / 600; 600 was blocked only by 2024 at -0.25 with a three-season average of +2.04 against 300's +1.56, so the interval between was never looked at",
+    "drift_side": "V155 found the drift reliability optimal at 150, but measured it when the feature side was also 150; the feature side is now 300 so the blend it corrects is a different object"
+  },
+  "why_cheap": "V160 showed Form bit-identical at every scale (0.000e+00), so a 105-feature HistGradientBoosting model never splits on ins_pitcher_reliability and only the two networks need refitting",
+  "feature_scales": [
+    225.0,
+    400.0,
+    500.0
+  ],
+  "drift_grid": {
+    "reliability": [
+      75.0,
+      150.0,
+      250.0,
+      400.0
+    ],
+    "weight": [
+      0.08,
+      0.1,
+      0.12
+    ]
+  },
+  "results": {
+    "feature_225": {
+      "kind": "feature",
+      "three_season": {
+        "average_points": -0.056624116886892076,
+        "se_points": 0.8278335183135759,
+        "ci95_low_points": -1.679177812781501,
+        "season_points": [
+          -0.8682668648328176,
+          0.6258649312889802,
+          0.07252958288316116
+        ]
+      },
+      "min_season_points": -0.8682668648328176,
+      "monthly_block_win_rate": 0.45
+    },
+    "feature_400": {
+      "kind": "feature",
+      "three_season": {
+        "average_points": -0.2047264422619548,
+        "se_points": 0.8346650170575225,
+        "ci95_low_points": -1.8406698756946986,
+        "season_points": [
+          0.8232866625825762,
+          -0.3416222125700077,
+          -1.0958437767984328
+        ]
+      },
+      "min_season_points": -1.0958437767984328,
+      "monthly_block_win_rate": 0.55
+    },
+    "feature_500": {
+      "kind": "feature",
+      "three_season": {
+        "average_points": -0.8704586093801852,
+        "se_points": 0.8561625399100659,
+        "ci95_low_points": -2.5485371876039142,
+        "season_points": [
+          0.1078834565949856,
+          -1.6645749955838591,
+          -1.0546842891516817
+        ]
+      },
+      "min_season_points": -1.6645749955838591,
+      "monthly_block_win_rate": 0.5
+    },
+    "drift_r75_w0.08": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -0.30373107730763876,
+        "se_points": 0.44863334069215827,
+        "ci95_low_points": -1.183052425064269,
+        "season_points": [
+          0.2563774103378214,
+          -1.1320107888139057,
+          -0.035559853446832025
+        ]
+      },
+      "min_season_points": -1.1320107888139057,
+      "monthly_block_win_rate": 0.45
+    },
+    "drift_r75_w0.10": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": 5.204263640501579,
+        "se_points": 0.9134532694224051,
+        "ci95_low_points": 3.413895232433665,
+        "season_points": [
+          0.8172259581184744,
+          15.014493998911194,
+          -0.21892903552493306
+        ]
+      },
+      "min_season_points": -0.21892903552493306,
+      "monthly_block_win_rate": 0.6
+    },
+    "drift_r75_w0.12": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": 10.308618674422714,
+        "se_points": 1.8945660568048444,
+        "ci95_low_points": 6.59526920308522,
+        "season_points": [
+          1.0654828170021688,
+          30.661967064193774,
+          -0.801593857927799
+        ]
+      },
+      "min_season_points": -0.801593857927799,
+      "monthly_block_win_rate": 0.6
+    },
+    "drift_r150_w0.08": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -4.704628211396147,
+        "se_points": 0.8973420433143611,
+        "ci95_low_points": -6.463418616292294,
+        "season_points": [
+          -0.6006292472870689,
+          -13.424532841472358,
+          -0.08872254542901804
+        ]
+      },
+      "min_season_points": -13.424532841472358,
+      "monthly_block_win_rate": 0.3
+    },
+    "drift_r150_w0.12": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": 4.419731638351731,
+        "se_points": 0.8871691171159206,
+        "ci95_low_points": 2.6808801688045265,
+        "season_points": [
+          0.3896505039552712,
+          13.0659645457946,
+          -0.19642013469467984
+        ]
+      },
+      "min_season_points": -0.19642013469467984,
+      "monthly_block_win_rate": 0.65
+    },
+    "drift_r250_w0.08": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -8.225938391654717,
+        "se_points": 1.4648046830215933,
+        "ci95_low_points": -11.09695557037704,
+        "season_points": [
+          -1.1619633854748725,
+          -23.129931583983115,
+          -0.38592020550616546
+        ]
+      },
+      "min_season_points": -23.129931583983115,
+      "monthly_block_win_rate": 0.25
+    },
+    "drift_r250_w0.10": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -4.20379788043673,
+        "se_points": 0.7449497035273026,
+        "ci95_low_points": -5.663899299350244,
+        "season_points": [
+          -0.5431130459883267,
+          -11.892282898473969,
+          -0.17599769684789582
+        ]
+      },
+      "min_season_points": -11.892282898473969,
+      "monthly_block_win_rate": 0.35
+    },
+    "drift_r250_w0.12": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -0.3874180043085028,
+        "se_points": 0.3355443147214397,
+        "ci95_low_points": -1.0450848611625245,
+        "season_points": [
+          -0.07181959913498948,
+          -0.9174162967767725,
+          -0.1730181170137466
+        ]
+      },
+      "min_season_points": -0.9174162967767725,
+      "monthly_block_win_rate": 0.55
+    },
+    "drift_r400_w0.08": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -11.490300677628529,
+        "se_points": 2.0198195343914476,
+        "ci95_low_points": -15.449146965035768,
+        "season_points": [
+          -1.6517963080502518,
+          -32.01691425532704,
+          -0.8021914695083014
+        ]
+      },
+      "min_season_points": -32.01691425532704,
+      "monthly_block_win_rate": 0.3
+    },
+    "drift_r400_w0.10": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -8.12868833907128,
+        "se_points": 1.4370878075564955,
+        "ci95_low_points": -10.945380441882012,
+        "season_points": [
+          -1.0372243033990414,
+          -22.809042203703083,
+          -0.539798510111716
+        ]
+      },
+      "min_season_points": -22.809042203703083,
+      "monthly_block_win_rate": 0.25
+    },
+    "drift_r400_w0.12": {
+      "kind": "drift",
+      "three_season": {
+        "average_points": -4.910611676070829,
+        "se_points": 0.8990530214400662,
+        "ci95_low_points": -6.672755598093358,
+        "season_points": [
+          -0.5229372330578894,
+          -13.787164622310776,
+          -0.4217331728438199
+        ]
+      },
+      "min_season_points": -13.787164622310776,
+      "monthly_block_win_rate": 0.3
+    }
+  },
+  "safe_candidates": [],
+  "promoted_candidate": null,
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}
