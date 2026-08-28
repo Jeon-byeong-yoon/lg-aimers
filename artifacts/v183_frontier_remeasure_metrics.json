@@ -1,0 +1,144 @@
+{
+  "experiment": "V183_frontier_remeasure",
+  "baseline": "V175 (Public 1067.8617513573)",
+  "why": "V147's map, measured at V138, said pitcher information was nearly exhausted and steered the project away from the region that later paid +14.65; it only ever measured marginals and the money was in a within-pitcher interaction",
+  "fold": {
+    "year": 2024,
+    "rows": 253507,
+    "rate": 0.4861049201797189
+  },
+  "skills": {
+    "raw_blend": 834.7219261388483,
+    "v161_layer": 907.9249151545677,
+    "v175_layer": 914.7087485862015,
+    "accepted_changes_moved": 6.783833431633866
+  },
+  "partitions": {
+    "count": {
+      "cells": 12,
+      "rows_per_cell": 21125.583333333332,
+      "oracle_skill": 47.87681956666123,
+      "perfect_correction_skill": 926.286431793244,
+      "perfect_gain": 11.577683207042469,
+      "denoised_points": 7.048825271076224
+    },
+    "experience": {
+      "cells": 7,
+      "rows_per_cell": 36215.28571428572,
+      "oracle_skill": 51.831974781324504,
+      "perfect_correction_skill": 920.5065253022004,
+      "perfect_gain": 5.797776715998907,
+      "denoised_points": 3.595603948880406
+    },
+    "handedness": {
+      "cells": 4,
+      "rows_per_cell": 63376.75,
+      "oracle_skill": 114.4889141957539,
+      "perfect_correction_skill": 921.7163388334226,
+      "perfect_gain": 7.00759024722106,
+      "denoised_points": 5.61992454757561
+    },
+    "pitcher": {
+      "cells": 391,
+      "rows_per_cell": 648.3554987212276,
+      "oracle_skill": 990.7713218653802,
+      "perfect_correction_skill": 1142.661508759979,
+      "perfect_gain": 227.9527601737774,
+      "denoised_points": 143.6377277435961
+    },
+    "batter": {
+      "cells": 424,
+      "rows_per_cell": 597.8938679245283,
+      "oracle_skill": 310.50517727014835,
+      "perfect_correction_skill": 1102.173256435479,
+      "perfect_gain": 187.46450784927754,
+      "denoised_points": 97.97789706720484
+    },
+    "pitcher x hand": {
+      "cells": 772,
+      "rows_per_cell": 328.3769430051814,
+      "oracle_skill": 1425.5018017952482,
+      "perfect_correction_skill": 1457.8789370253141,
+      "perfect_gain": 543.1701884391126,
+      "denoised_points": 367.89396455850095
+    },
+    "pitcher x hand x 2K  (shipped)": {
+      "cells": 1519,
+      "rows_per_cell": 166.8907175773535,
+      "oracle_skill": 1793.3640567043828,
+      "perfect_correction_skill": 1802.6537205117154,
+      "perfect_gain": 887.9449719255139,
+      "denoised_points": 573.0593208606319
+    },
+    "pitcher x count": {
+      "cells": 4512,
+      "rows_per_cell": 56.185062056737586,
+      "oracle_skill": 2740.945686868712,
+      "perfect_correction_skill": 2840.1872042887353,
+      "perfect_gain": 1925.4784557025337,
+      "denoised_points": 1141.1948981519542
+    },
+    "pitcher x hand x count": {
+      "cells": 8492,
+      "rows_per_cell": 29.852449364107397,
+      "oracle_skill": 4593.522405965867,
+      "perfect_correction_skill": 4571.288444042665,
+      "perfect_gain": 3656.5796954564635,
+      "denoised_points": 2287.468160026113
+    },
+    "batter x hand": {
+      "cells": 818,
+      "rows_per_cell": 309.91075794621025,
+      "oracle_skill": 622.3046364849272,
+      "perfect_correction_skill": 1291.060793261045,
+      "perfect_gain": 376.35204467484357,
+      "denoised_points": 208.6627121036798
+    },
+    "pitcher x batter": {
+      "cells": 26355,
+      "rows_per_cell": 9.618933788654903,
+      "oracle_skill": 12538.978021649316,
+      "perfect_correction_skill": 12413.292334773274,
+      "perfect_gain": 11498.583586187073,
+      "denoised_points": 7376.268114259681
+    },
+    "pitcher x inning": {
+      "cells": 2410,
+      "rows_per_cell": 105.18962655601659,
+      "oracle_skill": 1947.934543587815,
+      "perfect_correction_skill": 2073.124212556776,
+      "perfect_gain": 1158.4154639705744,
+      "denoised_points": 647.8600984595574
+    },
+    "pitcher x month": {
+      "cells": 1688,
+      "rows_per_cell": 150.1818720379147,
+      "oracle_skill": 1797.039153253055,
+      "perfect_correction_skill": 1869.6608806414438,
+      "perfect_gain": 954.9521320552423,
+      "denoised_points": 586.3095329774635
+    },
+    "placebo: pitcher x hand x parity": {
+      "cells": 1426,
+      "rows_per_cell": 177.7748948106592,
+      "oracle_skill": 1764.9915444361563,
+      "perfect_correction_skill": 1783.8342992671176,
+      "perfect_gain": 869.125550680916,
+      "denoised_points": 558.5135790893772
+    },
+    "placebo: pitcher x parity": {
+      "cells": 724,
+      "rows_per_cell": 350.1477900552486,
+      "oracle_skill": 1163.5691907833757,
+      "perfect_correction_skill": 1303.1664228907891,
+      "perfect_gain": 388.4576743045876,
+      "denoised_points": 230.32001812365064
+    }
+  },
+  "caveat": "V176 showed the noise correction failing at roughly 1,500 cells and 167 rows; the placebo rows are printed so the inflation is visible rather than assumed away",
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "in_fold_oracles_are_diagnostic_only": true
+  }
+}
