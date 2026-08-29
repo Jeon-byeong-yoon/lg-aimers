@@ -1,0 +1,74 @@
+{
+  "version": "V196",
+  "baseline": "V193 (1076.9782849555)",
+  "change": "nine factorization draws and six Context draws, both previously single; the network stays at nine and Form at six",
+  "seeds": {
+    "network": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13,
+      314,
+      2718,
+      65537
+    ],
+    "form": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13
+    ],
+    "factorization": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13,
+      314,
+      2718,
+      65537
+    ],
+    "context": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13
+    ]
+  },
+  "validation": {
+    "factorization_2024_curve": {
+      "1": 0.0,
+      "3": 1.36,
+      "5": 1.15,
+      "7": 1.62,
+      "8": 1.59
+    },
+    "context_2024_curve": {
+      "1": 0.0,
+      "2": 0.53,
+      "3": 0.7,
+      "4": 0.79,
+      "5": 0.84
+    },
+    "expected_over_v193_2024": 2.4,
+    "lottery_range_2024": {
+      "network": 17.94,
+      "factorization": 8.67,
+      "context": 6.54,
+      "form": 2.97
+    },
+    "controls": "V195's seed-42 Context reproduces the shipped one to 0.000e+00; the build asserts it",
+    "v188_reversal": "the factorization network was rejected at V188 on an estimator that averaged a set containing seed 42 against baselines that also contained it"
+  },
+  "deferred": {
+    "catboost": "160s per fold fit; three models would near 220 MB"
+  },
+  "global_shift": -0.010041268866489941
+}

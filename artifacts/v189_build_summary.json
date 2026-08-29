@@ -1,0 +1,38 @@
+{
+  "version": "V189",
+  "baseline": "V175 (1067.8617513573)",
+  "change": "average the embedding network over three seeds instead of shipping one draw; the factorization network keeps its single draw because averaging it has negative expected 2022 and 2023",
+  "network_seeds": [
+    42,
+    1004,
+    2024
+  ],
+  "models_retrained": [
+    "embedding network x 3 seeds"
+  ],
+  "why_v164_was_wrong": "its readings were taken against seed 42, which is the best of five draws on the 2024 fold and the worst of five on 2022; seed luck is fold-specific noise and the deployed model is another independent draw",
+  "validation": {
+    "expected_vs_a_typical_seed": {
+      "2022": 6.49,
+      "2023": 9.91,
+      "2024": 10.29
+    },
+    "per_baseline_2024": {
+      "42": -1.4,
+      "1004": 16.55,
+      "2024": 6.1,
+      "777": 15.97,
+      "999": 14.22
+    },
+    "monthly_block_win_rate": {
+      "42": 0.7,
+      "1004": 0.7,
+      "2024": 0.6,
+      "777": 0.9,
+      "999": 0.8
+    },
+    "deployment_lottery_sd_2024": 7.76,
+    "note": "four of five baselines lose 2024 to the average; only the lucky one wins, and the gate is satisfied against the reference deployment actually faces"
+  },
+  "global_shift": -0.010472037119772536
+}

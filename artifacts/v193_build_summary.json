@@ -1,0 +1,51 @@
+{
+  "version": "V193",
+  "baseline": "V189 (1071.4549348488)",
+  "change": "nine network draws instead of three, and six Form draws instead of one; Context, CatBoost and the factorization network unchanged",
+  "network_seeds": [
+    42,
+    1004,
+    2024,
+    777,
+    999,
+    13,
+    314,
+    2718,
+    65537
+  ],
+  "form_seeds": [
+    42,
+    1004,
+    2024,
+    777,
+    999,
+    13
+  ],
+  "validation": {
+    "network_k_curve_2024": {
+      "1": 0.0,
+      "2": 2.19,
+      "3": 3.37,
+      "4": 3.86,
+      "5": 4.34,
+      "6": 4.59,
+      "7": 5.16,
+      "8": 5.3
+    },
+    "form_k_curve_2024": {
+      "1": 0.0,
+      "2": 1.07,
+      "3": 1.43,
+      "4": 1.61,
+      "5": 1.72
+    },
+    "expected_over_v189": "about +1.9 from the network going 3 -> 9 and about +1.7 from Form going 1 -> 6, on the 2024 fold",
+    "every_season_positive_at_every_k": true,
+    "estimator": "pooled over which seeds go inside, so the luckiest draw does not sit in every averaged set -- the bias that made V190's table read backwards"
+  },
+  "deferred": {
+    "context": "same model class, different cached configuration",
+    "catboost": "160s per fold fit; three models would near 220 MB"
+  },
+  "global_shift": -0.010158723222911746
+}

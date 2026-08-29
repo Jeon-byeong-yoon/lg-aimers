@@ -1,0 +1,26 @@
+{
+  "version": "V199",
+  "baseline": "V196 (1082.8399355688)",
+  "change": "CatBoost averaged over four draws; every other component unchanged",
+  "catboost_seeds": [
+    42,
+    1004,
+    2024,
+    777
+  ],
+  "reused": "seed 42 is v154_catboost.cbm, identical construction",
+  "validation": {
+    "catboost_2024_curve": {
+      "1": 0.0,
+      "2": 0.6,
+      "3": 0.8
+    },
+    "catboost_lottery_range": {
+      "standalone_2024": 27,
+      "blend_2024": 9.23
+    },
+    "why_it_matters_despite_a_narrow_standalone_range": "a small standalone wobble multiplied by the second-largest weight is still a meaningful blend wobble",
+    "weights_left_alone": "V198 refitted them on the averaged components under V179's cross-fold transfer test and the selection bias was +230.68 and +92.43 points"
+  },
+  "global_shift": -0.010075314056466302
+}
