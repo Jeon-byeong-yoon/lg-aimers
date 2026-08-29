@@ -9,8 +9,16 @@ __pycache__/
 *.pyo
 
 # 모델 학습/패키징 중간 산출물 (최종 제출본은 submissions/by_submitter에 보관)
-# CatBoost 모델은 100MB를 넘어 GitHub 하드 리밋에 걸린다
+# CatBoost 모델은 100MB를 넘어 GitHub 하드 리밋에 걸린다.
+# `artifacts/*.cbm` 는 한 단계만 매칭한다 - V199에서 artifacts/v199_catboosts/ 아래
+# 네 개가 그 틈으로 추적돼 push가 막혔으므로 하위 디렉터리까지 덮는 패턴을 함께 둔다.
 artifacts/*.cbm
+artifacts/**/*.cbm
+
+# 100MB를 넘는 제출 ZIP은 커밋하지 않는다. GitHub 하드 리밋이고, LFS는 무료
+# 할당량 1GB를 기존 제출 ZIP 약 2GB가 이미 넘긴다. 대신 기록 문서가 md5와 전체
+# 명세를 담고 build_*/package_* 스크립트로 정확히 재생성된다.
+submissions/by_submitter/전병윤_RF_기준선/submit_v199.zip
 artifacts/ensemble.joblib
 artifacts/v2_ensemble.joblib
 artifacts/v4_ensemble.joblib

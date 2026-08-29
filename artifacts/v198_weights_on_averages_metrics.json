@@ -1,0 +1,89 @@
+{
+  "experiment": "V198_weights_on_averages",
+  "baseline": "V196 (Public 1082.8399355688)",
+  "premise": "the blend weights were fitted in V119/V135/V139 against single-draw components, and four components are now averages of six to nine draws; a weight is paid for the independent part of a prediction and averaging changes exactly that",
+  "why_v167_does_not_settle_it": "V167 refitted weights on averaged components and found nothing, measured against seed 42 -- the luckiest draw of five on the 2024 fold",
+  "instrument": "V179's cross-fold transfer test, because six weights is the same kind of search that produced +4 to +7 points of selection bias on the eight calibration parameters",
+  "results": {
+    "fit_2023": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.27,
+        "context": 0.04,
+        "network": 0.5,
+        "catboost": 0.12,
+        "factorization": 0.07
+      },
+      "readings": {
+        "2022": -4.164202740919443,
+        "2023": 200.80636481942804,
+        "2024": -29.873653611767192
+      },
+      "evaluations": 73,
+      "selection_bias": 230.68001843119524,
+      "out_of_fold": -29.873653611767192
+    },
+    "fit_2024": {
+      "weights": {
+        "v17": 0.0,
+        "form": 0.2,
+        "context": 0.24,
+        "network": 0.17,
+        "catboost": 0.37,
+        "factorization": 0.02
+      },
+      "readings": {
+        "2022": -5.536776890324724,
+        "2023": -88.8259767690025,
+        "2024": 3.607056042853607
+      },
+      "evaluations": 92,
+      "selection_bias": 92.4330328118561,
+      "out_of_fold": -88.8259767690025
+    }
+  },
+  "transfers_across_seasons": false,
+  "finalists": {
+    "fit_2023": {
+      "three_season": {
+        "average_points": 55.58950282225782,
+        "se_points": 8.559665584203477,
+        "ci95_low_points": 38.812558277219,
+        "season_points": [
+          -4.1642027409284355,
+          200.80636481945692,
+          -29.87365361175504
+        ]
+      },
+      "monthly_block_win_rate": 0.45,
+      "bootstrap_2024": {
+        "mean": -7.46841340293876e-05,
+        "ci95_low": -0.00011316385840149363,
+        "ci95_high": -3.830416135094945e-05
+      }
+    },
+    "fit_2024": {
+      "three_season": {
+        "average_points": -30.251899205471165,
+        "se_points": 3.5378533407333377,
+        "ci95_low_points": -37.1860917533085,
+        "season_points": [
+          -5.536776890323748,
+          -88.82597676893992,
+          3.6070560428501652
+        ]
+      },
+      "monthly_block_win_rate": 0.4,
+      "bootstrap_2024": {
+        "mean": 9.017640107125413e-06,
+        "ci95_low": -5.87227273630659e-06,
+        "ci95_high": 2.3758988209597718e-05
+      }
+    }
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}
