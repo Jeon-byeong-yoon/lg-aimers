@@ -1,0 +1,21 @@
+{
+  "version": "V207",
+  "baseline": "V199 (1083.2461959655)",
+  "change": "CatBoost cut from 1200 to 1000 trees; every other component unchanged",
+  "how": "the shipped .cbm files shrunk in place -- boosting prefixes are exact, so no retraining; controls demand prediction equality to 0.0",
+  "validation": {
+    "paired_reading_1000_vs_1200": {
+      "2022": "+0.80 +- 0.61",
+      "2023": "+0.67 +- 0.67",
+      "2024": "+0.93 +- 0.34 (2.7 SE)"
+    },
+    "ridge_not_peak": "600/800/1000 agree on 2024 (+0.99/+0.95/+0.93); 1500..2400 decline monotonically",
+    "avg_vs_avg_1000": {
+      "2022": "+0.63",
+      "2023": "+0.51",
+      "2024": "+0.72"
+    },
+    "minimum_season_expectation": "+0.51 (2023, avg-vs-avg)"
+  },
+  "global_shift": -0.010007339123539434
+}

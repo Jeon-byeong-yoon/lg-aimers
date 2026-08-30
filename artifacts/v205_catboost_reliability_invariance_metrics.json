@@ -1,0 +1,29 @@
+{
+  "experiment": "V205_catboost_reliability_invariance",
+  "baseline": "V199 (Public 1083.2461959655), CatBoost block reliability scale 150",
+  "why": "the one unexplored constant; but the reliability column is a strictly monotone transform of inside_n at every scale, so a tree model can see the scale only through border quantization -- predicted near-null",
+  "design": "one paired fit: 2024 fold, seed 42, incumbent config, block rebuilt at scale 600, read against the cached V197 fit at scale 150",
+  "incumbent_scale": 150.0,
+  "candidate_scale": 600.0,
+  "column_check": {
+    "spearman": 1.0,
+    "max_abs_value_gap": 0.3333333333333333,
+    "columns_changed": [
+      "ins_pitcher_reliability"
+    ]
+  },
+  "prediction_gap": {
+    "max_abs": 0.0,
+    "sd": 0.0
+  },
+  "paired_points": {
+    "2022": 0.0,
+    "2023": 0.0,
+    "2024": 0.0
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}
