@@ -19,6 +19,7 @@ artifacts/**/*.cbm
 # 할당량 1GB를 기존 제출 ZIP 약 2GB가 이미 넘긴다. 대신 기록 문서가 md5와 전체
 # 명세를 담고 build_*/package_* 스크립트로 정확히 재생성된다.
 submissions/by_submitter/전병윤_RF_기준선/submit_v199.zip
+submissions/by_submitter/전병윤_RF_기준선/submit_v207.zip
 artifacts/ensemble.joblib
 artifacts/v2_ensemble.joblib
 artifacts/v4_ensemble.joblib
