@@ -1,0 +1,133 @@
+{
+  "experiment": "V208_catboost_more_seeds",
+  "baseline": "V199 (Public 1083.2461959655), CatBoost = 4-seed average",
+  "why": "doc 87 priced k 4->9 at about +0.3 on the folds; deferred then, but now every axis is closed and this is the only candidate left with a measured positive expectation; adds draws (transfer 4/4), does not replace a constant (transfer 0/1)",
+  "design": "five new seeds x three folds at the shipped config, every '4 + j new' subset average read against the shipped average",
+  "shipped_seeds": [
+    42,
+    1004,
+    2024,
+    777
+  ],
+  "new_seeds": [
+    999,
+    13,
+    314,
+    2718,
+    65537
+  ],
+  "curve": {
+    "1": {
+      "readings": 5,
+      "mean": [
+        -0.6457687514371813,
+        -1.408687519854901,
+        -0.1419800979696184
+      ],
+      "sd_over_subsets": [
+        0.663995946675492,
+        1.3519653447432782,
+        0.3670804732592334
+      ],
+      "all_positive": false
+    },
+    "2": {
+      "readings": 10,
+      "mean": [
+        -1.0793282772680879,
+        -2.335339112495838,
+        -0.23606347837601405
+      ],
+      "sd_over_subsets": [
+        0.6479403191176453,
+        1.3115406678688515,
+        0.3531423032151715
+      ],
+      "all_positive": false
+    },
+    "3": {
+      "readings": 10,
+      "mean": [
+        -1.390506073234432,
+        -2.991123676743257,
+        -0.3029867003201403
+      ],
+      "sd_over_subsets": [
+        0.5608871646728416,
+        1.1305721480717987,
+        0.3026335055267121
+      ],
+      "all_positive": false
+    },
+    "4": {
+      "readings": 5,
+      "mean": [
+        -1.6247055875773242,
+        -3.479621005126887,
+        -0.3530264333018174
+      ],
+      "sd_over_subsets": [
+        0.42815344425133656,
+        0.8603086590741696,
+        0.22928896316901123
+      ],
+      "all_positive": false
+    },
+    "5": {
+      "readings": 1,
+      "mean": [
+        -1.8073444201349709,
+        -3.8575834635956596,
+        -0.39185574656208644
+      ],
+      "sd_over_subsets": null,
+      "all_positive": false
+    }
+  },
+  "survivors": [],
+  "held_at": {
+    "network": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13,
+      314,
+      2718,
+      65537
+    ],
+    "form": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13
+    ],
+    "factorization": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13,
+      314,
+      2718,
+      65537
+    ],
+    "context": [
+      42,
+      1004,
+      2024,
+      777,
+      999,
+      13
+    ]
+  },
+  "compliance": {
+    "official_data_only": true,
+    "test_csv_read": false,
+    "chronological_folds": true
+  }
+}
