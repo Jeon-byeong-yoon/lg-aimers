@@ -1,6 +1,6 @@
-# 🏆 LG Aimers 해커톤 — 야구 투구 제구 성공 확률 예측
+# 🏆 LG Aimers 9기 해커톤 — 야구 투구 제구 성공 확률 예측
 
-> LG AI연구원 주최 해커톤 참가 레포지토리  
+> LG AI연구원 주최 온라인 해커톤(Phase 2) 참가 레포지토리  
 > **팀원은 이 README를 먼저 읽어주세요** 👇
 
 ---
@@ -9,11 +9,68 @@
 
 | 항목 | 내용 |
 |------|------|
-| **주최** | LG AI연구원 |
+| **주최** | LG AI연구원 (DACON 운영, 대회 ID 236743) |
 | **태스크** | 야구 투구의 **제구 성공 확률** 예측 (이진 분류 → 0~1 확률 출력) |
 | **Target** | `control_success` — 제구 성공 여부 (1: 성공, 0: 실패) |
 | **데이터** | KBO 리그 실제 투구 데이터 + Trackman 측정 시스템 |
 | **제출 형식** | `row_id`, `control_success` (확률값) CSV → zip 압축 후 리더보드 업로드 |
+| **평가** | Public = Private = 테스트 100% (홀드아웃 갭 없음), 일일 제출 5회 |
+
+---
+
+## 🥇 최종 결과 (전병윤 트랙)
+
+베이스라인 Random Forest **Public 900.7385**에서 출발해 **약 210차례의 실험(V1~V208)**을 거쳐
+최종 **Public 1083.2462**에 도달했습니다. 베이스라인 대비 **+182.5점**, 로컬 시간순 검증
+기준선(V114)이 잡힌 이후로만 **누적 +80.67점**입니다.
+
+### 채택된 상위 5개 제출 (Public Score)
+
+| 순위 | 버전 | Public Score | 무엇이 바뀌었나 | 직전 대비 |
+|:---:|:---:|:---|:---|:---:|
+| 🥇 | **V199** | **1083.2461959655** | CatBoost 성분을 4개 시드 평균으로 (복권 축 완성) | +0.41 |
+| 2 | V196 | 1082.8399355688 | factorization 9개·Context 6개 시드 평균 | +5.86 |
+| 3 | V193 | 1076.9782849555 | 임베딩 신경망 9개·Form 6개 시드 평균 | +5.52 |
+| 4 | V189 | 1071.4549348488 | 임베딩 신경망 3개 시드 평균 (시드 복권 축 발견) | +3.59 |
+| 5 | V187 | 1067.8617513573 | V6에서 버렸던 인코딩 그룹을 신경망에 재투입 | — |
+
+> **V199가 최종 확정본입니다.** 이후 V204~V208(CatBoost 반복수·reliability·구조 다양성·
+> 시드 확장)은 전부 기각됐습니다 — 남은 축들이 리더보드 전이 잡음(±1점)을 넘는 이득을
+> 내지 못함을 **측정으로** 확인했기 때문입니다. 자세한 판정 근거는
+> [`submissions/by_submitter/전병윤_RF_기준선/`](submissions/by_submitter/전병윤_RF_기준선/)의
+> 90번대 기록 문서에 있습니다.
+
+### 최종 모델 아키텍처 — 6성분 가중 블렌드 + 세그먼트 보정층
+
+최종 예측은 **서로 다른 6개 모델의 가중 평균**에 **세그먼트 보정층**을 얹은 구조입니다.
+
+| 성분 | 가중치 | 모델 | 비고 |
+|------|:---:|------|------|
+| **Form** | 0.32 | HistGradientBoosting | 투수 안정형 이력 피처(`asof_*`) 중심, 6시드 평균 |
+| **CatBoost** | 0.27 | CatBoost | ordered target statistics로 범주형 처리, 4시드 평균 |
+| **임베딩 신경망** | 0.20 | Entity Embedding NN | 범주형을 임베딩, 9시드 평균 |
+| **Context** | 0.14 | HistGradientBoosting | 경기 상황·Trackman 맥락 피처, 6시드 평균 |
+| **Factorization** | 0.07 | Interaction/Factorization NN | 피처 간 상호작용 학습, 9시드 평균 |
+| **V17 (로지스틱+릿지)** | 0.00 | Logistic + Residual Ridge | 초기 성분, 현재 가중치 0으로 은퇴 |
+
+그 위에 **세그먼트 보정층**이 잔차를 네 축으로 나눠 교정합니다: 볼카운트, 투수×볼카운트,
+투수 경험 구간, **투수 좌우스플릿 × 2스트라이크**. 마지막으로 시즌 내 드리프트 보정을 더합니다.
+
+### 가장 효과가 컸던 방법 두 가지
+
+1. **투수 좌우스플릿 × 2스트라이크 세그먼트 보정** (V169~V175, **누적 +14.65**)  
+   투수의 좌/우타자 상대 성적을 2스트라이크 상황과 교차한 세그먼트에서 잔차를 교정한
+   것이 단일 아이디어로는 최대 이득이었습니다. "이미 닫혔다"고 두 번 선언됐던 보정층에서
+   상호작용 세그먼트를 전수 조사해 되살린 발견입니다.
+
+2. **시드 복권 평균화** (V189~V199, **누적 +15.38**)  
+   확률적 성분(신경망·CatBoost·Form·Context·factorization)은 시드마다 다른 뽑기를
+   내놓는데, 이를 여러 시드로 평균하면 배포 분산이 줄어 리더보드가 오릅니다. 성분별
+   2024 폴드의 "복권 범위"가 평균화의 가치를 예측한다는 규칙을 세우고 다섯 성분을
+   전부 평균화했습니다.
+
+이 두 축이 후반부 상승의 대부분을 설명하며, **로컬 검증의 "최소 시즌 규칙"이 16번 중
+14번 리더보드 방향을 맞혔습니다.**
 
 ---
 
@@ -211,27 +268,32 @@ submission.zip
 
 ---
 
-## 📈 모델 개선 계획
+## 📈 실험 여정 요약 (V1 → V208)
 
-### Phase 1 — 베이스라인 제출 ✅
-- [x] Random Forest 베이스라인 (`rf.pkl`) 실행
-- [x] `submission.csv` 생성 완료
-- [x] 리더보드 제출용 zip 생성
+| 단계 | 대표 버전 | 방법 | 도달 점수 |
+|------|:---:|------|:---:|
+| 베이스라인 | V0 | Random Forest (`rf.pkl`) | 900.7385 |
+| 피처 복원·이력 | V92~V114 | 시즌 내 이력·계층 인코딩·엔티티 임베딩 | 1002.5720 |
+| 성분 확장 | V117~V156 | CatBoost·factorization·Context 성분 추가 | ~1052 |
+| **보정층 상호작용** | **V169~V175** | **투수 좌우스플릿 × 2스트라이크 세그먼트** | 1060.5434 |
+| **시드 복권 평균화** | **V189~V199** | **다섯 성분 전부 시드 평균화** | **1083.2462** |
+| 축 폐쇄 (기각) | V200~V208 | 상수·구조 재검토 → 전부 현행 유지로 확정 | 1083.2462 |
 
-### Phase 2 — 피처 엔지니어링
-- [ ] `trackman_history.csv`에서 투수별 구종 특성 집계
-- [ ] cold-start 처리 전략 (smoothing, fallback)
-- [ ] `pitcher_hand × batter_hand` 상호작용 피처
+> 로컬 시간순 검증(2022·2023·2024 폴드)과 리더보드를 짝지어, 효과의 **부호와 유의성**을
+> 오차막대로 측정하는 방법론을 후반부에 확립했습니다. 각 실험의 사전 등록 가설과 판정
+> 근거는 `submissions/by_submitter/전병윤_RF_기준선/`의 번호순 기록 문서에 남아 있습니다.
 
-### Phase 3 — 모델 실험
-- [ ] LightGBM / XGBoost
-- [ ] CatBoost (범주형 피처 강점)
-- [ ] TabPFN (소규모 실험)
-- [ ] 앙상블 (Stacking / Blending)
+### 재현 방법
 
-### Phase 4 — 최적화
-- [ ] Optuna 하이퍼파라미터 튜닝
-- [ ] GroupKFold CV (시계열 특성 고려)
+최종 제출본(V199)은 아래로 정확히 재생성됩니다. 모델 아티팩트는 반드시
+`lgaimers_server` 환경(numpy 1.26.4 — 평가 서버와 동일)에서 저장해야 합니다.
+
+```bash
+# 1. 학습 아티팩트 빌드 (성분 모델 + 보정층)
+/opt/anaconda3/envs/lgaimers_server/bin/python scripts/build_v199_artifacts.py
+# 2. 서버 호환성 게이트 통과 후 제출 ZIP 패키징
+/opt/anaconda3/envs/lgaimers_server/bin/python scripts/package_v199_submission.py
+```
 
 ---
 
@@ -253,8 +315,13 @@ submission.zip
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8.0-orange)
-![pandas](https://img.shields.io/badge/pandas-2.3.3-lightblue)
+![CatBoost](https://img.shields.io/badge/CatBoost-1.2.10-brightgreen)
+![pandas](https://img.shields.io/badge/pandas-2.0.3-lightblue)
 ![numpy](https://img.shields.io/badge/numpy-1.26.4-yellow)
+
+> ⚠️ **제출 아티팩트는 반드시 `lgaimers_server` 환경(numpy 1.26.4)에서 저장**합니다.
+> numpy 2.x로 저장한 모델은 평가 서버(numpy 1.26.4)에서 로드가 깨져 제출이 실패합니다.
+> 패키징 전 `scripts/check_server_pickle_compat.py`로 로드 게이트를 통과시켜야 합니다.
 
 ---
 
@@ -268,4 +335,5 @@ submission.zip
 
 ---
 
-*LG Aimers 해커톤 참가 레포지토리 | 전병윤*
+*LG Aimers 9기 해커톤 참가 레포지토리 | 전병윤 · 이준형 · 오현기*
+*최종 Public 1083.2462 (V199) · 베이스라인 대비 +182.5점*
